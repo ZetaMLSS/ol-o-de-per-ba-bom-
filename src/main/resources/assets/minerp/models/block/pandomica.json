@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/white_candle_lit",
+    "up": "minecraft:block/white_candle_lit",
+    "north": "minecraft:block/white_candle_lit",
+    "east": "minecraft:block/white_candle_lit",
+    "south": "minecraft:block/white_candle_lit",
+    "west": "minecraft:block/white_candle_lit",
+    "particle": "minecraft:block/white_candle_lit"
+  },
+  "render_type": "solid"
+}

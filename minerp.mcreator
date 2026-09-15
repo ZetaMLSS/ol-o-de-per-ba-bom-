@@ -1,0 +1,108 @@
+{
+  "mod_elements": [
+    {
+      "name": "Bagaco",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bagaco",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minerp/models/item/bagaco.json",
+          "src/main/java/net/mcreator/minerp/item/BagacoItem.java"
+        ]
+      },
+      "path": "~/Bloco"
+    },
+    {
+      "name": "SAFADONA",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "safadona",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minerp/models/block/safadona.json",
+          "src/main/resources/assets/minerp/blockstates/safadona.json",
+          "src/main/resources/assets/minerp/models/item/safadona.json",
+          "src/main/resources/data/minerp/loot_table/blocks/safadona.json",
+          "src/main/java/net/mcreator/minerp/block/SAFADONABlock.java"
+        ]
+      },
+      "path": "~/Bloco"
+    },
+    {
+      "name": "Pandomica",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pandomica",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minerp/loot_table/blocks/pandomica.json",
+          "src/main/resources/assets/minerp/models/block/pandomica.json",
+          "src/main/java/net/mcreator/minerp/block/PandomicaBlock.java",
+          "src/main/resources/assets/minerp/blockstates/pandomica.json",
+          "src/main/resources/assets/minerp/models/item/pandomica.json"
+        ]
+      },
+      "path": "~/Bloco"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "item.teste.bagaco": "Bagaco",
+      "block.teste.safadona": "SAFADONA bloco",
+      "item.minerp.bagaco": "Bagaco",
+      "block.minerp.safadona": "SAFADONA bloco",
+      "block.minerp.pandomica": "Pandomica"
+    },
+    "pt_br": {
+      "item.teste.bagaco": "Bagaco",
+      "block.teste.safadona": "SAFADONA bloco",
+      "item.minerp.bagaco": "Bagaco",
+      "block.minerp.safadona": "SAFADONA bloco",
+      "block.minerp.pandomica": "Pandomica"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/mcreator/minerp/init/MinerpModBlocks.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModItems.java",
+      "src/main/java/net/mcreator/minerp/MinerpMod.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/pack.mcmeta"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Bloco",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "minerp",
+    "modName": "MineRP",
+    "version": "1.0.0",
+    "description": "O Mine-RP Mod é um mod focado inteiramente na construção de servidores de Roleplay (RP) no Minecraft. Ele adiciona uma vasta gama de itens, blocos e mecânicas projetadas para simular a vida real, permitindo que os jogadores criem cidades, gerenciem economias, formem facções e vivam uma experiência verdadeiramente imersiva.",
+    "author": "MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.minerp"
+  },
+  "mcreatorVersion": 202600233518
+}

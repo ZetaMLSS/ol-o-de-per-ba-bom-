@@ -3,12 +3,13 @@ loaderVersion="[4,)"
 license="Not specified"
 
 [[mods]]
-modId="teste"
+modId="minerp"
 version="1.0.0"
-displayName="teste"
+displayName="MineRP"
 displayURL="https://mcreator.net"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 authors="MCreator"
+description="O Mine-RP Mod \u00E9 um mod focado inteiramente na constru\u00E7\u00E3o de servidores de Roleplay (RP) no Minecraft. Ele adiciona uma vasta gama de itens, blocos e mec\u00E2nicas projetadas para simular a vida real, permitindo que os jogadores criem cidades, gerenciem economias, formem fac\u00E7\u00F5es e vivam uma experi\u00EAncia verdadeiramente imersiva."
 
 # Start of user code block mod configuration
 # End of user code block mod configuration
@@ -17,14 +18,14 @@ authors="MCreator"
 # Start of user code block custom mixins
 # End of user code block custom mixins
 
-[[dependencies.teste]]
+[[dependencies.minerp]]
     modId="neoforge"
     type="required"
     versionRange="[21.1.232,)"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.teste]]
+[[dependencies.minerp]]
     modId="minecraft"
     type="required"
     versionRange="[1.21.1]"
