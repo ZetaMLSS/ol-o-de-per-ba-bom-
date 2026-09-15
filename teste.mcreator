@@ -12,6 +12,22 @@
           "src/main/java/net/mcreator/teste/item/BagacoItem.java"
         ]
       }
+    },
+    {
+      "name": "SAFADONA",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "safadona",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/teste/models/item/safadona.json",
+          "src/main/resources/data/teste/loot_table/blocks/safadona.json",
+          "src/main/resources/assets/teste/blockstates/safadona.json",
+          "src/main/resources/assets/teste/models/block/safadona.json",
+          "src/main/java/net/mcreator/teste/block/SAFADONABlock.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -20,49 +36,17 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.teste.bagaco": "Bagaco"
+      "item.teste.bagaco": "Bagaco",
+      "block.teste.safadona": "SAFADONA"
     }
   },
   "metadata": {
     "files": [
+      "src/main/java/net/mcreator/teste/init/TesteModBlocks.java",
       "src/main/java/net/mcreator/teste/init/TesteModItems.java",
-      "src/main/java/net/mcreator/teste/world/BlackHoleManager.java",
-      "src/main/resources/teste.mixins.json",
-      "src/main/java/net/mcreator/teste/world/PortalSavedData.java",
-      "src/main/java/net/mcreator/teste/network/PlayPlayerAnimationMessage.java",
-      "src/main/java/net/mcreator/teste/ai/OrbitPositionGoal.java",
+      "src/main/java/net/mcreator/teste/TesteMod.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/java/net/mcreator/teste/client/renderer/CustomFireballRenderer.java",
-      "src/main/java/net/mcreator/teste/ai/OverrideMovementGoal.java",
-      "src/main/java/net/mcreator/teste/network/CameraShakePayload.java",
-      "src/main/java/net/mcreator/teste/mixin/EntityRenderDispatcherMixin.java",
-      "src/main/java/net/mcreator/teste/entity/CustomFireballEntity.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/teste/client/CameraShakeClientEvents.java",
-      "src/main/java/net/mcreator/teste/mixin/LevelRendererMixin.java",
-      "src/main/resources/META-INF/accesstransformer.cfg",
-      "src/main/java/net/mcreator/teste/network/NetworkRegister.java",
-      "src/main/java/net/mcreator/teste/mixin/PlayerAnimationRendererMixin.java",
-      "src/main/java/net/mcreator/teste/client/RenderUtils.java",
-      "src/main/java/net/mcreator/teste/ai/MoveToBlockGoal.java",
-      "src/main/java/net/mcreator/teste/ai/MoveToStructureGoal.java",
-      "src/main/java/net/mcreator/teste/client/renderer/CustomEyeOfEnderRenderer.java",
-      "src/main/java/net/mcreator/teste/mixin/ItemInHandRendererMixin.java",
-      "src/main/java/net/mcreator/teste/mixin/CameraAccessor.java",
-      "src/main/java/net/mcreator/teste/client/CameraShakeManager.java",
-      "src/main/java/net/mcreator/teste/mixin/PlayerAnimationMixin.java",
-      "src/main/java/net/mcreator/teste/world/TeleportBlockHandler.java",
-      "src/main/java/net/mcreator/teste/world/BlackHoleSavedData.java",
-      "src/main/java/net/mcreator/teste/client/ClientHelper.java",
-      "src/main/java/net/mcreator/teste/client/renderer/SemiAquaticRenderer.java",
-      "src/main/java/net/mcreator/teste/mixin/LivingEntityRendererMixin.java",
-      "src/main/java/net/mcreator/teste/entity/CustomEyeOfEnderEntity.java",
-      "src/main/java/net/mcreator/teste/TesteModPlayerAnimationAPI.java",
-      "src/main/java/net/mcreator/teste/math/CallCooldownManager.java",
-      "src/main/java/net/mcreator/teste/math/CallCounter.java",
-      "src/main/java/net/mcreator/teste/world/BlockDamageHandler.java",
-      "src/main/java/net/mcreator/teste/mixin/ItemInHandLayerMixin.java",
-      "src/main/java/net/mcreator/teste/TesteMod.java"
+      "src/main/resources/pack.mcmeta"
     ]
   },
   "foldersRoot": {

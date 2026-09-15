@@ -19,6 +19,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.teste.init.TesteModItems;
+import net.mcreator.teste.init.TesteModBlocks;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.Queue;
@@ -40,6 +41,7 @@ public class TesteMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
+		TesteModBlocks.REGISTRY.register(modEventBus);
 		TesteModItems.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
 		// End of user code block mod init
