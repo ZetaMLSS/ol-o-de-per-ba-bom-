@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/bamboo_fence_gate",
+    "up": "minecraft:block/bamboo_fence_gate",
+    "north": "minecraft:block/bamboo_fence_gate",
+    "east": "minecraft:block/bamboo_fence_gate",
+    "south": "minecraft:block/bamboo_fence_gate",
+    "west": "minecraft:block/bamboo_fence_gate",
+    "particle": "minecraft:block/bamboo_fence_gate"
+  },
+  "render_type": "solid"
+}
