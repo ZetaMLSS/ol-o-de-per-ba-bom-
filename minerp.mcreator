@@ -49,7 +49,32 @@
       "path": "~/Bloco"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "DinheiroBanco",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "CatCoinValor",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "CatCoinQuantidade",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "CatCoinSaldo",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    }
+  ],
   "sound_elements": [],
   "tag_elements": {},
   "tab_element_order": {},
@@ -93,7 +118,12 @@
       },
       {
         "name": "Sistemas",
-        "children": []
+        "children": [
+          {
+            "name": "Comandos",
+            "children": []
+          }
+        ]
       }
     ]
   },
