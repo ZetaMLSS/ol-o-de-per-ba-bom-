@@ -26,7 +26,7 @@ public class MinerpModItems {
 		VD_1 = REGISTRY.register("vd_1", VD1Item::new);
 		VD_050 = REGISTRY.register("vd_050", VD050Item::new);
 		VD_5 = REGISTRY.register("vd_5", VD5Item::new);
-		ASIC_V_1 = block(MinerpModBlocks.ASIC_V_1);
+		ASIC_V_1 = block(MinerpModBlocks.ASIC_V_1, new Item.Properties().stacksTo(1));
 	}
 
 	// Start of user code block custom items

@@ -19,6 +19,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.minerp.network.MinerpModVariables;
+import net.mcreator.minerp.init.MinerpModTabs;
 import net.mcreator.minerp.init.MinerpModItems;
 import net.mcreator.minerp.init.MinerpModBlocks;
 
@@ -44,6 +45,7 @@ public class MinerpMod {
 		modEventBus.addListener(this::registerNetworking);
 		MinerpModBlocks.REGISTRY.register(modEventBus);
 		MinerpModItems.REGISTRY.register(modEventBus);
+		MinerpModTabs.REGISTRY.register(modEventBus);
 		MinerpModVariables.ATTACHMENT_TYPES.register(modEventBus);
 		// Start of user code block mod init
 		// End of user code block mod init

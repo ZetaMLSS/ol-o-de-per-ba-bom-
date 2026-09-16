@@ -58,6 +58,17 @@
         ]
       },
       "path": "~/Bloco/Mineradoras/Asic V1"
+    },
+    {
+      "name": "MINERPTec",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minerp_tec",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Sistemas/Abas Criativo"
     }
   ],
   "variable_elements": [
@@ -96,7 +107,8 @@
       "item.minerp.vd_1": "VD$ 1",
       "item.minerp.vd_050": "VD$ 0.50",
       "item.minerp.vd_5": "VD$ 5",
-      "block.minerp.asic_v_1": "Asic V 1"
+      "block.minerp.asic_v_1": "Asic V 1",
+      "item_group.minerp.minerp_tec": "MINERP Tec"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -104,7 +116,8 @@
       "item.minerp.vd_1": "VD$ 1",
       "item.minerp.vd_050": "VD$ 1",
       "item.minerp.vd_5": "VD$ 0.50",
-      "block.minerp.asic_v_1": "Asic V 1"
+      "block.minerp.asic_v_1": "Asic V 1",
+      "item_group.minerp.minerp_tec": "MINERP Tec"
     }
   },
   "metadata": {
@@ -114,6 +127,7 @@
       "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/resources/pack.mcmeta",
       "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
       "src/main/resources/minerp.mixins.json",
       "src/main/java/net/mcreator/minerp/MinerpMod.java",
       "src/main/java/net/mcreator/minerp/client/ClientHelper.java"
@@ -150,6 +164,10 @@
         "children": [
           {
             "name": "Comandos",
+            "children": []
+          },
+          {
+            "name": "Abas Criativo",
             "children": []
           }
         ]

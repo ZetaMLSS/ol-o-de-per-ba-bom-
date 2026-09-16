@@ -47,10 +47,12 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "hasBlockItem": true,
-    "maxStackSize": 64,
+    "maxStackSize": 1,
     "rarity": "COMMON",
     "immuneToFire": false,
-    "creativeTabs": [],
+    "creativeTabs": [
+      "CUSTOM:MINERPTec"
+    ],
     "destroyTool": "Not specified",
     "customDrop": "",
     "dropAmount": 1,
