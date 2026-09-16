@@ -132,6 +132,40 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/Procedures"
+    },
+    {
+      "name": "ATMSup",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atm_sup",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minerp/models/block/atm_sup.json",
+          "src/main/resources/assets/minerp/blockstates/atm_sup.json",
+          "src/main/resources/assets/minerp/models/item/atm_sup.json",
+          "src/main/java/net/mcreator/minerp/block/ATMSupBlock.java",
+          "src/main/resources/data/minerp/loot_table/blocks/atm_sup.json"
+        ]
+      },
+      "path": "~/Bloco/ATM"
+    },
+    {
+      "name": "ATMinf",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "at_minf",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/block/ATMinfBlock.java",
+          "src/main/resources/assets/minerp/models/item/at_minf.json",
+          "src/main/resources/data/minerp/loot_table/blocks/at_minf.json",
+          "src/main/resources/assets/minerp/blockstates/at_minf.json",
+          "src/main/resources/assets/minerp/models/block/at_minf.json"
+        ]
+      },
+      "path": "~/Bloco/ATM"
     }
   ],
   "variable_elements": [
@@ -179,7 +213,9 @@
       "gui.minerp.tela_celular_inicial.button_4": "4",
       "gui.minerp.tela_celular_inicial.button_3": "3",
       "gui.minerp.tela_celular_inicial.button_2": "2",
-      "gui.minerp.tela_celular_inicial.button_1": "1"
+      "gui.minerp.tela_celular_inicial.button_1": "1",
+      "block.minerp.atm_sup": "ATM-Sup",
+      "block.minerp.at_minf": "ATM-Inf"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -196,7 +232,9 @@
       "gui.minerp.tela_celular_inicial.button_4": "4",
       "gui.minerp.tela_celular_inicial.button_3": "3",
       "gui.minerp.tela_celular_inicial.button_2": "2",
-      "gui.minerp.tela_celular_inicial.button_1": "1"
+      "gui.minerp.tela_celular_inicial.button_1": "1",
+      "block.minerp.atm_sup": "ATM-Sup",
+      "block.minerp.at_minf": "ATM-Sup"
     }
   },
   "metadata": {
@@ -207,12 +245,12 @@
       "src/main/java/net/mcreator/minerp/init/MinerpModBlocks.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModItems.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/resources/pack.mcmeta",
       "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
-      "src/main/resources/minerp.mixins.json",
+      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
       "src/main/java/net/mcreator/minerp/MinerpMod.java",
-      "src/main/java/net/mcreator/minerp/client/ClientHelper.java"
+      "src/main/resources/pack.mcmeta",
+      "src/main/resources/minerp.mixins.json"
     ]
   },
   "foldersRoot": {
@@ -229,6 +267,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "ATM",
+            "children": []
           }
         ]
       },

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "minerp:block/atm_sup"
+    },
+    "facing=east": {
+      "model": "minerp:block/atm_sup",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minerp:block/atm_sup",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minerp:block/atm_sup",
+      "y": 270
+    }
+  }
+}

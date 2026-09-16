@@ -13,5 +13,7 @@
   "gui.minerp.tela_celular_inicial.button_4": "4",
   "gui.minerp.tela_celular_inicial.button_3": "3",
   "gui.minerp.tela_celular_inicial.button_2": "2",
-  "gui.minerp.tela_celular_inicial.button_1": "1"
+  "gui.minerp.tela_celular_inicial.button_1": "1",
+  "block.minerp.atm_sup": "ATM-Sup",
+  "block.minerp.at_minf": "ATM-Sup"
 }

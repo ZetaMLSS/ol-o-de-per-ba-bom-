@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "minerp:block/at_minf"
+    },
+    "facing=east": {
+      "model": "minerp:block/at_minf",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minerp:block/at_minf",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minerp:block/at_minf",
+      "y": 270
+    }
+  }
+}

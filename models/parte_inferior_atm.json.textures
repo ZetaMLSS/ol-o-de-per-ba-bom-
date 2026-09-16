@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "name": "default",
+      "map": {
+        "0": "atm_inf",
+        "1": "money"
+      }
+    }
+  }
+}

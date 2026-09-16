@@ -1,0 +1,10 @@
+{
+  "parent": "minerp:custom/parte_inferior_atm",
+  "textures": {
+    "all": "minecraft:block/blue_concrete",
+    "particle": "minecraft:block/blue_concrete",
+    "0": "minerp:block/atm_inf",
+    "1": "minerp:block/money"
+  },
+  "render_type": "solid"
+}

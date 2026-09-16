@@ -24,12 +24,16 @@ public class MinerpModItems {
 	public static final DeferredItem<Item> VD_5;
 	public static final DeferredItem<Item> ASIC_V_1;
 	public static final DeferredItem<Item> CELULAR;
+	public static final DeferredItem<Item> ATM_SUP;
+	public static final DeferredItem<Item> AT_MINF;
 	static {
 		VD_1 = REGISTRY.register("vd_1", VD1Item::new);
 		VD_050 = REGISTRY.register("vd_050", VD050Item::new);
 		VD_5 = REGISTRY.register("vd_5", VD5Item::new);
 		ASIC_V_1 = block(MinerpModBlocks.ASIC_V_1, new Item.Properties().stacksTo(1));
 		CELULAR = REGISTRY.register("celular", CelularItem::new);
+		ATM_SUP = block(MinerpModBlocks.ATM_SUP);
+		AT_MINF = block(MinerpModBlocks.AT_MINF);
 	}
 
 	// Start of user code block custom items
