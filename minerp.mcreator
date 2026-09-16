@@ -178,7 +178,16 @@
             "children": [
               {
                 "name": "Sistema Celular",
-                "children": []
+                "children": [
+                  {
+                    "name": "GUI",
+                    "children": []
+                  },
+                  {
+                    "name": "Procedures",
+                    "children": []
+                  }
+                ]
               }
             ]
           }
