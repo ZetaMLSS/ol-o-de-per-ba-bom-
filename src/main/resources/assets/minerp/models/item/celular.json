@@ -1,6 +1,7 @@
 {
-  "parent": "item/generated",
+  "parent": "minerp:custom/phone",
   "textures": {
-    "layer0": "minecraft:item/empty_slot_smithing_template_netherite_upgrade"
+    "0": "minerp:block/phoneoff",
+    "particle": "minecraft:item/empty_slot_smithing_template_netherite_upgrade"
   }
 }
