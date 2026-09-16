@@ -1,0 +1,9 @@
+{
+  "parent": "minerp:custom/asic_v1",
+  "textures": {
+    "all": "minerp:block/mineradorav1",
+    "particle": "minerp:block/mineradorav1",
+    "0": "minerp:block/mineradorav1"
+  },
+  "render_type": "solid"
+}

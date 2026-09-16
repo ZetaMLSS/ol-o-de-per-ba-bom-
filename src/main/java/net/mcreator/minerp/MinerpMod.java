@@ -20,6 +20,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.minerp.network.MinerpModVariables;
 import net.mcreator.minerp.init.MinerpModItems;
+import net.mcreator.minerp.init.MinerpModBlocks;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.Queue;
@@ -41,6 +42,7 @@ public class MinerpMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
+		MinerpModBlocks.REGISTRY.register(modEventBus);
 		MinerpModItems.REGISTRY.register(modEventBus);
 		MinerpModVariables.ATTACHMENT_TYPES.register(modEventBus);
 		// Start of user code block mod init

@@ -41,6 +41,23 @@
         ]
       },
       "path": "~/Itens/Dinheiro"
+    },
+    {
+      "name": "AsicV1",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "asic_v_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minerp/models/item/asic_v_1.json",
+          "src/main/resources/assets/minerp/models/block/asic_v_1.json",
+          "src/main/java/net/mcreator/minerp/block/AsicV1Block.java",
+          "src/main/resources/data/minerp/loot_table/blocks/asic_v_1.json",
+          "src/main/resources/assets/minerp/blockstates/asic_v_1.json"
+        ]
+      },
+      "path": "~/Bloco/Mineradoras/Asic V1"
     }
   ],
   "variable_elements": [
@@ -78,18 +95,21 @@
       "block.teste.safadona": "SAFADONA bloco",
       "item.minerp.vd_1": "VD$ 1",
       "item.minerp.vd_050": "VD$ 0.50",
-      "item.minerp.vd_5": "VD$ 5"
+      "item.minerp.vd_5": "VD$ 5",
+      "block.minerp.asic_v_1": "Asic V 1"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
       "block.teste.safadona": "SAFADONA bloco",
       "item.minerp.vd_1": "VD$ 1",
       "item.minerp.vd_050": "VD$ 1",
-      "item.minerp.vd_5": "VD$ 0.50"
+      "item.minerp.vd_5": "VD$ 0.50",
+      "block.minerp.asic_v_1": "Asic V 1"
     }
   },
   "metadata": {
     "files": [
+      "src/main/java/net/mcreator/minerp/init/MinerpModBlocks.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModItems.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/resources/pack.mcmeta",
