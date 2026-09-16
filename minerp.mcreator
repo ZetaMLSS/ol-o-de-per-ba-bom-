@@ -69,6 +69,20 @@
         "files": []
       },
       "path": "~/Sistemas/Abas Criativo"
+    },
+    {
+      "name": "Celular",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "celular",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/item/CelularItem.java",
+          "src/main/resources/assets/minerp/models/item/celular.json"
+        ]
+      },
+      "path": "~/Itens/Celular"
     }
   ],
   "variable_elements": [
@@ -108,7 +122,8 @@
       "item.minerp.vd_050": "VD$ 0.50",
       "item.minerp.vd_5": "VD$ 5",
       "block.minerp.asic_v_1": "Asic V 1",
-      "item_group.minerp.minerp_tec": "MINERP Tec"
+      "item_group.minerp.minerp_tec": "MINERP Tec",
+      "item.minerp.celular": "Phone"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -117,7 +132,8 @@
       "item.minerp.vd_050": "VD$ 1",
       "item.minerp.vd_5": "VD$ 0.50",
       "block.minerp.asic_v_1": "Asic V 1",
-      "item_group.minerp.minerp_tec": "MINERP Tec"
+      "item_group.minerp.minerp_tec": "MINERP Tec",
+      "item.minerp.celular": "Phone"
     }
   },
   "metadata": {
@@ -156,6 +172,15 @@
           {
             "name": "Dinheiro",
             "children": []
+          },
+          {
+            "name": "Celular",
+            "children": [
+              {
+                "name": "Sistema Celular",
+                "children": []
+              }
+            ]
           }
         ]
       },
