@@ -14,6 +14,7 @@ import net.minecraft.world.item.BlockItem;
 import net.mcreator.minerp.item.VD5Item;
 import net.mcreator.minerp.item.VD1Item;
 import net.mcreator.minerp.item.VD050Item;
+import net.mcreator.minerp.item.CelularItem;
 import net.mcreator.minerp.MinerpMod;
 
 public class MinerpModItems {
@@ -22,11 +23,13 @@ public class MinerpModItems {
 	public static final DeferredItem<Item> VD_050;
 	public static final DeferredItem<Item> VD_5;
 	public static final DeferredItem<Item> ASIC_V_1;
+	public static final DeferredItem<Item> CELULAR;
 	static {
 		VD_1 = REGISTRY.register("vd_1", VD1Item::new);
 		VD_050 = REGISTRY.register("vd_050", VD050Item::new);
 		VD_5 = REGISTRY.register("vd_5", VD5Item::new);
 		ASIC_V_1 = block(MinerpModBlocks.ASIC_V_1, new Item.Properties().stacksTo(1));
+		CELULAR = REGISTRY.register("celular", CelularItem::new);
 	}
 
 	// Start of user code block custom items
