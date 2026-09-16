@@ -83,6 +83,55 @@
         ]
       },
       "path": "~/Itens/Celular"
+    },
+    {
+      "name": "TelaCelularInicial",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_celular_inicial",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularInicialScreen.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularInicialMenu.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI"
+    },
+    {
+      "name": "CelularRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "celular_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/CelularRightclickedProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/Procedures"
     }
   ],
   "variable_elements": [
@@ -123,7 +172,14 @@
       "item.minerp.vd_5": "VD$ 5",
       "block.minerp.asic_v_1": "Asic V 1",
       "item_group.minerp.minerp_tec": "MINERP Tec",
-      "item.minerp.celular": "Phone"
+      "item.minerp.celular": "Phone",
+      "gui.minerp.tela_celular_inicial.button_7": "7",
+      "gui.minerp.tela_celular_inicial.button_6": "6",
+      "gui.minerp.tela_celular_inicial.button_5": "5",
+      "gui.minerp.tela_celular_inicial.button_4": "4",
+      "gui.minerp.tela_celular_inicial.button_3": "3",
+      "gui.minerp.tela_celular_inicial.button_2": "2",
+      "gui.minerp.tela_celular_inicial.button_1": "1"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -133,20 +189,30 @@
       "item.minerp.vd_5": "VD$ 0.50",
       "block.minerp.asic_v_1": "Asic V 1",
       "item_group.minerp.minerp_tec": "MINERP Tec",
-      "item.minerp.celular": "Phone"
+      "item.minerp.celular": "Phone",
+      "gui.minerp.tela_celular_inicial.button_7": "7",
+      "gui.minerp.tela_celular_inicial.button_6": "6",
+      "gui.minerp.tela_celular_inicial.button_5": "5",
+      "gui.minerp.tela_celular_inicial.button_4": "4",
+      "gui.minerp.tela_celular_inicial.button_3": "3",
+      "gui.minerp.tela_celular_inicial.button_2": "2",
+      "gui.minerp.tela_celular_inicial.button_1": "1"
     }
   },
   "metadata": {
     "files": [
+      "src/main/java/net/mcreator/minerp/init/MinerpModScreens.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
+      "src/main/java/net/mcreator/minerp/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlocks.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModItems.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/pack.mcmeta",
       "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
-      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
+      "src/main/resources/minerp.mixins.json",
       "src/main/java/net/mcreator/minerp/MinerpMod.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/resources/minerp.mixins.json"
+      "src/main/java/net/mcreator/minerp/client/ClientHelper.java"
     ]
   },
   "foldersRoot": {

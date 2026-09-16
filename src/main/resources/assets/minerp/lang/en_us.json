@@ -6,5 +6,12 @@
   "item.minerp.vd_5": "VD$ 5",
   "block.minerp.asic_v_1": "Asic V 1",
   "item_group.minerp.minerp_tec": "MINERP Tec",
-  "item.minerp.celular": "Phone"
+  "item.minerp.celular": "Phone",
+  "gui.minerp.tela_celular_inicial.button_7": "7",
+  "gui.minerp.tela_celular_inicial.button_6": "6",
+  "gui.minerp.tela_celular_inicial.button_5": "5",
+  "gui.minerp.tela_celular_inicial.button_4": "4",
+  "gui.minerp.tela_celular_inicial.button_3": "3",
+  "gui.minerp.tela_celular_inicial.button_2": "2",
+  "gui.minerp.tela_celular_inicial.button_1": "1"
 }

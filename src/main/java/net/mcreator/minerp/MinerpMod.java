@@ -20,6 +20,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.minerp.network.MinerpModVariables;
 import net.mcreator.minerp.init.MinerpModTabs;
+import net.mcreator.minerp.init.MinerpModMenus;
 import net.mcreator.minerp.init.MinerpModItems;
 import net.mcreator.minerp.init.MinerpModBlocks;
 
@@ -47,6 +48,7 @@ public class MinerpMod {
 		MinerpModItems.REGISTRY.register(modEventBus);
 		MinerpModTabs.REGISTRY.register(modEventBus);
 		MinerpModVariables.ATTACHMENT_TYPES.register(modEventBus);
+		MinerpModMenus.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
 		// End of user code block mod init
 	}
