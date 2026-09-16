@@ -1,52 +1,46 @@
 {
   "mod_elements": [
     {
-      "name": "Bagaco",
+      "name": "VD1",
       "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "bagaco",
+      "registry_name": "vd_1",
       "metadata": {
         "files": [
-          "src/main/resources/assets/minerp/models/item/bagaco.json",
-          "src/main/java/net/mcreator/minerp/item/BagacoItem.java"
+          "src/main/resources/assets/minerp/models/item/vd_1.json",
+          "src/main/java/net/mcreator/minerp/item/VD1Item.java"
         ]
       },
-      "path": "~/Bloco"
+      "path": "~/Itens/Dinheiro"
     },
     {
-      "name": "SAFADONA",
-      "type": "block",
+      "name": "VD050",
+      "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "safadona",
+      "registry_name": "vd_050",
       "metadata": {
         "files": [
-          "src/main/resources/assets/minerp/models/block/safadona.json",
-          "src/main/resources/assets/minerp/blockstates/safadona.json",
-          "src/main/resources/assets/minerp/models/item/safadona.json",
-          "src/main/resources/data/minerp/loot_table/blocks/safadona.json",
-          "src/main/java/net/mcreator/minerp/block/SAFADONABlock.java"
+          "src/main/java/net/mcreator/minerp/item/VD050Item.java",
+          "src/main/resources/assets/minerp/models/item/vd_050.json"
         ]
       },
-      "path": "~/Bloco"
+      "path": "~/Itens/Dinheiro"
     },
     {
-      "name": "Pandomica",
-      "type": "block",
+      "name": "VD5",
+      "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pandomica",
+      "registry_name": "vd_5",
       "metadata": {
         "files": [
-          "src/main/resources/data/minerp/loot_table/blocks/pandomica.json",
-          "src/main/resources/assets/minerp/models/block/pandomica.json",
-          "src/main/java/net/mcreator/minerp/block/PandomicaBlock.java",
-          "src/main/resources/assets/minerp/blockstates/pandomica.json",
-          "src/main/resources/assets/minerp/models/item/pandomica.json"
+          "src/main/resources/assets/minerp/models/item/vd_5.json",
+          "src/main/java/net/mcreator/minerp/item/VD5Item.java"
         ]
       },
-      "path": "~/Bloco"
+      "path": "~/Itens/Dinheiro"
     }
   ],
   "variable_elements": [
@@ -82,24 +76,24 @@
     "en_us": {
       "item.teste.bagaco": "Bagaco",
       "block.teste.safadona": "SAFADONA bloco",
-      "item.minerp.bagaco": "Bagaco",
-      "block.minerp.safadona": "SAFADONA bloco",
-      "block.minerp.pandomica": "Pandomica"
+      "item.minerp.vd_1": "VD$ 1",
+      "item.minerp.vd_050": "VD$ 0.50",
+      "item.minerp.vd_5": "VD$ 5"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
       "block.teste.safadona": "SAFADONA bloco",
-      "item.minerp.bagaco": "Bagaco",
-      "block.minerp.safadona": "SAFADONA bloco",
-      "block.minerp.pandomica": "Pandomica"
+      "item.minerp.vd_1": "VD$ 1",
+      "item.minerp.vd_050": "VD$ 1",
+      "item.minerp.vd_5": "VD$ 0.50"
     }
   },
   "metadata": {
     "files": [
-      "src/main/java/net/mcreator/minerp/init/MinerpModBlocks.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModItems.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
       "src/main/resources/minerp.mixins.json",
       "src/main/java/net/mcreator/minerp/MinerpMod.java",
       "src/main/java/net/mcreator/minerp/client/ClientHelper.java"
@@ -110,11 +104,26 @@
     "children": [
       {
         "name": "Bloco",
-        "children": []
+        "children": [
+          {
+            "name": "Mineradoras",
+            "children": [
+              {
+                "name": "Asic V1",
+                "children": []
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "Itens",
-        "children": []
+        "children": [
+          {
+            "name": "Dinheiro",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Sistemas",
