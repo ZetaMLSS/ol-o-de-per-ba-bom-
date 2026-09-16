@@ -3,8 +3,8 @@
   "textures": {
     "all": "minecraft:block/blue_concrete",
     "particle": "minecraft:block/blue_concrete",
-    "0": "minerp:block/atm_superior",
-    "1": "minerp:block/atm_detalhes"
+    "0": "minerp:block/atm_detalhes",
+    "1": "minerp:block/atm_superior"
   },
   "render_type": "solid"
 }
