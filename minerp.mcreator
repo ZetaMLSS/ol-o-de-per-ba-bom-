@@ -93,8 +93,8 @@
       "registry_name": "tela_celular_inicial",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularInicialScreen.java",
-          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularInicialMenu.java"
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularInicialMenu.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularInicialScreen.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI"
@@ -201,6 +201,25 @@
         ]
       },
       "path": "~/Bloco/Computer"
+    },
+    {
+      "name": "TelaCelularInicialQuandoEstaGUIEAberta",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_celular_inicial_quando_esta_guie_aberta",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/TelaCelularInicialQuandoEstaGUIEAbertaProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI"
     }
   ],
   "variable_elements": [
