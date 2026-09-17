@@ -194,10 +194,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/minerp/models/item/monitor.json",
-          "src/main/resources/assets/minerp/blockstates/monitor.json",
-          "src/main/java/net/mcreator/minerp/block/MonitorBlock.java",
           "src/main/resources/data/minerp/loot_table/blocks/monitor.json",
-          "src/main/resources/assets/minerp/models/block/monitor.json"
+          "src/main/resources/assets/minerp/models/block/monitor.json",
+          "src/main/java/net/mcreator/minerp/block/MonitorBlock.java",
+          "src/main/resources/assets/minerp/blockstates/monitor.json"
         ]
       },
       "path": "~/Bloco/Computer"
