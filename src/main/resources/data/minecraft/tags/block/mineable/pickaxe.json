@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minerp:at_minf",
+    "minerp:atm_sup",
+    "minerp:computador",
+    "minerp:monitor"
+  ]
+}

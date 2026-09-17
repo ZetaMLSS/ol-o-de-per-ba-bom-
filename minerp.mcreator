@@ -50,11 +50,11 @@
       "registry_name": "asic_v_1",
       "metadata": {
         "files": [
-          "src/main/resources/assets/minerp/models/item/asic_v_1.json",
+          "src/main/resources/assets/minerp/blockstates/asic_v_1.json",
+          "src/main/resources/data/minerp/loot_table/blocks/asic_v_1.json",
           "src/main/resources/assets/minerp/models/block/asic_v_1.json",
           "src/main/java/net/mcreator/minerp/block/AsicV1Block.java",
-          "src/main/resources/data/minerp/loot_table/blocks/asic_v_1.json",
-          "src/main/resources/assets/minerp/blockstates/asic_v_1.json"
+          "src/main/resources/assets/minerp/models/item/asic_v_1.json"
         ]
       },
       "path": "~/Bloco/Mineradoras/Asic V1"
@@ -183,6 +183,23 @@
         ]
       },
       "path": "~/Bloco/Computer"
+    },
+    {
+      "name": "Monitor",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monitor",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minerp/loot_table/blocks/monitor.json",
+          "src/main/resources/assets/minerp/models/item/monitor.json",
+          "src/main/resources/assets/minerp/blockstates/monitor.json",
+          "src/main/resources/assets/minerp/models/block/monitor.json",
+          "src/main/java/net/mcreator/minerp/block/MonitorBlock.java"
+        ]
+      },
+      "path": "~/Bloco/Computer"
     }
   ],
   "variable_elements": [
@@ -212,7 +229,14 @@
     }
   ],
   "sound_elements": [],
-  "tag_elements": {},
+  "tag_elements": {
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~ATMinf@CUSTOM:ATMinf",
+      "~ATMSup@CUSTOM:ATMSup",
+      "~Computador@CUSTOM:Computador",
+      "~Monitor@CUSTOM:Monitor"
+    ]
+  },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
@@ -233,7 +257,8 @@
       "gui.minerp.tela_celular_inicial.button_1": "1",
       "block.minerp.atm_sup": "ATM-Sup",
       "block.minerp.at_minf": "ATM-Inf",
-      "block.minerp.computador": "Computer"
+      "block.minerp.computador": "Computer",
+      "block.minerp.monitor": "Monitor"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -253,7 +278,8 @@
       "gui.minerp.tela_celular_inicial.button_1": "1",
       "block.minerp.atm_sup": "ATM-Sup",
       "block.minerp.at_minf": "ATM-Sup",
-      "block.minerp.computador": "Computer"
+      "block.minerp.computador": "Computer",
+      "block.minerp.monitor": "Monitor"
     }
   },
   "metadata": {

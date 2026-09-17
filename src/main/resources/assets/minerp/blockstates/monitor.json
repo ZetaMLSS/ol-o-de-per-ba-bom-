@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "minerp:block/monitor"
+    },
+    "facing=east": {
+      "model": "minerp:block/monitor",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minerp:block/monitor",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minerp:block/monitor",
+      "y": 270
+    }
+  }
+}

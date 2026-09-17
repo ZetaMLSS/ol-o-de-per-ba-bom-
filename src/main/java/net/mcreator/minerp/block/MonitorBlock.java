@@ -20,22 +20,22 @@ import net.minecraft.core.BlockPos;
 
 import com.google.common.collect.ImmutableMap;
 
-public class ATMSupBlock extends Block {
+public class MonitorBlock extends Block {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 	private final ImmutableMap<BlockState, VoxelShape> shapes = this.makeShapes();
 
-	public ATMSupBlock() {
-		super(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLUE).sound(SoundType.COPPER_GRATE).strength(3f, 20f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+	public MonitorBlock() {
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).sound(SoundType.METAL).strength(1.5f, 10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
 	private ImmutableMap<BlockState, VoxelShape> makeShapes() {
 		return this.getShapeForEachState(state -> {
 			return switch (state.getValue(FACING)) {
-				case NORTH -> box(-3.75, 0, 0, 20.25, 18, 16);
-				case EAST -> box(0, 0, -3.75, 16, 18, 20.25);
-				case WEST -> box(0, 0, -4.25, 16, 18, 19.75);
-				default -> box(-4.25, 0, 0, 19.75, 18, 16);
+				case NORTH -> box(0, 0, 5, 16, 13.25, 9);
+				case EAST -> box(7, 0, 0, 11, 13.25, 16);
+				case WEST -> box(5, 0, 0, 9, 13.25, 16);
+				default -> box(0, 0, 7, 16, 13.25, 11);
 			};
 		});
 	}

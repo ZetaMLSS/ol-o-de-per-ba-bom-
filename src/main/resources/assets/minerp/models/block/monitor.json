@@ -1,0 +1,10 @@
+{
+  "parent": "minerp:custom/monitor_triplo",
+  "textures": {
+    "all": "minecraft:block/iron_block",
+    "particle": "minecraft:block/iron_block",
+    "0": "minerp:block/monitor",
+    "1": "minerp:block/detalhes"
+  },
+  "render_type": "solid"
+}

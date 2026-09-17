@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "name": "default",
+      "map": {
+        "0": "monitor",
+        "1": "detalhes"
+      }
+    }
+  }
+}

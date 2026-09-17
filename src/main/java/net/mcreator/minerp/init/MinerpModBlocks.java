@@ -8,6 +8,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.minerp.block.MonitorBlock;
 import net.mcreator.minerp.block.ComputadorBlock;
 import net.mcreator.minerp.block.AsicV1Block;
 import net.mcreator.minerp.block.ATMinfBlock;
@@ -20,11 +21,13 @@ public class MinerpModBlocks {
 	public static final DeferredBlock<Block> ATM_SUP;
 	public static final DeferredBlock<Block> AT_MINF;
 	public static final DeferredBlock<Block> COMPUTADOR;
+	public static final DeferredBlock<Block> MONITOR;
 	static {
 		ASIC_V_1 = REGISTRY.register("asic_v_1", AsicV1Block::new);
 		ATM_SUP = REGISTRY.register("atm_sup", ATMSupBlock::new);
 		AT_MINF = REGISTRY.register("at_minf", ATMinfBlock::new);
 		COMPUTADOR = REGISTRY.register("computador", ComputadorBlock::new);
+		MONITOR = REGISTRY.register("monitor", MonitorBlock::new);
 	}
 	// Start of user code block custom blocks
 	// End of user code block custom blocks

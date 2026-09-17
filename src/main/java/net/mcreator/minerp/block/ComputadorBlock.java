@@ -25,17 +25,17 @@ public class ComputadorBlock extends Block {
 	private final ImmutableMap<BlockState, VoxelShape> shapes = this.makeShapes();
 
 	public ComputadorBlock() {
-		super(BlockBehaviour.Properties.of().mapColor(MapColor.CLAY).sound(SoundType.BONE_BLOCK).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.CLAY).sound(SoundType.BONE_BLOCK).strength(2f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
 	private ImmutableMap<BlockState, VoxelShape> makeShapes() {
 		return this.getShapeForEachState(state -> {
 			return switch (state.getValue(FACING)) {
-				case NORTH -> box(4.5, 0, 1.5, 16, 11.5, 7.5);
-				case EAST -> box(8.5, 0, 4.5, 14.5, 11.5, 16);
-				case WEST -> box(1.5, 0, 0, 7.5, 11.5, 11.5);
-				default -> box(0, 0, 8.5, 11.5, 11.5, 14.5);
+				case NORTH -> box(4.5, 0, 1.5, 11.5, 11.25, 14.5);
+				case EAST -> box(1.5, 0, 4.5, 14.5, 11.25, 11.5);
+				case WEST -> box(1.5, 0, 4.5, 14.5, 11.25, 11.5);
+				default -> box(4.5, 0, 1.5, 11.5, 11.25, 14.5);
 			};
 		});
 	}
