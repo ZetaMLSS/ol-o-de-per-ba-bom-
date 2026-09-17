@@ -231,10 +231,10 @@
   "sound_elements": [],
   "tag_elements": {
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~Monitor@CUSTOM:Monitor",
       "~ATMinf@CUSTOM:ATMinf",
       "~ATMSup@CUSTOM:ATMSup",
-      "~Computador@CUSTOM:Computador",
-      "~Monitor@CUSTOM:Monitor"
+      "~Computador@CUSTOM:Computador"
     ]
   },
   "tab_element_order": {},
