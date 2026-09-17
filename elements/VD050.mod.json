@@ -21,7 +21,7 @@
     "damageCount": 0,
     "recipeRemainder": "",
     "destroyAnyBlock": false,
-    "immuneToFire": false,
+    "immuneToFire": true,
     "isPiglinCurrency": false,
     "repairItems": [],
     "stayInGridWhenCrafting": false,

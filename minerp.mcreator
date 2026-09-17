@@ -8,8 +8,8 @@
       "registry_name": "vd_1",
       "metadata": {
         "files": [
-          "src/main/resources/assets/minerp/models/item/vd_1.json",
-          "src/main/java/net/mcreator/minerp/item/VD1Item.java"
+          "src/main/java/net/mcreator/minerp/item/VD1Item.java",
+          "src/main/resources/assets/minerp/models/item/vd_1.json"
         ]
       },
       "path": "~/Itens/Dinheiro"
