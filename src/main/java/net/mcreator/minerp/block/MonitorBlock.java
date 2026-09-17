@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.DirectionalBlock;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -21,7 +21,7 @@ import net.minecraft.core.BlockPos;
 import com.google.common.collect.ImmutableMap;
 
 public class MonitorBlock extends Block {
-	public static final DirectionProperty FACING = DirectionalBlock.FACING;
+	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 	private final ImmutableMap<BlockState, VoxelShape> shapes = this.makeShapes();
 
 	public MonitorBlock() {
@@ -35,8 +35,6 @@ public class MonitorBlock extends Block {
 				case NORTH -> box(0, 0, 5, 16, 13.25, 9);
 				case EAST -> box(7, 0, 0, 11, 13.25, 16);
 				case WEST -> box(5, 0, 0, 9, 13.25, 16);
-				case UP -> box(0, 7, 0, 16, 11, 13.25);
-				case DOWN -> box(0, 5, 2.75, 16, 9, 16);
 				default -> box(0, 0, 7, 16, 13.25, 11);
 			};
 		});
@@ -73,7 +71,9 @@ public class MonitorBlock extends Block {
 		BlockState state = super.getStateForPlacement(context);
 		if (state == null)
 			return null;
-		return state.setValue(FACING, context.getNearestLookingDirection().getOpposite());
+		if (context.getClickedFace().getAxis() == Direction.Axis.Y)
+			return state.setValue(FACING, Direction.NORTH);
+		return state.setValue(FACING, context.getClickedFace());
 	}
 
 	public BlockState rotate(BlockState state, Rotation rot) {
