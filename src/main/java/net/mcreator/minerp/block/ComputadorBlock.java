@@ -18,12 +18,31 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import com.google.common.collect.ImmutableMap;
+
 public class ComputadorBlock extends Block {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+	private final ImmutableMap<BlockState, VoxelShape> shapes = this.makeShapes();
 
 	public ComputadorBlock() {
 		super(BlockBehaviour.Properties.of().mapColor(MapColor.CLAY).sound(SoundType.BONE_BLOCK).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
+	}
+
+	private ImmutableMap<BlockState, VoxelShape> makeShapes() {
+		return this.getShapeForEachState(state -> {
+			return switch (state.getValue(FACING)) {
+				case NORTH -> box(4.5, 0, 1.5, 16, 11.5, 7.5);
+				case EAST -> box(8.5, 0, 4.5, 14.5, 11.5, 16);
+				case WEST -> box(1.5, 0, 0, 7.5, 11.5, 11.5);
+				default -> box(0, 0, 8.5, 11.5, 11.5, 14.5);
+			};
+		});
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return shapes.get(state);
 	}
 
 	@Override
