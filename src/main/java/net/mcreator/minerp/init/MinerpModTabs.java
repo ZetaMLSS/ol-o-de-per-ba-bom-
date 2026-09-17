@@ -17,8 +17,8 @@ public class MinerpModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MinerpMod.MODID);
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MINERP_MONEY = REGISTRY.register("minerp_money",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.minerp.minerp_money")).icon(() -> new ItemStack(MinerpModItems.VD_1.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(MinerpModItems.VD_1.get());
 				tabData.accept(MinerpModItems.VD_050.get());
+				tabData.accept(MinerpModItems.VD_1.get());
 				tabData.accept(MinerpModItems.VD_5.get());
 				tabData.accept(MinerpModItems.VD_10.get());
 				tabData.accept(MinerpModItems.VD_20.get());

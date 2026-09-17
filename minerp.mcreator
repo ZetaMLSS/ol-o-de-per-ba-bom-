@@ -338,7 +338,18 @@
       "~Computador@CUSTOM:Computador"
     ]
   },
-  "tab_element_order": {},
+  "tab_element_order": {
+    "CUSTOM:MINERPMoney": [
+      "VD050",
+      "VD1",
+      "VD5",
+      "VD10",
+      "VD20",
+      "VD50",
+      "VD100",
+      "VD200"
+    ]
+  },
   "language_map": {
     "en_us": {
       "item.teste.bagaco": "Bagaco",
