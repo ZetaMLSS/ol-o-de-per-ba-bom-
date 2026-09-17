@@ -1,0 +1,9 @@
+{
+  "parent": "minerp:custom/computador",
+  "textures": {
+    "all": "minecraft:block/iron_block",
+    "particle": "minecraft:block/iron_block",
+    "0": "minerp:block/pc"
+  },
+  "render_type": "solid"
+}

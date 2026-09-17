@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "minerp:block/computador"
+    },
+    "facing=east": {
+      "model": "minerp:block/computador",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minerp:block/computador",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minerp:block/computador",
+      "y": 270
+    }
+  }
+}

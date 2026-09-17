@@ -19,5 +19,6 @@ public class MinerpModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.minerp.minerp_tec")).icon(() -> new ItemStack(MinerpModBlocks.ASIC_V_1.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(MinerpModBlocks.ASIC_V_1.get().asItem());
 				tabData.accept(MinerpModItems.CELULAR.get());
+				tabData.accept(MinerpModBlocks.COMPUTADOR.get().asItem());
 			}).build());
 }

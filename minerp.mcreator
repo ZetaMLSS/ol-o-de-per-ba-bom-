@@ -166,6 +166,23 @@
         ]
       },
       "path": "~/Bloco/ATM"
+    },
+    {
+      "name": "Computador",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "computador",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/block/ComputadorBlock.java",
+          "src/main/resources/data/minerp/loot_table/blocks/computador.json",
+          "src/main/resources/assets/minerp/models/block/computador.json",
+          "src/main/resources/assets/minerp/models/item/computador.json",
+          "src/main/resources/assets/minerp/blockstates/computador.json"
+        ]
+      },
+      "path": "~/Bloco/Computer"
     }
   ],
   "variable_elements": [
@@ -215,7 +232,8 @@
       "gui.minerp.tela_celular_inicial.button_2": "2",
       "gui.minerp.tela_celular_inicial.button_1": "1",
       "block.minerp.atm_sup": "ATM-Sup",
-      "block.minerp.at_minf": "ATM-Inf"
+      "block.minerp.at_minf": "ATM-Inf",
+      "block.minerp.computador": "Computer"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -234,7 +252,8 @@
       "gui.minerp.tela_celular_inicial.button_2": "2",
       "gui.minerp.tela_celular_inicial.button_1": "1",
       "block.minerp.atm_sup": "ATM-Sup",
-      "block.minerp.at_minf": "ATM-Sup"
+      "block.minerp.at_minf": "ATM-Sup",
+      "block.minerp.computador": "Computer"
     }
   },
   "metadata": {
@@ -270,6 +289,10 @@
           },
           {
             "name": "ATM",
+            "children": []
+          },
+          {
+            "name": "Computer",
             "children": []
           }
         ]

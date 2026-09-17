@@ -2,14 +2,14 @@
   "_fv": 89,
   "_type": "block",
   "definition": {
-    "texture": "minecraft:blue_concrete",
+    "texture": "minecraft:iron_block",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "parte_superior_atm:default",
+    "customModelName": "computador:default",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -28,17 +28,17 @@
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": -3.75,
+        "mx": 0.0,
         "my": 0.0,
         "mz": 0.0,
-        "Mx": 20.25,
-        "My": 18.0,
+        "Mx": 16.0,
+        "My": 16.0,
         "Mz": 16.0,
         "subtract": false
       }
     ],
     "customProperties": [],
-    "name": "ATM-Sup",
+    "name": "Computer",
     "specialInformation": {
       "fixedValue": []
     },
@@ -50,7 +50,9 @@
     "maxStackSize": 64,
     "rarity": "COMMON",
     "immuneToFire": false,
-    "creativeTabs": [],
+    "creativeTabs": [
+      "CUSTOM:MINERPTec"
+    ],
     "destroyTool": "Not specified",
     "customDrop": "",
     "dropAmount": 1,
@@ -61,8 +63,8 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
-    "hasCustomOpacity": true,
-    "lightOpacity": 0,
+    "hasCustomOpacity": false,
+    "lightOpacity": 15,
     "tickRate": 0,
     "tickRandomly": false,
     "isReplaceable": false,
@@ -70,7 +72,7 @@
     "emittedRedstonePower": {
       "fixedValue": 15.0
     },
-    "colorOnMap": "DEFAULT",
+    "colorOnMap": "CLAY",
     "noteBlockInstrument": "harp",
     "creativePickItem": "",
     "offsetType": "NONE",
@@ -85,7 +87,7 @@
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
-    "soundOnStep": "COPPER_GRATE",
+    "soundOnStep": "BONE",
     "isCustomSoundType": false,
     "breakSound": "",
     "fallSound": "",

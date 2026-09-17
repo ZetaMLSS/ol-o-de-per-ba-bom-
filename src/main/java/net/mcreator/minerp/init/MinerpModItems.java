@@ -26,6 +26,7 @@ public class MinerpModItems {
 	public static final DeferredItem<Item> CELULAR;
 	public static final DeferredItem<Item> ATM_SUP;
 	public static final DeferredItem<Item> AT_MINF;
+	public static final DeferredItem<Item> COMPUTADOR;
 	static {
 		VD_1 = REGISTRY.register("vd_1", VD1Item::new);
 		VD_050 = REGISTRY.register("vd_050", VD050Item::new);
@@ -34,6 +35,7 @@ public class MinerpModItems {
 		CELULAR = REGISTRY.register("celular", CelularItem::new);
 		ATM_SUP = block(MinerpModBlocks.ATM_SUP);
 		AT_MINF = block(MinerpModBlocks.AT_MINF);
+		COMPUTADOR = block(MinerpModBlocks.COMPUTADOR);
 	}
 
 	// Start of user code block custom items

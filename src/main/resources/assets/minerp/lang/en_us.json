@@ -15,5 +15,6 @@
   "gui.minerp.tela_celular_inicial.button_2": "2",
   "gui.minerp.tela_celular_inicial.button_1": "1",
   "block.minerp.atm_sup": "ATM-Sup",
-  "block.minerp.at_minf": "ATM-Inf"
+  "block.minerp.at_minf": "ATM-Inf",
+  "block.minerp.computador": "Computer"
 }

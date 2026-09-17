@@ -3,8 +3,7 @@
     "default": {
       "name": "default",
       "map": {
-        "0": "atm_superior",
-        "1": "atm_detalhes"
+        "0": "pc"
       }
     }
   }
