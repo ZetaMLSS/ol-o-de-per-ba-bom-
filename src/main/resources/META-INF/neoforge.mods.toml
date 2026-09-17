@@ -34,7 +34,31 @@ description="O Mine-RP Mod \u00E9 um mod focado inteiramente na constru\u00E7\u0
     ordering="AFTER"
     side="BOTH"
 
+[[dependencies.minerp]]
+    modId="ldlib2"
+    type="required"
+    versionRange="[2.2.29,)"
+    ordering="NONE"
+    side="BOTH"
 
+[[dependencies.minerp]]
+    modId="curios_api"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.minerp]]
+    modId="spis_ui_api"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.minerp]]
+    modId="jhotreload"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 
 # Start of user code block dependencies configuration

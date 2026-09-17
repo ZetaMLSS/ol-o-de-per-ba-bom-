@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 96,
-    "height": 166,
+    "width": 21,
+    "height": 0,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -98,6 +98,18 @@
           "height": 20,
           "x": 199,
           "y": 145,
+          "locked": false
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_0",
+          "image": "gemini_generated_image_luqojiluqojiluqo-removebg-preview.png",
+          "width": 120,
+          "height": 229,
+          "x": 154,
+          "y": 0,
           "locked": false
         }
       }

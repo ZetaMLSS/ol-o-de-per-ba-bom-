@@ -1,0 +1,130 @@
+repositories {
+maven {
+  name = "Illusive Soulworks maven"
+  url = "https://maven.theillusivec4.top/"
+  }
+}
+
+dependencies {
+  runtimeOnly "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1"
+  compileOnly "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1:api"
+}
+
+
+repositories {
+  maven { url 'https://api.modrinth.com/maven' }
+}
+dependencies {
+  implementation 'maven.modrinth:oi1rGz12:CpRysUz6'
+}
+
+
+def jhotreloadLibrary =
+    files(rootProject.file(".jhotreload/JHotReload.jar"))
+
+def jhotreloadRuntimeDirectory =
+    rootProject.file("run/JHotReload")
+
+def jhotreloadPluginSettings =
+    rootProject.file(".jhotreload-plugin.json")
+
+def jhotreloadReleaseDirectory =
+    layout.buildDirectory.dir("generated/jhotreload-release")
+
+dependencies {
+    implementation jhotreloadLibrary
+    additionalRuntimeClasspath jhotreloadLibrary
+    jarJar jhotreloadLibrary
+}
+
+def generateJHotReloadReleaseConfig =
+    tasks.register("generateJHotReloadReleaseConfig") {
+        def sourceConfig =
+            new File(
+                jhotreloadRuntimeDirectory,
+                "@CONFIGJHotReload.json"
+            )
+
+        outputs.dir(jhotreloadReleaseDirectory)
+
+        outputs.upToDateWhen {
+            false
+        }
+
+        doLast {
+            def outputDirectory =
+                jhotreloadReleaseDirectory.get().asFile
+
+            outputDirectory.mkdirs()
+
+            def releaseConfig = [:]
+
+            if (sourceConfig.exists()) {
+                releaseConfig.putAll(
+                    new groovy.json.JsonSlurper()
+                        .parse(sourceConfig) as Map
+                )
+            }
+
+            def keepJHotReloadActive = false
+
+            if (jhotreloadPluginSettings.exists()) {
+                def pluginSettings =
+                    new groovy.json.JsonSlurper()
+                        .parse(jhotreloadPluginSettings)
+
+                keepJHotReloadActive =
+                    pluginSettings["keepActiveInExportedMods"] == true
+            }
+
+            releaseConfig["isJHotReloadActive"] =
+                keepJHotReloadActive
+
+            def outputConfig =
+                new File(
+                    outputDirectory,
+                    "@CONFIGJHotReload.json"
+                )
+
+            outputConfig.text =
+                groovy.json.JsonOutput.prettyPrint(
+                    groovy.json.JsonOutput.toJson(
+                        releaseConfig
+                    )
+                )
+        }
+    }
+
+tasks.named("jar") {
+    dependsOn generateJHotReloadReleaseConfig
+
+    from(jhotreloadRuntimeDirectory) {
+        include "**/*.json"
+        exclude "@CONFIGJHotReload.json"
+        into "META-INF/jhotreload"
+    }
+
+    from(jhotreloadReleaseDirectory) {
+        include "@CONFIGJHotReload.json"
+        into "META-INF/jhotreload"
+    }
+}
+
+
+repositories {
+  maven {
+    name = 'LDLib2'
+    url = 'https://maven.firstdark.dev/snapshots'
+  }
+  maven {
+    name = 'LDLib2Releases'
+    url = 'https://maven.firstdark.dev/releases'
+  }
+}
+
+dependencies {
+  // Runtime + compile: NeoForge moddev loads implementation mods into runClient
+  implementation 'com.lowdragmc.ldlib2:ldlib2-neoforge-1.21.1:2.2.29'
+}
+
+

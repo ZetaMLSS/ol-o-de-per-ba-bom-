@@ -34,8 +34,8 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 96;
-		this.imageHeight = 166;
+		this.imageWidth = 21;
+		this.imageHeight = 0;
 	}
 
 	@Override
@@ -57,8 +57,19 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		guiTools$alphaBlit(guiGraphics, texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		RenderSystem.disableBlend();
+		guiTools$orderedImages : {
+			if (true) {
+				int guiTools$xOffset = 0;
+				int guiTools$yOffset = 0;
+				int guiTools$visibleWidth = 120;
+				int guiTools$visibleHeight = 229;
+				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/gemini_generated_image_luqojiluqojiluqo-removebg-preview.png"));
+				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -49 + guiTools$xOffset, this.topPos + -120 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 120, 229);
+			}
+		}
 	}
 
 	@Override
@@ -78,25 +89,56 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 	public void init() {
 		super.init();
 		button_1 = Button.builder(Component.translatable("gui.minerp.tela_celular_inicial.button_1"), e -> {
-		}).bounds(this.leftPos + 13, this.topPos + 17, 30, 20).build();
+		}).bounds(this.leftPos + -24, this.topPos + -66, 30, 20).build();
 		this.addRenderableWidget(button_1);
 		button_2 = Button.builder(Component.translatable("gui.minerp.tela_celular_inicial.button_2"), e -> {
-		}).bounds(this.leftPos + 54, this.topPos + 17, 30, 20).build();
+		}).bounds(this.leftPos + 17, this.topPos + -66, 30, 20).build();
 		this.addRenderableWidget(button_2);
 		button_3 = Button.builder(Component.translatable("gui.minerp.tela_celular_inicial.button_3"), e -> {
-		}).bounds(this.leftPos + 13, this.topPos + 48, 30, 20).build();
+		}).bounds(this.leftPos + -24, this.topPos + -35, 30, 20).build();
 		this.addRenderableWidget(button_3);
 		button_4 = Button.builder(Component.translatable("gui.minerp.tela_celular_inicial.button_4"), e -> {
-		}).bounds(this.leftPos + 54, this.topPos + 48, 30, 20).build();
+		}).bounds(this.leftPos + 17, this.topPos + -35, 30, 20).build();
 		this.addRenderableWidget(button_4);
 		button_5 = Button.builder(Component.translatable("gui.minerp.tela_celular_inicial.button_5"), e -> {
-		}).bounds(this.leftPos + 13, this.topPos + 78, 30, 20).build();
+		}).bounds(this.leftPos + -24, this.topPos + -5, 30, 20).build();
 		this.addRenderableWidget(button_5);
 		button_6 = Button.builder(Component.translatable("gui.minerp.tela_celular_inicial.button_6"), e -> {
-		}).bounds(this.leftPos + 54, this.topPos + 78, 30, 20).build();
+		}).bounds(this.leftPos + 17, this.topPos + -5, 30, 20).build();
 		this.addRenderableWidget(button_6);
 		button_7 = Button.builder(Component.translatable("gui.minerp.tela_celular_inicial.button_7"), e -> {
-		}).bounds(this.leftPos + 33, this.topPos + 108, 30, 20).build();
+		}).bounds(this.leftPos + -4, this.topPos + 25, 30, 20).build();
 		this.addRenderableWidget(button_7);
+	}
+
+	private static net.minecraft.resources.ResourceLocation guiTools$dynamicTexture(String value, net.minecraft.resources.ResourceLocation fallback) {
+		if (value == null || value.isBlank())
+			return fallback;
+		try {
+			String texture = value.trim().replace('\\', '/');
+			if (texture.indexOf(':') >= 0)
+				return net.minecraft.resources.ResourceLocation.parse(texture);
+			while (texture.startsWith("/"))
+				texture = texture.substring(1);
+			if (texture.startsWith("textures/screens/"))
+				texture = texture.substring("textures/screens/".length());
+			if (!texture.endsWith(".png"))
+				texture += ".png";
+			return net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("minerp", "textures/screens/" + texture);
+		} catch (RuntimeException ignored) {
+			return fallback;
+		}
+	}
+
+	private static void guiTools$alphaBlit(net.minecraft.client.gui.GuiGraphics graphics, net.minecraft.resources.ResourceLocation texture, int x, int y, float u, float v, int width, int height, int textureWidth, int textureHeight) {
+		boolean wasBlending = org.lwjgl.opengl.GL11.glIsEnabled(org.lwjgl.opengl.GL11.GL_BLEND);
+		com.mojang.blaze3d.systems.RenderSystem.enableBlend();
+		com.mojang.blaze3d.systems.RenderSystem.defaultBlendFunc();
+		try {
+			graphics.blit(texture, x, y, u, v, width, height, textureWidth, textureHeight);
+		} finally {
+			if (!wasBlending)
+				com.mojang.blaze3d.systems.RenderSystem.disableBlend();
+		}
 	}
 }
