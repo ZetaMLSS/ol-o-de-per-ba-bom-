@@ -1,0 +1,7 @@
+{
+  "parent": "minerp:custom/dinheiro100",
+  "textures": {
+    "0": "minerp:block/100voids",
+    "particle": "minecraft:item/gold_nugget"
+  }
+}

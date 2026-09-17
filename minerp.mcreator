@@ -220,6 +220,87 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI"
+    },
+    {
+      "name": "MINERPMoney",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minerp_money",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Sistemas/Abas Criativo"
+    },
+    {
+      "name": "VD10",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vd_10",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/item/VD10Item.java",
+          "src/main/resources/assets/minerp/models/item/vd_10.json"
+        ]
+      },
+      "path": "~/Itens/Dinheiro"
+    },
+    {
+      "name": "VD20",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vd_20",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minerp/models/item/vd_20.json",
+          "src/main/java/net/mcreator/minerp/item/VD20Item.java"
+        ]
+      },
+      "path": "~/Itens/Dinheiro"
+    },
+    {
+      "name": "VD50",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vd_50",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minerp/models/item/vd_50.json",
+          "src/main/java/net/mcreator/minerp/item/VD50Item.java"
+        ]
+      },
+      "path": "~/Itens/Dinheiro"
+    },
+    {
+      "name": "VD100",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vd_100",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/item/VD100Item.java",
+          "src/main/resources/assets/minerp/models/item/vd_100.json"
+        ]
+      },
+      "path": "~/Itens/Dinheiro"
+    },
+    {
+      "name": "VD200",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vd_200",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/item/VD200Item.java",
+          "src/main/resources/assets/minerp/models/item/vd_200.json"
+        ]
+      },
+      "path": "~/Itens/Dinheiro"
     }
   ],
   "variable_elements": [
@@ -278,7 +359,13 @@
       "block.minerp.atm_sup": "ATM-Sup",
       "block.minerp.at_minf": "ATM-Inf",
       "block.minerp.computador": "Computer",
-      "block.minerp.monitor": "Monitor"
+      "block.minerp.monitor": "Monitor",
+      "item_group.minerp.minerp_money": "MINERP Dinheiro",
+      "item.minerp.vd_10": "VD$ 10",
+      "item.minerp.vd_20": "VD$ 20",
+      "item.minerp.vd_50": "VD$ 50",
+      "item.minerp.vd_100": "VD$ 100",
+      "item.minerp.vd_200": "VD$ 200"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -299,7 +386,13 @@
       "block.minerp.atm_sup": "ATM-Sup",
       "block.minerp.at_minf": "ATM-Sup",
       "block.minerp.computador": "Computer",
-      "block.minerp.monitor": "Monitor"
+      "block.minerp.monitor": "Monitor",
+      "item_group.minerp.minerp_money": "MINERP Tec",
+      "item.minerp.vd_10": "VD$ 1",
+      "item.minerp.vd_20": "VD$ 10",
+      "item.minerp.vd_50": "VD$ 20",
+      "item.minerp.vd_100": "VD$ 20",
+      "item.minerp.vd_200": "VD$ 100"
     }
   },
   "metadata": {
@@ -310,12 +403,12 @@
       "src/main/java/net/mcreator/minerp/init/MinerpModBlocks.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModItems.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/pack.mcmeta",
       "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
-      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
+      "src/main/resources/minerp.mixins.json",
       "src/main/java/net/mcreator/minerp/MinerpMod.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/resources/minerp.mixins.json"
+      "src/main/java/net/mcreator/minerp/client/ClientHelper.java"
     ]
   },
   "foldersRoot": {

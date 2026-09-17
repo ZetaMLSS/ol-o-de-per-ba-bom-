@@ -2,14 +2,14 @@
   "_fv": 89,
   "_type": "item",
   "definition": {
-    "renderType": 0,
+    "renderType": 1,
     "texture": "minecraft:gold_nugget",
-    "customModelName": "Normal",
+    "customModelName": "dinheiro100:default",
     "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],
-    "name": "VD$ 1",
+    "name": "VD$ 100",
     "rarity": "COMMON",
     "creativeTabs": [
       "CUSTOM:MINERPMoney"

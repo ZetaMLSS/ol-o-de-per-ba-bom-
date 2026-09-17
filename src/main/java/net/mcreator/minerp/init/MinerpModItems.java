@@ -11,10 +11,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
-import net.mcreator.minerp.item.VD5Item;
-import net.mcreator.minerp.item.VD1Item;
-import net.mcreator.minerp.item.VD050Item;
-import net.mcreator.minerp.item.CelularItem;
+import net.mcreator.minerp.item.*;
 import net.mcreator.minerp.MinerpMod;
 
 public class MinerpModItems {
@@ -28,6 +25,11 @@ public class MinerpModItems {
 	public static final DeferredItem<Item> AT_MINF;
 	public static final DeferredItem<Item> COMPUTADOR;
 	public static final DeferredItem<Item> MONITOR;
+	public static final DeferredItem<Item> VD_10;
+	public static final DeferredItem<Item> VD_20;
+	public static final DeferredItem<Item> VD_50;
+	public static final DeferredItem<Item> VD_100;
+	public static final DeferredItem<Item> VD_200;
 	static {
 		VD_1 = REGISTRY.register("vd_1", VD1Item::new);
 		VD_050 = REGISTRY.register("vd_050", VD050Item::new);
@@ -38,6 +40,11 @@ public class MinerpModItems {
 		AT_MINF = block(MinerpModBlocks.AT_MINF, new Item.Properties().stacksTo(1));
 		COMPUTADOR = block(MinerpModBlocks.COMPUTADOR);
 		MONITOR = block(MinerpModBlocks.MONITOR);
+		VD_10 = REGISTRY.register("vd_10", VD10Item::new);
+		VD_20 = REGISTRY.register("vd_20", VD20Item::new);
+		VD_50 = REGISTRY.register("vd_50", VD50Item::new);
+		VD_100 = REGISTRY.register("vd_100", VD100Item::new);
+		VD_200 = REGISTRY.register("vd_200", VD200Item::new);
 	}
 
 	// Start of user code block custom items

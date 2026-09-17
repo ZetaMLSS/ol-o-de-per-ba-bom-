@@ -17,5 +17,11 @@
   "block.minerp.atm_sup": "ATM-Sup",
   "block.minerp.at_minf": "ATM-Inf",
   "block.minerp.computador": "Computer",
-  "block.minerp.monitor": "Monitor"
+  "block.minerp.monitor": "Monitor",
+  "item_group.minerp.minerp_money": "MINERP Dinheiro",
+  "item.minerp.vd_10": "VD$ 10",
+  "item.minerp.vd_20": "VD$ 20",
+  "item.minerp.vd_50": "VD$ 50",
+  "item.minerp.vd_100": "VD$ 100",
+  "item.minerp.vd_200": "VD$ 200"
 }

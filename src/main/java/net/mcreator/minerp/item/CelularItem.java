@@ -13,7 +13,7 @@ import net.mcreator.minerp.procedures.CelularRightclickedProcedure;
 
 public class CelularItem extends Item {
 	public CelularItem() {
-		super(new Item.Properties());
+		super(new Item.Properties().stacksTo(1));
 	}
 
 	@Override

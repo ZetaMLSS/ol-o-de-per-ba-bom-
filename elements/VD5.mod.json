@@ -11,7 +11,9 @@
     "animations": [],
     "name": "VD$ 5",
     "rarity": "COMMON",
-    "creativeTabs": [],
+    "creativeTabs": [
+      "CUSTOM:MINERPMoney"
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,

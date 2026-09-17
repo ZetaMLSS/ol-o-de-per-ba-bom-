@@ -15,6 +15,17 @@ import net.mcreator.minerp.MinerpMod;
 
 public class MinerpModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MinerpMod.MODID);
+	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MINERP_MONEY = REGISTRY.register("minerp_money",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.minerp.minerp_money")).icon(() -> new ItemStack(MinerpModItems.VD_1.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(MinerpModItems.VD_1.get());
+				tabData.accept(MinerpModItems.VD_050.get());
+				tabData.accept(MinerpModItems.VD_5.get());
+				tabData.accept(MinerpModItems.VD_10.get());
+				tabData.accept(MinerpModItems.VD_20.get());
+				tabData.accept(MinerpModItems.VD_50.get());
+				tabData.accept(MinerpModItems.VD_100.get());
+				tabData.accept(MinerpModItems.VD_200.get());
+			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MINERP_TEC = REGISTRY.register("minerp_tec",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.minerp.minerp_tec")).icon(() -> new ItemStack(MinerpModBlocks.ASIC_V_1.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(MinerpModBlocks.ASIC_V_1.get().asItem());
@@ -23,5 +34,5 @@ public class MinerpModTabs {
 				tabData.accept(MinerpModBlocks.AT_MINF.get().asItem());
 				tabData.accept(MinerpModBlocks.COMPUTADOR.get().asItem());
 				tabData.accept(MinerpModBlocks.MONITOR.get().asItem());
-			}).build());
+			}).withTabsBefore(MINERP_MONEY.getId()).build());
 }
