@@ -301,6 +301,34 @@
         ]
       },
       "path": "~/Itens/Dinheiro"
+    },
+    {
+      "name": "Carteira",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carteira",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/item/CarteiraItem.java",
+          "src/main/resources/assets/minerp/models/item/carteira.json"
+        ]
+      },
+      "path": "~/Itens/Carteira"
+    },
+    {
+      "name": "CarteiraGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carteira_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/world/inventory/CarteiraGuiMenu.java",
+          "src/main/java/net/mcreator/minerp/client/gui/CarteiraGuiScreen.java"
+        ]
+      },
+      "path": "~/Itens/Carteira/Gui"
     }
   ],
   "variable_elements": [
@@ -347,7 +375,8 @@
       "VD20",
       "VD50",
       "VD100",
-      "VD200"
+      "VD200",
+      "Carteira"
     ]
   },
   "language_map": {
@@ -376,7 +405,8 @@
       "item.minerp.vd_20": "VD$ 20",
       "item.minerp.vd_50": "VD$ 50",
       "item.minerp.vd_100": "VD$ 100",
-      "item.minerp.vd_200": "VD$ 200"
+      "item.minerp.vd_200": "VD$ 200",
+      "item.minerp.carteira": "Carteira"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -403,7 +433,8 @@
       "item.minerp.vd_20": "VD$ 10",
       "item.minerp.vd_50": "VD$ 20",
       "item.minerp.vd_100": "VD$ 20",
-      "item.minerp.vd_200": "VD$ 100"
+      "item.minerp.vd_200": "VD$ 100",
+      "item.minerp.carteira": "Carteira"
     }
   },
   "metadata": {
@@ -469,6 +500,15 @@
                     "children": []
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "name": "Carteira",
+            "children": [
+              {
+                "name": "Gui",
+                "children": []
               }
             ]
           }

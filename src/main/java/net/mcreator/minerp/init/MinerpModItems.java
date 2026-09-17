@@ -30,6 +30,7 @@ public class MinerpModItems {
 	public static final DeferredItem<Item> VD_50;
 	public static final DeferredItem<Item> VD_100;
 	public static final DeferredItem<Item> VD_200;
+	public static final DeferredItem<Item> CARTEIRA;
 	static {
 		VD_1 = REGISTRY.register("vd_1", VD1Item::new);
 		VD_050 = REGISTRY.register("vd_050", VD050Item::new);
@@ -45,6 +46,7 @@ public class MinerpModItems {
 		VD_50 = REGISTRY.register("vd_50", VD50Item::new);
 		VD_100 = REGISTRY.register("vd_100", VD100Item::new);
 		VD_200 = REGISTRY.register("vd_200", VD200Item::new);
+		CARTEIRA = REGISTRY.register("carteira", CarteiraItem::new);
 	}
 
 	// Start of user code block custom items
