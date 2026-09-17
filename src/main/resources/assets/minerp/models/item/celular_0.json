@@ -1,0 +1,7 @@
+{
+  "parent": "minerp:custom/phoneon",
+  "textures": {
+    "0": "minerp:block/phoneon",
+    "particle": "minecraft:item/silence_armor_trim_smithing_template"
+  }
+}

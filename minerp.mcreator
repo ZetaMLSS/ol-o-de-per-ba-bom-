@@ -78,6 +78,7 @@
       "registry_name": "celular",
       "metadata": {
         "files": [
+          "src/main/resources/assets/minerp/models/item/celular_0.json",
           "src/main/java/net/mcreator/minerp/item/CelularItem.java",
           "src/main/resources/assets/minerp/models/item/celular.json"
         ]

@@ -3,5 +3,13 @@
   "textures": {
     "0": "minerp:block/phoneoff",
     "particle": "minecraft:item/empty_slot_smithing_template_netherite_upgrade"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "cooldown": 1
+      },
+      "model": "minerp:item/celular_0"
+    }
+  ]
 }
