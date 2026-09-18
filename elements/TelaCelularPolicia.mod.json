@@ -28,6 +28,7 @@
           "name": "button_chamar",
           "text": "SIM",
           "isUndecorated": false,
+          "onClick": "ChamarPolicia",
           "width": 55,
           "height": 20,
           "x": 187,

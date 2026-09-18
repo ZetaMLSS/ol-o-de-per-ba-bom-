@@ -373,8 +373,9 @@
       "registry_name": "tela_celular_policia",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularPoliciaScreen.java",
           "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularPoliciaMenu.java",
-          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularPoliciaScreen.java"
+          "src/main/java/net/mcreator/minerp/network/TelaCelularPoliciaButtonMessage.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Policia"
@@ -453,6 +454,29 @@
         ]
       },
       "path": "~/Itens/Carteira/Gui"
+    },
+    {
+      "name": "ChamarPolicia",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chamar_policia",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/ChamarPoliciaProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Policia"
     }
   ],
   "variable_elements": [

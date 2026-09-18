@@ -1,5 +1,7 @@
 package net.mcreator.minerp.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -10,6 +12,7 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.minerp.world.inventory.TelaCelularPoliciaMenu;
+import net.mcreator.minerp.network.TelaCelularPoliciaButtonMessage;
 import net.mcreator.minerp.init.MinerpModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -85,6 +88,12 @@ public class TelaCelularPoliciaScreen extends AbstractContainerScreen<TelaCelula
 	public void init() {
 		super.init();
 		button_chamar = Button.builder(Component.translatable("gui.minerp.tela_celular_policia.button_chamar"), e -> {
+			int x = TelaCelularPoliciaScreen.this.x;
+			int y = TelaCelularPoliciaScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new TelaCelularPoliciaButtonMessage(0, x, y, z));
+				TelaCelularPoliciaButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}).bounds(this.leftPos + -16, this.topPos + 42, 55, 20).build();
 		this.addRenderableWidget(button_chamar);
 	}
