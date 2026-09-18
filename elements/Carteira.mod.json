@@ -2,9 +2,9 @@
   "_fv": 89,
   "_type": "item",
   "definition": {
-    "renderType": 1,
+    "renderType": 0,
     "texture": "minecraft:bundle",
-    "customModelName": "carteirafechada:default",
+    "customModelName": "Normal",
     "guiTexture": "",
     "customProperties": {},
     "states": [],
@@ -35,11 +35,12 @@
     "glowCondition": {
       "fixedValue": false
     },
+    "guiBoundTo": "InventarioCarteira",
     "openGUIOnRightClick": {
       "fixedValue": false
     },
-    "inventorySize": 18,
-    "inventoryStackSize": 1,
+    "inventorySize": 6,
+    "inventoryStackSize": 2,
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

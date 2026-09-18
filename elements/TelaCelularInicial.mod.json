@@ -156,6 +156,7 @@
           "name": "enhanced_image_button_app_policia",
           "text": "",
           "isUndecorated": true,
+          "onClick": "TelaCelularInicialButtonClicked",
           "width": 26,
           "height": 26,
           "x": 181,

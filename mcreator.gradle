@@ -111,20 +111,3 @@ tasks.named("jar") {
 }
 
 
-repositories {
-  maven {
-    name = 'LDLib2'
-    url = 'https://maven.firstdark.dev/snapshots'
-  }
-  maven {
-    name = 'LDLib2Releases'
-    url = 'https://maven.firstdark.dev/releases'
-  }
-}
-
-dependencies {
-  // Runtime + compile: NeoForge moddev loads implementation mods into runClient
-  implementation 'com.lowdragmc.ldlib2:ldlib2-neoforge-1.21.1:2.2.29'
-}
-
-

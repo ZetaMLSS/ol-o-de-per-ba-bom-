@@ -6,14 +6,20 @@ package net.mcreator.minerp.init;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.minerp.item.inventory.CarteiraInventoryCapability;
 import net.mcreator.minerp.item.*;
 import net.mcreator.minerp.MinerpMod;
 
+@EventBusSubscriber
 public class MinerpModItems {
 	public static final DeferredRegister.Items REGISTRY = DeferredRegister.createItems(MinerpMod.MODID);
 	public static final DeferredItem<Item> VD_1;
@@ -30,6 +36,7 @@ public class MinerpModItems {
 	public static final DeferredItem<Item> VD_50;
 	public static final DeferredItem<Item> VD_100;
 	public static final DeferredItem<Item> VD_200;
+	public static final DeferredItem<Item> CAIXA;
 	public static final DeferredItem<Item> CARTEIRA;
 	static {
 		VD_1 = REGISTRY.register("vd_1", VD1Item::new);
@@ -46,11 +53,17 @@ public class MinerpModItems {
 		VD_50 = REGISTRY.register("vd_50", VD50Item::new);
 		VD_100 = REGISTRY.register("vd_100", VD100Item::new);
 		VD_200 = REGISTRY.register("vd_200", VD200Item::new);
+		CAIXA = REGISTRY.register("caixa", CaixaItem::new);
 		CARTEIRA = REGISTRY.register("carteira", CarteiraItem::new);
 	}
 
 	// Start of user code block custom items
 	// End of user code block custom items
+	@SubscribeEvent
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new CarteiraInventoryCapability(stack), CARTEIRA.get());
+	}
+
 	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {
 		return block(block, new Item.Properties());
 	}
