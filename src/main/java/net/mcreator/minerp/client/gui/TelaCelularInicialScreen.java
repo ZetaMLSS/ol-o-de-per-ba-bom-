@@ -61,27 +61,6 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
 					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -49 + guiTools$xOffset, this.topPos + -120 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 120, 229);
 			}
-			if (this.enhanced_image_button_app_config != null && this.enhanced_image_button_app_config.visible) {
-				this.enhanced_image_button_app_config.render(guiGraphics, mouseX, mouseY, partialTicks);
-			}
-			if (this.enhanced_image_button_app_banco != null && this.enhanced_image_button_app_banco.visible) {
-				this.enhanced_image_button_app_banco.render(guiGraphics, mouseX, mouseY, partialTicks);
-			}
-			if (this.enhanced_image_button_app_policia != null && this.enhanced_image_button_app_policia.visible) {
-				this.enhanced_image_button_app_policia.render(guiGraphics, mouseX, mouseY, partialTicks);
-			}
-			if (this.enhanced_image_button_app_ambulancia != null && this.enhanced_image_button_app_ambulancia.visible) {
-				this.enhanced_image_button_app_ambulancia.render(guiGraphics, mouseX, mouseY, partialTicks);
-			}
-			if (this.enhanced_image_button_app_chamada != null && this.enhanced_image_button_app_chamada.visible) {
-				this.enhanced_image_button_app_chamada.render(guiGraphics, mouseX, mouseY, partialTicks);
-			}
-			if (this.enhanced_image_button_vaunt_wallet != null && this.enhanced_image_button_vaunt_wallet.visible) {
-				this.enhanced_image_button_vaunt_wallet.render(guiGraphics, mouseX, mouseY, partialTicks);
-			}
-			if (this.enhanced_image_button_app_urbr != null && this.enhanced_image_button_app_urbr.visible) {
-				this.enhanced_image_button_app_urbr.render(guiGraphics, mouseX, mouseY, partialTicks);
-			}
 			if (true) {
 				int guiTools$xOffset = 0;
 				int guiTools$yOffset = 0;
@@ -135,6 +114,27 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/negrom.png"));
 				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
 					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -23 + guiTools$xOffset, this.topPos + -9 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 28, 28);
+			}
+			if (this.enhanced_image_button_app_config != null && this.enhanced_image_button_app_config.visible) {
+				this.enhanced_image_button_app_config.render(guiGraphics, mouseX, mouseY, partialTicks);
+			}
+			if (this.enhanced_image_button_app_banco != null && this.enhanced_image_button_app_banco.visible) {
+				this.enhanced_image_button_app_banco.render(guiGraphics, mouseX, mouseY, partialTicks);
+			}
+			if (this.enhanced_image_button_app_policia != null && this.enhanced_image_button_app_policia.visible) {
+				this.enhanced_image_button_app_policia.render(guiGraphics, mouseX, mouseY, partialTicks);
+			}
+			if (this.enhanced_image_button_app_ambulancia != null && this.enhanced_image_button_app_ambulancia.visible) {
+				this.enhanced_image_button_app_ambulancia.render(guiGraphics, mouseX, mouseY, partialTicks);
+			}
+			if (this.enhanced_image_button_app_chamada != null && this.enhanced_image_button_app_chamada.visible) {
+				this.enhanced_image_button_app_chamada.render(guiGraphics, mouseX, mouseY, partialTicks);
+			}
+			if (this.enhanced_image_button_vaunt_wallet != null && this.enhanced_image_button_vaunt_wallet.visible) {
+				this.enhanced_image_button_vaunt_wallet.render(guiGraphics, mouseX, mouseY, partialTicks);
+			}
+			if (this.enhanced_image_button_app_urbr != null && this.enhanced_image_button_app_urbr.visible) {
+				this.enhanced_image_button_app_urbr.render(guiGraphics, mouseX, mouseY, partialTicks);
 			}
 		}
 	}
