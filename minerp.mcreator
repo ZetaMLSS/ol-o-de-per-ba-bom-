@@ -311,6 +311,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/minerp/item/CarteiraItem.java",
+          "src/main/java/net/mcreator/minerp/item/inventory/CarteiraInventoryCapability.java",
           "src/main/resources/assets/minerp/models/item/carteira.json"
         ]
       },
