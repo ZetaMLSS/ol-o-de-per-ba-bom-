@@ -329,6 +329,39 @@
         ]
       },
       "path": "~/Itens/Carteira/Gui"
+    },
+    {
+      "name": "Caixa",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "caixa",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minerp/models/item/caixa.json",
+          "src/main/java/net/mcreator/minerp/item/CaixaItem.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Caixa Celular"
+    },
+    {
+      "name": "CaixaQuandoClicadoComOBotaoDireito",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "caixa_quando_clicado_com_o_botao_direito",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/CaixaQuandoClicadoComOBotaoDireitoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Caixa Celular"
     }
   ],
   "variable_elements": [
@@ -406,7 +439,8 @@
       "item.minerp.vd_50": "VD$ 50",
       "item.minerp.vd_100": "VD$ 100",
       "item.minerp.vd_200": "VD$ 200",
-      "item.minerp.carteira": "Carteira"
+      "item.minerp.carteira": "Carteira",
+      "item.minerp.caixa": "Caixa"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -434,53 +468,54 @@
       "item.minerp.vd_50": "VD$ 50",
       "item.minerp.vd_100": "VD$ 100",
       "item.minerp.vd_200": "VD$ 200",
-      "item.minerp.carteira": "Carteira"
+      "item.minerp.carteira": "Carteira",
+      "item.minerp.caixa": "Caixa"
     }
   },
   "metadata": {
     "files": [
-      "src/main/java/net/mcreator/minerp/init/MinerpModScreens.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModScreens.java",
       "src/main/java/net/mcreator/minerp/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlocks.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModItems.java",
-      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
+      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
+      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
+      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
       "src/main/java/net/mcreator/minerp/ai/MoveToBlockGoal.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
+      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
+      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
+      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
       "src/main/java/net/mcreator/minerp/world/BlackHoleSavedData.java",
       "src/main/java/net/mcreator/minerp/mixin/LevelRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
-      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/minerp.mixins.json",
+      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
       "src/main/java/net/mcreator/minerp/client/renderer/CustomEyeOfEnderRenderer.java",
+      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
+      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
+      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
       "src/main/java/net/mcreator/minerp/world/PortalSavedData.java",
       "src/main/java/net/mcreator/minerp/MinerpMod.java",
-      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
-      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
-      "src/main/java/net/mcreator/minerp/math/CallCounter.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
-      "src/main/resources/minerp.mixins.json",
-      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
-      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
-      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
-      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
       "src/main/java/net/mcreator/minerp/ai/OrbitPositionGoal.java",
-      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
-      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
-      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
-      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java"
+      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
+      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
+      "src/main/java/net/mcreator/minerp/math/CallCounter.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
+      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java"
     ]
   },
   "foldersRoot": {
@@ -513,6 +548,10 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "name": "Caixa Celular",
+                "children": []
               }
             ]
           },
