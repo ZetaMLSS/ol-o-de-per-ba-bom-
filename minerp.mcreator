@@ -50,11 +50,11 @@
       "registry_name": "asic_v_1",
       "metadata": {
         "files": [
-          "src/main/resources/assets/minerp/models/block/asic_v_1.json",
           "src/main/resources/assets/minerp/models/item/asic_v_1.json",
-          "src/main/resources/assets/minerp/blockstates/asic_v_1.json",
+          "src/main/resources/assets/minerp/models/block/asic_v_1.json",
+          "src/main/java/net/mcreator/minerp/block/AsicV1Block.java",
           "src/main/resources/data/minerp/loot_table/blocks/asic_v_1.json",
-          "src/main/java/net/mcreator/minerp/block/AsicV1Block.java"
+          "src/main/resources/assets/minerp/blockstates/asic_v_1.json"
         ]
       },
       "path": "~/Bloco/Mineradoras/Asic V1"
@@ -78,8 +78,8 @@
       "registry_name": "celular",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/item/CelularItem.java",
           "src/main/resources/assets/minerp/models/item/celular_0.json",
+          "src/main/java/net/mcreator/minerp/item/CelularItem.java",
           "src/main/resources/assets/minerp/models/item/celular.json"
         ]
       },
@@ -143,10 +143,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/minerp/block/ATMSupBlock.java",
-          "src/main/resources/assets/minerp/models/item/atm_sup.json",
-          "src/main/resources/assets/minerp/blockstates/atm_sup.json",
           "src/main/resources/data/minerp/loot_table/blocks/atm_sup.json",
-          "src/main/resources/assets/minerp/models/block/atm_sup.json"
+          "src/main/resources/assets/minerp/blockstates/atm_sup.json",
+          "src/main/resources/assets/minerp/models/block/atm_sup.json",
+          "src/main/resources/assets/minerp/models/item/atm_sup.json"
         ]
       },
       "path": "~/Bloco/ATM"
@@ -159,10 +159,10 @@
       "registry_name": "at_minf",
       "metadata": {
         "files": [
-          "src/main/resources/assets/minerp/blockstates/at_minf.json",
-          "src/main/resources/assets/minerp/models/item/at_minf.json",
-          "src/main/resources/assets/minerp/models/block/at_minf.json",
           "src/main/java/net/mcreator/minerp/block/ATMinfBlock.java",
+          "src/main/resources/assets/minerp/models/item/at_minf.json",
+          "src/main/resources/assets/minerp/blockstates/at_minf.json",
+          "src/main/resources/assets/minerp/models/block/at_minf.json",
           "src/main/resources/data/minerp/loot_table/blocks/at_minf.json"
         ]
       },
@@ -176,10 +176,10 @@
       "registry_name": "computador",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/block/ComputadorBlock.java",
           "src/main/resources/assets/minerp/models/block/computador.json",
-          "src/main/resources/data/minerp/loot_table/blocks/computador.json",
+          "src/main/java/net/mcreator/minerp/block/ComputadorBlock.java",
           "src/main/resources/assets/minerp/models/item/computador.json",
+          "src/main/resources/data/minerp/loot_table/blocks/computador.json",
           "src/main/resources/assets/minerp/blockstates/computador.json"
         ]
       },
@@ -311,8 +311,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/minerp/item/CarteiraItem.java",
-          "src/main/resources/assets/minerp/models/item/carteira.json",
-          "src/main/java/net/mcreator/minerp/item/inventory/CarteiraInventoryCapability.java"
+          "src/main/resources/assets/minerp/models/item/carteira.json"
         ]
       },
       "path": "~/Itens/Carteira"
@@ -488,6 +487,55 @@
     "name": "~",
     "children": [
       {
+        "name": "Itens",
+        "children": [
+          {
+            "name": "Carteira",
+            "children": [
+              {
+                "name": "Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Celular",
+            "children": [
+              {
+                "name": "Sistema Celular",
+                "children": [
+                  {
+                    "name": "Procedures",
+                    "children": []
+                  },
+                  {
+                    "name": "GUI",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Dinheiro",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Sistemas",
+        "children": [
+          {
+            "name": "Abas Criativo",
+            "children": []
+          },
+          {
+            "name": "Comandos",
+            "children": []
+          }
+        ]
+      },
+      {
         "name": "Bloco",
         "children": [
           {
@@ -500,60 +548,11 @@
             ]
           },
           {
-            "name": "ATM",
-            "children": []
-          },
-          {
             "name": "Computer",
             "children": []
-          }
-        ]
-      },
-      {
-        "name": "Itens",
-        "children": [
-          {
-            "name": "Dinheiro",
-            "children": []
           },
           {
-            "name": "Celular",
-            "children": [
-              {
-                "name": "Sistema Celular",
-                "children": [
-                  {
-                    "name": "GUI",
-                    "children": []
-                  },
-                  {
-                    "name": "Procedures",
-                    "children": []
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Carteira",
-            "children": [
-              {
-                "name": "Gui",
-                "children": []
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Sistemas",
-        "children": [
-          {
-            "name": "Comandos",
-            "children": []
-          },
-          {
-            "name": "Abas Criativo",
+            "name": "ATM",
             "children": []
           }
         ]

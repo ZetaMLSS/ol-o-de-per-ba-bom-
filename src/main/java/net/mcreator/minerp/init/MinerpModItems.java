@@ -6,19 +6,14 @@ package net.mcreator.minerp.init;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
-import net.mcreator.minerp.item.inventory.CarteiraInventoryCapability;
 import net.mcreator.minerp.item.*;
 import net.mcreator.minerp.MinerpMod;
 
-@EventBusSubscriber
 public class MinerpModItems {
 	public static final DeferredRegister.Items REGISTRY = DeferredRegister.createItems(MinerpMod.MODID);
 	public static final DeferredItem<Item> VD_1;
@@ -56,11 +51,6 @@ public class MinerpModItems {
 
 	// Start of user code block custom items
 	// End of user code block custom items
-	@SubscribeEvent
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new CarteiraInventoryCapability(stack), CARTEIRA.get());
-	}
-
 	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {
 		return block(block, new Item.Properties());
 	}
