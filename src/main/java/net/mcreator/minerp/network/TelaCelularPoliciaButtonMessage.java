@@ -49,7 +49,7 @@ public record TelaCelularPoliciaButtonMessage(int buttonID, int x, int y, int z)
 			return;
 		if (buttonID == 0) {
 
-			ChamarPoliciaProcedure.execute(world, entity);
+			ChamarPoliciaProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
