@@ -93,9 +93,9 @@
       "registry_name": "tela_celular_inicial",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularInicialScreen.java",
+          "src/main/java/net/mcreator/minerp/network/TelaCelularInicialButtonMessage.java",
           "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularInicialMenu.java",
-          "src/main/java/net/mcreator/minerp/network/TelaCelularInicialButtonMessage.java"
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularInicialScreen.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
@@ -381,41 +381,6 @@
       "path": "~/Itens/Celular/Sistema Celular/GUI/Policia"
     },
     {
-      "name": "TelaCelularInicialButtonClicked",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tela_celular_inicial_button_clicked",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/minerp/procedures/TelaCelularInicialButtonClickedProcedure.java"
-        ]
-      },
-      "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
-    },
-    {
       "name": "QuaisItensVaiNaCarteira",
       "type": "procedure",
       "compiles": true,
@@ -489,6 +454,126 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Policia"
+    },
+    {
+      "name": "TelaCelularParamedico",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_celular_paramedico",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularParamedicoScreen.java",
+          "src/main/java/net/mcreator/minerp/network/TelaCelularParamedicoButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularParamedicoMenu.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Paramedicos"
+    },
+    {
+      "name": "ChamarParamedicos",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chamar_paramedicos",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/ChamarParamedicosProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Paramedicos"
+    },
+    {
+      "name": "BotaoCelularParamedico",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "botao_celular_paramedico",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/BotaoCelularParamedicoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
+    },
+    {
+      "name": "BotaoCelularPolicia",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "botao_celular_policia",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/BotaoCelularPoliciaProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
     }
   ],
   "variable_elements": [
@@ -569,7 +654,8 @@
       "item.minerp.caixa": "Caixa",
       "item.minerp.carteira": "Carteira",
       "gui.minerp.tela_celular_policia.button_chamar": "SIM",
-      "gui.minerp.inventario_carteira.label_valor": "Valor"
+      "gui.minerp.inventario_carteira.label_valor": "Valor",
+      "gui.minerp.tela_celular_paramedico.button_chamar": "SIM"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -600,7 +686,8 @@
       "item.minerp.caixa": "Caixa",
       "item.minerp.carteira": "Carteira",
       "gui.minerp.tela_celular_policia.button_chamar": "SIM",
-      "gui.minerp.inventario_carteira.label_valor": "Valor"
+      "gui.minerp.inventario_carteira.label_valor": "Valor",
+      "gui.minerp.tela_celular_paramedico.button_chamar": "SIM"
     }
   },
   "metadata": {
@@ -683,6 +770,10 @@
                       },
                       {
                         "name": "Policia",
+                        "children": []
+                      },
+                      {
+                        "name": "Paramedicos",
                         "children": []
                       }
                     ]

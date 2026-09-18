@@ -16,6 +16,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.minerp.world.inventory.TelaCelularPoliciaMenu;
+import net.mcreator.minerp.world.inventory.TelaCelularParamedicoMenu;
 import net.mcreator.minerp.world.inventory.TelaCelularInicialMenu;
 import net.mcreator.minerp.world.inventory.InventarioCarteiraMenu;
 import net.mcreator.minerp.network.MenuStateUpdateMessage;
@@ -28,6 +29,7 @@ public class MinerpModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<TelaCelularInicialMenu>> TELA_CELULAR_INICIAL = REGISTRY.register("tela_celular_inicial", () -> IMenuTypeExtension.create(TelaCelularInicialMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<InventarioCarteiraMenu>> INVENTARIO_CARTEIRA = REGISTRY.register("inventario_carteira", () -> IMenuTypeExtension.create(InventarioCarteiraMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<TelaCelularPoliciaMenu>> TELA_CELULAR_POLICIA = REGISTRY.register("tela_celular_policia", () -> IMenuTypeExtension.create(TelaCelularPoliciaMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<TelaCelularParamedicoMenu>> TELA_CELULAR_PARAMEDICO = REGISTRY.register("tela_celular_paramedico", () -> IMenuTypeExtension.create(TelaCelularParamedicoMenu::new));
 
 	public interface MenuAccessor {
 		Map<String, Object> getMenuState();

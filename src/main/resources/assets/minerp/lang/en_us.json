@@ -27,5 +27,6 @@
   "item.minerp.caixa": "Caixa",
   "item.minerp.carteira": "Carteira",
   "gui.minerp.tela_celular_policia.button_chamar": "SIM",
-  "gui.minerp.inventario_carteira.label_valor": "Valor"
+  "gui.minerp.inventario_carteira.label_valor": "Valor",
+  "gui.minerp.tela_celular_paramedico.button_chamar": "SIM"
 }
