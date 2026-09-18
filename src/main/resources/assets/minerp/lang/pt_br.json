@@ -26,5 +26,6 @@
   "item.minerp.vd_200": "VD$ 200",
   "item.minerp.caixa": "Caixa",
   "item.minerp.carteira": "Carteira",
-  "gui.minerp.tela_celular_policia.button_chamar": "SIM"
+  "gui.minerp.tela_celular_policia.button_chamar": "SIM",
+  "gui.minerp.inventario_carteira.label_valor": "Valor"
 }

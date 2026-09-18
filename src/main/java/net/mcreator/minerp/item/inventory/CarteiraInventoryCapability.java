@@ -27,12 +27,12 @@ public class CarteiraInventoryCapability extends ComponentItemHandler {
 	}
 
 	public CarteiraInventoryCapability(MutableDataComponentHolder parent) {
-		super(parent, DataComponents.CONTAINER, 6);
+		super(parent, DataComponents.CONTAINER, 19);
 	}
 
 	@Override
 	public int getSlotLimit(int slot) {
-		return 2;
+		return 1;
 	}
 
 	@Override

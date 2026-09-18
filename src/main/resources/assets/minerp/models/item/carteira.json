@@ -1,6 +1,7 @@
 {
-  "parent": "item/generated",
+  "parent": "minerp:custom/carteirafechada",
   "textures": {
-    "layer0": "minecraft:item/bundle"
+    "1": "minerp:block/carteira_canto",
+    "particle": "minecraft:item/bundle"
   }
 }

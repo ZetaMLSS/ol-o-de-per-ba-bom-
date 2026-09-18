@@ -413,6 +413,26 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
+    },
+    {
+      "name": "QuaisItensVaiNaCarteira",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quais_itens_vai_na_carteira",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/QuaisItensVaiNaCarteiraProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Carteira/Gui"
     }
   ],
   "variable_elements": [
@@ -492,7 +512,8 @@
       "item.minerp.vd_200": "VD$ 200",
       "item.minerp.caixa": "Caixa",
       "item.minerp.carteira": "Carteira",
-      "gui.minerp.tela_celular_policia.button_chamar": "SIM"
+      "gui.minerp.tela_celular_policia.button_chamar": "SIM",
+      "gui.minerp.inventario_carteira.label_valor": "Valor"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -522,7 +543,8 @@
       "item.minerp.vd_200": "VD$ 200",
       "item.minerp.caixa": "Caixa",
       "item.minerp.carteira": "Carteira",
-      "gui.minerp.tela_celular_policia.button_chamar": "SIM"
+      "gui.minerp.tela_celular_policia.button_chamar": "SIM",
+      "gui.minerp.inventario_carteira.label_valor": "Valor"
     }
   },
   "metadata": {
