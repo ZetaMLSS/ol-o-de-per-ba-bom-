@@ -11,97 +11,6 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "button",
-        "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
-          "width": 30,
-          "height": 20,
-          "x": 179,
-          "y": 54,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
-          "width": 30,
-          "height": 20,
-          "x": 220,
-          "y": 54,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
-          "width": 30,
-          "height": 20,
-          "x": 179,
-          "y": 85,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_4",
-          "text": "4",
-          "isUndecorated": false,
-          "width": 30,
-          "height": 20,
-          "x": 220,
-          "y": 85,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_5",
-          "text": "5",
-          "isUndecorated": false,
-          "width": 30,
-          "height": 20,
-          "x": 179,
-          "y": 115,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_6",
-          "text": "6",
-          "isUndecorated": false,
-          "width": 30,
-          "height": 20,
-          "x": 220,
-          "y": 115,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_7",
-          "text": "7",
-          "isUndecorated": false,
-          "width": 30,
-          "height": 20,
-          "x": 199,
-          "y": 145,
-          "locked": false
-        }
-      },
-      {
         "type": "dynamic_image",
         "data": {
           "name": "dynamic_image_0",
@@ -110,6 +19,239 @@
           "height": 229,
           "x": 154,
           "y": 0,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "app_config.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_app_config",
+          "text": "",
+          "isUndecorated": true,
+          "width": 26,
+          "height": 26,
+          "x": 181,
+          "y": 51,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "app_banco.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_app_banco",
+          "text": "",
+          "isUndecorated": true,
+          "width": 26,
+          "height": 26,
+          "x": 222,
+          "y": 51,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "app_policia.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_app_policia",
+          "text": "",
+          "isUndecorated": true,
+          "width": 26,
+          "height": 26,
+          "x": 181,
+          "y": 82,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "app_ambulancia.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_app_ambulancia",
+          "text": "",
+          "isUndecorated": true,
+          "width": 26,
+          "height": 26,
+          "x": 222,
+          "y": 82,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "app_chamada.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_app_chamada",
+          "text": "",
+          "isUndecorated": true,
+          "width": 26,
+          "height": 26,
+          "x": 181,
+          "y": 112,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "vaunt_wallet.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_vaunt_wallet",
+          "text": "",
+          "isUndecorated": true,
+          "width": 26,
+          "height": 26,
+          "x": 222,
+          "y": 112,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "app_urbr.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_app_urbr",
+          "text": "",
+          "isUndecorated": true,
+          "width": 26,
+          "height": 26,
+          "x": 201,
+          "y": 147,
+          "locked": false
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_1",
+          "image": "negrom.png",
+          "width": 28,
+          "height": 28,
+          "x": 221,
+          "y": 111,
+          "locked": false
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_2",
+          "image": "negrom.png",
+          "width": 28,
+          "height": 28,
+          "x": 221,
+          "y": 81,
+          "locked": false
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_3",
+          "image": "negrom.png",
+          "width": 28,
+          "height": 28,
+          "x": 221,
+          "y": 50,
+          "locked": false
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_4",
+          "image": "negrom.png",
+          "width": 28,
+          "height": 28,
+          "x": 180,
+          "y": 50,
+          "locked": false
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_5",
+          "image": "negrom.png",
+          "width": 28,
+          "height": 28,
+          "x": 180,
+          "y": 81,
+          "locked": false
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_6",
+          "image": "negrom.png",
+          "width": 28,
+          "height": 28,
+          "x": 180,
+          "y": 111,
           "locked": false
         }
       }
