@@ -16,7 +16,7 @@ public class ChamarPoliciaProcedure {
 			return;
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					("tellraw @a[team=policia] {\"text\":\"[Central] X: " + "" + new java.text.DecimalFormat("##").format(entity.getX()) + " Y: " + new java.text.DecimalFormat("##").format(entity.getY()) + " Z: "
+					("tellraw @a[team=policia] {\"text\":\"[CHAMADO!!] X: " + "" + new java.text.DecimalFormat("##").format(entity.getX()) + " Y: " + new java.text.DecimalFormat("##").format(entity.getY()) + " Z: "
 							+ new java.text.DecimalFormat("##").format(entity.getZ()) + "\", \"color\":\"blue\"}"));
 		if (entity instanceof Player _player && !_player.level().isClientSide())
 			_player.displayClientMessage(Component.literal("A Policia foi informada aguarde!"), true);
