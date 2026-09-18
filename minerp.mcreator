@@ -433,6 +433,46 @@
         ]
       },
       "path": "~/Itens/Carteira/Gui"
+    },
+    {
+      "name": "Calculadoradaguicarteira",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "calculadoradaguicarteira",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/CalculadoradaguicarteiraProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Carteira/Gui"
+    },
+    {
+      "name": "ValorSetarCarteiraCalculadora",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "valor_setar_carteira_calculadora",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/ValorSetarCarteiraCalculadoraProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Carteira/Gui"
     }
   ],
   "variable_elements": [
@@ -641,6 +681,14 @@
           },
           {
             "name": "Dinheiro",
+            "children": []
+          },
+          {
+            "name": "Medicinal",
+            "children": []
+          },
+          {
+            "name": "Ferramentas",
             "children": []
           }
         ]

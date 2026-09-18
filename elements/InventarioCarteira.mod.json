@@ -4,12 +4,24 @@
   "definition": {
     "type": 1,
     "width": 176,
-    "height": 166,
+    "height": 188,
     "inventoryOffsetX": 0,
-    "inventoryOffsetY": 0,
+    "inventoryOffsetY": 12,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_0",
+          "image": "carteirasinistra.png",
+          "width": 188,
+          "height": 188,
+          "x": 120,
+          "y": 26,
+          "locked": true
+        }
+      },
       {
         "type": "inputslot",
         "data": {
@@ -24,8 +36,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 133,
-          "y": 44,
+          "x": 129,
+          "y": 34,
           "locked": false
         }
       },
@@ -44,8 +56,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 133,
-          "y": 70,
+          "x": 129,
+          "y": 62,
           "locked": false
         }
       },
@@ -64,8 +76,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 133,
-          "y": 88,
+          "x": 129,
+          "y": 80,
           "locked": false
         }
       },
@@ -84,8 +96,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 151,
-          "y": 70,
+          "x": 148,
+          "y": 62,
           "locked": false
         }
       },
@@ -104,8 +116,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 151,
-          "y": 88,
+          "x": 148,
+          "y": 80,
           "locked": false
         }
       },
@@ -124,8 +136,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 169,
-          "y": 70,
+          "x": 167,
+          "y": 62,
           "locked": false
         }
       },
@@ -144,8 +156,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 169,
-          "y": 88,
+          "x": 167,
+          "y": 80,
           "locked": false
         }
       },
@@ -164,8 +176,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 187,
-          "y": 70,
+          "x": 186,
+          "y": 62,
           "locked": false
         }
       },
@@ -184,8 +196,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 187,
-          "y": 88,
+          "x": 186,
+          "y": 80,
           "locked": false
         }
       },
@@ -205,7 +217,7 @@
           },
           "dropItemsWhenNotBound": false,
           "x": 205,
-          "y": 70,
+          "y": 62,
           "locked": false
         }
       },
@@ -225,7 +237,7 @@
           },
           "dropItemsWhenNotBound": false,
           "x": 205,
-          "y": 88,
+          "y": 80,
           "locked": false
         }
       },
@@ -244,8 +256,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 223,
-          "y": 70,
+          "x": 224,
+          "y": 62,
           "locked": false
         }
       },
@@ -264,8 +276,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 223,
-          "y": 88,
+          "x": 224,
+          "y": 80,
           "locked": false
         }
       },
@@ -284,8 +296,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 241,
-          "y": 70,
+          "x": 129,
+          "y": 99,
           "locked": false
         }
       },
@@ -304,8 +316,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 241,
-          "y": 88,
+          "x": 148,
+          "y": 99,
           "locked": false
         }
       },
@@ -324,8 +336,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 259,
-          "y": 70,
+          "x": 167,
+          "y": 99,
           "locked": false
         }
       },
@@ -344,8 +356,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 259,
-          "y": 88,
+          "x": 186,
+          "y": 99,
           "locked": false
         }
       },
@@ -364,8 +376,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 277,
-          "y": 70,
+          "x": 205,
+          "y": 99,
           "locked": false
         }
       },
@@ -384,31 +396,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 277,
-          "y": 88,
-          "locked": false
-        }
-      },
-      {
-        "type": "enhanced_image_button",
-        "data": {
-          "image": "negrom.png",
-          "hoveredImage": "",
-          "pressedImage": "",
-          "textColor": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "textShadow": true,
-          "fontScale": 100,
-          "togglePressedTexture": false,
-          "name": "enhanced_image_button_negrom",
-          "text": "",
-          "isUndecorated": true,
-          "width": 32,
-          "height": 16,
-          "x": 264,
-          "y": 41,
+          "x": 224,
+          "y": 99,
           "locked": false
         }
       },
@@ -454,19 +443,21 @@
           "sua_pulse_speed": 1.0,
           "name": "label_valor",
           "text": {
-            "fixedValue": "Valor"
+            "fixedValue": "Valor",
+            "name": "Calculadoradaguicarteira"
           },
           "color": {
             "value": -16724992,
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 265,
-          "y": 43,
+          "x": 260,
+          "y": 45,
           "locked": false
         }
       }
     ],
+    "onTick": "Calculadoradaguicarteira",
     "gridSettings": {
       "sx": 18,
       "sy": 18,

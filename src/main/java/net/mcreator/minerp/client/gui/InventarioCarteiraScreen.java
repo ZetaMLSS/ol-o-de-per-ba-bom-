@@ -9,6 +9,7 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.minerp.world.inventory.InventarioCarteiraMenu;
+import net.mcreator.minerp.procedures.CalculadoradaguicarteiraProcedure;
 import net.mcreator.minerp.init.MinerpModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -27,7 +28,7 @@ public class InventarioCarteiraScreen extends AbstractContainerScreen<Inventario
 		this.z = container.z;
 		this.entity = container.entity;
 		this.imageWidth = 176;
-		this.imageHeight = 166;
+		this.imageHeight = 188;
 	}
 
 	@Override
@@ -52,8 +53,14 @@ public class InventarioCarteiraScreen extends AbstractContainerScreen<Inventario
 		guiTools$alphaBlit(guiGraphics, texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		RenderSystem.disableBlend();
 		guiTools$orderedImages : {
-			if (this.enhanced_image_button_negrom != null && this.enhanced_image_button_negrom.visible) {
-				this.enhanced_image_button_negrom.render(guiGraphics, mouseX, mouseY, partialTicks);
+			if (true) {
+				int guiTools$xOffset = 0;
+				int guiTools$yOffset = 0;
+				int guiTools$visibleWidth = 188;
+				int guiTools$visibleHeight = 188;
+				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/carteirasinistra.png"));
+				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -6 + guiTools$xOffset, this.topPos + 0 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 188, 188);
 			}
 		}
 	}
@@ -70,34 +77,16 @@ public class InventarioCarteiraScreen extends AbstractContainerScreen<Inventario
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		{
-			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.inventario_carteira.label_valor"), 139, 6, -16724992, false);
+			guiGraphics.drawString(this.font, CalculadoradaguicarteiraProcedure.execute(entity), 134, 19, -16724992, false);
 		}
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		enhanced_image_button_negrom = new net.minecraft.client.gui.components.ImageButton(this.leftPos + 138, this.topPos + 4, 32, 16,
-				new net.minecraft.client.gui.components.WidgetSprites(net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/negrom.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/negrom.png")), e -> {
-				}) {
-			@Override
-			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/negrom.png");
-				net.minecraft.resources.ResourceLocation guiTools$hoveredTexture = guiTools$normalTexture;
-				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = guiTools$hoveredTexture;
-				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
-				boolean mousePressed = mouseOverButton && org.lwjgl.glfw.GLFW.glfwGetMouseButton(net.minecraft.client.Minecraft.getInstance().getWindow().getWindow(), org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT) == org.lwjgl.glfw.GLFW.GLFW_PRESS;
-				net.minecraft.resources.ResourceLocation buttonTexture = mousePressed ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
-				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
-			}
-		};
-		this.addWidget(enhanced_image_button_negrom);
 	}
 
-	private static final boolean guiTools$enhancedImageButton = true;
-	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_negrom;
-
-	private static net.minecraft.resources.ResourceLocation guiTools$buttonTexture(String value, net.minecraft.resources.ResourceLocation fallback) {
+	private static net.minecraft.resources.ResourceLocation guiTools$dynamicTexture(String value, net.minecraft.resources.ResourceLocation fallback) {
 		if (value == null || value.isBlank())
 			return fallback;
 		try {

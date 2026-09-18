@@ -5,7 +5,10 @@ import net.neoforged.neoforge.items.SlotItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
@@ -23,6 +26,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.minerp.procedures.QuaisItensVaiNaCarteiraProcedure;
+import net.mcreator.minerp.procedures.CalculadoradaguicarteiraProcedure;
 import net.mcreator.minerp.init.MinerpModMenus;
 
 import java.util.function.Supplier;
@@ -30,6 +34,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
 
+@EventBusSubscriber
 public class InventarioCarteiraMenu extends AbstractContainerMenu implements MinerpModMenus.MenuAccessor {
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
@@ -91,7 +96,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				}
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 8, 8) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 4, 9) {
 			private final int slot = 0;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -101,7 +106,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return Blocks.POLISHED_ANDESITE_STAIRS.asItem() == stack.getItem();
 			}
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 8, 34) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 4, 37) {
 			private final int slot = 1;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -111,7 +116,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 8, 52) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 4, 55) {
 			private final int slot = 2;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -121,7 +126,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 26, 34) {
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 23, 37) {
 			private final int slot = 3;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -131,7 +136,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 26, 52) {
+		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 23, 55) {
 			private final int slot = 4;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -141,7 +146,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 44, 34) {
+		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 42, 37) {
 			private final int slot = 5;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -151,7 +156,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 44, 52) {
+		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 42, 55) {
 			private final int slot = 6;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -161,7 +166,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 62, 34) {
+		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 61, 37) {
 			private final int slot = 7;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -171,7 +176,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 62, 52) {
+		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 61, 55) {
 			private final int slot = 8;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -181,7 +186,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 80, 34) {
+		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 80, 37) {
 			private final int slot = 9;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -191,7 +196,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 80, 52) {
+		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 80, 55) {
 			private final int slot = 10;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -201,7 +206,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 98, 34) {
+		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 99, 37) {
 			private final int slot = 11;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -211,7 +216,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 98, 52) {
+		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 99, 55) {
 			private final int slot = 12;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -221,7 +226,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 116, 34) {
+		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 4, 74) {
 			private final int slot = 13;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -231,7 +236,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 116, 52) {
+		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 23, 74) {
 			private final int slot = 14;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -241,7 +246,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 134, 34) {
+		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 42, 74) {
 			private final int slot = 15;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -251,7 +256,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 134, 52) {
+		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 61, 74) {
 			private final int slot = 16;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -261,7 +266,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 152, 34) {
+		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 80, 74) {
 			private final int slot = 17;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -271,7 +276,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 				return !QuaisItensVaiNaCarteiraProcedure.execute(itemstack);
 			}
 		}));
-		this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 152, 52) {
+		this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 99, 74) {
 			private final int slot = 18;
 			private int x = InventarioCarteiraMenu.this.x;
 			private int y = InventarioCarteiraMenu.this.y;
@@ -283,9 +288,9 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 0 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 23 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 0 + 142));
+			this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 23 + 142));
 	}
 
 	@Override
@@ -498,5 +503,17 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 	@Override
 	public Map<String, Object> getMenuState() {
 		return menuState;
+	}
+
+	@SubscribeEvent
+	public static void onPlayerTick(PlayerTickEvent.Post event) {
+		Player entity = event.getEntity();
+		if (entity.containerMenu instanceof InventarioCarteiraMenu menu) {
+			Level world = menu.world;
+			double x = menu.x;
+			double y = menu.y;
+			double z = menu.z;
+			CalculadoradaguicarteiraProcedure.execute(entity);
+		}
 	}
 }
