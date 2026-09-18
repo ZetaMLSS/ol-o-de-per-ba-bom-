@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 1,
     "texture": "minecraft:bundle",
-    "customModelName": "carteira_fechada:default",
+    "customModelName": "carteirafechada:default",
     "guiTexture": "",
     "customProperties": {},
     "states": [],

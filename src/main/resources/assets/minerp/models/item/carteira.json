@@ -1,5 +1,5 @@
 {
-  "parent": "minerp:custom/carteira_fechada",
+  "parent": "minerp:custom/carteirafechada",
   "textures": {
     "1": "minerp:block/carteira_canto",
     "particle": "minecraft:item/bundle"
