@@ -35,8 +35,9 @@
     "glowCondition": {
       "fixedValue": false
     },
+    "guiBoundTo": "CarteiraGui",
     "openGUIOnRightClick": {
-      "fixedValue": false
+      "fixedValue": true
     },
     "inventorySize": 9,
     "inventoryStackSize": 99,
