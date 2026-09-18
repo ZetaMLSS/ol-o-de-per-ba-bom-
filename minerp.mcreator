@@ -8,8 +8,8 @@
       "registry_name": "vd_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/item/VD1Item.java",
-          "src/main/resources/assets/minerp/models/item/vd_1.json"
+          "src/main/resources/assets/minerp/models/item/vd_1.json",
+          "src/main/java/net/mcreator/minerp/item/VD1Item.java"
         ]
       },
       "path": "~/Itens/Dinheiro"
@@ -93,8 +93,8 @@
       "registry_name": "tela_celular_inicial",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularInicialMenu.java",
-          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularInicialScreen.java"
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularInicialScreen.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularInicialMenu.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI"
@@ -194,10 +194,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/minerp/models/item/monitor.json",
-          "src/main/resources/data/minerp/loot_table/blocks/monitor.json",
-          "src/main/resources/assets/minerp/models/block/monitor.json",
+          "src/main/resources/assets/minerp/blockstates/monitor.json",
           "src/main/java/net/mcreator/minerp/block/MonitorBlock.java",
-          "src/main/resources/assets/minerp/blockstates/monitor.json"
+          "src/main/resources/data/minerp/loot_table/blocks/monitor.json",
+          "src/main/resources/assets/minerp/models/block/monitor.json"
         ]
       },
       "path": "~/Bloco/Computer"
@@ -317,15 +317,15 @@
       "path": "~/Itens/Carteira"
     },
     {
-      "name": "CarteiraGui",
+      "name": "InventarioCarteira",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
-      "registry_name": "carteira_gui",
+      "registry_name": "inventario_carteira",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/world/inventory/CarteiraGuiMenu.java",
-          "src/main/java/net/mcreator/minerp/client/gui/CarteiraGuiScreen.java"
+          "src/main/java/net/mcreator/minerp/world/inventory/InventarioCarteiraMenu.java",
+          "src/main/java/net/mcreator/minerp/client/gui/InventarioCarteiraScreen.java"
         ]
       },
       "path": "~/Itens/Carteira/Gui"

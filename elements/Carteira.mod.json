@@ -38,8 +38,8 @@
     "openGUIOnRightClick": {
       "fixedValue": false
     },
-    "inventorySize": 9,
-    "inventoryStackSize": 99,
+    "inventorySize": 18,
+    "inventoryStackSize": 1,
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

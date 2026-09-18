@@ -16,7 +16,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.minerp.world.inventory.TelaCelularInicialMenu;
-import net.mcreator.minerp.world.inventory.CarteiraGuiMenu;
+import net.mcreator.minerp.world.inventory.InventarioCarteiraMenu;
 import net.mcreator.minerp.network.MenuStateUpdateMessage;
 import net.mcreator.minerp.MinerpMod;
 
@@ -25,7 +25,7 @@ import java.util.Map;
 public class MinerpModMenus {
 	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(Registries.MENU, MinerpMod.MODID);
 	public static final DeferredHolder<MenuType<?>, MenuType<TelaCelularInicialMenu>> TELA_CELULAR_INICIAL = REGISTRY.register("tela_celular_inicial", () -> IMenuTypeExtension.create(TelaCelularInicialMenu::new));
-	public static final DeferredHolder<MenuType<?>, MenuType<CarteiraGuiMenu>> CARTEIRA_GUI = REGISTRY.register("carteira_gui", () -> IMenuTypeExtension.create(CarteiraGuiMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<InventarioCarteiraMenu>> INVENTARIO_CARTEIRA = REGISTRY.register("inventario_carteira", () -> IMenuTypeExtension.create(InventarioCarteiraMenu::new));
 
 	public interface MenuAccessor {
 		Map<String, Object> getMenuState();
