@@ -1,0 +1,123 @@
+{
+  "_fv": 89,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 21,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_0",
+          "image": "gemini_generated_image_luqojiluqojiluqo-removebg-preview.png",
+          "width": 120,
+          "height": 229,
+          "x": 154,
+          "y": 0,
+          "locked": true
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_chamar",
+          "text": "Chamar",
+          "isUndecorated": false,
+          "onClick": "ChamarPolicia",
+          "width": 55,
+          "height": 20,
+          "x": 187,
+          "y": 175,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_voce_quer_chamar_a_policia",
+          "text": "Você deseja chamar um Urber?",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 125,
+          "width": 85,
+          "height": 50,
+          "x": 173,
+          "y": 35,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_chamadas_falsas_sao_crimes",
+          "text": "Qual tipo de viagem deseja solicitar?",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 75,
+          "width": 80,
+          "height": 40,
+          "x": 174,
+          "y": 75,
+          "locked": false
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "Opcaocorrida",
+          "text": "Curta",
+          "x": 177,
+          "y": 105,
+          "locked": false
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "Opcaocorrida_copy",
+          "text": "Longa",
+          "x": 177,
+          "y": 130,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_chamadas_falsas_sao_crimes_copy",
+          "text": "(Até 100 blocos)",
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 50,
+          "width": 80,
+          "height": 40,
+          "x": 202,
+          "y": 120,
+          "locked": false
+        }
+      }
+    ],
+    "onTick": "TelaCelularInicialQuandoEstaGUIEAberta",
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -574,6 +574,91 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
+    },
+    {
+      "name": "BotaoCelularURB",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "botao_celular_urb",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/BotaoCelularURBProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
+    },
+    {
+      "name": "TelaCelularUrb",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_celular_urb",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularUrbScreen.java",
+          "src/main/java/net/mcreator/minerp/network/TelaCelularUrbButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularUrbMenu.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Urb"
+    },
+    {
+      "name": "ChamarUrb",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chamar_urb",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/ChamarUrbProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Urb"
     }
   ],
   "variable_elements": [
@@ -655,7 +740,10 @@
       "item.minerp.carteira": "Carteira",
       "gui.minerp.tela_celular_policia.button_chamar": "SIM",
       "gui.minerp.inventario_carteira.label_valor": "Valor",
-      "gui.minerp.tela_celular_paramedico.button_chamar": "SIM"
+      "gui.minerp.tela_celular_paramedico.button_chamar": "SIM",
+      "gui.minerp.tela_celular_urb.button_chamar": "Chamar",
+      "gui.minerp.tela_celular_urb.Opcaocorrida_copy": "Longa",
+      "gui.minerp.tela_celular_urb.Opcaocorrida": "Curta"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -687,7 +775,10 @@
       "item.minerp.carteira": "Carteira",
       "gui.minerp.tela_celular_policia.button_chamar": "SIM",
       "gui.minerp.inventario_carteira.label_valor": "Valor",
-      "gui.minerp.tela_celular_paramedico.button_chamar": "SIM"
+      "gui.minerp.tela_celular_paramedico.button_chamar": "SIM",
+      "gui.minerp.tela_celular_urb.button_chamar": "SIM",
+      "gui.minerp.tela_celular_urb.Opcaocorrida_copy": "Longa",
+      "gui.minerp.tela_celular_urb.Opcaocorrida": "Curta"
     }
   },
   "metadata": {
@@ -774,6 +865,10 @@
                       },
                       {
                         "name": "Paramedicos",
+                        "children": []
+                      },
+                      {
+                        "name": "Urb",
                         "children": []
                       }
                     ]

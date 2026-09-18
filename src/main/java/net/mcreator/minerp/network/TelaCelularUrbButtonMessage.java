@@ -15,24 +15,25 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.SectionPos;
 
+import net.mcreator.minerp.procedures.ChamarPoliciaProcedure;
 import net.mcreator.minerp.MinerpMod;
 
 @EventBusSubscriber
-public record TelaCelularInicialButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
-	public static final Type<TelaCelularInicialButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(MinerpMod.MODID, "tela_celular_inicial_buttons"));
-	public static final StreamCodec<RegistryFriendlyByteBuf, TelaCelularInicialButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, TelaCelularInicialButtonMessage message) -> {
+public record TelaCelularUrbButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
+	public static final Type<TelaCelularUrbButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(MinerpMod.MODID, "tela_celular_urb_buttons"));
+	public static final StreamCodec<RegistryFriendlyByteBuf, TelaCelularUrbButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, TelaCelularUrbButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
-	}, (RegistryFriendlyByteBuf buffer) -> new TelaCelularInicialButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
+	}, (RegistryFriendlyByteBuf buffer) -> new TelaCelularUrbButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
 
 	@Override
-	public Type<TelaCelularInicialButtonMessage> type() {
+	public Type<TelaCelularUrbButtonMessage> type() {
 		return TYPE;
 	}
 
-	public static void handleData(final TelaCelularInicialButtonMessage message, final IPayloadContext context) {
+	public static void handleData(final TelaCelularUrbButtonMessage message, final IPayloadContext context) {
 		if (context.flow() == PacketFlow.SERVERBOUND) {
 			context.enqueueWork(() -> handleButtonAction(context.player(), message.buttonID, message.x, message.y, message.z)).exceptionally(e -> {
 				context.connection().disconnect(Component.literal(e.getMessage()));
@@ -46,22 +47,14 @@ public record TelaCelularInicialButtonMessage(int buttonID, int x, int y, int z)
 		// security measure to prevent arbitrary chunk generation
 		if (!world.getChunkSource().hasChunk(SectionPos.blockToSectionCoord(x), SectionPos.blockToSectionCoord(z)))
 			return;
+		if (buttonID == 0) {
 
-		guiTools$enhancedImageButton : {
-			if (buttonID == 2) {
-				net.mcreator.minerp.procedures.BotaoCelularPoliciaProcedure.execute(world, x, y, z, entity);
-			}
-			if (buttonID == 3) {
-				net.mcreator.minerp.procedures.BotaoCelularParamedicoProcedure.execute(world, x, y, z, entity);
-			}
-			if (buttonID == 6) {
-				net.mcreator.minerp.procedures.BotaoCelularURBProcedure.execute(world, x, y, z, entity);
-			}
+			ChamarPoliciaProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		MinerpMod.addNetworkMessage(TelaCelularInicialButtonMessage.TYPE, TelaCelularInicialButtonMessage.STREAM_CODEC, TelaCelularInicialButtonMessage::handleData);
+		MinerpMod.addNetworkMessage(TelaCelularUrbButtonMessage.TYPE, TelaCelularUrbButtonMessage.STREAM_CODEC, TelaCelularUrbButtonMessage::handleData);
 	}
 }

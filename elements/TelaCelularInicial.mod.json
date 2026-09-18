@@ -250,6 +250,7 @@
           "name": "enhanced_image_button_app_urbr",
           "text": "",
           "isUndecorated": true,
+          "onClick": "BotaoCelularURB",
           "width": 26,
           "height": 26,
           "x": 201,

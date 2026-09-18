@@ -8,6 +8,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
+import net.mcreator.minerp.client.gui.TelaCelularUrbScreen;
 import net.mcreator.minerp.client.gui.TelaCelularPoliciaScreen;
 import net.mcreator.minerp.client.gui.TelaCelularParamedicoScreen;
 import net.mcreator.minerp.client.gui.TelaCelularInicialScreen;
@@ -21,6 +22,7 @@ public class MinerpModScreens {
 		event.register(MinerpModMenus.INVENTARIO_CARTEIRA.get(), InventarioCarteiraScreen::new);
 		event.register(MinerpModMenus.TELA_CELULAR_POLICIA.get(), TelaCelularPoliciaScreen::new);
 		event.register(MinerpModMenus.TELA_CELULAR_PARAMEDICO.get(), TelaCelularParamedicoScreen::new);
+		event.register(MinerpModMenus.TELA_CELULAR_URB.get(), TelaCelularUrbScreen::new);
 	}
 
 	public interface ScreenAccessor {
