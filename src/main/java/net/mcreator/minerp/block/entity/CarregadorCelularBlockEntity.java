@@ -26,7 +26,7 @@ import java.util.stream.IntStream;
 import io.netty.buffer.Unpooled;
 
 public class CarregadorCelularBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.withSize(0, ItemStack.EMPTY);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(1, ItemStack.EMPTY);
 
 	public CarregadorCelularBlockEntity(BlockPos position, BlockState state) {
 		super(MinerpModBlockEntities.CARREGADOR_CELULAR.get(), position, state);
@@ -74,6 +74,11 @@ public class CarregadorCelularBlockEntity extends RandomizableContainerBlockEnti
 	@Override
 	public Component getDefaultName() {
 		return Component.literal("carregador_celular");
+	}
+
+	@Override
+	public int getMaxStackSize() {
+		return 1;
 	}
 
 	@Override

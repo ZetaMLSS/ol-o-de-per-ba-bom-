@@ -22,6 +22,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.minerp.init.MinerpModMenus;
+import net.mcreator.minerp.init.MinerpModItems;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -93,6 +94,11 @@ public class GuiDoCarregadorCelularMenu extends AbstractContainerMenu implements
 			private final int slot = 0;
 			private int x = GuiDoCarregadorCelularMenu.this.x;
 			private int y = GuiDoCarregadorCelularMenu.this.y;
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return MinerpModItems.CELULAR.get() == stack.getItem();
+			}
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)

@@ -14,7 +14,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "CUSTOM:Celular"
           },
           "disablePlacement": {
             "fixedValue": false
