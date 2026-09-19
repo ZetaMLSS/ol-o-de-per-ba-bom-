@@ -12,6 +12,7 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.minerp.world.inventory.TelaCelularParamedicoMenu;
+import net.mcreator.minerp.procedures.BateriaVisorProcedure;
 import net.mcreator.minerp.network.TelaCelularParamedicoButtonMessage;
 import net.mcreator.minerp.init.MinerpModScreens;
 
@@ -55,6 +56,8 @@ public class TelaCelularParamedicoScreen extends AbstractContainerScreen<TelaCel
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiTools$alphaBlit(guiGraphics, texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		net.spidrone.uiapi.UIProgressBarRenderer.drawProgressBar(guiGraphics, this.leftPos + 24, this.topPos + -95, 16, 7, 1, -16777216, -14145496, net.spidrone.uiapi.UIColorEffects.solid(-11163051), BateriaVisorProcedure.execute(entity),
+				BateriaVisorProcedure.execute(entity), net.spidrone.uiapi.UIProgressBarRenderer.FillDirection.LEFT_TO_RIGHT);
 		RenderSystem.disableBlend();
 		guiTools$orderedImages : {
 			if (true) {

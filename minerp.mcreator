@@ -93,9 +93,9 @@
       "registry_name": "tela_celular_inicial",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/network/TelaCelularInicialButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularInicialScreen.java",
           "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularInicialMenu.java",
-          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularInicialScreen.java"
+          "src/main/java/net/mcreator/minerp/network/TelaCelularInicialButtonMessage.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
@@ -111,6 +111,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           },
           {
             "name": "x",
@@ -373,9 +377,9 @@
       "registry_name": "tela_celular_policia",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularPoliciaScreen.java",
+          "src/main/java/net/mcreator/minerp/network/TelaCelularPoliciaButtonMessage.java",
           "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularPoliciaMenu.java",
-          "src/main/java/net/mcreator/minerp/network/TelaCelularPoliciaButtonMessage.java"
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularPoliciaScreen.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Policia"
@@ -463,9 +467,9 @@
       "registry_name": "tela_celular_paramedico",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularParamedicoMenu.java",
           "src/main/java/net/mcreator/minerp/client/gui/TelaCelularParamedicoScreen.java",
-          "src/main/java/net/mcreator/minerp/network/TelaCelularParamedicoButtonMessage.java",
-          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularParamedicoMenu.java"
+          "src/main/java/net/mcreator/minerp/network/TelaCelularParamedicoButtonMessage.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Paramedicos"
@@ -618,9 +622,9 @@
       "registry_name": "tela_celular_urb",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularUrbMenu.java",
           "src/main/java/net/mcreator/minerp/client/gui/TelaCelularUrbScreen.java",
-          "src/main/java/net/mcreator/minerp/network/TelaCelularUrbButtonMessage.java",
-          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularUrbMenu.java"
+          "src/main/java/net/mcreator/minerp/network/TelaCelularUrbButtonMessage.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Urb"
@@ -727,6 +731,46 @@
         ]
       },
       "path": "~/Itens/Celular/Carregador Celular"
+    },
+    {
+      "name": "BateriaVisor",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bateria_visor",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/BateriaVisorProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
+    },
+    {
+      "name": "Horacelularvisor",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horacelularvisor",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/HoracelularvisorProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
     }
   ],
   "variable_elements": [

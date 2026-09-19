@@ -170,10 +170,12 @@
           "name": "progressbar_progress_bar",
           "sua_image_mode": false,
           "current": {
-            "fixedValue": 0.0
+            "fixedValue": 0.0,
+            "name": "BateriaVisor"
           },
           "max": {
-            "fixedValue": 100.0
+            "fixedValue": 10000.0,
+            "name": "BateriaVisor"
           },
           "direction": "LEFT_TO_RIGHT",
           "sua_color_effect": "solid",
@@ -208,8 +210,8 @@
           "width": 16,
           "height": 7,
           "anchorPoint": "CENTER",
-          "x": 285,
-          "y": 27,
+          "x": 227,
+          "y": 25,
           "locked": false
         }
       },
@@ -304,6 +306,44 @@
           "height": 26,
           "x": 201,
           "y": 147,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_relogio",
+          "text": "00:00\n",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "textProcedure": "Horacelularvisor",
+          "width": 100,
+          "height": 40,
+          "x": 177,
+          "y": 24,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_first_linesecond_line",
+          "text": "aaa",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "textProcedure": "Calculadoradaguicarteira",
+          "width": 120,
+          "height": 40,
+          "x": 81,
+          "y": 44,
           "locked": false
         }
       }
