@@ -56,7 +56,7 @@ public class TelaCelularParamedicoScreen extends AbstractContainerScreen<TelaCel
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiTools$alphaBlit(guiGraphics, texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-		net.spidrone.uiapi.UIProgressBarRenderer.drawProgressBar(guiGraphics, this.leftPos + 29, this.topPos + -90, 16, 7, 1, -16777216, -14145496, net.spidrone.uiapi.UIColorEffects.multiGradient(-6750208, -256, -16724992, -65281),
+		net.spidrone.uiapi.UIProgressBarRenderer.drawProgressBar(guiGraphics, this.leftPos + 24, this.topPos + -95, 16, 7, 1, -16777216, -14145496, net.spidrone.uiapi.UIColorEffects.multiGradient(-6750208, -256, -16724992, -65281),
 				BateriaVisorProcedure.execute(entity), 10000, net.spidrone.uiapi.UIProgressBarRenderer.FillDirection.LEFT_TO_RIGHT);
 		RenderSystem.disableBlend();
 		guiTools$orderedImages : {
@@ -67,7 +67,7 @@ public class TelaCelularParamedicoScreen extends AbstractContainerScreen<TelaCel
 				int guiTools$visibleHeight = 229;
 				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/gemini_generated_image_luqojiluqojiluqo-removebg-preview.png"));
 				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
-					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -44 + guiTools$xOffset, this.topPos + -115 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 120, 229);
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -49 + guiTools$xOffset, this.topPos + -120 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 120, 229);
 			}
 		}
 	}
@@ -85,7 +85,7 @@ public class TelaCelularParamedicoScreen extends AbstractContainerScreen<TelaCel
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		this.guiTools$renderMultilineLabel(guiGraphics, "Voc\u00EA deseja chamar os Param\u00E9dicos?", -17, -58, 80, 50, -3407872, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "Lembre-se que chamadas falsas s\u00E3o crimes.", -18, -6, 80, 40, -12829636, false, 0.75F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -21, -91, 48, 40, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 40, -1, false, 1.00F);
 	}
 
 	@Override

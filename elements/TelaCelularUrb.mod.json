@@ -17,9 +17,9 @@
           "image": "gemini_generated_image_luqojiluqojiluqo-removebg-preview.png",
           "width": 120,
           "height": 229,
-          "x": 159,
-          "y": 5,
-          "locked": false
+          "x": 154,
+          "y": 0,
+          "locked": true
         }
       },
       {
@@ -31,8 +31,8 @@
           "onClick": "ChamarUrb",
           "width": 55,
           "height": 20,
-          "x": 191,
-          "y": 173,
+          "x": 187,
+          "y": 172,
           "locked": false
         }
       },
@@ -49,7 +49,7 @@
           "fontScale": 125,
           "width": 85,
           "height": 50,
-          "x": 178,
+          "x": 173,
           "y": 42,
           "locked": false
         }
@@ -67,8 +67,8 @@
           "fontScale": 75,
           "width": 80,
           "height": 40,
-          "x": 187,
-          "y": 82,
+          "x": 186,
+          "y": 84,
           "locked": false
         }
       },
@@ -77,7 +77,7 @@
         "data": {
           "name": "Curta",
           "text": "Curta",
-          "x": 183,
+          "x": 180,
           "y": 115,
           "locked": false
         }
@@ -87,7 +87,7 @@
         "data": {
           "name": "Longa",
           "text": "Longa",
-          "x": 183,
+          "x": 180,
           "y": 140,
           "locked": false
         }
@@ -105,7 +105,7 @@
           "fontScale": 50,
           "width": 80,
           "height": 40,
-          "x": 208,
+          "x": 204,
           "y": 130,
           "locked": false
         }
@@ -155,8 +155,8 @@
           "width": 16,
           "height": 7,
           "anchorPoint": "TOP_RIGHT",
-          "x": 232,
-          "y": 30,
+          "x": 227,
+          "y": 25,
           "locked": false
         }
       },
@@ -174,8 +174,8 @@
           "textProcedure": "Horacelularvisor",
           "width": 48,
           "height": 40,
-          "x": 182,
-          "y": 29,
+          "x": 177,
+          "y": 24,
           "locked": false
         }
       }

@@ -17,9 +17,9 @@
           "image": "gemini_generated_image_luqojiluqojiluqo-removebg-preview.png",
           "width": 120,
           "height": 229,
-          "x": 159,
-          "y": 5,
-          "locked": true
+          "x": 154,
+          "y": 0,
+          "locked": false
         }
       },
       {
@@ -117,8 +117,8 @@
           "width": 16,
           "height": 7,
           "anchorPoint": "TOP_RIGHT",
-          "x": 232,
-          "y": 30,
+          "x": 227,
+          "y": 25,
           "locked": false
         }
       },
@@ -136,8 +136,8 @@
           "textProcedure": "Horacelularvisor",
           "width": 48,
           "height": 40,
-          "x": 182,
-          "y": 29,
+          "x": 177,
+          "y": 24,
           "locked": false
         }
       }
