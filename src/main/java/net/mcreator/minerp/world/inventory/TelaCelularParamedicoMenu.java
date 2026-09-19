@@ -98,7 +98,7 @@ public class TelaCelularParamedicoMenu extends AbstractContainerMenu implements 
 			double x = menu.x;
 			double y = menu.y;
 			double z = menu.z;
-			TelaCelularInicialQuandoEstaGUIEAbertaProcedure.execute(entity, itemstack);
+			TelaCelularInicialQuandoEstaGUIEAbertaProcedure.execute(entity);
 		}
 	}
 }
