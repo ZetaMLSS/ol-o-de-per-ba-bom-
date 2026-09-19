@@ -163,6 +163,14 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 				new net.minecraft.client.gui.components.WidgetSprites(net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/app_config.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/app_config.png")),
 				e -> {
 				}) {
+			private boolean guiTools$pressedToggled;
+
+			@Override
+			public void onPress() {
+				guiTools$pressedToggled = !guiTools$pressedToggled;
+				super.onPress();
+			}
+
 			@Override
 			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/app_config.png");
@@ -170,7 +178,7 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = guiTools$hoveredTexture;
 				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
 				boolean mousePressed = mouseOverButton && org.lwjgl.glfw.GLFW.glfwGetMouseButton(net.minecraft.client.Minecraft.getInstance().getWindow().getWindow(), org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT) == org.lwjgl.glfw.GLFW.GLFW_PRESS;
-				net.minecraft.resources.ResourceLocation buttonTexture = mousePressed ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
+				net.minecraft.resources.ResourceLocation buttonTexture = (guiTools$pressedToggled || mousePressed) ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
 				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -179,6 +187,14 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 				new net.minecraft.client.gui.components.WidgetSprites(net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/app_banco.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/app_banco.png")),
 				e -> {
 				}) {
+			private boolean guiTools$pressedToggled;
+
+			@Override
+			public void onPress() {
+				guiTools$pressedToggled = !guiTools$pressedToggled;
+				super.onPress();
+			}
+
 			@Override
 			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/app_banco.png");
@@ -186,7 +202,7 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = guiTools$hoveredTexture;
 				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
 				boolean mousePressed = mouseOverButton && org.lwjgl.glfw.GLFW.glfwGetMouseButton(net.minecraft.client.Minecraft.getInstance().getWindow().getWindow(), org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT) == org.lwjgl.glfw.GLFW.GLFW_PRESS;
-				net.minecraft.resources.ResourceLocation buttonTexture = mousePressed ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
+				net.minecraft.resources.ResourceLocation buttonTexture = (guiTools$pressedToggled || mousePressed) ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
 				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -200,6 +216,14 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 						net.mcreator.minerp.network.TelaCelularInicialButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
+			private boolean guiTools$pressedToggled;
+
+			@Override
+			public void onPress() {
+				guiTools$pressedToggled = !guiTools$pressedToggled;
+				super.onPress();
+			}
+
 			@Override
 			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/app_policia.png");
@@ -207,7 +231,7 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = guiTools$hoveredTexture;
 				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
 				boolean mousePressed = mouseOverButton && org.lwjgl.glfw.GLFW.glfwGetMouseButton(net.minecraft.client.Minecraft.getInstance().getWindow().getWindow(), org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT) == org.lwjgl.glfw.GLFW.GLFW_PRESS;
-				net.minecraft.resources.ResourceLocation buttonTexture = mousePressed ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
+				net.minecraft.resources.ResourceLocation buttonTexture = (guiTools$pressedToggled || mousePressed) ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
 				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -221,6 +245,14 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 						net.mcreator.minerp.network.TelaCelularInicialButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
+			private boolean guiTools$pressedToggled;
+
+			@Override
+			public void onPress() {
+				guiTools$pressedToggled = !guiTools$pressedToggled;
+				super.onPress();
+			}
+
 			@Override
 			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/app_ambulancia.png");
@@ -228,7 +260,7 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = guiTools$hoveredTexture;
 				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
 				boolean mousePressed = mouseOverButton && org.lwjgl.glfw.GLFW.glfwGetMouseButton(net.minecraft.client.Minecraft.getInstance().getWindow().getWindow(), org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT) == org.lwjgl.glfw.GLFW.GLFW_PRESS;
-				net.minecraft.resources.ResourceLocation buttonTexture = mousePressed ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
+				net.minecraft.resources.ResourceLocation buttonTexture = (guiTools$pressedToggled || mousePressed) ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
 				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -236,6 +268,14 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 		enhanced_image_button_app_chamada = new net.minecraft.client.gui.components.ImageButton(this.leftPos + -22, this.topPos + -8, 26, 26, new net.minecraft.client.gui.components.WidgetSprites(
 				net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/app_chamada.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/app_chamada.png")), e -> {
 				}) {
+			private boolean guiTools$pressedToggled;
+
+			@Override
+			public void onPress() {
+				guiTools$pressedToggled = !guiTools$pressedToggled;
+				super.onPress();
+			}
+
 			@Override
 			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/app_chamada.png");
@@ -243,7 +283,7 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = guiTools$hoveredTexture;
 				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
 				boolean mousePressed = mouseOverButton && org.lwjgl.glfw.GLFW.glfwGetMouseButton(net.minecraft.client.Minecraft.getInstance().getWindow().getWindow(), org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT) == org.lwjgl.glfw.GLFW.GLFW_PRESS;
-				net.minecraft.resources.ResourceLocation buttonTexture = mousePressed ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
+				net.minecraft.resources.ResourceLocation buttonTexture = (guiTools$pressedToggled || mousePressed) ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
 				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -251,6 +291,14 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 		enhanced_image_button_vaunt_wallet = new net.minecraft.client.gui.components.ImageButton(this.leftPos + 19, this.topPos + -8, 26, 26, new net.minecraft.client.gui.components.WidgetSprites(
 				net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/vaunt_wallet.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/vaunt_wallet.png")), e -> {
 				}) {
+			private boolean guiTools$pressedToggled;
+
+			@Override
+			public void onPress() {
+				guiTools$pressedToggled = !guiTools$pressedToggled;
+				super.onPress();
+			}
+
 			@Override
 			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/vaunt_wallet.png");
@@ -258,7 +306,7 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = guiTools$hoveredTexture;
 				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
 				boolean mousePressed = mouseOverButton && org.lwjgl.glfw.GLFW.glfwGetMouseButton(net.minecraft.client.Minecraft.getInstance().getWindow().getWindow(), org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT) == org.lwjgl.glfw.GLFW.GLFW_PRESS;
-				net.minecraft.resources.ResourceLocation buttonTexture = mousePressed ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
+				net.minecraft.resources.ResourceLocation buttonTexture = (guiTools$pressedToggled || mousePressed) ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
 				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -273,6 +321,14 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 						net.mcreator.minerp.network.TelaCelularInicialButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
+			private boolean guiTools$pressedToggled;
+
+			@Override
+			public void onPress() {
+				guiTools$pressedToggled = !guiTools$pressedToggled;
+				super.onPress();
+			}
+
 			@Override
 			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/app_urbr.png");
@@ -280,7 +336,7 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = guiTools$hoveredTexture;
 				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
 				boolean mousePressed = mouseOverButton && org.lwjgl.glfw.GLFW.glfwGetMouseButton(net.minecraft.client.Minecraft.getInstance().getWindow().getWindow(), org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT) == org.lwjgl.glfw.GLFW.GLFW_PRESS;
-				net.minecraft.resources.ResourceLocation buttonTexture = mousePressed ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
+				net.minecraft.resources.ResourceLocation buttonTexture = (guiTools$pressedToggled || mousePressed) ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
 				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

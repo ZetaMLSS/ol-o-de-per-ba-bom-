@@ -821,6 +821,42 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
+    },
+    {
+      "name": "SaberONbt",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "saber_o_nbt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/command/SaberONbtCommand.java"
+        ]
+      },
+      "path": "~/Sistemas/Comandos"
+    },
+    {
+      "name": "SaberONbtProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "saber_o_nbt_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/SaberONbtProcedureProcedure.java"
+        ]
+      },
+      "path": "~/Sistemas/Comandos"
     }
   ],
   "variable_elements": [
