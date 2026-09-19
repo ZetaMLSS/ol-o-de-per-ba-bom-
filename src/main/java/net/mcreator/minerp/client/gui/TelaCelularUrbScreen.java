@@ -94,7 +94,7 @@ public class TelaCelularUrbScreen extends AbstractContainerScreen<TelaCelularUrb
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		this.guiTools$renderMultilineLabel(guiGraphics, "Voc\u00EA deseja chamar um Urber?", -30, -85, 85, 50, -13421773, false, 1.25F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "Qual tipo de viagem deseja solicitar?", -29, -45, 80, 40, -13421773, false, 0.75F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "(At\u00E9 100 blocos)", -1, 0, 80, 40, -65536, false, 0.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "(Dentro da cidade)", -1, 0, 80, 40, -65536, false, 0.50F);
 	}
 
 	@Override
