@@ -61,9 +61,7 @@ public class VerCelularCarregandoNaBaseBlockEntityRenderer implements BlockEntit
 				stack = container.getItem(0);
 			if (!stack.isEmpty()) {
 				poseStack.pushPose();
-				poseStack.translate(0.5, 0.5, 0.5);
-				applyFacingRotation(poseStack, state);
-				poseStack.translate(-0.01, -0.27000000000000002, 0.05);
+				poseStack.translate(0.49, 0.22999999999999998, 0.55);
 				poseStack.mulPose(Axis.XP.rotationDegrees(155.5f));
 				poseStack.mulPose(Axis.YP.rotationDegrees(360f));
 				poseStack.mulPose(Axis.ZP.rotationDegrees(180f));

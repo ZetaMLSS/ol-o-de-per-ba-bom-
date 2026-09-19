@@ -20,7 +20,7 @@
         "hitboxY": 0.12,
         "hitboxZ": 0.5,
         "displayContext": "FIXED",
-        "followBlockRotation": true,
+        "followBlockRotation": false,
         "fixedItem": ""
       }
     ],
