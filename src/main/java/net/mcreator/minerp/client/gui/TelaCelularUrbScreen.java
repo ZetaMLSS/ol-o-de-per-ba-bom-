@@ -23,8 +23,8 @@ public class TelaCelularUrbScreen extends AbstractContainerScreen<TelaCelularUrb
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	private Checkbox Opcaocorrida;
-	private Checkbox Opcaocorrida_copy;
+	private Checkbox Curta;
+	private Checkbox Longa;
 	private Button button_chamar;
 
 	public TelaCelularUrbScreen(TelaCelularUrbMenu container, Inventory inventory, Component text) {
@@ -42,12 +42,12 @@ public class TelaCelularUrbScreen extends AbstractContainerScreen<TelaCelularUrb
 	public void updateMenuState(int elementType, String name, Object elementState) {
 		menuStateUpdateActive = true;
 		if (elementType == 1 && elementState instanceof Boolean logicState) {
-			if (name.equals("Opcaocorrida")) {
-				if (Opcaocorrida.selected() != logicState)
-					Opcaocorrida.onPress();
-			} else if (name.equals("Opcaocorrida_copy")) {
-				if (Opcaocorrida_copy.selected() != logicState)
-					Opcaocorrida_copy.onPress();
+			if (name.equals("Curta")) {
+				if (Curta.selected() != logicState)
+					Curta.onPress();
+			} else if (name.equals("Longa")) {
+				if (Longa.selected() != logicState)
+					Longa.onPress();
 			}
 		}
 		menuStateUpdateActive = false;
@@ -109,16 +109,16 @@ public class TelaCelularUrbScreen extends AbstractContainerScreen<TelaCelularUrb
 			}
 		}).bounds(this.leftPos + -16, this.topPos + 55, 55, 20).build();
 		this.addRenderableWidget(button_chamar);
-		Opcaocorrida = Checkbox.builder(Component.translatable("gui.minerp.tela_celular_urb.Opcaocorrida"), this.font).pos(this.leftPos + -26, this.topPos + -15).onValueChange((checkbox, value) -> {
+		Curta = Checkbox.builder(Component.translatable("gui.minerp.tela_celular_urb.Curta"), this.font).pos(this.leftPos + -26, this.topPos + -15).onValueChange((checkbox, value) -> {
 			if (!menuStateUpdateActive)
-				menu.sendMenuStateUpdate(entity, 1, "Opcaocorrida", value, false);
+				menu.sendMenuStateUpdate(entity, 1, "Curta", value, false);
 		}).build();
-		this.addRenderableWidget(Opcaocorrida);
-		Opcaocorrida_copy = Checkbox.builder(Component.translatable("gui.minerp.tela_celular_urb.Opcaocorrida_copy"), this.font).pos(this.leftPos + -26, this.topPos + 10).onValueChange((checkbox, value) -> {
+		this.addRenderableWidget(Curta);
+		Longa = Checkbox.builder(Component.translatable("gui.minerp.tela_celular_urb.Longa"), this.font).pos(this.leftPos + -26, this.topPos + 10).onValueChange((checkbox, value) -> {
 			if (!menuStateUpdateActive)
-				menu.sendMenuStateUpdate(entity, 1, "Opcaocorrida_copy", value, false);
+				menu.sendMenuStateUpdate(entity, 1, "Longa", value, false);
 		}).build();
-		this.addRenderableWidget(Opcaocorrida_copy);
+		this.addRenderableWidget(Longa);
 	}
 
 	private final java.util.Map<String, java.util.List<String>> guiTools$multilineCache = new java.util.HashMap<>();

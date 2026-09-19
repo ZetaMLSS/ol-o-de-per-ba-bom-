@@ -659,6 +659,42 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Urb"
+    },
+    {
+      "name": "AceitarChamada",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aceitar_chamada",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/AceitarChamadaProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Urb"
+    },
+    {
+      "name": "Aceitarurb",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aceitarurb",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/command/AceitarurbCommand.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Urb"
     }
   ],
   "variable_elements": [
@@ -684,6 +720,30 @@
       "name": "CatCoinSaldo",
       "type": "number",
       "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "urb_ativo",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "urb_x",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "urb_y",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "urb_z",
+      "type": "number",
+      "scope": "map",
       "value": "0"
     }
   ],
@@ -743,7 +803,9 @@
       "gui.minerp.tela_celular_paramedico.button_chamar": "SIM",
       "gui.minerp.tela_celular_urb.button_chamar": "Chamar",
       "gui.minerp.tela_celular_urb.Opcaocorrida_copy": "Longa",
-      "gui.minerp.tela_celular_urb.Opcaocorrida": "Curta"
+      "gui.minerp.tela_celular_urb.Opcaocorrida": "Curta",
+      "gui.minerp.tela_celular_urb.Curta": "Curta",
+      "gui.minerp.tela_celular_urb.Longa": "Longa"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -778,7 +840,9 @@
       "gui.minerp.tela_celular_paramedico.button_chamar": "SIM",
       "gui.minerp.tela_celular_urb.button_chamar": "SIM",
       "gui.minerp.tela_celular_urb.Opcaocorrida_copy": "Longa",
-      "gui.minerp.tela_celular_urb.Opcaocorrida": "Curta"
+      "gui.minerp.tela_celular_urb.Opcaocorrida": "Curta",
+      "gui.minerp.tela_celular_urb.Curta": "Curta",
+      "gui.minerp.tela_celular_urb.Longa": "Longa"
     }
   },
   "metadata": {

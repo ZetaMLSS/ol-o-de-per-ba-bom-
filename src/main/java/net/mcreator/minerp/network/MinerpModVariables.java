@@ -156,6 +156,10 @@ public class MinerpModVariables {
 		boolean _syncDirty = false;
 		public double CatCoinValor = 0;
 		public double CatCoinQuantidade = 0;
+		public boolean urb_ativo = false;
+		public double urb_x = 0;
+		public double urb_y = 0;
+		public double urb_z = 0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -166,12 +170,20 @@ public class MinerpModVariables {
 		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			CatCoinValor = nbt.getDouble("CatCoinValor");
 			CatCoinQuantidade = nbt.getDouble("CatCoinQuantidade");
+			urb_ativo = nbt.getBoolean("urb_ativo");
+			urb_x = nbt.getDouble("urb_x");
+			urb_y = nbt.getDouble("urb_y");
+			urb_z = nbt.getDouble("urb_z");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			nbt.putDouble("CatCoinValor", CatCoinValor);
 			nbt.putDouble("CatCoinQuantidade", CatCoinQuantidade);
+			nbt.putBoolean("urb_ativo", urb_ativo);
+			nbt.putDouble("urb_x", urb_x);
+			nbt.putDouble("urb_y", urb_y);
+			nbt.putDouble("urb_z", urb_z);
 			return nbt;
 		}
 

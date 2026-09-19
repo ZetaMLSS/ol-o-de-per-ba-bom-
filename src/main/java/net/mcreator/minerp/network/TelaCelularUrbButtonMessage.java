@@ -15,7 +15,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.SectionPos;
 
-import net.mcreator.minerp.procedures.ChamarPoliciaProcedure;
+import net.mcreator.minerp.procedures.ChamarUrbProcedure;
 import net.mcreator.minerp.MinerpMod;
 
 @EventBusSubscriber
@@ -49,7 +49,7 @@ public record TelaCelularUrbButtonMessage(int buttonID, int x, int y, int z) imp
 			return;
 		if (buttonID == 0) {
 
-			ChamarPoliciaProcedure.execute(world, x, y, z, entity);
+			ChamarUrbProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

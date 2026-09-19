@@ -28,7 +28,7 @@
           "name": "button_chamar",
           "text": "Chamar",
           "isUndecorated": false,
-          "onClick": "ChamarPolicia",
+          "onClick": "ChamarUrb",
           "width": 55,
           "height": 20,
           "x": 187,
@@ -75,7 +75,7 @@
       {
         "type": "checkbox",
         "data": {
-          "name": "Opcaocorrida",
+          "name": "Curta",
           "text": "Curta",
           "x": 177,
           "y": 105,
@@ -85,7 +85,7 @@
       {
         "type": "checkbox",
         "data": {
-          "name": "Opcaocorrida_copy",
+          "name": "Longa",
           "text": "Longa",
           "x": 177,
           "y": 130,
