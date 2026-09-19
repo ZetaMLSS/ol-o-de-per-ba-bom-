@@ -36,5 +36,6 @@ public class MinerpModTabs {
 				tabData.accept(MinerpModBlocks.COMPUTADOR.get().asItem());
 				tabData.accept(MinerpModBlocks.MONITOR.get().asItem());
 				tabData.accept(MinerpModItems.CAIXA.get());
+				tabData.accept(MinerpModBlocks.CARREGADOR_CELULAR.get().asItem());
 			}).withTabsBefore(MINERP_MONEY.getId()).build());
 }
