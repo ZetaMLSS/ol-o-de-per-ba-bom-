@@ -160,6 +160,7 @@ public class MinerpModVariables {
 		public double urb_x = 0;
 		public double urb_y = 0;
 		public double urb_z = 0;
+		public double ContadorPoliciais = 0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -174,6 +175,7 @@ public class MinerpModVariables {
 			urb_x = nbt.getDouble("urb_x");
 			urb_y = nbt.getDouble("urb_y");
 			urb_z = nbt.getDouble("urb_z");
+			ContadorPoliciais = nbt.getDouble("ContadorPoliciais");
 		}
 
 		@Override
@@ -184,6 +186,7 @@ public class MinerpModVariables {
 			nbt.putDouble("urb_x", urb_x);
 			nbt.putDouble("urb_y", urb_y);
 			nbt.putDouble("urb_z", urb_z);
+			nbt.putDouble("ContadorPoliciais", ContadorPoliciais);
 			return nbt;
 		}
 
