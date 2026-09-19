@@ -995,6 +995,21 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
+    },
+    {
+      "name": "VerCelularCarregandoNaBase",
+      "type": "ber",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ver_celular_carregando_na_base",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/client/renderer/block/VerCelularCarregandoNaBaseBlockEntityRenderer.java",
+          "src/main/java/net/mcreator/minerp/init/MinerpModBerClient.java",
+          "src/main/java/net/mcreator/minerp/init/MinerpModBerSupport.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Carregador Celular"
     }
   ],
   "variable_elements": [
@@ -1156,6 +1171,8 @@
   },
   "metadata": {
     "files": [
+      "src/main/java/net/mcreator/minerp/init/MinerpModBerClient.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModBerSupport.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModScreens.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
       "src/main/java/net/mcreator/minerp/network/MenuStateUpdateMessage.java",

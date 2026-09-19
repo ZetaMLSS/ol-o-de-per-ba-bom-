@@ -1,13 +1,9 @@
 {
-  "parent": "block/cube",
+  "parent": "minerp:custom/carregadorcelular",
   "textures": {
-    "down": "minecraft:block/beacon",
-    "up": "minecraft:block/beacon",
-    "north": "minecraft:block/beacon",
-    "east": "minecraft:block/beacon",
-    "south": "minecraft:block/beacon",
-    "west": "minecraft:block/beacon",
-    "particle": "minecraft:block/beacon"
+    "all": "minecraft:block/black_concrete",
+    "particle": "minecraft:block/black_concrete",
+    "0": "minerp:block/carregadortelemovel"
   },
   "render_type": "solid"
 }
