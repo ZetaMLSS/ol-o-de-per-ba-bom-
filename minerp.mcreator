@@ -940,6 +940,61 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Config"
+    },
+    {
+      "name": "MostrarNumeroCelularProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostrar_numero_celular_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostrarNumeroCelularProcedureProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Config"
+    },
+    {
+      "name": "AppConfiguracoesCelular",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "app_configuracoes_celular",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/AppConfiguracoesCelularProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
     }
   ],
   "variable_elements": [
