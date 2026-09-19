@@ -14,12 +14,15 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.Containers;
+import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.minerp.world.inventory.GuiDoCarregadorCelularMenu;
+import net.mcreator.minerp.procedures.CarregadorCelularOnTickUpdateProcedure;
 import net.mcreator.minerp.block.entity.CarregadorCelularBlockEntity;
 
 import io.netty.buffer.Unpooled;
@@ -27,6 +30,12 @@ import io.netty.buffer.Unpooled;
 public class CarregadorCelularBlock extends Block implements EntityBlock {
 	public CarregadorCelularBlock() {
 		super(BlockBehaviour.Properties.of().sound(SoundType.GRAVEL).strength(1f, 10f));
+	}
+
+	@Override
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
+		super.tick(blockstate, world, pos, random);
+		CarregadorCelularOnTickUpdateProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

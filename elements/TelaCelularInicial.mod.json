@@ -174,8 +174,7 @@
             "name": "BateriaVisor"
           },
           "max": {
-            "fixedValue": 10000.0,
-            "name": "BateriaVisor"
+            "fixedValue": 10000.0
           },
           "direction": "LEFT_TO_RIGHT",
           "sua_color_effect": "solid",
@@ -209,7 +208,7 @@
           "sua_pulse_easing": "easeInOutSine",
           "width": 16,
           "height": 7,
-          "anchorPoint": "CENTER",
+          "anchorPoint": "CENTER_LEFT",
           "x": 227,
           "y": 25,
           "locked": false

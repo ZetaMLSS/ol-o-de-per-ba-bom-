@@ -120,6 +120,7 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": "CarregadorCelularOnTickUpdate",
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

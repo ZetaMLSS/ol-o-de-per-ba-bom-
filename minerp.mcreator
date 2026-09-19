@@ -771,6 +771,37 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
+    },
+    {
+      "name": "CarregadorCelularOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carregador_celular_on_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/CarregadorCelularOnTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Carregador Celular"
     }
   ],
   "variable_elements": [
