@@ -124,23 +124,21 @@ public class TelaCelularConfigScreen extends AbstractContainerScreen<TelaCelular
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -97, 48, 12, -1, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarNumeroCelularProcedureProcedure.execute(entity), ""), -27, -73, 120, 40, -16777216, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Celular", -27, -66, 120, 40, -16777216, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarNumeroCelularProcedureProcedure.execute(entity), ""), -28, -74, 120, 40, -1, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Celular", -28, -67, 120, 40, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "N\u00FAmero:", -27, -73, 120, 40, -16777216, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "N\u00FAmero:", -28, -74, 120, 40, -1, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "Online:", -30, -51, 39, 10, -16777216, false, 1.25F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "Online:", -31, -52, 39, 10, -13369549, false, 1.25F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "Players:", -22, 55, 20, 20, -16777216, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "Players:", -23, 54, 113, 40, -1, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Policiais:", -30, -5, 120, 40, -16777216, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Policiais:", -31, -6, 120, 40, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Policiais:", -28, -5, 120, 40, -16777216, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Policiais:", -29, -6, 120, 40, -1, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "M\u00E9dicos:", -23, 25, 120, 40, -16777216, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "M\u00E9dicos:", -24, 24, 120, 40, -1, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "Urbes:", -18, -34, 120, 40, -16777216, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "Urbes:", -19, -35, 120, 40, -1, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PlayersOnlineProcedure.execute(world), ""), 41, 54, 120, 40, -16711936, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarNumeroCelularProcedureProcedure.execute(entity), ""), 11, -74, 120, 40, -1, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarNumeroCelularProcedureProcedure.execute(entity), ""), 12, -73, 120, 40, -16777216, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarNumeroCelularProcedureProcedure.execute(entity), ""), -27, -63, 120, 40, -16777216, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarNumeroCelularProcedureProcedure.execute(entity), ""), -28, -64, 120, 40, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PlayersOnlineProcedure.execute(world), ""), 42, 56, 120, 40, -16711936, false, 1.00F);
 	}
 
 	@Override

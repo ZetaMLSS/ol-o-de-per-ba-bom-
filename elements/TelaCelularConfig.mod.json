@@ -102,29 +102,10 @@
           },
           "hasShadow": false,
           "fontScale": 100,
-          "textProcedure": "MostrarNumeroCelularProcedure",
           "width": 120,
           "height": 40,
           "x": 176,
           "y": 47,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_meu_numero_copy",
-          "text": "Celular",
-          "color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 100,
-          "width": 120,
-          "height": 40,
-          "x": 176,
-          "y": 54,
           "locked": false
         }
       },
@@ -139,29 +120,10 @@
           },
           "hasShadow": false,
           "fontScale": 100,
-          "textProcedure": "MostrarNumeroCelularProcedure",
           "width": 120,
           "height": 40,
           "x": 175,
           "y": 46,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_meu_numero",
-          "text": "Celular",
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 100,
-          "width": 120,
-          "height": 40,
-          "x": 175,
-          "y": 53,
           "locked": false
         }
       },
@@ -310,7 +272,7 @@
           "fontScale": 100,
           "width": 120,
           "height": 40,
-          "x": 173,
+          "x": 175,
           "y": 115,
           "locked": false
         }
@@ -328,7 +290,7 @@
           "fontScale": 100,
           "width": 120,
           "height": 40,
-          "x": 172,
+          "x": 174,
           "y": 114,
           "locked": false
         }
@@ -408,19 +370,19 @@
       {
         "type": "multiline_label",
         "data": {
-          "name": "multiline_label_0",
-          "text": "0",
+          "name": "multiline_label_empty_copy",
+          "text": "-",
           "color": {
-            "value": -16711936,
+            "value": -16777216,
             "falpha": 0.0
           },
           "hasShadow": false,
           "fontScale": 100,
-          "textProcedure": "PlayersOnline",
+          "textProcedure": "MostrarNumeroCelularProcedure",
           "width": 120,
           "height": 40,
-          "x": 244,
-          "y": 174,
+          "x": 176,
+          "y": 57,
           "locked": false
         }
       },
@@ -438,27 +400,27 @@
           "textProcedure": "MostrarNumeroCelularProcedure",
           "width": 120,
           "height": 40,
-          "x": 214,
-          "y": 46,
+          "x": 175,
+          "y": 56,
           "locked": false
         }
       },
       {
         "type": "multiline_label",
         "data": {
-          "name": "multiline_label_empty_copy",
-          "text": "-",
+          "name": "multiline_label_0",
+          "text": "0",
           "color": {
-            "value": -16777216,
+            "value": -16711936,
             "falpha": 0.0
           },
           "hasShadow": false,
           "fontScale": 100,
-          "textProcedure": "MostrarNumeroCelularProcedure",
+          "textProcedure": "PlayersOnline",
           "width": 120,
           "height": 40,
-          "x": 215,
-          "y": 47,
+          "x": 245,
+          "y": 176,
           "locked": false
         }
       }
