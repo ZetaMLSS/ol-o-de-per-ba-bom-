@@ -404,6 +404,43 @@
           "y": 85,
           "locked": false
         }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_numero",
+          "text": "Numero:",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "textProcedure": "MostrarNumeroCelularProcedure",
+          "width": 120,
+          "height": 40,
+          "x": 175,
+          "y": 36,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_meu_numero",
+          "text": "Meu Numero",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "width": 120,
+          "height": 40,
+          "x": 175,
+          "y": 46,
+          "locked": false
+        }
       }
     ],
     "onTick": "TelaCelularInicialQuandoEstaGUIEAberta",
