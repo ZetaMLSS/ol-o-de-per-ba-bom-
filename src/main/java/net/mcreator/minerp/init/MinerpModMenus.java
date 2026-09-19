@@ -15,11 +15,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.minerp.world.inventory.TelaCelularUrbMenu;
-import net.mcreator.minerp.world.inventory.TelaCelularPoliciaMenu;
-import net.mcreator.minerp.world.inventory.TelaCelularParamedicoMenu;
-import net.mcreator.minerp.world.inventory.TelaCelularInicialMenu;
-import net.mcreator.minerp.world.inventory.InventarioCarteiraMenu;
+import net.mcreator.minerp.world.inventory.*;
 import net.mcreator.minerp.network.MenuStateUpdateMessage;
 import net.mcreator.minerp.MinerpMod;
 
@@ -32,6 +28,7 @@ public class MinerpModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<TelaCelularPoliciaMenu>> TELA_CELULAR_POLICIA = REGISTRY.register("tela_celular_policia", () -> IMenuTypeExtension.create(TelaCelularPoliciaMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<TelaCelularParamedicoMenu>> TELA_CELULAR_PARAMEDICO = REGISTRY.register("tela_celular_paramedico", () -> IMenuTypeExtension.create(TelaCelularParamedicoMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<TelaCelularUrbMenu>> TELA_CELULAR_URB = REGISTRY.register("tela_celular_urb", () -> IMenuTypeExtension.create(TelaCelularUrbMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<GuiDoCarregadorCelularMenu>> GUI_DO_CARREGADOR_CELULAR = REGISTRY.register("gui_do_carregador_celular", () -> IMenuTypeExtension.create(GuiDoCarregadorCelularMenu::new));
 
 	public interface MenuAccessor {
 		Map<String, Object> getMenuState();

@@ -31,5 +31,6 @@
   "gui.minerp.tela_celular_paramedico.button_chamar": "SIM",
   "gui.minerp.tela_celular_urb.button_chamar": "Chamar",
   "gui.minerp.tela_celular_urb.Opcaocorrida_copy": "Longa",
-  "gui.minerp.tela_celular_urb.Opcaocorrida": "Curta"
+  "gui.minerp.tela_celular_urb.Opcaocorrida": "Curta",
+  "block.minerp.carregador_celular": "Carregador Celular"
 }

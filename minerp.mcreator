@@ -667,6 +667,69 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Urb"
+    },
+    {
+      "name": "CarregadorCelular",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carregador_celular",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minerp/models/item/carregador_celular.json",
+          "src/main/resources/assets/minerp/blockstates/carregador_celular.json",
+          "src/main/resources/assets/minerp/models/block/carregador_celular.json",
+          "src/main/resources/data/minerp/loot_table/blocks/carregador_celular.json",
+          "src/main/java/net/mcreator/minerp/block/CarregadorCelularBlock.java",
+          "src/main/java/net/mcreator/minerp/block/entity/CarregadorCelularBlockEntity.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Carregador"
+    },
+    {
+      "name": "GuiDoCarregadorCelular",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gui_do_carregador_celular",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/world/inventory/GuiDoCarregadorCelularMenu.java",
+          "src/main/java/net/mcreator/minerp/client/gui/GuiDoCarregadorCelularScreen.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Carregador"
+    },
+    {
+      "name": "GuiDoCarregadorCelularWhileThisGUIIsOpenTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gui_do_carregador_celular_while_this_gui_is_open_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/GuiDoCarregadorCelularWhileThisGUIIsOpenTickProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Carregador"
     }
   ],
   "variable_elements": [
@@ -751,7 +814,8 @@
       "gui.minerp.tela_celular_paramedico.button_chamar": "SIM",
       "gui.minerp.tela_celular_urb.button_chamar": "Chamar",
       "gui.minerp.tela_celular_urb.Opcaocorrida_copy": "Longa",
-      "gui.minerp.tela_celular_urb.Opcaocorrida": "Curta"
+      "gui.minerp.tela_celular_urb.Opcaocorrida": "Curta",
+      "block.minerp.carregador_celular": "Carregador Celular"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -786,7 +850,8 @@
       "gui.minerp.tela_celular_paramedico.button_chamar": "SIM",
       "gui.minerp.tela_celular_urb.button_chamar": "SIM",
       "gui.minerp.tela_celular_urb.Opcaocorrida_copy": "Longa",
-      "gui.minerp.tela_celular_urb.Opcaocorrida": "Curta"
+      "gui.minerp.tela_celular_urb.Opcaocorrida": "Curta",
+      "block.minerp.carregador_celular": "Carregador Celular"
     }
   },
   "metadata": {
@@ -795,6 +860,7 @@
       "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
       "src/main/java/net/mcreator/minerp/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlocks.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModBlockEntities.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModItems.java",
       "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
       "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
@@ -885,6 +951,10 @@
               },
               {
                 "name": "Caixa Celular",
+                "children": []
+              },
+              {
+                "name": "Carregador",
                 "children": []
               }
             ]
