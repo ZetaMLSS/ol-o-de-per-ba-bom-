@@ -56,7 +56,7 @@ public class MinerpModItems {
 		VD_200 = REGISTRY.register("vd_200", VD200Item::new);
 		CAIXA = REGISTRY.register("caixa", CaixaItem::new);
 		CARTEIRA = REGISTRY.register("carteira", CarteiraItem::new);
-		CARREGADOR_CELULAR = block(MinerpModBlocks.CARREGADOR_CELULAR);
+		CARREGADOR_CELULAR = block(MinerpModBlocks.CARREGADOR_CELULAR, new Item.Properties().stacksTo(1));
 	}
 
 	// Start of user code block custom items

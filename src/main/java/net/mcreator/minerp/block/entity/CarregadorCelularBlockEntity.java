@@ -88,7 +88,7 @@ public class CarregadorCelularBlockEntity extends RandomizableContainerBlockEnti
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Carregador Celular");
+		return Component.literal("Carregador De Phone");
 	}
 
 	@Override

@@ -29,7 +29,7 @@ import io.netty.buffer.Unpooled;
 
 public class CarregadorCelularBlock extends Block implements EntityBlock {
 	public CarregadorCelularBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.GRAVEL).strength(1f, 10f));
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1f, 12.5f).hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true));
 	}
 
 	@Override
@@ -52,7 +52,7 @@ public class CarregadorCelularBlock extends Block implements EntityBlock {
 			player.openMenu(new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Carregador Celular");
+					return Component.literal("Carregador De Phone");
 				}
 
 				@Override
