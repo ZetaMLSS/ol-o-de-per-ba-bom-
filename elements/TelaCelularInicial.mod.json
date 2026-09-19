@@ -19,7 +19,7 @@
           "height": 229,
           "x": 154,
           "y": 0,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -31,7 +31,7 @@
           "height": 28,
           "x": 221,
           "y": 111,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -43,7 +43,7 @@
           "height": 28,
           "x": 221,
           "y": 81,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -55,7 +55,7 @@
           "height": 28,
           "x": 221,
           "y": 50,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -67,7 +67,7 @@
           "height": 28,
           "x": 180,
           "y": 50,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -79,7 +79,7 @@
           "height": 28,
           "x": 180,
           "y": 81,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -91,7 +91,7 @@
           "height": 28,
           "x": 180,
           "y": 111,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -161,6 +161,55 @@
           "height": 26,
           "x": 181,
           "y": 82,
+          "locked": false
+        }
+      },
+      {
+        "type": "progress_bar",
+        "data": {
+          "name": "progressbar_progress_bar",
+          "sua_image_mode": false,
+          "current": {
+            "fixedValue": 0.0
+          },
+          "max": {
+            "fixedValue": 100.0
+          },
+          "direction": "LEFT_TO_RIGHT",
+          "sua_color_effect": "solid",
+          "color1": {
+            "value": -11163051,
+            "falpha": 0.0
+          },
+          "color2": {
+            "value": -43691,
+            "falpha": 0.0
+          },
+          "color3": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "color4": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "thresholdPercent": 0.25,
+          "emptyColor": {
+            "value": -14145496,
+            "falpha": 0.0
+          },
+          "borderColor": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "borderWidth": 1,
+          "sua_pulse_speed": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "width": 16,
+          "height": 7,
+          "anchorPoint": "CENTER",
+          "x": 285,
+          "y": 27,
           "locked": false
         }
       },

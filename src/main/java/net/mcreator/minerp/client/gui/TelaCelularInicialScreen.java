@@ -50,6 +50,8 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiTools$alphaBlit(guiGraphics, texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		net.spidrone.uiapi.UIProgressBarRenderer.drawProgressBar(guiGraphics, this.leftPos + 82, this.topPos + -93, 16, 7, 1, -16777216, -14145496, net.spidrone.uiapi.UIColorEffects.solid(-11163051), 0, 100,
+				net.spidrone.uiapi.UIProgressBarRenderer.FillDirection.LEFT_TO_RIGHT);
 		RenderSystem.disableBlend();
 		guiTools$orderedImages : {
 			if (true) {
