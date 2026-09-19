@@ -2,9 +2,9 @@
   "_fv": 89,
   "_type": "item",
   "definition": {
-    "renderType": 0,
+    "renderType": 1,
     "texture": "minecraft:ward_armor_trim_smithing_template",
-    "customModelName": "Normal",
+    "customModelName": "caixadecelular:default",
     "guiTexture": "",
     "customProperties": {},
     "states": [],

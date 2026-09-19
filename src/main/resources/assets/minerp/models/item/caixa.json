@@ -1,6 +1,7 @@
 {
-  "parent": "item/generated",
+  "parent": "minerp:custom/caixadecelular",
   "textures": {
-    "layer0": "minecraft:item/ward_armor_trim_smithing_template"
+    "0": "minerp:block/caixadocelular",
+    "particle": "minecraft:item/ward_armor_trim_smithing_template"
   }
 }
