@@ -30,6 +30,7 @@ import net.mcreator.minerp.init.MinerpModTabs;
 import net.mcreator.minerp.init.MinerpModMenus;
 import net.mcreator.minerp.init.MinerpModItems;
 import net.mcreator.minerp.init.MinerpModBlocks;
+import net.mcreator.minerp.init.MinerpModBlockEntities;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.Queue;
@@ -52,6 +53,7 @@ public class MinerpMod {
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
 		MinerpModBlocks.REGISTRY.register(modEventBus);
+		MinerpModBlockEntities.REGISTRY.register(modEventBus);
 		MinerpModItems.REGISTRY.register(modEventBus);
 		MinerpModTabs.REGISTRY.register(modEventBus);
 		MinerpModVariables.ATTACHMENT_TYPES.register(modEventBus);

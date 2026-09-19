@@ -1,19 +1,7 @@
 {
   "variants": {
-    "facing=north": {
+    "": {
       "model": "minerp:block/carregador_celular"
-    },
-    "facing=east": {
-      "model": "minerp:block/carregador_celular",
-      "y": 90
-    },
-    "facing=south": {
-      "model": "minerp:block/carregador_celular",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "minerp:block/carregador_celular",
-      "y": 270
     }
   }
 }

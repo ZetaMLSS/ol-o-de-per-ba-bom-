@@ -33,5 +33,6 @@
   "gui.minerp.tela_celular_urb.Opcaocorrida_copy": "Longa",
   "gui.minerp.tela_celular_urb.Opcaocorrida": "Curta",
   "gui.minerp.tela_celular_urb.Curta": "Curta",
-  "gui.minerp.tela_celular_urb.Longa": "Longa"
+  "gui.minerp.tela_celular_urb.Longa": "Longa",
+  "block.minerp.carregador_celular": "Carregador Celular"
 }
