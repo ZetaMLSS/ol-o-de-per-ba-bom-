@@ -83,7 +83,7 @@ public class TelaCelularBancoScreen extends AbstractContainerScreen<TelaCelularB
 			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.tela_celular_banco.label_saldo"), -26, -81, -12829636, false);
 		}
 		{
-			guiGraphics.drawString(this.font, PegarValorDoBancoParaTextoProcedure.execute(entity), 8, -81, -12829636, false);
+			guiGraphics.drawString(this.font, PegarValorDoBancoParaTextoProcedure.execute(entity), -25, -72, -12829636, false);
 		}
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 40, -1, false, 1.00F);
 	}

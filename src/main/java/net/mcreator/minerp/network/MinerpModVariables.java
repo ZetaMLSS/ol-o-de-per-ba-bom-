@@ -75,6 +75,7 @@ public class MinerpModVariables {
 		PlayerVariables clone = new PlayerVariables();
 		clone.DinheiroBanco = original.DinheiroBanco;
 		clone.CatCoinSaldo = original.CatCoinSaldo;
+		clone.CreditoBanco = original.CreditoBanco;
 		if (!event.isWasDeath()) {
 		}
 		event.getEntity().setData(PLAYER_VARIABLES, clone);
@@ -247,12 +248,14 @@ public class MinerpModVariables {
 		boolean _syncDirty = false;
 		public double DinheiroBanco = 0;
 		public double CatCoinSaldo = 0;
+		public double CreditoBanco = 0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putDouble("DinheiroBanco", DinheiroBanco);
 			nbt.putDouble("CatCoinSaldo", CatCoinSaldo);
+			nbt.putDouble("CreditoBanco", CreditoBanco);
 			return nbt;
 		}
 
@@ -260,6 +263,7 @@ public class MinerpModVariables {
 		public void deserializeNBT(HolderLookup.Provider lookupProvider, CompoundTag nbt) {
 			DinheiroBanco = nbt.getDouble("DinheiroBanco");
 			CatCoinSaldo = nbt.getDouble("CatCoinSaldo");
+			CreditoBanco = nbt.getDouble("CreditoBanco");
 		}
 
 		public void markSyncDirty() {
