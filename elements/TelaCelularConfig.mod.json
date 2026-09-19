@@ -23,6 +23,150 @@
         }
       },
       {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_1",
+          "image": "negrom.png",
+          "width": 28,
+          "height": 28,
+          "x": 221,
+          "y": 111,
+          "locked": true
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_2",
+          "image": "negrom.png",
+          "width": 28,
+          "height": 28,
+          "x": 221,
+          "y": 81,
+          "locked": true
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_3",
+          "image": "negrom.png",
+          "width": 28,
+          "height": 28,
+          "x": 221,
+          "y": 50,
+          "locked": true
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_4",
+          "image": "negrom.png",
+          "width": 28,
+          "height": 28,
+          "x": 180,
+          "y": 50,
+          "locked": true
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_5",
+          "image": "negrom.png",
+          "width": 28,
+          "height": 28,
+          "x": 180,
+          "y": 81,
+          "locked": true
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_6",
+          "image": "negrom.png",
+          "width": 28,
+          "height": 28,
+          "x": 180,
+          "y": 111,
+          "locked": true
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "app_config.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": true,
+          "name": "enhanced_image_button_app_config",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "AppConfiguracoesCelular",
+          "width": 26,
+          "height": 26,
+          "x": 181,
+          "y": 51,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "app_banco.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": true,
+          "name": "enhanced_image_button_app_banco",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "AbrirAppBanco",
+          "width": 26,
+          "height": 26,
+          "x": 222,
+          "y": 51,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "app_policia.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": true,
+          "name": "enhanced_image_button_app_policia",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "BotaoCelularPolicia",
+          "width": 26,
+          "height": 26,
+          "x": 181,
+          "y": 82,
+          "locked": false
+        }
+      },
+      {
         "type": "progress_bar",
         "data": {
           "name": "progressbar_progress_bar",
@@ -73,6 +217,100 @@
         }
       },
       {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "app_ambulancia.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": true,
+          "name": "enhanced_image_button_app_ambulancia",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "BotaoCelularParamedico",
+          "width": 26,
+          "height": 26,
+          "x": 222,
+          "y": 82,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "app_chamada.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": true,
+          "name": "enhanced_image_button_app_chamada",
+          "text": "",
+          "isUndecorated": true,
+          "width": 26,
+          "height": 26,
+          "x": 181,
+          "y": 112,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "vaunt_wallet.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": true,
+          "name": "enhanced_image_button_vaunt_wallet",
+          "text": "",
+          "isUndecorated": true,
+          "width": 26,
+          "height": 26,
+          "x": 222,
+          "y": 112,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "app_urbr.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": true,
+          "name": "enhanced_image_button_app_urbr",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "BotaoCelularURB",
+          "width": 26,
+          "height": 26,
+          "x": 201,
+          "y": 147,
+          "locked": false
+        }
+      },
+      {
         "type": "multiline_label",
         "data": {
           "name": "multiline_label_relogio",
@@ -85,46 +323,9 @@
           "fontScale": 100,
           "textProcedure": "Horacelularvisor",
           "width": 48,
-          "height": 12,
+          "height": 40,
           "x": 177,
           "y": 24,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_numero",
-          "text": "Numero:",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 100,
-          "textProcedure": "MostrarNumeroCelularProcedure",
-          "width": 120,
-          "height": 40,
-          "x": 175,
-          "y": 36,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_meu_numero",
-          "text": "Meu Numero",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 100,
-          "width": 120,
-          "height": 40,
-          "x": 175,
-          "y": 46,
           "locked": false
         }
       }

@@ -49,10 +49,10 @@ public record TelaCelularInicialButtonMessage(int buttonID, int x, int y, int z)
 
 		guiTools$enhancedImageButton : {
 			if (buttonID == 0) {
-				net.mcreator.minerp.procedures.AppConfiguracoesCelularProcedure.execute(world, x, y, z, entity);
+				net.mcreator.minerp.procedures.AppConfiguracoesCelularProcedure.execute();
 			}
 			if (buttonID == 1) {
-				net.mcreator.minerp.procedures.AbrirAppBancoProcedure.execute(world, x, y, z, entity);
+				net.mcreator.minerp.procedures.AbrirAppBancoProcedure.execute();
 			}
 			if (buttonID == 2) {
 				net.mcreator.minerp.procedures.BotaoCelularPoliciaProcedure.execute(world, x, y, z, entity);
