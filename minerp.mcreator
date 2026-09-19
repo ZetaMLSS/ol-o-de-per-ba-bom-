@@ -1030,6 +1030,20 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Config"
+    },
+    {
+      "name": "PoliciaisOnline",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "policiais_online",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/PoliciaisOnlineProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Config"
     }
   ],
   "variable_elements": [
