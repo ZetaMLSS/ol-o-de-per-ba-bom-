@@ -6,19 +6,17 @@ import net.neoforged.neoforge.common.extensions.ILevelExtension;
 import net.neoforged.neoforge.capabilities.Capabilities;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.minerp.init.MinerpModItems;
-
 public class CarregadorCelularOnTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double Bateria = 0;
 		ItemStack celular = ItemStack.EMPTY;
-		if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == MinerpModItems.CELULAR.get()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("bateria") <= 10000) {
+		if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("bateria") < 10000) {
 			celular = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).copy();
 			{
 				final String _tagName = "bateria";
@@ -30,6 +28,8 @@ public class CarregadorCelularOnTickUpdateProcedure {
 				_setstack.setCount(1);
 				_itemHandlerModifiable.setStackInSlot(0, _setstack);
 			}
+			if (world instanceof Level _level)
+				_level.updateNeighborsAt(BlockPos.containing(x, y, z), _level.getBlockState(BlockPos.containing(x, y, z)).getBlock());
 		}
 	}
 

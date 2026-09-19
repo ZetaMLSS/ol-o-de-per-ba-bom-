@@ -177,17 +177,17 @@
             "fixedValue": 10000.0
           },
           "direction": "LEFT_TO_RIGHT",
-          "sua_color_effect": "solid",
+          "sua_color_effect": "multiGradient",
           "color1": {
-            "value": -11163051,
+            "value": -6750208,
             "falpha": 0.0
           },
           "color2": {
-            "value": -43691,
+            "value": -256,
             "falpha": 0.0
           },
           "color3": {
-            "value": -16711936,
+            "value": -16724992,
             "falpha": 0.0
           },
           "color4": {
