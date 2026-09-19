@@ -10,6 +10,6 @@ public class MostrarNumeroCelularProcedureProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "" + ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero"));
+		return new java.text.DecimalFormat("######").format((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero"));
 	}
 }

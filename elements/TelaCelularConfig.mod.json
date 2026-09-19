@@ -272,7 +272,7 @@
           "fontScale": 100,
           "width": 120,
           "height": 40,
-          "x": 173,
+          "x": 175,
           "y": 115,
           "locked": false
         }
@@ -290,7 +290,7 @@
           "fontScale": 100,
           "width": 120,
           "height": 40,
-          "x": 172,
+          "x": 174,
           "y": 114,
           "locked": false
         }
@@ -419,7 +419,7 @@
           "textProcedure": "PlayersOnline",
           "width": 120,
           "height": 40,
-          "x": 244,
+          "x": 245,
           "y": 176,
           "locked": false
         }
