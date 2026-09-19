@@ -11,7 +11,9 @@
     "animations": [],
     "name": "Caixa",
     "rarity": "COMMON",
-    "creativeTabs": [],
+    "creativeTabs": [
+      "CUSTOM:MINERPTec"
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
@@ -38,6 +40,7 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 99,
+    "onRightClickedOnBlock": "CaixaQuandoClicadoComOBotaoDireito",
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

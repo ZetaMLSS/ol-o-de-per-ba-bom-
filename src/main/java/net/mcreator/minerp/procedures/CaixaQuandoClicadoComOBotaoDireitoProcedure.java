@@ -29,6 +29,11 @@ public class CaixaQuandoClicadoComOBotaoDireitoProcedure {
 				final double _tagValue = (Mth.nextInt(RandomSource.create(), 100000, 999999));
 				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 			}
+			{
+				final String _tagName = "bateria";
+				final double _tagValue = 5000;
+				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+			}
 		}
 	}
 }
