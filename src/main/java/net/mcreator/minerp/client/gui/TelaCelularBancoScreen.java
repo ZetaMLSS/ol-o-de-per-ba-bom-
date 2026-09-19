@@ -9,7 +9,6 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.minerp.world.inventory.TelaCelularBancoMenu;
-import net.mcreator.minerp.procedures.PegarValorDoBancoParaTextoProcedure;
 import net.mcreator.minerp.procedures.BateriaVisorProcedure;
 import net.mcreator.minerp.init.MinerpModScreens;
 
@@ -65,6 +64,15 @@ public class TelaCelularBancoScreen extends AbstractContainerScreen<TelaCelularB
 				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
 					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -49 + guiTools$xOffset, this.topPos + -120 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 120, 229);
 			}
+			if (true) {
+				int guiTools$xOffset = 0;
+				int guiTools$yOffset = 0;
+				int guiTools$visibleWidth = 86;
+				int guiTools$visibleHeight = 166;
+				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/gemini_generatewadawd_f63ykhf63ykhf63y.png"));
+				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -32 + guiTools$xOffset, this.topPos + -87 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 86, 166);
+			}
 		}
 	}
 
@@ -79,13 +87,11 @@ public class TelaCelularBancoScreen extends AbstractContainerScreen<TelaCelularB
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		{
-			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.tela_celular_banco.label_saldo"), -26, -81, -12829636, false);
-		}
-		{
-			guiGraphics.drawString(this.font, PegarValorDoBancoParaTextoProcedure.execute(entity), -25, -72, -12829636, false);
-		}
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 40, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PegarValorDoBancoParaTextoProcedure.execute(entity), ""), -14, -29, 120, 40, -16777216, false, 2.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PegarValorDoBancoParaTextoProcedure.execute(entity), ""), -14, 39, 120, 40, -16777216, false, 2.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PegarValorDoBancoParaTextoProcedure.execute(entity), ""), -15, -30, 120, 40, -12415422, false, 2.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PegarValorDoBancoParaTextoProcedure.execute(entity), ""), -15, 38, 120, 40, -12415422, false, 2.00F);
 	}
 
 	@Override

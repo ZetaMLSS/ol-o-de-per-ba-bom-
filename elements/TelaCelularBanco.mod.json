@@ -92,111 +92,90 @@
         }
       },
       {
-        "type": "label",
+        "type": "dynamic_image",
         "data": {
-          "sua_font": "vanilla",
-          "sua_color_effect": "solid",
-          "sua_motion_effect": "none",
-          "sua_color1": {
-            "value": -16776961,
-            "falpha": 0.0
-          },
-          "sua_color2": {
-            "value": -14336,
-            "falpha": 0.0
-          },
-          "sua_alignment": "LEFT",
-          "sua_max_width": 0,
-          "sua_reveal_speed": 0.0,
-          "sua_rainbow_speed": 1.0,
-          "sua_wave_amplitude": 2.0,
-          "sua_wave_speed": 1.0,
-          "sua_bounce_amplitude": 3.0,
-          "sua_bounce_ms": 150,
-          "sua_color3": {
-            "value": -16711936,
-            "falpha": 0.0
-          },
-          "sua_color4": {
-            "value": -65281,
-            "falpha": 0.0
-          },
-          "sua_outline_enabled": false,
-          "sua_outline_color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "sua_outline_width": 1,
-          "sua_scale_x": 1.0,
-          "sua_scale_y": 1.0,
-          "sua_pulse_easing": "easeInOutSine",
-          "sua_pulse_speed": 1.0,
-          "name": "label_saldo",
-          "text": {
-            "fixedValue": "Saldo:"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 177,
-          "y": 39,
+          "name": "dynamic_image_1",
+          "image": "gemini_generatewadawd_f63ykhf63ykhf63y.png",
+          "width": 86,
+          "height": 166,
+          "x": 171,
+          "y": 33,
           "locked": false
         }
       },
       {
-        "type": "label",
+        "type": "multiline_label",
         "data": {
-          "sua_font": "vanilla",
-          "sua_color_effect": "solid",
-          "sua_motion_effect": "none",
-          "sua_color1": {
-            "value": -16776961,
-            "falpha": 0.0
-          },
-          "sua_color2": {
-            "value": -14336,
-            "falpha": 0.0
-          },
-          "sua_alignment": "LEFT",
-          "sua_max_width": 0,
-          "sua_reveal_speed": 0.0,
-          "sua_rainbow_speed": 1.0,
-          "sua_wave_amplitude": 2.0,
-          "sua_wave_speed": 1.0,
-          "sua_bounce_amplitude": 3.0,
-          "sua_bounce_ms": 150,
-          "sua_color3": {
-            "value": -16711936,
-            "falpha": 0.0
-          },
-          "sua_color4": {
-            "value": -65281,
-            "falpha": 0.0
-          },
-          "sua_outline_enabled": false,
-          "sua_outline_color": {
+          "name": "multiline_label_0_copy",
+          "text": "0",
+          "color": {
             "value": -16777216,
             "falpha": 0.0
           },
-          "sua_outline_width": 1,
-          "sua_scale_x": 1.0,
-          "sua_scale_y": 1.0,
-          "sua_pulse_easing": "easeInOutSine",
-          "sua_pulse_speed": 1.0,
-          "name": "label_0",
-          "text": {
-            "fixedValue": "00",
-            "name": "PegarValorDoBancoParaTexto"
-          },
+          "hasShadow": false,
+          "fontScale": 200,
+          "textProcedure": "PegarValorDoBancoParaTexto",
+          "width": 120,
+          "height": 40,
+          "x": 189,
+          "y": 91,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_0_copy_copy",
+          "text": "0",
           "color": {
-            "value": -12829636,
+            "value": -16777216,
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 178,
-          "y": 48,
+          "fontScale": 200,
+          "textProcedure": "PegarValorDoBancoParaTexto",
+          "width": 120,
+          "height": 40,
+          "x": 189,
+          "y": 159,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_0",
+          "text": "0",
+          "color": {
+            "value": -12415422,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 200,
+          "textProcedure": "PegarValorDoBancoParaTexto",
+          "width": 120,
+          "height": 40,
+          "x": 188,
+          "y": 90,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_0_copy_2",
+          "text": "0",
+          "color": {
+            "value": -12415422,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 200,
+          "textProcedure": "PegarValorDoBancoParaTexto",
+          "width": 120,
+          "height": 40,
+          "x": 188,
+          "y": 158,
           "locked": false
         }
       }
