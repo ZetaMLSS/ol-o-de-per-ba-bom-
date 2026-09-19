@@ -208,7 +208,7 @@
           "sua_pulse_easing": "easeInOutSine",
           "width": 16,
           "height": 7,
-          "anchorPoint": "CENTER_LEFT",
+          "anchorPoint": "TOP_RIGHT",
           "x": 227,
           "y": 25,
           "locked": false
@@ -320,7 +320,7 @@
           "hasShadow": false,
           "fontScale": 100,
           "textProcedure": "Horacelularvisor",
-          "width": 100,
+          "width": 48,
           "height": 40,
           "x": 177,
           "y": 24,
@@ -328,6 +328,8 @@
         }
       }
     ],
+    "onTick": "TelaCelularInicialQuandoEstaGUIEAberta",
+    "onClosed": "QuandoDesligaCelular",
     "gridSettings": {
       "sx": 18,
       "sy": 18,

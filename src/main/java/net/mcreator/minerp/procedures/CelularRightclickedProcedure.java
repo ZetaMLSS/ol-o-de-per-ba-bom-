@@ -44,6 +44,7 @@ public class CelularRightclickedProcedure {
 					}
 				}, _bpos);
 			}
+			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).setDamageValue(1);
 		}
 	}
 }

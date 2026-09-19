@@ -78,8 +78,8 @@
       "registry_name": "celular",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/item/CelularItem.java",
           "src/main/resources/assets/minerp/models/item/celular_0.json",
+          "src/main/java/net/mcreator/minerp/item/CelularItem.java",
           "src/main/resources/assets/minerp/models/item/celular.json"
         ]
       },
@@ -802,6 +802,25 @@
         ]
       },
       "path": "~/Itens/Celular/Carregador Celular"
+    },
+    {
+      "name": "QuandoDesligaCelular",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quando_desliga_celular",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/QuandoDesligaCelularProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
     }
   ],
   "variable_elements": [
@@ -861,6 +880,9 @@
       "~Computador@CUSTOM:Computador",
       "~ATMinf@CUSTOM:ATMinf",
       "~ATMSup@CUSTOM:ATMSup"
+    ],
+    "ITEMS:minecraft:enchantable/durability": [
+      "~Celular@CUSTOM:Celular"
     ]
   },
   "tab_element_order": {

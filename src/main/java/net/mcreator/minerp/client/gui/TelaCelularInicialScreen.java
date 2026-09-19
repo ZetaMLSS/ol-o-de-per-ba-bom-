@@ -153,7 +153,7 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 100, 40, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 40, -1, false, 1.00F);
 	}
 
 	@Override

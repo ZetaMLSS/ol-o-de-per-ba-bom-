@@ -2,6 +2,9 @@ package net.mcreator.minerp.world.inventory;
 
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.Level;
@@ -15,6 +18,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.minerp.procedures.TelaCelularInicialQuandoEstaGUIEAbertaProcedure;
+import net.mcreator.minerp.procedures.QuandoDesligaCelularProcedure;
 import net.mcreator.minerp.init.MinerpModMenus;
 
 import java.util.function.Supplier;
@@ -22,6 +27,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
 
+@EventBusSubscriber
 public class TelaCelularInicialMenu extends AbstractContainerMenu implements MinerpModMenus.MenuAccessor {
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
@@ -76,6 +82,12 @@ public class TelaCelularInicialMenu extends AbstractContainerMenu implements Min
 	}
 
 	@Override
+	public void removed(Player playerIn) {
+		super.removed(playerIn);
+		QuandoDesligaCelularProcedure.execute(entity);
+	}
+
+	@Override
 	public Map<Integer, Slot> getSlots() {
 		return Collections.unmodifiableMap(customSlots);
 	}
@@ -83,5 +95,17 @@ public class TelaCelularInicialMenu extends AbstractContainerMenu implements Min
 	@Override
 	public Map<String, Object> getMenuState() {
 		return menuState;
+	}
+
+	@SubscribeEvent
+	public static void onPlayerTick(PlayerTickEvent.Post event) {
+		Player entity = event.getEntity();
+		if (entity.containerMenu instanceof TelaCelularInicialMenu menu) {
+			Level world = menu.world;
+			double x = menu.x;
+			double y = menu.y;
+			double z = menu.z;
+			TelaCelularInicialQuandoEstaGUIEAbertaProcedure.execute(entity);
+		}
 	}
 }

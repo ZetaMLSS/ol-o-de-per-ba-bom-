@@ -19,6 +19,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.minerp.procedures.TelaCelularInicialQuandoEstaGUIEAbertaProcedure;
+import net.mcreator.minerp.procedures.QuandoDesligaCelularProcedure;
 import net.mcreator.minerp.init.MinerpModMenus;
 
 import java.util.function.Supplier;
@@ -78,6 +79,12 @@ public class TelaCelularParamedicoMenu extends AbstractContainerMenu implements 
 	@Override
 	public ItemStack quickMoveStack(Player playerIn, int index) {
 		return ItemStack.EMPTY;
+	}
+
+	@Override
+	public void removed(Player playerIn) {
+		super.removed(playerIn);
+		QuandoDesligaCelularProcedure.execute(entity);
 	}
 
 	@Override
