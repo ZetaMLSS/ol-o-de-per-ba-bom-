@@ -1,0 +1,8 @@
+{
+  "_fv": 89,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"89\" y=\"17\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"return_string\"><value name=\"return\"><block type=\"text_join\"><mutation items=\"1\"></mutation><value name=\"ADD0\"><block type=\"java_code_get\"><field name=\"CODE\">Integer.toString((int) (net.neoforged.neoforge.server.ServerLifecycleHooks.getCurrentServer() != null ? net.neoforged.neoforge.server.ServerLifecycleHooks.getCurrentServer().getPlayerList().getPlayers().stream().filter(player -&gt; player.getTeam() != null &amp;&amp; player.getTeam().getName().equals(\"medicos\")).count() : 0))</field></block></value></block></value></block></next></block></xml>",
+    "skipDependencyNullCheck": false
+  }
+}

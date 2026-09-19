@@ -138,8 +138,10 @@ public class TelaCelularConfigScreen extends AbstractContainerScreen<TelaCelular
 		this.guiTools$renderMultilineLabel(guiGraphics, "Urbes:", -19, -35, 120, 40, -1, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarNumeroCelularProcedureProcedure.execute(entity), ""), -27, -63, 120, 40, -16777216, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarNumeroCelularProcedureProcedure.execute(entity), ""), -28, -64, 120, 40, -1, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PlayersOnlineProcedure.execute(world), ""), 42, 56, 120, 40, -16711936, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PoliciaisOnlineProcedure.execute(), ""), 42, -5, 120, 40, -16711936, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PlayersOnlineProcedure.execute(world), ""), 41, 55, 120, 40, -16711936, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PoliciaisOnlineProcedure.execute(), ""), 41, -5, 120, 40, -16711936, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.ParamedicosOnlineProcedure.execute(), ""), 41, 25, 120, 40, -16711936, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.UrbOnlineProcedure.execute(), ""), 41, -35, 120, 40, -16711936, false, 1.00F);
 	}
 
 	@Override

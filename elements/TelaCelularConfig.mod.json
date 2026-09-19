@@ -419,8 +419,8 @@
           "textProcedure": "PlayersOnline",
           "width": 120,
           "height": 40,
-          "x": 245,
-          "y": 176,
+          "x": 244,
+          "y": 175,
           "locked": false
         }
       },
@@ -438,8 +438,46 @@
           "textProcedure": "PoliciaisOnline",
           "width": 120,
           "height": 40,
-          "x": 245,
+          "x": 244,
           "y": 115,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_0_copy_copy",
+          "text": "0",
+          "color": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "textProcedure": "ParamedicosOnline",
+          "width": 120,
+          "height": 40,
+          "x": 244,
+          "y": 145,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_0_copy_copy_copy",
+          "text": "0",
+          "color": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "textProcedure": "UrbOnline",
+          "width": 120,
+          "height": 40,
+          "x": 244,
+          "y": 85,
           "locked": false
         }
       }
