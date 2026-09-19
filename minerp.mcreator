@@ -935,8 +935,8 @@
       "registry_name": "tela_celular_config",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularConfigScreen.java",
-          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularConfigMenu.java"
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularConfigMenu.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularConfigScreen.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Config"
