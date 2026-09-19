@@ -13,101 +13,13 @@
       {
         "type": "dynamic_image",
         "data": {
-          "name": "dynamic_image_0_copy",
+          "name": "dynamic_image_0",
           "image": "gemini_generated_image_luqojiluqojiluqo-removebg-preview.png",
           "width": 120,
           "height": 229,
-          "x": 159,
-          "y": 5,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_chamar",
-          "text": "Chamar",
-          "isUndecorated": false,
-          "onClick": "ChamarUrb",
-          "width": 55,
-          "height": 20,
-          "x": 191,
-          "y": 173,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_voce_quer_chamar_a_policia",
-          "text": "Você deseja chamar um Urber?",
-          "color": {
-            "value": -13421773,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 125,
-          "width": 85,
-          "height": 50,
-          "x": 178,
-          "y": 42,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_chamadas_falsas_sao_crimes",
-          "text": "Qual tipo de viagem deseja solicitar?",
-          "color": {
-            "value": -13421773,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 75,
-          "width": 80,
-          "height": 40,
-          "x": 187,
-          "y": 82,
-          "locked": false
-        }
-      },
-      {
-        "type": "checkbox",
-        "data": {
-          "name": "Curta",
-          "text": "Curta",
-          "x": 183,
-          "y": 115,
-          "locked": false
-        }
-      },
-      {
-        "type": "checkbox",
-        "data": {
-          "name": "Longa",
-          "text": "Longa",
-          "x": 183,
-          "y": 140,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_chamadas_falsas_sao_crimes_copy",
-          "text": "(Dentro da cidade)",
-          "color": {
-            "value": -65536,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 50,
-          "width": 80,
-          "height": 40,
-          "x": 208,
-          "y": 130,
-          "locked": false
+          "x": 154,
+          "y": 0,
+          "locked": true
         }
       },
       {
@@ -155,8 +67,8 @@
           "width": 16,
           "height": 7,
           "anchorPoint": "TOP_RIGHT",
-          "x": 232,
-          "y": 30,
+          "x": 227,
+          "y": 25,
           "locked": false
         }
       },
@@ -173,9 +85,46 @@
           "fontScale": 100,
           "textProcedure": "Horacelularvisor",
           "width": 48,
+          "height": 12,
+          "x": 177,
+          "y": 24,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_numero",
+          "text": "Numero:",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "textProcedure": "MostrarNumeroCelularProcedure",
+          "width": 120,
           "height": 40,
-          "x": 182,
-          "y": 29,
+          "x": 175,
+          "y": 36,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_meu_numero",
+          "text": "Meu Numero",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "width": 120,
+          "height": 40,
+          "x": 175,
+          "y": 46,
           "locked": false
         }
       }

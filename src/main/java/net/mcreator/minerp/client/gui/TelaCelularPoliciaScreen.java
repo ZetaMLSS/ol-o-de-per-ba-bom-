@@ -58,6 +58,8 @@ public class TelaCelularPoliciaScreen extends AbstractContainerScreen<TelaCelula
 		guiTools$alphaBlit(guiGraphics, texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		net.spidrone.uiapi.UIProgressBarRenderer.drawProgressBar(guiGraphics, this.leftPos + 24, this.topPos + -95, 16, 7, 1, -16777216, -14145496, net.spidrone.uiapi.UIColorEffects.solid(-11163051), BateriaVisorProcedure.execute(entity),
 				BateriaVisorProcedure.execute(entity), net.spidrone.uiapi.UIProgressBarRenderer.FillDirection.LEFT_TO_RIGHT);
+		net.spidrone.uiapi.UIProgressBarRenderer.drawProgressBar(guiGraphics, this.leftPos + 29, this.topPos + -90, 16, 7, 1, -16777216, -14145496, net.spidrone.uiapi.UIColorEffects.multiGradient(-6750208, -256, -16724992, -65281),
+				BateriaVisorProcedure.execute(entity), 10000, net.spidrone.uiapi.UIProgressBarRenderer.FillDirection.LEFT_TO_RIGHT);
 		RenderSystem.disableBlend();
 		guiTools$orderedImages : {
 			if (true) {
@@ -67,7 +69,7 @@ public class TelaCelularPoliciaScreen extends AbstractContainerScreen<TelaCelula
 				int guiTools$visibleHeight = 229;
 				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/gemini_generated_image_luqojiluqojiluqo-removebg-preview.png"));
 				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
-					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -49 + guiTools$xOffset, this.topPos + -120 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 120, 229);
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -44 + guiTools$xOffset, this.topPos + -115 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 120, 229);
 			}
 		}
 	}
@@ -83,8 +85,9 @@ public class TelaCelularPoliciaScreen extends AbstractContainerScreen<TelaCelula
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		this.guiTools$renderMultilineLabel(guiGraphics, "Voc\u00EA quer chamar a policia?", -28, -77, 85, 50, -3407872, false, 1.50F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Lembre-se que chamadas falsas s\u00E3o crimes.", -28, -20, 80, 40, -12829636, false, 0.75F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Voc\u00EA quer chamar a policia?", -23, -70, 85, 50, -3407872, false, 1.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Lembre-se que chamadas falsas s\u00E3o crimes.", -19, -15, 80, 40, -12829636, false, 0.75F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -21, -91, 48, 40, -1, false, 1.00F);
 	}
 
 	@Override
@@ -97,7 +100,7 @@ public class TelaCelularPoliciaScreen extends AbstractContainerScreen<TelaCelula
 				PacketDistributor.sendToServer(new TelaCelularPoliciaButtonMessage(0, x, y, z));
 				TelaCelularPoliciaButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + -16, this.topPos + 42, 55, 20).build();
+		}).bounds(this.leftPos + -13, this.topPos + 42, 55, 20).build();
 		this.addRenderableWidget(button_chamar);
 	}
 

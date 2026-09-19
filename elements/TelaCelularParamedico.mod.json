@@ -13,12 +13,12 @@
       {
         "type": "dynamic_image",
         "data": {
-          "name": "dynamic_image_0",
+          "name": "dynamic_image_0_copy",
           "image": "gemini_generated_image_luqojiluqojiluqo-removebg-preview.png",
           "width": 120,
           "height": 229,
-          "x": 154,
-          "y": 0,
+          "x": 159,
+          "y": 5,
           "locked": true
         }
       },
@@ -31,8 +31,8 @@
           "onClick": "ChamarParamedicos",
           "width": 55,
           "height": 20,
-          "x": 187,
-          "y": 162,
+          "x": 192,
+          "y": 163,
           "locked": false
         }
       },
@@ -49,8 +49,8 @@
           "fontScale": 100,
           "width": 80,
           "height": 50,
-          "x": 174,
-          "y": 50,
+          "x": 186,
+          "y": 62,
           "locked": false
         }
       },
@@ -67,36 +67,35 @@
           "fontScale": 75,
           "width": 80,
           "height": 40,
-          "x": 175,
-          "y": 91,
+          "x": 185,
+          "y": 114,
           "locked": false
         }
       },
       {
         "type": "progress_bar",
         "data": {
-          "name": "progressbar_progress_bar",
+          "name": "progressbar_progress_bar_copy",
           "sua_image_mode": false,
           "current": {
             "fixedValue": 0.0,
             "name": "BateriaVisor"
           },
           "max": {
-            "fixedValue": 10000.0,
-            "name": "BateriaVisor"
+            "fixedValue": 10000.0
           },
           "direction": "LEFT_TO_RIGHT",
-          "sua_color_effect": "solid",
+          "sua_color_effect": "multiGradient",
           "color1": {
-            "value": -11163051,
+            "value": -6750208,
             "falpha": 0.0
           },
           "color2": {
-            "value": -43691,
+            "value": -256,
             "falpha": 0.0
           },
           "color3": {
-            "value": -16711936,
+            "value": -16724992,
             "falpha": 0.0
           },
           "color4": {
@@ -117,9 +116,28 @@
           "sua_pulse_easing": "easeInOutSine",
           "width": 16,
           "height": 7,
-          "anchorPoint": "CENTER",
-          "x": 227,
-          "y": 25,
+          "anchorPoint": "TOP_RIGHT",
+          "x": 232,
+          "y": 30,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_relogio",
+          "text": "00:00\n",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "textProcedure": "Horacelularvisor",
+          "width": 48,
+          "height": 40,
+          "x": 182,
+          "y": 29,
           "locked": false
         }
       }

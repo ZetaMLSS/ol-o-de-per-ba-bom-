@@ -162,6 +162,12 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 		enhanced_image_button_app_config = new net.minecraft.client.gui.components.ImageButton(this.leftPos + -22, this.topPos + -69, 26, 26,
 				new net.minecraft.client.gui.components.WidgetSprites(net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/app_config.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/app_config.png")),
 				e -> {
+					int x = TelaCelularInicialScreen.this.x;
+					int y = TelaCelularInicialScreen.this.y;
+					if (true) {
+						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.TelaCelularInicialButtonMessage(0, x, y, z));
+						net.mcreator.minerp.network.TelaCelularInicialButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
 				}) {
 			private boolean guiTools$pressedToggled;
 
@@ -186,6 +192,12 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 		enhanced_image_button_app_banco = new net.minecraft.client.gui.components.ImageButton(this.leftPos + 19, this.topPos + -69, 26, 26,
 				new net.minecraft.client.gui.components.WidgetSprites(net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/app_banco.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/app_banco.png")),
 				e -> {
+					int x = TelaCelularInicialScreen.this.x;
+					int y = TelaCelularInicialScreen.this.y;
+					if (true) {
+						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.TelaCelularInicialButtonMessage(1, x, y, z));
+						net.mcreator.minerp.network.TelaCelularInicialButtonMessage.handleButtonAction(entity, 1, x, y, z);
+					}
 				}) {
 			private boolean guiTools$pressedToggled;
 
