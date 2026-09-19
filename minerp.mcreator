@@ -1010,6 +1010,26 @@
         ]
       },
       "path": "~/Itens/Celular/Carregador Celular"
+    },
+    {
+      "name": "PlayersOnline",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "players_online",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/PlayersOnlineProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Config"
     }
   ],
   "variable_elements": [

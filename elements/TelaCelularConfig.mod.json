@@ -408,10 +408,29 @@
       {
         "type": "multiline_label",
         "data": {
-          "name": "multiline_label_numero",
-          "text": "Numero:",
+          "name": "multiline_label_0",
+          "text": "0",
           "color": {
-            "value": -12829636,
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "textProcedure": "PlayersOnline",
+          "width": 120,
+          "height": 40,
+          "x": 244,
+          "y": 174,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_empty",
+          "text": "-",
+          "color": {
+            "value": -1,
             "falpha": 0.0
           },
           "hasShadow": false,
@@ -419,26 +438,27 @@
           "textProcedure": "MostrarNumeroCelularProcedure",
           "width": 120,
           "height": 40,
-          "x": 175,
-          "y": 36,
+          "x": 214,
+          "y": 46,
           "locked": false
         }
       },
       {
         "type": "multiline_label",
         "data": {
-          "name": "multiline_label_meu_numero",
-          "text": "Meu Numero",
+          "name": "multiline_label_empty_copy",
+          "text": "-",
           "color": {
-            "value": -12829636,
+            "value": -16777216,
             "falpha": 0.0
           },
           "hasShadow": false,
           "fontScale": 100,
+          "textProcedure": "MostrarNumeroCelularProcedure",
           "width": 120,
           "height": 40,
-          "x": 175,
-          "y": 46,
+          "x": 215,
+          "y": 47,
           "locked": false
         }
       }
