@@ -98,7 +98,7 @@ public class TelaCelularUrbMenu extends AbstractContainerMenu implements MinerpM
 			double x = menu.x;
 			double y = menu.y;
 			double z = menu.z;
-			TelaCelularInicialQuandoEstaGUIEAbertaProcedure.execute(entity);
+			TelaCelularInicialQuandoEstaGUIEAbertaProcedure.execute(entity, itemstack);
 		}
 	}
 }

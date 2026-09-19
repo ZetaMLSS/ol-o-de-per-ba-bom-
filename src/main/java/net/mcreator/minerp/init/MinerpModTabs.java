@@ -35,5 +35,6 @@ public class MinerpModTabs {
 				tabData.accept(MinerpModBlocks.AT_MINF.get().asItem());
 				tabData.accept(MinerpModBlocks.COMPUTADOR.get().asItem());
 				tabData.accept(MinerpModBlocks.MONITOR.get().asItem());
+				tabData.accept(MinerpModItems.CAIXA.get());
 			}).withTabsBefore(MINERP_MONEY.getId()).build());
 }

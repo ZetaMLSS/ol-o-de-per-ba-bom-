@@ -78,8 +78,8 @@
       "registry_name": "celular",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/item/CelularItem.java",
           "src/main/resources/assets/minerp/models/item/celular_0.json",
+          "src/main/java/net/mcreator/minerp/item/CelularItem.java",
           "src/main/resources/assets/minerp/models/item/celular.json"
         ]
       },
@@ -93,9 +93,9 @@
       "registry_name": "tela_celular_inicial",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/network/TelaCelularInicialButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularInicialScreen.java",
           "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularInicialMenu.java",
-          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularInicialScreen.java"
+          "src/main/java/net/mcreator/minerp/network/TelaCelularInicialButtonMessage.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
@@ -111,6 +111,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           },
           {
             "name": "x",
@@ -214,6 +218,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           }
         ],
         "files": [
@@ -373,9 +381,9 @@
       "registry_name": "tela_celular_policia",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularPoliciaScreen.java",
+          "src/main/java/net/mcreator/minerp/network/TelaCelularPoliciaButtonMessage.java",
           "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularPoliciaMenu.java",
-          "src/main/java/net/mcreator/minerp/network/TelaCelularPoliciaButtonMessage.java"
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularPoliciaScreen.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Policia"
@@ -463,9 +471,9 @@
       "registry_name": "tela_celular_paramedico",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularParamedicoMenu.java",
           "src/main/java/net/mcreator/minerp/client/gui/TelaCelularParamedicoScreen.java",
-          "src/main/java/net/mcreator/minerp/network/TelaCelularParamedicoButtonMessage.java",
-          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularParamedicoMenu.java"
+          "src/main/java/net/mcreator/minerp/network/TelaCelularParamedicoButtonMessage.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Paramedicos"
@@ -618,9 +626,9 @@
       "registry_name": "tela_celular_urb",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularUrbMenu.java",
           "src/main/java/net/mcreator/minerp/client/gui/TelaCelularUrbScreen.java",
-          "src/main/java/net/mcreator/minerp/network/TelaCelularUrbButtonMessage.java",
-          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularUrbMenu.java"
+          "src/main/java/net/mcreator/minerp/network/TelaCelularUrbButtonMessage.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Urb"
@@ -783,48 +791,48 @@
   },
   "metadata": {
     "files": [
-      "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModScreens.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
       "src/main/java/net/mcreator/minerp/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlocks.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModItems.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
-      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
-      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
-      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
+      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
       "src/main/java/net/mcreator/minerp/ai/MoveToBlockGoal.java",
-      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
-      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
-      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
-      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/mcreator/minerp/world/BlackHoleSavedData.java",
       "src/main/java/net/mcreator/minerp/mixin/LevelRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/resources/minerp.mixins.json",
-      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
+      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
       "src/main/java/net/mcreator/minerp/client/renderer/CustomEyeOfEnderRenderer.java",
-      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
-      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
-      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
       "src/main/java/net/mcreator/minerp/world/PortalSavedData.java",
       "src/main/java/net/mcreator/minerp/MinerpMod.java",
-      "src/main/java/net/mcreator/minerp/ai/OrbitPositionGoal.java",
-      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
-      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
-      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
+      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
+      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
       "src/main/java/net/mcreator/minerp/math/CallCounter.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
       "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
-      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java"
+      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
+      "src/main/resources/minerp.mixins.json",
+      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
+      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
+      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
+      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
+      "src/main/java/net/mcreator/minerp/ai/OrbitPositionGoal.java",
+      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
+      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
+      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
+      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java"
     ]
   },
   "foldersRoot": {
