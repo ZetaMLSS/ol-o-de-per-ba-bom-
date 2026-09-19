@@ -139,6 +139,7 @@ public class TelaCelularConfigScreen extends AbstractContainerScreen<TelaCelular
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarNumeroCelularProcedureProcedure.execute(entity), ""), -27, -63, 120, 40, -16777216, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarNumeroCelularProcedureProcedure.execute(entity), ""), -28, -64, 120, 40, -1, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PlayersOnlineProcedure.execute(world), ""), 42, 56, 120, 40, -16711936, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PoliciaisOnlineProcedure.execute(), ""), 42, 26, 120, 40, -16711936, false, 1.00F);
 	}
 
 	@Override
