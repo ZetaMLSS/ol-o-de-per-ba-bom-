@@ -857,6 +857,89 @@
         ]
       },
       "path": "~/Sistemas/Comandos"
+    },
+    {
+      "name": "TelaCelularBanco",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_celular_banco",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularBancoMenu.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularBancoScreen.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/BancoApp"
+    },
+    {
+      "name": "PegarValorDoBancoParaTexto",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pegar_valor_do_banco_para_texto",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/PegarValorDoBancoParaTextoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/BancoApp"
+    },
+    {
+      "name": "AbrirAppBanco",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abrir_app_banco",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/AbrirAppBancoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
+    },
+    {
+      "name": "TelaCelularConfig",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_celular_config",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularConfigMenu.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularConfigScreen.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Config"
     }
   ],
   "variable_elements": [
@@ -971,7 +1054,9 @@
       "gui.minerp.tela_celular_urb.Opcaocorrida": "Curta",
       "gui.minerp.tela_celular_urb.Curta": "Curta",
       "gui.minerp.tela_celular_urb.Longa": "Longa",
-      "block.minerp.carregador_celular": "Carregador De Phone"
+      "block.minerp.carregador_celular": "Carregador De Phone",
+      "gui.minerp.tela_celular_banco.label_0": "00",
+      "gui.minerp.tela_celular_banco.label_saldo": "Saldo:"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -1009,7 +1094,9 @@
       "gui.minerp.tela_celular_urb.Opcaocorrida": "Curta",
       "gui.minerp.tela_celular_urb.Curta": "Curta",
       "gui.minerp.tela_celular_urb.Longa": "Longa",
-      "block.minerp.carregador_celular": "Carregador Celular"
+      "block.minerp.carregador_celular": "Carregador Celular",
+      "gui.minerp.tela_celular_banco.label_0": "00",
+      "gui.minerp.tela_celular_banco.label_saldo": "Saldo:"
     }
   },
   "metadata": {
@@ -1101,6 +1188,14 @@
                       },
                       {
                         "name": "Urb",
+                        "children": []
+                      },
+                      {
+                        "name": "BancoApp",
+                        "children": []
+                      },
+                      {
+                        "name": "Config",
                         "children": []
                       }
                     ]

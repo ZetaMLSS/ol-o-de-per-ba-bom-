@@ -20,6 +20,8 @@ public class MinerpModScreens {
 		event.register(MinerpModMenus.TELA_CELULAR_PARAMEDICO.get(), TelaCelularParamedicoScreen::new);
 		event.register(MinerpModMenus.TELA_CELULAR_URB.get(), TelaCelularUrbScreen::new);
 		event.register(MinerpModMenus.GUI_DO_CARREGADOR_CELULAR.get(), GuiDoCarregadorCelularScreen::new);
+		event.register(MinerpModMenus.TELA_CELULAR_BANCO.get(), TelaCelularBancoScreen::new);
+		event.register(MinerpModMenus.TELA_CELULAR_CONFIG.get(), TelaCelularConfigScreen::new);
 	}
 
 	public interface ScreenAccessor {

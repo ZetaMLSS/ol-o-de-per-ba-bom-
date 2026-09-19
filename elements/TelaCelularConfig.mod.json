@@ -1,0 +1,105 @@
+{
+  "_fv": 89,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 21,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_0",
+          "image": "gemini_generated_image_luqojiluqojiluqo-removebg-preview.png",
+          "width": 120,
+          "height": 229,
+          "x": 154,
+          "y": 0,
+          "locked": true
+        }
+      },
+      {
+        "type": "progress_bar",
+        "data": {
+          "name": "progressbar_progress_bar",
+          "sua_image_mode": false,
+          "current": {
+            "fixedValue": 0.0,
+            "name": "BateriaVisor"
+          },
+          "max": {
+            "fixedValue": 10000.0
+          },
+          "direction": "LEFT_TO_RIGHT",
+          "sua_color_effect": "multiGradient",
+          "color1": {
+            "value": -6750208,
+            "falpha": 0.0
+          },
+          "color2": {
+            "value": -256,
+            "falpha": 0.0
+          },
+          "color3": {
+            "value": -16724992,
+            "falpha": 0.0
+          },
+          "color4": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "thresholdPercent": 0.25,
+          "emptyColor": {
+            "value": -14145496,
+            "falpha": 0.0
+          },
+          "borderColor": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "borderWidth": 1,
+          "sua_pulse_speed": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "width": 16,
+          "height": 7,
+          "anchorPoint": "TOP_RIGHT",
+          "x": 227,
+          "y": 25,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_relogio",
+          "text": "00:00\n",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "textProcedure": "Horacelularvisor",
+          "width": 48,
+          "height": 40,
+          "x": 177,
+          "y": 24,
+          "locked": false
+        }
+      }
+    ],
+    "onTick": "TelaCelularInicialQuandoEstaGUIEAberta",
+    "onClosed": "QuandoDesligaCelular",
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
