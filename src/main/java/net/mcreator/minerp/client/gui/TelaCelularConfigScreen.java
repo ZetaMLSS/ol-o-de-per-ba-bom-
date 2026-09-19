@@ -64,6 +64,51 @@ public class TelaCelularConfigScreen extends AbstractContainerScreen<TelaCelular
 				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
 					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -49 + guiTools$xOffset, this.topPos + -120 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 120, 229);
 			}
+			if (true) {
+				int guiTools$xOffset = 0;
+				int guiTools$yOffset = 0;
+				int guiTools$visibleWidth = 86;
+				int guiTools$visibleHeight = 166;
+				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/tela_config_cortada.png"));
+				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -32 + guiTools$xOffset, this.topPos + -88 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 86, 166);
+			}
+			if (true) {
+				int guiTools$xOffset = 0;
+				int guiTools$yOffset = 0;
+				int guiTools$visibleWidth = 28;
+				int guiTools$visibleHeight = 28;
+				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/icone_quantidade_de_players.png"));
+				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + 23 + guiTools$xOffset, this.topPos + -44 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 28, 28);
+			}
+			if (true) {
+				int guiTools$xOffset = 0;
+				int guiTools$yOffset = 0;
+				int guiTools$visibleWidth = 28;
+				int guiTools$visibleHeight = 28;
+				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/icone_quantidade_de_players.png"));
+				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + 23 + guiTools$xOffset, this.topPos + -14 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 28, 28);
+			}
+			if (true) {
+				int guiTools$xOffset = 0;
+				int guiTools$yOffset = 0;
+				int guiTools$visibleWidth = 28;
+				int guiTools$visibleHeight = 28;
+				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/icone_quantidade_de_players.png"));
+				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + 23 + guiTools$xOffset, this.topPos + 16 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 28, 28);
+			}
+			if (true) {
+				int guiTools$xOffset = 0;
+				int guiTools$yOffset = 0;
+				int guiTools$visibleWidth = 28;
+				int guiTools$visibleHeight = 28;
+				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/icone_quantidade_de_players.png"));
+				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + 23 + guiTools$xOffset, this.topPos + 46 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 28, 28);
+			}
 		}
 	}
 
@@ -78,9 +123,21 @@ public class TelaCelularConfigScreen extends AbstractContainerScreen<TelaCelular
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 12, -1, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarNumeroCelularProcedureProcedure.execute(entity), ""), -28, -84, 120, 40, -12829636, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Meu Numero", -28, -74, 120, 40, -12829636, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -97, 48, 12, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarNumeroCelularProcedureProcedure.execute(entity), ""), -27, -73, 120, 40, -16777216, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Celular", -27, -66, 120, 40, -16777216, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarNumeroCelularProcedureProcedure.execute(entity), ""), -28, -74, 120, 40, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Celular", -28, -67, 120, 40, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Online:", -30, -51, 39, 10, -16777216, false, 1.25F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Online:", -31, -52, 39, 10, -13369549, false, 1.25F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Players:", -22, 55, 20, 20, -16777216, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Players:", -23, 54, 113, 40, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Policiais:", -30, -5, 120, 40, -16777216, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Policiais:", -31, -6, 120, 40, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "M\u00E9dicos:", -23, 25, 120, 40, -16777216, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "M\u00E9dicos:", -24, 24, 120, 40, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Urbes:", -18, -34, 120, 40, -16777216, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Urbes:", -19, -35, 120, 40, -1, false, 1.00F);
 	}
 
 	@Override
