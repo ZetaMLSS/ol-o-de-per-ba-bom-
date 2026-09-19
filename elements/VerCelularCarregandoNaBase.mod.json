@@ -7,10 +7,10 @@
       {
         "slotName": "slot0",
         "inventorySlot": 0,
-        "offsetX": 0.49,
-        "offsetY": 0.22999999999999998,
+        "offsetX": 0.49000000000000005,
+        "offsetY": 0.08,
         "offsetZ": 0.55,
-        "rotationX": 20.0,
+        "rotationX": -90.0,
         "rotationY": 0.0,
         "rotationZ": 0.0,
         "scale": 0.55,

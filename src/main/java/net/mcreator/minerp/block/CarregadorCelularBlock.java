@@ -47,10 +47,10 @@ public class CarregadorCelularBlock extends Block implements EntityBlock {
 	private ImmutableMap<BlockState, VoxelShape> makeShapes() {
 		return this.getShapeForEachState(state -> {
 			return switch (state.getValue(FACING)) {
-				case NORTH -> box(6, 0, 6, 10, 7, 11);
-				case EAST -> box(5, 0, 6, 10, 7, 10);
-				case WEST -> box(6, 0, 6, 11, 7, 10);
-				default -> box(6, 0, 5, 10, 7, 10);
+				case NORTH -> box(4, 0, 4, 12, 1, 12);
+				case EAST -> box(4, 0, 4, 12, 1, 12);
+				case WEST -> box(4, 0, 4, 12, 1, 12);
+				default -> box(4, 0, 4, 12, 1, 12);
 			};
 		});
 	}
