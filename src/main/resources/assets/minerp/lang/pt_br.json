@@ -51,5 +51,6 @@
   "gui.minerp.resultado_banco_computador.SetarLimiteCredito": "",
   "gui.minerp.resultado_banco_computador.button_cobrar": "Cobrar",
   "gui.minerp.resultado_banco_computador.label_valornaconta": "ValorNaConta",
-  "gui.minerp.resultado_banco_computador.label_valorcredito": "ValorCredito"
+  "gui.minerp.resultado_banco_computador.label_valorcredito": "ValorCredito",
+  "block.minerp.maquina_cartao": "Maquina Cartao"
 }

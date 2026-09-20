@@ -1,0 +1,9 @@
+{
+  "parent": "minerp:custom/maquininhacartao",
+  "textures": {
+    "all": "minecraft:block/grindstone_side",
+    "particle": "minecraft:block/quartz_block_top",
+    "0": "minerp:block/maquininha"
+  },
+  "render_type": "solid"
+}
