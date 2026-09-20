@@ -32,6 +32,10 @@ public class MinerpModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<TelaCelularBancoMenu>> TELA_CELULAR_BANCO = REGISTRY.register("tela_celular_banco", () -> IMenuTypeExtension.create(TelaCelularBancoMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<TelaCelularConfigMenu>> TELA_CELULAR_CONFIG = REGISTRY.register("tela_celular_config", () -> IMenuTypeExtension.create(TelaCelularConfigMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<TelaCelularCriptoMenu>> TELA_CELULAR_CRIPTO = REGISTRY.register("tela_celular_cripto", () -> IMenuTypeExtension.create(TelaCelularCriptoMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<ConfigurarSenhaComputadorBancarioMenu>> CONFIGURAR_SENHA_COMPUTADOR_BANCARIO = REGISTRY.register("configurar_senha_computador_bancario",
+			() -> IMenuTypeExtension.create(ConfigurarSenhaComputadorBancarioMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<InsiraSuaSenhaComputadorBanqueiroMenu>> INSIRA_SUA_SENHA_COMPUTADOR_BANQUEIRO = REGISTRY.register("insira_sua_senha_computador_banqueiro",
+			() -> IMenuTypeExtension.create(InsiraSuaSenhaComputadorBanqueiroMenu::new));
 
 	public interface MenuAccessor {
 		Map<String, Object> getMenuState();

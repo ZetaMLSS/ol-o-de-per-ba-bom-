@@ -23,6 +23,8 @@ public class MinerpModScreens {
 		event.register(MinerpModMenus.TELA_CELULAR_BANCO.get(), TelaCelularBancoScreen::new);
 		event.register(MinerpModMenus.TELA_CELULAR_CONFIG.get(), TelaCelularConfigScreen::new);
 		event.register(MinerpModMenus.TELA_CELULAR_CRIPTO.get(), TelaCelularCriptoScreen::new);
+		event.register(MinerpModMenus.CONFIGURAR_SENHA_COMPUTADOR_BANCARIO.get(), ConfigurarSenhaComputadorBancarioScreen::new);
+		event.register(MinerpModMenus.INSIRA_SUA_SENHA_COMPUTADOR_BANQUEIRO.get(), InsiraSuaSenhaComputadorBanqueiroScreen::new);
 	}
 
 	public interface ScreenAccessor {

@@ -38,5 +38,9 @@
   "gui.minerp.tela_celular_banco.label_0": "00",
   "gui.minerp.tela_celular_banco.label_saldo": "Saldo:",
   "gui.minerp.tela_celular_cripto.button_loja": "Loja",
-  "gui.minerp.tela_celular_cripto.button_mineracoes": "Minerações"
+  "gui.minerp.tela_celular_cripto.button_mineracoes": "Minerações",
+  "gui.minerp.configurar_senha_computador_bancario.button_avancar": "Avançar",
+  "gui.minerp.configurar_senha_computador_bancario.ColocarSenha": "Escreva sua nova senha",
+  "gui.minerp.insira_sua_senha_computador_banqueiro.ColocarSenha": "Escreva sua nova senha",
+  "gui.minerp.insira_sua_senha_computador_banqueiro.button_avancar": "Avançar"
 }
