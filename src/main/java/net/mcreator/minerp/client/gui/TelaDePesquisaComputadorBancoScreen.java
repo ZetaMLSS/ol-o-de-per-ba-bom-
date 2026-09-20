@@ -11,20 +11,20 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.minerp.world.inventory.InsiraSuaSenhaComputadorBanqueiroMenu;
+import net.mcreator.minerp.world.inventory.TelaDePesquisaComputadorBancoMenu;
 import net.mcreator.minerp.init.MinerpModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class InsiraSuaSenhaComputadorBanqueiroScreen extends AbstractContainerScreen<InsiraSuaSenhaComputadorBanqueiroMenu> implements MinerpModScreens.ScreenAccessor {
+public class TelaDePesquisaComputadorBancoScreen extends AbstractContainerScreen<TelaDePesquisaComputadorBancoMenu> implements MinerpModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	private EditBox ColocarSenha;
-	private Button button_avancar;
+	private EditBox Pesquisar;
+	private Button button_pesquisar;
 
-	public InsiraSuaSenhaComputadorBanqueiroScreen(InsiraSuaSenhaComputadorBanqueiroMenu container, Inventory inventory, Component text) {
+	public TelaDePesquisaComputadorBancoScreen(TelaDePesquisaComputadorBancoMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
@@ -32,25 +32,25 @@ public class InsiraSuaSenhaComputadorBanqueiroScreen extends AbstractContainerSc
 		this.z = container.z;
 		this.entity = container.entity;
 		this.imageWidth = 176;
-		this.imageHeight = 90;
+		this.imageHeight = 124;
 	}
 
 	@Override
 	public void updateMenuState(int elementType, String name, Object elementState) {
 		menuStateUpdateActive = true;
 		if (elementType == 0 && elementState instanceof String stringState) {
-			if (name.equals("ColocarSenha"))
-				ColocarSenha.setValue(stringState);
+			if (name.equals("Pesquisar"))
+				Pesquisar.setValue(stringState);
 		}
 		menuStateUpdateActive = false;
 	}
 
-	private static final ResourceLocation texture = ResourceLocation.parse("minerp:textures/screens/insira_sua_senha_computador_banqueiro.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("minerp:textures/screens/tela_de_pesquisa_computador_banco.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		ColocarSenha.render(guiGraphics, mouseX, mouseY, partialTicks);
+		Pesquisar.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
@@ -69,16 +69,16 @@ public class InsiraSuaSenhaComputadorBanqueiroScreen extends AbstractContainerSc
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-		if (ColocarSenha.isFocused())
-			return ColocarSenha.keyPressed(key, b, c);
+		if (Pesquisar.isFocused())
+			return Pesquisar.keyPressed(key, b, c);
 		return super.keyPressed(key, b, c);
 	}
 
 	@Override
 	public void resize(Minecraft minecraft, int width, int height) {
-		String ColocarSenhaValue = ColocarSenha.getValue();
+		String PesquisarValue = Pesquisar.getValue();
 		super.resize(minecraft, width, height);
-		ColocarSenha.setValue(ColocarSenhaValue);
+		Pesquisar.setValue(PesquisarValue);
 	}
 
 	@Override
@@ -88,16 +88,16 @@ public class InsiraSuaSenhaComputadorBanqueiroScreen extends AbstractContainerSc
 	@Override
 	public void init() {
 		super.init();
-		ColocarSenha = new EditBox(this.font, this.leftPos + 29, this.topPos + 13, 118, 18, Component.translatable("gui.minerp.insira_sua_senha_computador_banqueiro.ColocarSenha"));
-		ColocarSenha.setMaxLength(8192);
-		ColocarSenha.setResponder(content -> {
+		Pesquisar = new EditBox(this.font, this.leftPos + 29, this.topPos + 28, 118, 18, Component.translatable("gui.minerp.tela_de_pesquisa_computador_banco.Pesquisar"));
+		Pesquisar.setMaxLength(8192);
+		Pesquisar.setResponder(content -> {
 			if (!menuStateUpdateActive)
-				menu.sendMenuStateUpdate(entity, 0, "ColocarSenha", content, false);
+				menu.sendMenuStateUpdate(entity, 0, "Pesquisar", content, false);
 		});
-		ColocarSenha.setHint(Component.translatable("gui.minerp.insira_sua_senha_computador_banqueiro.ColocarSenha"));
-		this.addWidget(this.ColocarSenha);
-		button_avancar = Button.builder(Component.translatable("gui.minerp.insira_sua_senha_computador_banqueiro.button_avancar"), e -> {
-		}).bounds(this.leftPos + 56, this.topPos + 45, 67, 20).build();
-		this.addRenderableWidget(button_avancar);
+		Pesquisar.setHint(Component.translatable("gui.minerp.tela_de_pesquisa_computador_banco.Pesquisar"));
+		this.addWidget(this.Pesquisar);
+		button_pesquisar = Button.builder(Component.translatable("gui.minerp.tela_de_pesquisa_computador_banco.button_pesquisar"), e -> {
+		}).bounds(this.leftPos + 53, this.topPos + 72, 70, 20).build();
+		this.addRenderableWidget(button_pesquisar);
 	}
 }

@@ -42,5 +42,14 @@
   "gui.minerp.configurar_senha_computador_bancario.button_avancar": "Avançar",
   "gui.minerp.configurar_senha_computador_bancario.ColocarSenha": "Escreva sua nova senha",
   "gui.minerp.insira_sua_senha_computador_banqueiro.ColocarSenha": "Insira Sua Senha.",
-  "gui.minerp.insira_sua_senha_computador_banqueiro.button_avancar": "Confirmar"
+  "gui.minerp.insira_sua_senha_computador_banqueiro.button_avancar": "Confirmar",
+  "gui.minerp.tela_de_pesquisa_computador_banco.Pesquisar": "Pesquisar (nick)",
+  "gui.minerp.tela_de_pesquisa_computador_banco.button_pesquisar": "Pesquisar",
+  "gui.minerp.resultado_banco_computador.label_nickdojogador": "NickDoJogador",
+  "gui.minerp.resultado_banco_computador.button_setar": "Setar",
+  "gui.minerp.resultado_banco_computador.label_limitedocredito": "LimiteDoCredito",
+  "gui.minerp.resultado_banco_computador.SetarLimiteCredito": "",
+  "gui.minerp.resultado_banco_computador.button_cobrar": "Cobrar",
+  "gui.minerp.resultado_banco_computador.label_valornaconta": "ValorNaConta",
+  "gui.minerp.resultado_banco_computador.label_valorcredito": "ValorCredito"
 }

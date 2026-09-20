@@ -4,7 +4,7 @@
   "definition": {
     "type": 0,
     "width": 176,
-    "height": 90,
+    "height": 124,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -13,25 +13,25 @@
       {
         "type": "textfield",
         "data": {
-          "placeholder": "Insira Sua Senha.",
-          "name": "ColocarSenha",
+          "placeholder": "Pesquisar (nick)",
+          "name": "Pesquisar",
           "width": 120,
           "height": 20,
           "x": 154,
-          "y": 87,
+          "y": 85,
           "locked": false
         }
       },
       {
         "type": "button",
         "data": {
-          "name": "button_avancar",
-          "text": "Confirmar",
+          "name": "button_pesquisar",
+          "text": "Pesquisar",
           "isUndecorated": false,
-          "width": 67,
+          "width": 70,
           "height": 20,
-          "x": 182,
-          "y": 120,
+          "x": 179,
+          "y": 130,
           "locked": false
         }
       }
