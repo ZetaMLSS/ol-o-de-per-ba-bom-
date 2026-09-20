@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "minerp:block/maquina_cartao"
+    },
+    "facing=east": {
+      "model": "minerp:block/maquina_cartao",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minerp:block/maquina_cartao",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minerp:block/maquina_cartao",
+      "y": 270
     }
   }
 }
