@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 1,
     "texture": "minecraft:gold_nugget",
-    "customModelName": "moedas:default",
+    "customModelName": "moeda1:default",
     "guiTexture": "",
     "customProperties": {},
     "states": [],

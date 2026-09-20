@@ -83,8 +83,9 @@ public class TelaCelularParamedicoScreen extends AbstractContainerScreen<TelaCel
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		this.guiTools$renderMultilineLabel(guiGraphics, "Voc\u00EA deseja chamar os Param\u00E9dicos?", -17, -58, 80, 50, -3407872, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Lembre-se que chamadas falsas s\u00E3o crimes.", -18, -6, 80, 40, -12829636, false, 0.75F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Voc\u00EA deseja chamar os Param\u00E9dicos?", -20, -58, 70, 44, -16777216, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Voc\u00EA deseja chamar os Param\u00E9dicos?", -21, -58, 70, 44, -3407872, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Lembre-se que chamadas falsas s\u00E3o crimes.", -23, -11, 70, 40, -12829636, false, 0.75F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 40, -1, false, 1.00F);
 	}
 
@@ -98,7 +99,7 @@ public class TelaCelularParamedicoScreen extends AbstractContainerScreen<TelaCel
 				PacketDistributor.sendToServer(new TelaCelularParamedicoButtonMessage(0, x, y, z));
 				TelaCelularParamedicoButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + -11, this.topPos + 43, 55, 20).build();
+		}).bounds(this.leftPos + -17, this.topPos + 36, 55, 20).build();
 		this.addRenderableWidget(button_chamar);
 	}
 

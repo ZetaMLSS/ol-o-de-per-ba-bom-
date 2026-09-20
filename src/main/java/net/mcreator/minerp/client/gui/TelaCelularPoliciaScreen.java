@@ -83,8 +83,9 @@ public class TelaCelularPoliciaScreen extends AbstractContainerScreen<TelaCelula
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		this.guiTools$renderMultilineLabel(guiGraphics, "Voc\u00EA quer chamar a policia?", -28, -70, 85, 50, -3407872, false, 1.50F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Lembre-se que chamadas falsas s\u00E3o crimes.", -26, -15, 80, 40, -12829636, false, 0.75F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Voc\u00EA quer chamar a policia?", -27, -70, 81, 50, -16777216, false, 1.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Voc\u00EA quer chamar a policia?", -28, -70, 81, 50, -3407872, false, 1.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Lembre-se que chamadas falsas s\u00E3o crimes.", -23, -15, 69, 30, -12829636, false, 0.75F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 40, -1, false, 1.00F);
 	}
 
@@ -98,7 +99,7 @@ public class TelaCelularPoliciaScreen extends AbstractContainerScreen<TelaCelula
 				PacketDistributor.sendToServer(new TelaCelularPoliciaButtonMessage(0, x, y, z));
 				TelaCelularPoliciaButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + -16, this.topPos + 42, 55, 20).build();
+		}).bounds(this.leftPos + -17, this.topPos + 33, 55, 20).build();
 		this.addRenderableWidget(button_chamar);
 	}
 

@@ -3,8 +3,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [8, 8],
 	"textures": {
-		"0": "moeda1",
-		"particle": "moeda1"
+		"0": "block/Moeda50",
+		"particle": "block/moeda5"
 	},
 	"elements": [
 		{
@@ -46,7 +46,7 @@
 		"gui": {
 			"rotation": [75.32, 15.49, -8.25],
 			"translation": [0, 0, -5.41797],
-			"scale": [2.87109, 2.87109, 2.87109]
+			"scale": [4, 4, 4]
 		},
 		"fixed": {
 			"rotation": [87.75, -0.06, -179.97],

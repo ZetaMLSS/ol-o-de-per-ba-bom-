@@ -31,8 +31,26 @@
           "onClick": "ChamarPolicia",
           "width": 55,
           "height": 20,
-          "x": 187,
-          "y": 162,
+          "x": 186,
+          "y": 153,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_voce_quer_chamar_a_policia_copy",
+          "text": "Você quer chamar a policia?",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 150,
+          "width": 81,
+          "height": 50,
+          "x": 176,
+          "y": 50,
           "locked": false
         }
       },
@@ -47,7 +65,7 @@
           },
           "hasShadow": false,
           "fontScale": 150,
-          "width": 85,
+          "width": 81,
           "height": 50,
           "x": 175,
           "y": 50,
@@ -65,9 +83,9 @@
           },
           "hasShadow": false,
           "fontScale": 75,
-          "width": 80,
-          "height": 40,
-          "x": 177,
+          "width": 69,
+          "height": 30,
+          "x": 180,
           "y": 105,
           "locked": false
         }

@@ -1075,6 +1075,25 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Config"
+    },
+    {
+      "name": "ValorDoCatCoinMudar",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "valor_do_cat_coin_mudar",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/ValorDoCatCoinMudarProcedure.java"
+        ]
+      },
+      "path": "~/Sistemas/Cripto Moedas/CatCoin/SistemaGlobalVolatil"
     }
   ],
   "variable_elements": [
@@ -1130,6 +1149,12 @@
       "name": "CreditoBanco",
       "type": "number",
       "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "CatCoinLimite",
+      "type": "number",
+      "scope": "map",
       "value": "0"
     }
   ],
@@ -1379,6 +1404,20 @@
           {
             "name": "Comandos",
             "children": []
+          },
+          {
+            "name": "Cripto Moedas",
+            "children": [
+              {
+                "name": "CatCoin",
+                "children": [
+                  {
+                    "name": "SistemaGlobalVolatil",
+                    "children": []
+                  }
+                ]
+              }
+            ]
           }
         ]
       },

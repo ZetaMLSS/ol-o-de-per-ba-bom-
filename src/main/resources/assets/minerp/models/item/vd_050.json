@@ -1,6 +1,7 @@
 {
-  "parent": "item/generated",
+  "parent": "minerp:custom/moeda50",
   "textures": {
-    "layer0": "minecraft:item/gold_nugget"
+    "0": "minerp:block/moeda50",
+    "particle": "minecraft:item/gold_nugget"
   }
 }

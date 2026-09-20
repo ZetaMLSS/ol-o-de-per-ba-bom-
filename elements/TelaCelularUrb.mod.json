@@ -31,8 +31,26 @@
           "onClick": "ChamarUrb",
           "width": 55,
           "height": 20,
-          "x": 187,
-          "y": 172,
+          "x": 186,
+          "y": 170,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_voce_quer_chamar_a_policia_copy",
+          "text": "Você deseja chamar um Urber?",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 125,
+          "width": 84,
+          "height": 50,
+          "x": 176,
+          "y": 42,
           "locked": false
         }
       },
@@ -47,9 +65,9 @@
           },
           "hasShadow": false,
           "fontScale": 125,
-          "width": 85,
+          "width": 84,
           "height": 50,
-          "x": 173,
+          "x": 175,
           "y": 42,
           "locked": false
         }
@@ -65,7 +83,7 @@
           },
           "hasShadow": false,
           "fontScale": 75,
-          "width": 80,
+          "width": 59,
           "height": 40,
           "x": 186,
           "y": 84,

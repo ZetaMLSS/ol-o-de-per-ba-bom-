@@ -95,8 +95,9 @@ public class TelaCelularUrbScreen extends AbstractContainerScreen<TelaCelularUrb
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		this.guiTools$renderMultilineLabel(guiGraphics, "Voc\u00EA deseja chamar um Urber?", -30, -78, 85, 50, -13421773, false, 1.25F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Qual tipo de viagem deseja solicitar?", -17, -36, 80, 40, -13421773, false, 0.75F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Voc\u00EA deseja chamar um Urber?", -27, -78, 84, 50, -1, false, 1.25F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Voc\u00EA deseja chamar um Urber?", -28, -78, 84, 50, -13421773, false, 1.25F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Qual tipo de viagem deseja solicitar?", -17, -36, 59, 40, -13421773, false, 0.75F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "(Dentro da cidade)", 1, 10, 80, 40, -65536, false, 0.50F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 40, -1, false, 1.00F);
 	}
@@ -111,7 +112,7 @@ public class TelaCelularUrbScreen extends AbstractContainerScreen<TelaCelularUrb
 				PacketDistributor.sendToServer(new TelaCelularUrbButtonMessage(0, x, y, z));
 				TelaCelularUrbButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + -16, this.topPos + 52, 55, 20).build();
+		}).bounds(this.leftPos + -17, this.topPos + 50, 55, 20).build();
 		this.addRenderableWidget(button_chamar);
 		Curta = Checkbox.builder(Component.translatable("gui.minerp.tela_celular_urb.Curta"), this.font).pos(this.leftPos + -23, this.topPos + -5).onValueChange((checkbox, value) -> {
 			if (!menuStateUpdateActive)

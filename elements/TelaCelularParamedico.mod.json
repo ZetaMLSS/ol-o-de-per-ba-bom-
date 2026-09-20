@@ -23,6 +23,24 @@
         }
       },
       {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_voce_quer_chamar_a_policia_copy",
+          "text": "Você deseja chamar os Paramédicos?",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "width": 70,
+          "height": 44,
+          "x": 183,
+          "y": 62,
+          "locked": false
+        }
+      },
+      {
         "type": "button",
         "data": {
           "name": "button_chamar",
@@ -31,8 +49,8 @@
           "onClick": "ChamarParamedicos",
           "width": 55,
           "height": 20,
-          "x": 192,
-          "y": 163,
+          "x": 186,
+          "y": 156,
           "locked": false
         }
       },
@@ -47,9 +65,9 @@
           },
           "hasShadow": false,
           "fontScale": 100,
-          "width": 80,
-          "height": 50,
-          "x": 186,
+          "width": 70,
+          "height": 44,
+          "x": 182,
           "y": 62,
           "locked": false
         }
@@ -65,10 +83,10 @@
           },
           "hasShadow": false,
           "fontScale": 75,
-          "width": 80,
+          "width": 70,
           "height": 40,
-          "x": 185,
-          "y": 114,
+          "x": 180,
+          "y": 109,
           "locked": false
         }
       },
