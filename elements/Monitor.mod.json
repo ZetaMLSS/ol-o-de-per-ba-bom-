@@ -97,7 +97,7 @@
     "luminance": {
       "fixedValue": 0.0
     },
-    "unbreakable": false,
+    "unbreakable": true,
     "vanillaToolTier": "NONE",
     "isBonemealable": false,
     "sensitiveToVibration": false,
