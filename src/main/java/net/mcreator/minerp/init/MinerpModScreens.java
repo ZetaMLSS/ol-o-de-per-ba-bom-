@@ -22,6 +22,7 @@ public class MinerpModScreens {
 		event.register(MinerpModMenus.GUI_DO_CARREGADOR_CELULAR.get(), GuiDoCarregadorCelularScreen::new);
 		event.register(MinerpModMenus.TELA_CELULAR_BANCO.get(), TelaCelularBancoScreen::new);
 		event.register(MinerpModMenus.TELA_CELULAR_CONFIG.get(), TelaCelularConfigScreen::new);
+		event.register(MinerpModMenus.TELA_CELULAR_CRIPTO.get(), TelaCelularCriptoScreen::new);
 	}
 
 	public interface ScreenAccessor {

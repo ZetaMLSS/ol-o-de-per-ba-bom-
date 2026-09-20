@@ -36,5 +36,7 @@
   "gui.minerp.tela_celular_urb.Longa": "Longa",
   "block.minerp.carregador_celular": "Carregador Celular",
   "gui.minerp.tela_celular_banco.label_0": "00",
-  "gui.minerp.tela_celular_banco.label_saldo": "Saldo:"
+  "gui.minerp.tela_celular_banco.label_saldo": "Saldo:",
+  "gui.minerp.tela_celular_cripto.button_loja": "Loja",
+  "gui.minerp.tela_celular_cripto.button_mineracoes": "Minerações"
 }

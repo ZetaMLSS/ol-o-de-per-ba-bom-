@@ -1094,6 +1094,20 @@
         ]
       },
       "path": "~/Sistemas/Cripto Moedas/CatCoin/SistemaGlobalVolatil"
+    },
+    {
+      "name": "TelaCelularCripto",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_celular_cripto",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularCriptoMenu.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularCriptoScreen.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto"
     }
   ],
   "variable_elements": [
@@ -1222,7 +1236,9 @@
       "gui.minerp.tela_celular_urb.Longa": "Longa",
       "block.minerp.carregador_celular": "Carregador De Phone",
       "gui.minerp.tela_celular_banco.label_0": "00",
-      "gui.minerp.tela_celular_banco.label_saldo": "Saldo:"
+      "gui.minerp.tela_celular_banco.label_saldo": "Saldo:",
+      "gui.minerp.tela_celular_cripto.button_loja": "Loja",
+      "gui.minerp.tela_celular_cripto.button_mineracoes": "Minerações"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -1262,7 +1278,9 @@
       "gui.minerp.tela_celular_urb.Longa": "Longa",
       "block.minerp.carregador_celular": "Carregador Celular",
       "gui.minerp.tela_celular_banco.label_0": "00",
-      "gui.minerp.tela_celular_banco.label_saldo": "Saldo:"
+      "gui.minerp.tela_celular_banco.label_saldo": "Saldo:",
+      "gui.minerp.tela_celular_cripto.button_loja": "Loja",
+      "gui.minerp.tela_celular_cripto.button_mineracoes": "Minerações"
     }
   },
   "metadata": {
@@ -1364,6 +1382,10 @@
                       },
                       {
                         "name": "Config",
+                        "children": []
+                      },
+                      {
+                        "name": "Cripto",
                         "children": []
                       }
                     ]
