@@ -1262,6 +1262,41 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Telefone"
+    },
+    {
+      "name": "BotaoCelularTelefone",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "botao_celular_telefone",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/BotaoCelularTelefoneProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
     }
   ],
   "variable_elements": [
