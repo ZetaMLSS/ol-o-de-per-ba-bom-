@@ -1181,6 +1181,23 @@
         ]
       },
       "path": "~/Itens/MaquininhaCartao"
+    },
+    {
+      "name": "ImpressoraDinheiroFalso",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "impressora_dinheiro_falso",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minerp/blockstates/impressora_dinheiro_falso.json",
+          "src/main/resources/assets/minerp/models/block/impressora_dinheiro_falso.json",
+          "src/main/java/net/mcreator/minerp/block/ImpressoraDinheiroFalsoBlock.java",
+          "src/main/resources/assets/minerp/models/item/impressora_dinheiro_falso.json",
+          "src/main/resources/data/minerp/loot_table/blocks/impressora_dinheiro_falso.json"
+        ]
+      },
+      "path": "~/Bloco/ImpressoraDinheiroFalso"
     }
   ],
   "variable_elements": [
@@ -1268,7 +1285,8 @@
       "VD100",
       "VD200",
       "Carteira",
-      "MaquinaCartao"
+      "MaquinaCartao",
+      "ImpressoraDinheiroFalso"
     ]
   },
   "language_map": {
@@ -1326,7 +1344,8 @@
       "gui.minerp.resultado_banco_computador.button_cobrar": "Cobrar",
       "gui.minerp.resultado_banco_computador.label_valornaconta": "ValorNaConta",
       "gui.minerp.resultado_banco_computador.label_valorcredito": "ValorCredito",
-      "block.minerp.maquina_cartao": "Maquina Cartao"
+      "block.minerp.maquina_cartao": "Maquina Cartao",
+      "block.minerp.impressora_dinheiro_falso": "Impressora Dinheiro Falso"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -1382,7 +1401,8 @@
       "gui.minerp.resultado_banco_computador.button_cobrar": "Cobrar",
       "gui.minerp.resultado_banco_computador.label_valornaconta": "ValorNaConta",
       "gui.minerp.resultado_banco_computador.label_valorcredito": "ValorCredito",
-      "block.minerp.maquina_cartao": "Maquina Cartao"
+      "block.minerp.maquina_cartao": "Maquina Cartao",
+      "block.minerp.impressora_dinheiro_falso": "Impressora Dinheiro Falso"
     }
   },
   "metadata": {
@@ -1519,6 +1539,10 @@
           {
             "name": "MaquininhaCartao",
             "children": []
+          },
+          {
+            "name": "Algema",
+            "children": []
           }
         ]
       },
@@ -1572,6 +1596,10 @@
           },
           {
             "name": "ATM",
+            "children": []
+          },
+          {
+            "name": "ImpressoraDinheiroFalso",
             "children": []
           }
         ]

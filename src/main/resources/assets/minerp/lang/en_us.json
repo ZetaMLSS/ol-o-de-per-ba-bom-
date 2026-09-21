@@ -52,5 +52,6 @@
   "gui.minerp.resultado_banco_computador.button_cobrar": "Cobrar",
   "gui.minerp.resultado_banco_computador.label_valornaconta": "ValorNaConta",
   "gui.minerp.resultado_banco_computador.label_valorcredito": "ValorCredito",
-  "block.minerp.maquina_cartao": "Maquina Cartao"
+  "block.minerp.maquina_cartao": "Maquina Cartao",
+  "block.minerp.impressora_dinheiro_falso": "Impressora Dinheiro Falso"
 }

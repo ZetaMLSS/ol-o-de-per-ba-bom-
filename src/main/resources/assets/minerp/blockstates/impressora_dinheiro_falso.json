@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "minerp:block/impressora_dinheiro_falso"
+    },
+    "facing=east": {
+      "model": "minerp:block/impressora_dinheiro_falso",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minerp:block/impressora_dinheiro_falso",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minerp:block/impressora_dinheiro_falso",
+      "y": 270
+    }
+  }
+}

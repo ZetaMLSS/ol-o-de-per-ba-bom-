@@ -1,0 +1,14 @@
+{
+  "parent": "minerp:custom/impresora",
+  "textures": {
+    "all": "minecraft:block/command_block_front",
+    "particle": "minecraft:block/black_concrete_powder",
+    "0": "minerp:block/textureimpressoura",
+    "1": "minerp:block/100voids",
+    "2": "minerp:block/50voids",
+    "3": "minerp:block/200voids",
+    "4": "minerp:block/tecladoimpressora",
+    "5": "minerp:block/vidrosimpressora"
+  },
+  "render_type": "solid"
+}
