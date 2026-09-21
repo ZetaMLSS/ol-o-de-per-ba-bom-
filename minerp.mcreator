@@ -1512,7 +1512,6 @@
       "src/main/java/net/mcreator/minerp/mixin/LevelRendererMixin.java",
       "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/resources/minerp.mixins.json",
       "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
       "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
       "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
