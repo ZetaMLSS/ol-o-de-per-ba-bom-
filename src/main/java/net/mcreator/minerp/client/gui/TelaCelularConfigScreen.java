@@ -123,7 +123,7 @@ public class TelaCelularConfigScreen extends AbstractContainerScreen<TelaCelular
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -98, 48, 12, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 12, -1, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "N\u00FAmero:", -27, -73, 120, 40, -16777216, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "N\u00FAmero:", -28, -74, 120, 40, -1, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "Online:", -30, -51, 39, 10, -16777216, false, 1.25F);

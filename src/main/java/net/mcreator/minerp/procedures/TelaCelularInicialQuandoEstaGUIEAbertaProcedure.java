@@ -20,5 +20,9 @@ public class TelaCelularInicialQuandoEstaGUIEAbertaProcedure {
 				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 			}
 		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("bateria") == 0) {
+			if (entity instanceof Player _player)
+				_player.closeContainer();
+		}
 	}
 }

@@ -15,6 +15,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.minerp.world.inventory.TelaCelularBancoMenu;
+import net.mcreator.minerp.MinerpMod;
 
 import io.netty.buffer.Unpooled;
 
@@ -41,9 +42,11 @@ public class AbrirAppBancoProcedure {
 				}
 			}, _bpos);
 		}
-		if (world instanceof ServerLevel _level) {
-			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
-			});
-		}
+		MinerpMod.queueServerWork(20, () -> {
+			if (world instanceof ServerLevel _level) {
+				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(4, _level, null, _stkprov -> {
+				});
+			}
+		});
 	}
 }
