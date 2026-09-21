@@ -20,7 +20,6 @@ public class MinerpModBlocks {
 	public static final DeferredBlock<Block> MONITOR;
 	public static final DeferredBlock<Block> CARREGADOR_CELULAR;
 	public static final DeferredBlock<Block> MAQUINA_CARTAO;
-	public static final DeferredBlock<Block> IMPRESSORA_DINHEIRO_FALSO;
 	static {
 		ASIC_V_1 = REGISTRY.register("asic_v_1", AsicV1Block::new);
 		ATM_SUP = REGISTRY.register("atm_sup", ATMSupBlock::new);
@@ -29,7 +28,6 @@ public class MinerpModBlocks {
 		MONITOR = REGISTRY.register("monitor", MonitorBlock::new);
 		CARREGADOR_CELULAR = REGISTRY.register("carregador_celular", CarregadorCelularBlock::new);
 		MAQUINA_CARTAO = REGISTRY.register("maquina_cartao", MaquinaCartaoBlock::new);
-		IMPRESSORA_DINHEIRO_FALSO = REGISTRY.register("impressora_dinheiro_falso", ImpressoraDinheiroFalsoBlock::new);
 	}
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
