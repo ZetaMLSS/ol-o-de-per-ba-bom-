@@ -182,6 +182,25 @@
           "y": 121,
           "locked": false
         }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_empty",
+          "text": "",
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 75,
+          "textProcedure": "Excessocontatos",
+          "width": 120,
+          "height": 40,
+          "x": 175,
+          "y": 152,
+          "locked": false
+        }
       }
     ],
     "onTick": "TelaCelularInicialQuandoEstaGUIEAberta",

@@ -1757,6 +1757,26 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
+    },
+    {
+      "name": "Excessocontatos",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "excessocontatos",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/ExcessocontatosProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
     }
   ],
   "variable_elements": [
