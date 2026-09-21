@@ -18,11 +18,13 @@ import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.minerp.block.entity.MonitorBlockEntity;
 import net.mcreator.minerp.block.entity.CarregadorCelularBlockEntity;
+import net.mcreator.minerp.block.entity.ATMSupBlockEntity;
 import net.mcreator.minerp.MinerpMod;
 
 @EventBusSubscriber
 public class MinerpModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, MinerpMod.MODID);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ATMSupBlockEntity>> ATM_SUP = register("atm_sup", MinerpModBlocks.ATM_SUP, ATMSupBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MonitorBlockEntity>> MONITOR = register("monitor", MinerpModBlocks.MONITOR, MonitorBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CarregadorCelularBlockEntity>> CARREGADOR_CELULAR = register("carregador_celular", MinerpModBlocks.CARREGADOR_CELULAR, CarregadorCelularBlockEntity::new);
 
@@ -34,6 +36,7 @@ public class MinerpModBlockEntities {
 
 	@SubscribeEvent
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ATM_SUP.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, MONITOR.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, CARREGADOR_CELULAR.get(), SidedInvWrapper::new);
 	}
