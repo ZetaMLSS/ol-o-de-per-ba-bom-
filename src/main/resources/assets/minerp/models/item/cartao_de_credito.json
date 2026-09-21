@@ -1,6 +1,7 @@
 {
-  "parent": "item/generated",
+  "parent": "minerp:custom/cartaodecredito",
   "textures": {
-    "layer0": "minecraft:item/netherite_scrap"
+    "0": "minerp:block/cartaocredito",
+    "particle": "minecraft:item/netherite_scrap"
   }
 }
