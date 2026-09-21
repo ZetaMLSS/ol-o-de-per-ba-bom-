@@ -123,6 +123,12 @@ public class TelaCelularMenssagensScreen extends AbstractContainerScreen<TelaCel
 		}).bounds(this.leftPos + -29, this.topPos + 21, 80, 20).build();
 		this.addRenderableWidget(button_adicionar_ctt);
 		button_chats = Button.builder(Component.translatable("gui.minerp.tela_celular_menssagens.button_chats"), e -> {
+			int x = TelaCelularMenssagensScreen.this.x;
+			int y = TelaCelularMenssagensScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new TelaCelularMenssagensButtonMessage(2, x, y, z));
+				TelaCelularMenssagensButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
 		}).bounds(this.leftPos + -29, this.topPos + 0, 50, 20).build();
 		this.addRenderableWidget(button_chats);
 		slidercontatos = new ExtendedSlider(this.leftPos + -24, this.topPos + -49, 70, 20, Component.translatable("gui.minerp.tela_celular_menssagens.slidercontatos_prefix"),

@@ -6,6 +6,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.minerp.world.inventory.TelaChatsMenu;
@@ -19,6 +20,7 @@ public class TelaChatsScreen extends AbstractContainerScreen<TelaChatsMenu> impl
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private Button button_enviar;
 
 	public TelaChatsScreen(TelaChatsMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -85,6 +87,9 @@ public class TelaChatsScreen extends AbstractContainerScreen<TelaChatsMenu> impl
 	@Override
 	public void init() {
 		super.init();
+		button_enviar = Button.builder(Component.translatable("gui.minerp.tela_chats.button_enviar"), e -> {
+		}).bounds(this.leftPos + -16, this.topPos + 55, 55, 20).build();
+		this.addRenderableWidget(button_enviar);
 	}
 
 	private final java.util.Map<String, java.util.List<String>> guiTools$multilineCache = new java.util.HashMap<>();

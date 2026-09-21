@@ -72,5 +72,6 @@
   "gui.minerp.tela_chats.input_numero": "",
   "gui.minerp.tela_chats.input_nome": "",
   "gui.minerp.atmtela_1.Senha": "Insira sua senha.",
-  "gui.minerp.atmtela_1.button_proximo": "Proximo"
+  "gui.minerp.atmtela_1.button_proximo": "Proximo",
+  "gui.minerp.tela_chats.button_enviar": "Enviar"
 }

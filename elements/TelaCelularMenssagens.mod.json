@@ -179,6 +179,7 @@
           "name": "button_chats",
           "text": "Chats",
           "isUndecorated": false,
+          "onClick": "SelecionarChat",
           "width": 50,
           "height": 20,
           "x": 174,

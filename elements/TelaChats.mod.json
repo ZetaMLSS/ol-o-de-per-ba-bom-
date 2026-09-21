@@ -108,6 +108,19 @@
           "y": 54,
           "locked": false
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_enviar",
+          "text": "Enviar",
+          "isUndecorated": false,
+          "width": 55,
+          "height": 20,
+          "x": 187,
+          "y": 175,
+          "locked": false
+        }
       }
     ],
     "onTick": "TelaCelularInicialQuandoEstaGUIEAberta",
