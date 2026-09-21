@@ -1,14 +1,11 @@
 {
-  "parent": "minerp:custom/impresora",
+  "parent": "minerp:custom/impresoradinheirofalsoo",
   "textures": {
-    "all": "minecraft:block/command_block_front",
+    "all": "minerp:block/textureimpressoura",
     "particle": "minecraft:block/black_concrete_powder",
     "0": "minerp:block/textureimpressoura",
-    "1": "minerp:block/100voids",
-    "2": "minerp:block/50voids",
-    "3": "minerp:block/200voids",
-    "4": "minerp:block/tecladoimpressora",
-    "5": "minerp:block/vidrosimpressora"
+    "1": "minerp:block/detalhesimpressora",
+    "2": "minerp:block/200voids"
   },
   "render_type": "solid"
 }

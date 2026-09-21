@@ -2,14 +2,14 @@
   "_fv": 89,
   "_type": "block",
   "definition": {
-    "texture": "minecraft:command_block_front",
+    "texture": "textureimpressoura",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "impresora:default",
+    "customModelName": "impresoradinheirofalsoo:default",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -38,7 +38,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Impressora Dinheiro Falso",
+    "name": "ImpressoraDinheiroFalso",
     "specialInformation": {
       "fixedValue": []
     },
@@ -53,7 +53,7 @@
     "creativeTabs": [
       "CUSTOM:MINERPMoney"
     ],
-    "destroyTool": "Not specified",
+    "destroyTool": "pickaxe",
     "customDrop": "",
     "dropAmount": 1,
     "xpAmountMin": 0,
@@ -98,7 +98,7 @@
       "fixedValue": 0.0
     },
     "unbreakable": false,
-    "vanillaToolTier": "NONE",
+    "vanillaToolTier": "IRON",
     "isBonemealable": false,
     "sensitiveToVibration": false,
     "vibrationalEvents": [],

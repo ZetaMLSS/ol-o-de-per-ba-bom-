@@ -53,5 +53,10 @@
   "gui.minerp.resultado_banco_computador.label_valornaconta": "ValorNaConta",
   "gui.minerp.resultado_banco_computador.label_valorcredito": "ValorCredito",
   "block.minerp.maquina_cartao": "Maquina Cartao",
-  "block.minerp.impressora_dinheiro_falso": "Impressora Dinheiro Falso"
+  "block.minerp.impressora_dinheiro_falso": "Impressora Dinheiro Falso",
+  "gui.minerp.tela_celular_telefone.button_chamar": "Chamar",
+  "gui.minerp.tela_celular_telefone.Longa": "Longa",
+  "gui.minerp.tela_celular_telefone.Curta": "Curta",
+  "gui.minerp.tela_celular_telefone.Contatos_prefix": "",
+  "gui.minerp.tela_celular_telefone.Contatos_suffix": ""
 }
