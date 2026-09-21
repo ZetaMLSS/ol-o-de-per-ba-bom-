@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minerp:impressora_dinheiro_falso",
     "minerp:at_minf",
     "minerp:atm_sup",
     "minerp:computador",

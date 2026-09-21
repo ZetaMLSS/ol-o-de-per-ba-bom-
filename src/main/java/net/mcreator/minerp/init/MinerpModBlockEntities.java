@@ -16,12 +16,14 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import net.mcreator.minerp.block.entity.MonitorBlockEntity;
 import net.mcreator.minerp.block.entity.CarregadorCelularBlockEntity;
 import net.mcreator.minerp.MinerpMod;
 
 @EventBusSubscriber
 public class MinerpModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, MinerpMod.MODID);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MonitorBlockEntity>> MONITOR = register("monitor", MinerpModBlocks.MONITOR, MonitorBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CarregadorCelularBlockEntity>> CARREGADOR_CELULAR = register("carregador_celular", MinerpModBlocks.CARREGADOR_CELULAR, CarregadorCelularBlockEntity::new);
 
 	// Start of user code block custom block entities
@@ -32,6 +34,7 @@ public class MinerpModBlockEntities {
 
 	@SubscribeEvent
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, MONITOR.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, CARREGADOR_CELULAR.get(), SidedInvWrapper::new);
 	}
 }

@@ -100,6 +100,7 @@
           "name": "button_setar",
           "text": "Setar",
           "isUndecorated": false,
+          "onClick": "SetarPelaGuiDoComputadorBancoLimite",
           "width": 50,
           "height": 20,
           "x": 220,
@@ -162,7 +163,8 @@
           "sua_pulse_speed": 1.0,
           "name": "label_valorcredito",
           "text": {
-            "fixedValue": "ValorCredito"
+            "fixedValue": "ValorCredito",
+            "name": "MostrarCreditoBancoComputadorBanco"
           },
           "color": {
             "value": -12829636,
@@ -216,14 +218,15 @@
           "sua_pulse_speed": 1.0,
           "name": "label_nickdojogador",
           "text": {
-            "fixedValue": "NickDoJogador"
+            "fixedValue": "NickDoJogador",
+            "name": "MostrarNickResultadoBanco"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 137,
+          "x": 133,
           "y": 45,
           "locked": false
         }
@@ -270,7 +273,8 @@
           "sua_pulse_speed": 1.0,
           "name": "label_valornaconta",
           "text": {
-            "fixedValue": "ValorNaConta"
+            "fixedValue": "ValorNaConta",
+            "name": "MostrarSaldoBancoComputadorBanco"
           },
           "color": {
             "value": -12829636,
@@ -324,7 +328,8 @@
           "sua_pulse_speed": 1.0,
           "name": "label_limitedocredito",
           "text": {
-            "fixedValue": "LimiteDoCredito"
+            "fixedValue": "LimiteDoCredito",
+            "name": "MostrarLimiteCreditoBancoComputadorBanco"
           },
           "color": {
             "value": -12829636,
@@ -333,6 +338,31 @@
           "hasShadow": false,
           "x": 208,
           "y": 71,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_criar_cartao",
+          "text": "Criar Cartão",
+          "isUndecorated": false,
+          "width": 85,
+          "height": 20,
+          "x": 245,
+          "y": 177,
+          "locked": false
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Adicionar Senha",
+          "name": "senhaprocartao",
+          "width": 120,
+          "height": 20,
+          "x": 120,
+          "y": 177,
           "locked": false
         }
       }

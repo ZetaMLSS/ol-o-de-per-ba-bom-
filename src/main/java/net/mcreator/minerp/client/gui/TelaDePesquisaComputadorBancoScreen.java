@@ -1,5 +1,7 @@
 package net.mcreator.minerp.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -12,6 +14,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.minerp.world.inventory.TelaDePesquisaComputadorBancoMenu;
+import net.mcreator.minerp.network.TelaDePesquisaComputadorBancoButtonMessage;
 import net.mcreator.minerp.init.MinerpModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -97,7 +100,13 @@ public class TelaDePesquisaComputadorBancoScreen extends AbstractContainerScreen
 		Pesquisar.setHint(Component.translatable("gui.minerp.tela_de_pesquisa_computador_banco.Pesquisar"));
 		this.addWidget(this.Pesquisar);
 		button_pesquisar = Button.builder(Component.translatable("gui.minerp.tela_de_pesquisa_computador_banco.button_pesquisar"), e -> {
-		}).bounds(this.leftPos + 53, this.topPos + 72, 70, 20).build();
+			int x = TelaDePesquisaComputadorBancoScreen.this.x;
+			int y = TelaDePesquisaComputadorBancoScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new TelaDePesquisaComputadorBancoButtonMessage(0, x, y, z));
+				TelaDePesquisaComputadorBancoButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		}).bounds(this.leftPos + 53, this.topPos + 70, 70, 20).build();
 		this.addRenderableWidget(button_pesquisar);
 	}
 }

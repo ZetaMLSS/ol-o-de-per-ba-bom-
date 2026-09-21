@@ -28,6 +28,7 @@
           "name": "button_avancar",
           "text": "Avançar",
           "isUndecorated": false,
+          "onClick": "PcBancoCriarSenha",
           "width": 60,
           "height": 20,
           "x": 184,
