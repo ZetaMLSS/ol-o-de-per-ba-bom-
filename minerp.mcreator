@@ -1926,6 +1926,20 @@
         ]
       },
       "path": "~/Bloco/ATM/Gui"
+    },
+    {
+      "name": "Enviarmensagem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enviarmensagem",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/EnviarmensagemProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
     }
   ],
   "variable_elements": [
