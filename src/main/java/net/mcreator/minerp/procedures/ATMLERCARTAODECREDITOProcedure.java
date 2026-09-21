@@ -18,9 +18,17 @@ public class ATMLERCARTAODECREDITOProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof MinerpModMenus.MenuAccessor _menu0 ? _menu0.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == MinerpModItems.CARTAO_DE_CREDITO.get()) {
-			if (((entity instanceof Player _entity2 && _entity2.containerMenu instanceof MinerpModMenus.MenuAccessor _menu2)
-					? _menu2.getMenuState(2, "Senha", 0.0)
-					: 0.0) == (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof MinerpModMenus.MenuAccessor _menu3 ? _menu3.getSlots().get(0).getItem() : ItemStack.EMPTY)
+			if (new Object() {
+				double convert(String s) {
+					try {
+						return Double.parseDouble(s.trim());
+					} catch (Exception e) {
+					}
+					return 0;
+				}
+			}.convert((entity instanceof Player _entity2 && _entity2.containerMenu instanceof MinerpModMenus.MenuAccessor _menu2)
+					? _menu2.getMenuState(0, "Senha", "")
+					: "") == (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof MinerpModMenus.MenuAccessor _menu3 ? _menu3.getSlots().get(0).getItem() : ItemStack.EMPTY)
 							.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("senha")) {
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
 					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof MinerpModMenus.MenuAccessor _menu5 ? _menu5.getSlots().get(0).getItem() : ItemStack.EMPTY)
