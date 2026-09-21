@@ -106,6 +106,7 @@
       "fixedValue": 7.0
     },
     "hasInventory": true,
+    "guiBoundTo": "ATMTELA1",
     "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 99,
