@@ -26,6 +26,7 @@ public class PesquisarPessoaPcBancoProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		boolean Encontrado = false;
 		for (Entity entityiterator : new ArrayList<>(world.players())) {
 			if (((entity instanceof Player _entity0 && _entity0.containerMenu instanceof MinerpModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "Pesquisar", "") : "").equals(entityiterator.getDisplayName().getString())) {
 				if (!world.isClientSide()) {
@@ -34,9 +35,9 @@ public class PesquisarPessoaPcBancoProcedure {
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putString("nick", (entityiterator.getDisplayName().getString()));
-						_blockEntity.getPersistentData().putDouble("DinheiroBanco", entity.getData(MinerpModVariables.PLAYER_VARIABLES).DinheiroBanco);
-						_blockEntity.getPersistentData().putDouble("CreditoBanco", entity.getData(MinerpModVariables.PLAYER_VARIABLES).CreditoBanco);
-						_blockEntity.getPersistentData().putDouble("LimiteDoCredito", entity.getData(MinerpModVariables.PLAYER_VARIABLES).LimiteDoCredito);
+						_blockEntity.getPersistentData().putDouble("DinheiroBanco", entityiterator.getData(MinerpModVariables.PLAYER_VARIABLES).DinheiroBanco);
+						_blockEntity.getPersistentData().putDouble("CreditoBanco", entityiterator.getData(MinerpModVariables.PLAYER_VARIABLES).CreditoBanco);
+						_blockEntity.getPersistentData().putDouble("LimiteDoCredito", entityiterator.getData(MinerpModVariables.PLAYER_VARIABLES).LimiteDoCredito);
 					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
@@ -60,10 +61,13 @@ public class PesquisarPessoaPcBancoProcedure {
 						}
 					}, _bpos);
 				}
-			} else {
-				if (entity instanceof Player _player && _player.containerMenu instanceof MinerpModMenus.MenuAccessor _menu)
-					_menu.sendMenuStateUpdate(_player, 0, "Pesquisar", "Player n\u00E3o encontrado.", true);
+				Encontrado = true;
+				break;
 			}
+		}
+		if (Encontrado == false) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof MinerpModMenus.MenuAccessor _menu)
+				_menu.sendMenuStateUpdate(_player, 0, "Pesquisar", "Player n\u00E3o encontrado.", true);
 		}
 	}
 }
