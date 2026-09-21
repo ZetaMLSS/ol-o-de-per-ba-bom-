@@ -1207,8 +1207,58 @@
       "registry_name": "tela_celular_telefone",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/minerp/network/TelaCelularTelefoneButtonMessage.java",
           "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularTelefoneMenu.java",
           "src/main/java/net/mcreator/minerp/client/gui/TelaCelularTelefoneScreen.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Telefone"
+    },
+    {
+      "name": "Adicionarcontato",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adicionarcontato",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/AdicionarcontatoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Telefone"
+    },
+    {
+      "name": "TelaAdicionarContato",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_adicionar_contato",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/client/gui/TelaAdicionarContatoScreen.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaAdicionarContatoMenu.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Telefone"
@@ -1365,7 +1415,13 @@
       "gui.minerp.tela_celular_telefone.Longa": "Longa",
       "gui.minerp.tela_celular_telefone.Curta": "Curta",
       "gui.minerp.tela_celular_telefone.Contatos_prefix": "",
-      "gui.minerp.tela_celular_telefone.Contatos_suffix": ""
+      "gui.minerp.tela_celular_telefone.Contatos_suffix": "",
+      "gui.minerp.tela_adicionar_contato.button_chamar": "Adicionar",
+      "gui.minerp.tela_adicionar_contato.Contatos_prefix": "",
+      "gui.minerp.tela_adicionar_contato.Contatos_suffix": "",
+      "gui.minerp.tela_adicionar_contato.input_nome": "",
+      "gui.minerp.tela_adicionar_contato.button_salvar": "Salvar",
+      "gui.minerp.tela_adicionar_contato.input_nome_copy": ""
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -1427,7 +1483,13 @@
       "gui.minerp.tela_celular_telefone.Longa": "Longa",
       "gui.minerp.tela_celular_telefone.Curta": "Curta",
       "gui.minerp.tela_celular_telefone.Contatos_prefix": "",
-      "gui.minerp.tela_celular_telefone.Contatos_suffix": ""
+      "gui.minerp.tela_celular_telefone.Contatos_suffix": "",
+      "gui.minerp.tela_adicionar_contato.button_chamar": "Adicionar",
+      "gui.minerp.tela_adicionar_contato.Contatos_prefix": "",
+      "gui.minerp.tela_adicionar_contato.Contatos_suffix": "",
+      "gui.minerp.tela_adicionar_contato.input_nome": "",
+      "gui.minerp.tela_adicionar_contato.button_salvar": "Salvar",
+      "gui.minerp.tela_adicionar_contato.input_nome_copy": ""
     }
   },
   "metadata": {
