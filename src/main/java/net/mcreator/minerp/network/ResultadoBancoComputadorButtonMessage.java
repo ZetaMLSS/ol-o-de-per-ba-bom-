@@ -16,6 +16,7 @@ import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.SectionPos;
 
 import net.mcreator.minerp.procedures.SetarPelaGuiDoComputadorBancoLimiteProcedure;
+import net.mcreator.minerp.procedures.CriadorDeCartaoDoBancoProcedure;
 import net.mcreator.minerp.MinerpMod;
 
 @EventBusSubscriber
@@ -50,6 +51,10 @@ public record ResultadoBancoComputadorButtonMessage(int buttonID, int x, int y, 
 		if (buttonID == 0) {
 
 			SetarPelaGuiDoComputadorBancoLimiteProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 2) {
+
+			CriadorDeCartaoDoBancoProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

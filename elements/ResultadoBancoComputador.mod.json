@@ -347,6 +347,7 @@
           "name": "button_criar_cartao",
           "text": "Criar Cartão",
           "isUndecorated": false,
+          "onClick": "CriadorDeCartaoDoBanco",
           "width": 85,
           "height": 20,
           "x": 245,

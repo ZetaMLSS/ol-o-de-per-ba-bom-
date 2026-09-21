@@ -149,6 +149,12 @@ public class ResultadoBancoComputadorScreen extends AbstractContainerScreen<Resu
 		}).bounds(this.leftPos + 4, this.topPos + 104, 55, 20).build();
 		this.addRenderableWidget(button_cobrar);
 		button_criar_cartao = Button.builder(Component.translatable("gui.minerp.resultado_banco_computador.button_criar_cartao"), e -> {
+			int x = ResultadoBancoComputadorScreen.this.x;
+			int y = ResultadoBancoComputadorScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new ResultadoBancoComputadorButtonMessage(2, x, y, z));
+				ResultadoBancoComputadorButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
 		}).bounds(this.leftPos + 155, this.topPos + 141, 85, 20).build();
 		this.addRenderableWidget(button_criar_cartao);
 	}
