@@ -1,5 +1,7 @@
 package net.mcreator.minerp.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -12,6 +14,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.minerp.world.inventory.ATMTELA1Menu;
+import net.mcreator.minerp.network.ATMTELA1ButtonMessage;
 import net.mcreator.minerp.init.MinerpModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -97,6 +100,12 @@ public class ATMTELA1Screen extends AbstractContainerScreen<ATMTELA1Menu> implem
 		Senha.setHint(Component.translatable("gui.minerp.atmtela_1.Senha"));
 		this.addWidget(this.Senha);
 		button_proximo = Button.builder(Component.translatable("gui.minerp.atmtela_1.button_proximo"), e -> {
+			int x = ATMTELA1Screen.this.x;
+			int y = ATMTELA1Screen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new ATMTELA1ButtonMessage(0, x, y, z));
+				ATMTELA1ButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}).bounds(this.leftPos + 78, this.topPos + 46, 60, 20).build();
 		this.addRenderableWidget(button_proximo);
 	}

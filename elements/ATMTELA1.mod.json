@@ -48,6 +48,7 @@
           "name": "button_proximo",
           "text": "Proximo",
           "isUndecorated": false,
+          "onClick": "ATMLERCARTAODECREDITO",
           "width": 60,
           "height": 20,
           "x": 204,
