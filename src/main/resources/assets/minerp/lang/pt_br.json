@@ -58,5 +58,11 @@
   "gui.minerp.resultado_banco_computador.button_criar_cartao": "Criar Cartão",
   "gui.minerp.tela_adicionar_contato.input_nome": "",
   "gui.minerp.tela_adicionar_contato.button_salvar": "Salvar",
-  "gui.minerp.tela_adicionar_contato.input_nome_copy": ""
+  "gui.minerp.tela_adicionar_contato.input_nome_copy": "",
+  "gui.minerp.tela_celular_menssagens.button_chamar": "SIM",
+  "gui.minerp.tela_adionar_contato.button_chamar": "Adicionar",
+  "gui.minerp.tela_adionar_contato.input_numero": "",
+  "gui.minerp.tela_adionar_contato.input_nome": "",
+  "gui.minerp.tela_celular_menssagens.slidercontatos_suffix": "",
+  "gui.minerp.tela_celular_menssagens.slidercontatos_prefix": ""
 }

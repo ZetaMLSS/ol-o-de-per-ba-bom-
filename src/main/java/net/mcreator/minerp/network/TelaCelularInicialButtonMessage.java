@@ -60,6 +60,9 @@ public record TelaCelularInicialButtonMessage(int buttonID, int x, int y, int z)
 			if (buttonID == 3) {
 				net.mcreator.minerp.procedures.BotaoCelularParamedicoProcedure.execute(world, x, y, z, entity);
 			}
+			if (buttonID == 4) {
+				net.mcreator.minerp.procedures.BotaoCelularMenssagensProcedure.execute(world, x, y, z, entity);
+			}
 			if (buttonID == 6) {
 				net.mcreator.minerp.procedures.BotaoCelularURBProcedure.execute(world, x, y, z, entity);
 			}

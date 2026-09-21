@@ -27,6 +27,8 @@ public class MinerpModScreens {
 		event.register(MinerpModMenus.INSIRA_SUA_SENHA_COMPUTADOR_BANQUEIRO.get(), InsiraSuaSenhaComputadorBanqueiroScreen::new);
 		event.register(MinerpModMenus.TELA_DE_PESQUISA_COMPUTADOR_BANCO.get(), TelaDePesquisaComputadorBancoScreen::new);
 		event.register(MinerpModMenus.RESULTADO_BANCO_COMPUTADOR.get(), ResultadoBancoComputadorScreen::new);
+		event.register(MinerpModMenus.TELA_CELULAR_MENSSAGENS.get(), TelaCelularMenssagensScreen::new);
+		event.register(MinerpModMenus.TELA_ADIONAR_CONTATO.get(), TelaAdionarContatoScreen::new);
 	}
 
 	public interface ScreenAccessor {
