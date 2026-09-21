@@ -84,7 +84,7 @@ public class TelaCelularUrbMenu extends AbstractContainerMenu implements MinerpM
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
-		QuandoDesligaCelularProcedure.execute(entity);
+		QuandoDesligaCelularProcedure.execute(world, entity);
 	}
 
 	@Override

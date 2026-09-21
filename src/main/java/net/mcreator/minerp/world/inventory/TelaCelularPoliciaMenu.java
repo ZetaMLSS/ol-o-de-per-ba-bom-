@@ -84,7 +84,7 @@ public class TelaCelularPoliciaMenu extends AbstractContainerMenu implements Min
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
-		QuandoDesligaCelularProcedure.execute(entity);
+		QuandoDesligaCelularProcedure.execute(world, entity);
 	}
 
 	@Override

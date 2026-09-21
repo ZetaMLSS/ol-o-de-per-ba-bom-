@@ -84,7 +84,7 @@ public class TelaCelularCriptoMenu extends AbstractContainerMenu implements Mine
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
-		QuandoDesligaCelularProcedure.execute(entity);
+		QuandoDesligaCelularProcedure.execute(world, entity);
 	}
 
 	@Override
