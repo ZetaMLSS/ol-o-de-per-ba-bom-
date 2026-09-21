@@ -95,16 +95,16 @@
         "type": "multiline_label",
         "data": {
           "name": "multiline_label_voce_quer_chamar_a_policia_copy",
-          "text": "Chats\n",
+          "text": "Lista-Contatos\n",
           "color": {
             "value": -16777216,
             "falpha": 0.0
           },
           "hasShadow": false,
-          "fontScale": 150,
+          "fontScale": 100,
           "width": 81,
           "height": 31,
-          "x": 174,
+          "x": 176,
           "y": 33,
           "locked": false
         }

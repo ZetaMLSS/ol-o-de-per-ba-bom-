@@ -96,7 +96,7 @@ public class TelaCelularMenssagensScreen extends AbstractContainerScreen<TelaCel
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 40, -1, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Chats\n", -29, -87, 81, 31, -16777216, false, 1.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Lista-Contatos\n", -27, -87, 81, 31, -16777216, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.InformacoesContatosProcedure.execute(entity), ""), -26, -25, 75, 21, -12829636, false, 0.75F);
 	}
 
