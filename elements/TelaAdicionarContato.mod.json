@@ -92,24 +92,10 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_chamar",
-          "text": "Adicionar",
-          "isUndecorated": false,
-          "onClick": "Adicionarcontato",
-          "width": 55,
-          "height": 20,
-          "x": 174,
-          "y": 69,
-          "locked": false
-        }
-      },
-      {
         "type": "multiline_label",
         "data": {
           "name": "multiline_label_voce_quer_chamar_a_policia",
-          "text": "Lista de Contatos",
+          "text": "Adicionar Contato",
           "color": {
             "value": -13421773,
             "falpha": 0.0
@@ -124,19 +110,75 @@
         }
       },
       {
-        "type": "slider",
+        "type": "textfield",
         "data": {
-          "name": "Contatos",
-          "min": 0.0,
-          "max": 10.0,
-          "value": 5.0,
-          "step": 1.0,
-          "prefix": "",
-          "suffix": "",
-          "width": 76,
+          "placeholder": "",
+          "name": "input_nome",
+          "width": 80,
           "height": 20,
-          "x": 338,
-          "y": 113,
+          "x": 174,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_voce_quer_chamar_a_policia_copy",
+          "text": "Apelido:",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "width": 84,
+          "height": 50,
+          "x": 177,
+          "y": 83,
+          "locked": false
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "input_nome_copy",
+          "width": 80,
+          "height": 20,
+          "x": 174,
+          "y": 146,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_voce_quer_chamar_a_policia_copy_copy",
+          "text": "Número:",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "width": 84,
+          "height": 50,
+          "x": 177,
+          "y": 133,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_salvar",
+          "text": "Salvar",
+          "isUndecorated": false,
+          "width": 55,
+          "height": 20,
+          "x": 188,
+          "y": 173,
           "locked": false
         }
       }

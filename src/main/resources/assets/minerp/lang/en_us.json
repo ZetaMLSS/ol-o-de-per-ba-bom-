@@ -53,7 +53,15 @@
   "gui.minerp.resultado_banco_computador.label_valornaconta": "ValorNaConta",
   "gui.minerp.resultado_banco_computador.label_valorcredito": "ValorCredito",
   "block.minerp.maquina_cartao": "Maquina Cartao",
-  "item.minerp.cartao_de_credito": "Cartao De Credito",
-  "gui.minerp.resultado_banco_computador.senhaprocartao": "Adicionar Senha",
-  "gui.minerp.resultado_banco_computador.button_criar_cartao": "Criar Cartão"
+  "gui.minerp.tela_celular_telefone.button_chamar": "Adicionar",
+  "gui.minerp.tela_celular_telefone.Longa": "Longa",
+  "gui.minerp.tela_celular_telefone.Curta": "Curta",
+  "gui.minerp.tela_celular_telefone.Contatos_prefix": "",
+  "gui.minerp.tela_celular_telefone.Contatos_suffix": "",
+  "gui.minerp.tela_adicionar_contato.button_chamar": "Adicionar",
+  "gui.minerp.tela_adicionar_contato.Contatos_prefix": "",
+  "gui.minerp.tela_adicionar_contato.Contatos_suffix": "",
+  "gui.minerp.tela_adicionar_contato.input_nome": "",
+  "gui.minerp.tela_adicionar_contato.button_salvar": "Salvar",
+  "gui.minerp.tela_adicionar_contato.input_nome_copy": ""
 }

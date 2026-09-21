@@ -1,33 +1,32 @@
 package net.mcreator.minerp.client.gui;
 
-import net.neoforged.neoforge.network.PacketDistributor;
-import net.neoforged.neoforge.client.gui.widget.ExtendedSlider;
-
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 
-import net.mcreator.minerp.world.inventory.TelaCelularTelefoneMenu;
+import net.mcreator.minerp.world.inventory.TelaAdicionarContatoMenu;
 import net.mcreator.minerp.procedures.BateriaVisorProcedure;
-import net.mcreator.minerp.network.TelaCelularTelefoneButtonMessage;
 import net.mcreator.minerp.init.MinerpModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class TelaCelularTelefoneScreen extends AbstractContainerScreen<TelaCelularTelefoneMenu> implements MinerpModScreens.ScreenAccessor {
+public class TelaAdicionarContatoScreen extends AbstractContainerScreen<TelaAdicionarContatoMenu> implements MinerpModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	private Button button_chamar;
-	private ExtendedSlider Contatos;
+	private EditBox input_nome;
+	private EditBox input_nome_copy;
+	private Button button_salvar;
 
-	public TelaCelularTelefoneScreen(TelaCelularTelefoneMenu container, Inventory inventory, Component text) {
+	public TelaAdicionarContatoScreen(TelaAdicionarContatoMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
@@ -41,18 +40,22 @@ public class TelaCelularTelefoneScreen extends AbstractContainerScreen<TelaCelul
 	@Override
 	public void updateMenuState(int elementType, String name, Object elementState) {
 		menuStateUpdateActive = true;
-		if (elementType == 2 && elementState instanceof Number n) {
-			if (name.equals("Contatos"))
-				Contatos.setValue(n.doubleValue());
+		if (elementType == 0 && elementState instanceof String stringState) {
+			if (name.equals("input_nome"))
+				input_nome.setValue(stringState);
+			else if (name.equals("input_nome_copy"))
+				input_nome_copy.setValue(stringState);
 		}
 		menuStateUpdateActive = false;
 	}
 
-	private static final ResourceLocation texture = ResourceLocation.parse("minerp:textures/screens/tela_celular_telefone.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("minerp:textures/screens/tela_adicionar_contato.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+		input_nome.render(guiGraphics, mouseX, mouseY, partialTicks);
+		input_nome_copy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
@@ -84,43 +87,50 @@ public class TelaCelularTelefoneScreen extends AbstractContainerScreen<TelaCelul
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+		if (input_nome.isFocused())
+			return input_nome.keyPressed(key, b, c);
+		if (input_nome_copy.isFocused())
+			return input_nome_copy.keyPressed(key, b, c);
 		return super.keyPressed(key, b, c);
 	}
 
 	@Override
-	public boolean mouseDragged(double mouseX, double mouseY, int button, double dragX, double dragY) {
-		return (this.getFocused() != null && this.isDragging() && button == 0) ? this.getFocused().mouseDragged(mouseX, mouseY, button, dragX, dragY) : super.mouseDragged(mouseX, mouseY, button, dragX, dragY);
+	public void resize(Minecraft minecraft, int width, int height) {
+		String input_nomeValue = input_nome.getValue();
+		String input_nome_copyValue = input_nome_copy.getValue();
+		super.resize(minecraft, width, height);
+		input_nome.setValue(input_nomeValue);
+		input_nome_copy.setValue(input_nome_copyValue);
 	}
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 40, -1, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Lista de Contatos", -26, -87, 84, 50, -13421773, false, 1.25F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Adicionar Contato", -26, -87, 84, 50, -13421773, false, 1.25F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Apelido:", -26, -37, 84, 50, -13421773, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "N\u00FAmero:", -26, 13, 84, 50, -13421773, false, 1.00F);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		button_chamar = Button.builder(Component.translatable("gui.minerp.tela_celular_telefone.button_chamar"), e -> {
-			int x = TelaCelularTelefoneScreen.this.x;
-			int y = TelaCelularTelefoneScreen.this.y;
-			if (true) {
-				PacketDistributor.sendToServer(new TelaCelularTelefoneButtonMessage(0, x, y, z));
-				TelaCelularTelefoneButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}).bounds(this.leftPos + -29, this.topPos + -51, 55, 20).build();
-		this.addRenderableWidget(button_chamar);
-		Contatos = new ExtendedSlider(this.leftPos + 135, this.topPos + -7, 76, 20, Component.translatable("gui.minerp.tela_celular_telefone.Contatos_prefix"), Component.translatable("gui.minerp.tela_celular_telefone.Contatos_suffix"), 0, 10, 5, 1,
-				0, true) {
-			@Override
-			protected void applyValue() {
-				if (!menuStateUpdateActive)
-					menu.sendMenuStateUpdate(entity, 2, "Contatos", this.getValue(), false);
-			}
-		};
-		this.addRenderableWidget(Contatos);
-		if (!menuStateUpdateActive)
-			menu.sendMenuStateUpdate(entity, 2, "Contatos", Contatos.getValue(), false);
+		input_nome = new EditBox(this.font, this.leftPos + -28, this.topPos + -24, 78, 18, Component.translatable("gui.minerp.tela_adicionar_contato.input_nome"));
+		input_nome.setMaxLength(8192);
+		input_nome.setResponder(content -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 0, "input_nome", content, false);
+		});
+		this.addWidget(this.input_nome);
+		input_nome_copy = new EditBox(this.font, this.leftPos + -28, this.topPos + 27, 78, 18, Component.translatable("gui.minerp.tela_adicionar_contato.input_nome_copy"));
+		input_nome_copy.setMaxLength(8192);
+		input_nome_copy.setResponder(content -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 0, "input_nome_copy", content, false);
+		});
+		this.addWidget(this.input_nome_copy);
+		button_salvar = Button.builder(Component.translatable("gui.minerp.tela_adicionar_contato.button_salvar"), e -> {
+		}).bounds(this.leftPos + -15, this.topPos + 53, 55, 20).build();
+		this.addRenderableWidget(button_salvar);
 	}
 
 	private final java.util.Map<String, java.util.List<String>> guiTools$multilineCache = new java.util.HashMap<>();
