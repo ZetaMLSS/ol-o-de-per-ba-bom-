@@ -28,10 +28,11 @@
           "name": "button_pesquisar",
           "text": "Pesquisar",
           "isUndecorated": false,
+          "onClick": "PesquisarPessoaPcBanco",
           "width": 70,
           "height": 20,
           "x": 179,
-          "y": 130,
+          "y": 128,
           "locked": false
         }
       }

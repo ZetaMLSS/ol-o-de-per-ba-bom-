@@ -1,5 +1,7 @@
 package net.mcreator.minerp.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -12,6 +14,11 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.minerp.world.inventory.ResultadoBancoComputadorMenu;
+import net.mcreator.minerp.procedures.MostrarSaldoBancoComputadorBancoProcedure;
+import net.mcreator.minerp.procedures.MostrarNickResultadoBancoProcedure;
+import net.mcreator.minerp.procedures.MostrarLimiteCreditoBancoComputadorBancoProcedure;
+import net.mcreator.minerp.procedures.MostrarCreditoBancoComputadorBancoProcedure;
+import net.mcreator.minerp.network.ResultadoBancoComputadorButtonMessage;
 import net.mcreator.minerp.init.MinerpModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -22,8 +29,10 @@ public class ResultadoBancoComputadorScreen extends AbstractContainerScreen<Resu
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
 	private EditBox SetarLimiteCredito;
+	private EditBox senhaprocartao;
 	private Button button_setar;
 	private Button button_cobrar;
+	private Button button_criar_cartao;
 
 	public ResultadoBancoComputadorScreen(ResultadoBancoComputadorMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -42,6 +51,8 @@ public class ResultadoBancoComputadorScreen extends AbstractContainerScreen<Resu
 		if (elementType == 0 && elementState instanceof String stringState) {
 			if (name.equals("SetarLimiteCredito"))
 				SetarLimiteCredito.setValue(stringState);
+			else if (name.equals("senhaprocartao"))
+				senhaprocartao.setValue(stringState);
 		}
 		menuStateUpdateActive = false;
 	}
@@ -52,6 +63,7 @@ public class ResultadoBancoComputadorScreen extends AbstractContainerScreen<Resu
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		SetarLimiteCredito.render(guiGraphics, mouseX, mouseY, partialTicks);
+		senhaprocartao.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
@@ -72,29 +84,33 @@ public class ResultadoBancoComputadorScreen extends AbstractContainerScreen<Resu
 		}
 		if (SetarLimiteCredito.isFocused())
 			return SetarLimiteCredito.keyPressed(key, b, c);
+		if (senhaprocartao.isFocused())
+			return senhaprocartao.keyPressed(key, b, c);
 		return super.keyPressed(key, b, c);
 	}
 
 	@Override
 	public void resize(Minecraft minecraft, int width, int height) {
 		String SetarLimiteCreditoValue = SetarLimiteCredito.getValue();
+		String senhaprocartaoValue = senhaprocartao.getValue();
 		super.resize(minecraft, width, height);
 		SetarLimiteCredito.setValue(SetarLimiteCreditoValue);
+		senhaprocartao.setValue(senhaprocartaoValue);
 	}
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		{
-			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.resultado_banco_computador.label_valorcredito"), 150, 85, -12829636, false);
+			guiGraphics.drawString(this.font, MostrarCreditoBancoComputadorBancoProcedure.execute(world, x, y, z), 150, 85, -12829636, false);
 		}
 		{
-			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.resultado_banco_computador.label_nickdojogador"), 47, 9, -12829636, false);
+			guiGraphics.drawString(this.font, MostrarNickResultadoBancoProcedure.execute(world, x, y, z), 43, 9, -12829636, false);
 		}
 		{
-			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.resultado_banco_computador.label_valornaconta"), 50, 22, -12829636, false);
+			guiGraphics.drawString(this.font, MostrarSaldoBancoComputadorBancoProcedure.execute(world, x, y, z), 50, 22, -12829636, false);
 		}
 		{
-			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.resultado_banco_computador.label_limitedocredito"), 118, 35, -12829636, false);
+			guiGraphics.drawString(this.font, MostrarLimiteCreditoBancoComputadorBancoProcedure.execute(world, x, y, z), 118, 35, -12829636, false);
 		}
 		this.guiTools$renderMultilineLabel(guiGraphics, "Nick:", 5, 8, 120, 12, -12829636, false, 1.25F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "Conta:", 4, 20, 120, 12, -12829636, false, 1.25F);
@@ -112,12 +128,29 @@ public class ResultadoBancoComputadorScreen extends AbstractContainerScreen<Resu
 				menu.sendMenuStateUpdate(entity, 0, "SetarLimiteCredito", content, false);
 		});
 		this.addWidget(this.SetarLimiteCredito);
+		senhaprocartao = new EditBox(this.font, this.leftPos + 31, this.topPos + 142, 118, 18, Component.translatable("gui.minerp.resultado_banco_computador.senhaprocartao"));
+		senhaprocartao.setMaxLength(8192);
+		senhaprocartao.setResponder(content -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 0, "senhaprocartao", content, false);
+		});
+		senhaprocartao.setHint(Component.translatable("gui.minerp.resultado_banco_computador.senhaprocartao"));
+		this.addWidget(this.senhaprocartao);
 		button_setar = Button.builder(Component.translatable("gui.minerp.resultado_banco_computador.button_setar"), e -> {
+			int x = ResultadoBancoComputadorScreen.this.x;
+			int y = ResultadoBancoComputadorScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new ResultadoBancoComputadorButtonMessage(0, x, y, z));
+				ResultadoBancoComputadorButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}).bounds(this.leftPos + 130, this.topPos + 50, 50, 20).build();
 		this.addRenderableWidget(button_setar);
 		button_cobrar = Button.builder(Component.translatable("gui.minerp.resultado_banco_computador.button_cobrar"), e -> {
 		}).bounds(this.leftPos + 4, this.topPos + 104, 55, 20).build();
 		this.addRenderableWidget(button_cobrar);
+		button_criar_cartao = Button.builder(Component.translatable("gui.minerp.resultado_banco_computador.button_criar_cartao"), e -> {
+		}).bounds(this.leftPos + 155, this.topPos + 141, 85, 20).build();
+		this.addRenderableWidget(button_criar_cartao);
 	}
 
 	private final java.util.Map<String, java.util.List<String>> guiTools$multilineCache = new java.util.HashMap<>();

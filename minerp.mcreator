@@ -198,11 +198,12 @@
       "registry_name": "monitor",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/minerp/block/entity/MonitorBlockEntity.java",
           "src/main/resources/assets/minerp/models/item/monitor.json",
-          "src/main/resources/data/minerp/loot_table/blocks/monitor.json",
-          "src/main/resources/assets/minerp/models/block/monitor.json",
+          "src/main/resources/assets/minerp/blockstates/monitor.json",
           "src/main/java/net/mcreator/minerp/block/MonitorBlock.java",
-          "src/main/resources/assets/minerp/blockstates/monitor.json"
+          "src/main/resources/data/minerp/loot_table/blocks/monitor.json",
+          "src/main/resources/assets/minerp/models/block/monitor.json"
         ]
       },
       "path": "~/Bloco/Computer"
@@ -1117,6 +1118,7 @@
       "registry_name": "configurar_senha_computador_bancario",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/minerp/network/ConfigurarSenhaComputadorBancarioButtonMessage.java",
           "src/main/java/net/mcreator/minerp/world/inventory/ConfigurarSenhaComputadorBancarioMenu.java",
           "src/main/java/net/mcreator/minerp/client/gui/ConfigurarSenhaComputadorBancarioScreen.java"
         ]
@@ -1132,6 +1134,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/minerp/client/gui/InsiraSuaSenhaComputadorBanqueiroScreen.java",
+          "src/main/java/net/mcreator/minerp/network/InsiraSuaSenhaComputadorBanqueiroButtonMessage.java",
           "src/main/java/net/mcreator/minerp/world/inventory/InsiraSuaSenhaComputadorBanqueiroMenu.java"
         ]
       },
@@ -1146,6 +1149,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/minerp/client/gui/TelaDePesquisaComputadorBancoScreen.java",
+          "src/main/java/net/mcreator/minerp/network/TelaDePesquisaComputadorBancoButtonMessage.java",
           "src/main/java/net/mcreator/minerp/world/inventory/TelaDePesquisaComputadorBancoMenu.java"
         ]
       },
@@ -1160,10 +1164,11 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/minerp/world/inventory/ResultadoBancoComputadorMenu.java",
-          "src/main/java/net/mcreator/minerp/client/gui/ResultadoBancoComputadorScreen.java"
+          "src/main/java/net/mcreator/minerp/client/gui/ResultadoBancoComputadorScreen.java",
+          "src/main/java/net/mcreator/minerp/network/ResultadoBancoComputadorButtonMessage.java"
         ]
       },
-      "path": "~/Itens/Carteira/Gui"
+      "path": "~/Bloco/Computer/Gui/ResultadoDoBanco"
     },
     {
       "name": "MaquinaCartao",
@@ -1181,6 +1186,422 @@
         ]
       },
       "path": "~/Itens/MaquininhaCartao"
+    },
+    {
+      "name": "InsiraSuaSenhaComputadorBanqueiroWhileThisGUIIsOpenTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "insira_sua_senha_computador_banqueiro_while_this_gui_is_open_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/InsiraSuaSenhaComputadorBanqueiroWhileThisGUIIsOpenTickProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Computer/Gui"
+    },
+    {
+      "name": "PcBancoConfirmarSenha",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pc_banco_confirmar_senha",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/PcBancoConfirmarSenhaProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Computer/Gui"
+    },
+    {
+      "name": "PcBancoCriarSenha",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pc_banco_criar_senha",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/PcBancoCriarSenhaProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Computer/Gui"
+    },
+    {
+      "name": "PesquisarPessoaPcBanco",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pesquisar_pessoa_pc_banco",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/PesquisarPessoaPcBancoProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Computer/Gui"
+    },
+    {
+      "name": "MostrarNickResultadoBanco",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostrar_nick_resultado_banco",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostrarNickResultadoBancoProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Computer/Gui/ResultadoDoBanco"
+    },
+    {
+      "name": "MostrarSaldoBancoComputadorBanco",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostrar_saldo_banco_computador_banco",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostrarSaldoBancoComputadorBancoProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Computer/Gui/ResultadoDoBanco"
+    },
+    {
+      "name": "MostrarCreditoBancoComputadorBanco",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostrar_credito_banco_computador_banco",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostrarCreditoBancoComputadorBancoProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Computer/Gui/ResultadoDoBanco"
+    },
+    {
+      "name": "MostrarLimiteCreditoBancoComputadorBanco",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostrar_limite_credito_banco_computador_banco",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostrarLimiteCreditoBancoComputadorBancoProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Computer/Gui/ResultadoDoBanco"
+    },
+    {
+      "name": "AdicionarLimiteCredito",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adicionar_limite_credito",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/command/AdicionarLimiteCreditoCommand.java"
+        ]
+      },
+      "path": "~/Bloco/Computer/Gui/ResultadoDoBanco"
+    },
+    {
+      "name": "Comandoprocedureadicionarlimitecreditopc",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "comandoprocedureadicionarlimitecreditopc",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/ComandoprocedureadicionarlimitecreditopcProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Computer/Gui/ResultadoDoBanco"
+    },
+    {
+      "name": "SetarPelaGuiDoComputadorBancoLimite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "setar_pela_gui_do_computador_banco_limite",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/SetarPelaGuiDoComputadorBancoLimiteProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Computer/Gui/ResultadoDoBanco"
+    },
+    {
+      "name": "CartaoDeCredito",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cartao_de_credito",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/item/CartaoDeCreditoItem.java",
+          "src/main/resources/assets/minerp/models/item/cartao_de_credito.json"
+        ]
+      },
+      "path": "~/Bloco/Computer/Cartao De Credito"
+    },
+    {
+      "name": "CriadorDeCartaoDoBanco",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "criador_de_cartao_do_banco",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/CriadorDeCartaoDoBancoProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Computer/Gui/ResultadoDoBanco"
+    },
+    {
+      "name": "MudarCodigoUnicoParaCartao",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mudar_codigo_unico_para_cartao",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/command/MudarCodigoUnicoParaCartaoCommand.java"
+        ]
+      },
+      "path": "~/Bloco/Computer/Gui/ResultadoDoBanco"
+    },
+    {
+      "name": "MudarcodigoUnicoProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mudarcodigo_unico_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MudarcodigoUnicoProcedureProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Computer/Gui/ResultadoDoBanco"
     }
   ],
   "variable_elements": [
@@ -1242,6 +1663,18 @@
       "name": "CatCoinLimite",
       "type": "number",
       "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "LimiteDoCredito",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "CartaoVinculado",
+      "type": "number",
+      "scope": "player_persistent",
       "value": "0"
     }
   ],
@@ -1326,7 +1759,10 @@
       "gui.minerp.resultado_banco_computador.button_cobrar": "Cobrar",
       "gui.minerp.resultado_banco_computador.label_valornaconta": "ValorNaConta",
       "gui.minerp.resultado_banco_computador.label_valorcredito": "ValorCredito",
-      "block.minerp.maquina_cartao": "Maquina Cartao"
+      "block.minerp.maquina_cartao": "Maquina Cartao",
+      "item.minerp.cartao_de_credito": "Cartao De Credito",
+      "gui.minerp.resultado_banco_computador.senhaprocartao": "Adicionar Senha",
+      "gui.minerp.resultado_banco_computador.button_criar_cartao": "Criar Cartão"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -1382,56 +1818,59 @@
       "gui.minerp.resultado_banco_computador.button_cobrar": "Cobrar",
       "gui.minerp.resultado_banco_computador.label_valornaconta": "ValorNaConta",
       "gui.minerp.resultado_banco_computador.label_valorcredito": "ValorCredito",
-      "block.minerp.maquina_cartao": "Maquina Cartao"
+      "block.minerp.maquina_cartao": "Maquina Cartao",
+      "item.minerp.cartao_de_credito": "Cartao De Credito",
+      "gui.minerp.resultado_banco_computador.senhaprocartao": "Adicionar Senha",
+      "gui.minerp.resultado_banco_computador.button_criar_cartao": "Criar Cartão"
     }
   },
   "metadata": {
     "files": [
       "src/main/java/net/mcreator/minerp/init/MinerpModBerClient.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBerSupport.java",
-      "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModScreens.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
       "src/main/java/net/mcreator/minerp/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlocks.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlockEntities.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModItems.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
-      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
-      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
-      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
+      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
       "src/main/java/net/mcreator/minerp/ai/MoveToBlockGoal.java",
-      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
-      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
-      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
-      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/mcreator/minerp/world/BlackHoleSavedData.java",
       "src/main/java/net/mcreator/minerp/mixin/LevelRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/resources/minerp.mixins.json",
-      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
+      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
       "src/main/java/net/mcreator/minerp/client/renderer/CustomEyeOfEnderRenderer.java",
-      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
-      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
-      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
       "src/main/java/net/mcreator/minerp/world/PortalSavedData.java",
       "src/main/java/net/mcreator/minerp/MinerpMod.java",
-      "src/main/java/net/mcreator/minerp/ai/OrbitPositionGoal.java",
-      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
-      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
-      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
+      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
+      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
       "src/main/java/net/mcreator/minerp/math/CallCounter.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
       "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
-      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java"
+      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
+      "src/main/resources/minerp.mixins.json",
+      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
+      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
+      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
+      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
+      "src/main/java/net/mcreator/minerp/ai/OrbitPositionGoal.java",
+      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
+      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
+      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
+      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java"
     ]
   },
   "foldersRoot": {
@@ -1566,6 +2005,15 @@
             "children": [
               {
                 "name": "Gui",
+                "children": [
+                  {
+                    "name": "ResultadoDoBanco",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Cartao De Credito",
                 "children": []
               }
             ]

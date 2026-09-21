@@ -1,5 +1,7 @@
 package net.mcreator.minerp.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -12,6 +14,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.minerp.world.inventory.ConfigurarSenhaComputadorBancarioMenu;
+import net.mcreator.minerp.network.ConfigurarSenhaComputadorBancarioButtonMessage;
 import net.mcreator.minerp.init.MinerpModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -97,6 +100,12 @@ public class ConfigurarSenhaComputadorBancarioScreen extends AbstractContainerSc
 		ColocarSenha.setHint(Component.translatable("gui.minerp.configurar_senha_computador_bancario.ColocarSenha"));
 		this.addWidget(this.ColocarSenha);
 		button_avancar = Button.builder(Component.translatable("gui.minerp.configurar_senha_computador_bancario.button_avancar"), e -> {
+			int x = ConfigurarSenhaComputadorBancarioScreen.this.x;
+			int y = ConfigurarSenhaComputadorBancarioScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new ConfigurarSenhaComputadorBancarioButtonMessage(0, x, y, z));
+				ConfigurarSenhaComputadorBancarioButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}).bounds(this.leftPos + 58, this.topPos + 45, 60, 20).build();
 		this.addRenderableWidget(button_avancar);
 	}

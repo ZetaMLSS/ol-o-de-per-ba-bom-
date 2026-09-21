@@ -52,5 +52,8 @@
   "gui.minerp.resultado_banco_computador.button_cobrar": "Cobrar",
   "gui.minerp.resultado_banco_computador.label_valornaconta": "ValorNaConta",
   "gui.minerp.resultado_banco_computador.label_valorcredito": "ValorCredito",
-  "block.minerp.maquina_cartao": "Maquina Cartao"
+  "block.minerp.maquina_cartao": "Maquina Cartao",
+  "item.minerp.cartao_de_credito": "Cartao De Credito",
+  "gui.minerp.resultado_banco_computador.senhaprocartao": "Adicionar Senha",
+  "gui.minerp.resultado_banco_computador.button_criar_cartao": "Criar Cartão"
 }
