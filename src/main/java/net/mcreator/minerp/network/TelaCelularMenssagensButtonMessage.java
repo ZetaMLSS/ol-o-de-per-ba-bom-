@@ -15,6 +15,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.SectionPos;
 
+import net.mcreator.minerp.procedures.DeletarContatoProcedure;
 import net.mcreator.minerp.procedures.AcionarTelaAdicionarContatoProcedure;
 import net.mcreator.minerp.MinerpMod;
 
@@ -50,6 +51,10 @@ public record TelaCelularMenssagensButtonMessage(int buttonID, int x, int y, int
 		if (buttonID == 0) {
 
 			AcionarTelaAdicionarContatoProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 1) {
+
+			DeletarContatoProcedure.execute();
 		}
 	}
 

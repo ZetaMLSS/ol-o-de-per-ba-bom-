@@ -25,6 +25,7 @@ public class TelaCelularMenssagensScreen extends AbstractContainerScreen<TelaCel
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
 	private Button button_chamar;
+	private Button button_deletar_ctt;
 	private ExtendedSlider slidercontatos;
 
 	public TelaCelularMenssagensScreen(TelaCelularMenssagensMenu container, Inventory inventory, Component text) {
@@ -109,8 +110,17 @@ public class TelaCelularMenssagensScreen extends AbstractContainerScreen<TelaCel
 				PacketDistributor.sendToServer(new TelaCelularMenssagensButtonMessage(0, x, y, z));
 				TelaCelularMenssagensButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + -26, this.topPos + 46, 55, 20).build();
+		}).bounds(this.leftPos + -26, this.topPos + 22, 55, 20).build();
 		this.addRenderableWidget(button_chamar);
+		button_deletar_ctt = Button.builder(Component.translatable("gui.minerp.tela_celular_menssagens.button_deletar_ctt"), e -> {
+			int x = TelaCelularMenssagensScreen.this.x;
+			int y = TelaCelularMenssagensScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new TelaCelularMenssagensButtonMessage(1, x, y, z));
+				TelaCelularMenssagensButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		}).bounds(this.leftPos + -29, this.topPos + 43, 80, 20).build();
+		this.addRenderableWidget(button_deletar_ctt);
 		slidercontatos = new ExtendedSlider(this.leftPos + -24, this.topPos + -49, 70, 20, Component.translatable("gui.minerp.tela_celular_menssagens.slidercontatos_prefix"),
 				Component.translatable("gui.minerp.tela_celular_menssagens.slidercontatos_suffix"), 1, 10, 1, 1, 0, true) {
 			@Override

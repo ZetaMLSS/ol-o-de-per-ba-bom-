@@ -101,7 +101,7 @@
           "width": 55,
           "height": 20,
           "x": 177,
-          "y": 166,
+          "y": 142,
           "locked": true
         }
       },
@@ -156,6 +156,20 @@
           "height": 21,
           "x": 177,
           "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_deletar_ctt",
+          "text": "Deletar CTT",
+          "isUndecorated": false,
+          "onClick": "DeletarContato",
+          "width": 80,
+          "height": 20,
+          "x": 174,
+          "y": 163,
           "locked": false
         }
       }

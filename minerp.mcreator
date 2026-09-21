@@ -1777,6 +1777,20 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
+    },
+    {
+      "name": "DeletarContato",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deletar_contato",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/DeletarContatoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
     }
   ],
   "variable_elements": [
@@ -1946,7 +1960,8 @@
       "gui.minerp.tela_adionar_contato.input_numero": "",
       "gui.minerp.tela_adionar_contato.input_nome": "",
       "gui.minerp.tela_celular_menssagens.slidercontatos_suffix": "",
-      "gui.minerp.tela_celular_menssagens.slidercontatos_prefix": ""
+      "gui.minerp.tela_celular_menssagens.slidercontatos_prefix": "",
+      "gui.minerp.tela_celular_menssagens.button_deletar_ctt": "Deletar CTT"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -2014,7 +2029,8 @@
       "gui.minerp.tela_adionar_contato.input_numero": "",
       "gui.minerp.tela_adionar_contato.input_nome": "",
       "gui.minerp.tela_celular_menssagens.slidercontatos_suffix": "",
-      "gui.minerp.tela_celular_menssagens.slidercontatos_prefix": ""
+      "gui.minerp.tela_celular_menssagens.slidercontatos_prefix": "",
+      "gui.minerp.tela_celular_menssagens.button_deletar_ctt": "Deletar CTT"
     }
   },
   "metadata": {
