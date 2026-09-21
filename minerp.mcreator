@@ -1631,9 +1631,9 @@
       "registry_name": "tela_adionar_contato",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/minerp/network/TelaAdionarContatoButtonMessage.java",
           "src/main/java/net/mcreator/minerp/world/inventory/TelaAdionarContatoMenu.java",
-          "src/main/java/net/mcreator/minerp/client/gui/TelaAdionarContatoScreen.java",
-          "src/main/java/net/mcreator/minerp/network/TelaAdionarContatoButtonMessage.java"
+          "src/main/java/net/mcreator/minerp/client/gui/TelaAdionarContatoScreen.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
@@ -1823,7 +1823,28 @@
       "locked_code": false,
       "registry_name": "selecionar_chat",
       "metadata": {
-        "dependencies": [],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
         "files": [
           "src/main/java/net/mcreator/minerp/procedures/SelecionarChatProcedure.java"
         ]

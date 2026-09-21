@@ -59,7 +59,7 @@ public record TelaCelularMenssagensButtonMessage(int buttonID, int x, int y, int
 		}
 		if (buttonID == 2) {
 
-			SelecionarChatProcedure.execute();
+			SelecionarChatProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
