@@ -109,10 +109,10 @@ public class TelaAdionarContatoScreen extends AbstractContainerScreen<TelaAdiona
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 40, -1, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Novo-Contato\n", -29, -87, 81, 31, -16777216, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Novo-Contato\n", -29, -86, 81, 31, -16777216, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "Apelido:\n", -29, -42, 81, 31, -16777216, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "N\u00FAmero:\n", -29, 1, 81, 31, -16777216, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.ExcessocontatosProcedure.execute(entity), ""), -28, 32, 120, 40, -65536, false, 0.75F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.ExcessocontatosProcedure.execute(entity), ""), -28, 32, 120, 40, -65536, false, 0.50F);
 	}
 
 	@Override

@@ -119,7 +119,7 @@
           "width": 81,
           "height": 31,
           "x": 174,
-          "y": 33,
+          "y": 34,
           "locked": false
         }
       },
@@ -193,7 +193,7 @@
             "falpha": 0.0
           },
           "hasShadow": false,
-          "fontScale": 75,
+          "fontScale": 50,
           "textProcedure": "Excessocontatos",
           "width": 120,
           "height": 40,

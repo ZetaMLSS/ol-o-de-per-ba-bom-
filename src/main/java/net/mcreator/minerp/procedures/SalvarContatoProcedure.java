@@ -334,9 +334,6 @@ public class SalvarContatoProcedure {
 					}
 				}, _bpos);
 			}
-		} else {
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("\"Erro: A tua agenda de contatos est\u00E1 cheia!\""), false);
 		}
 	}
 }
