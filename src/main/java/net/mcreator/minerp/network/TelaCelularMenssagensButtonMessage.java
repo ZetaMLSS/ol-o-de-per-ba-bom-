@@ -50,11 +50,11 @@ public record TelaCelularMenssagensButtonMessage(int buttonID, int x, int y, int
 			return;
 		if (buttonID == 0) {
 
-			AcionarTelaAdicionarContatoProcedure.execute(world, x, y, z, entity);
+			DeletarContatoProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			DeletarContatoProcedure.execute();
+			AcionarTelaAdicionarContatoProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

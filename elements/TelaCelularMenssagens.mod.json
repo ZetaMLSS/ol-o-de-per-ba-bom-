@@ -92,20 +92,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_chamar",
-          "text": "Adicionar",
-          "isUndecorated": false,
-          "onClick": "AcionarTelaAdicionarContato",
-          "width": 55,
-          "height": 20,
-          "x": 177,
-          "y": 142,
-          "locked": true
-        }
-      },
-      {
         "type": "multiline_label",
         "data": {
           "name": "multiline_label_voce_quer_chamar_a_policia_copy",
@@ -170,6 +156,20 @@
           "height": 20,
           "x": 174,
           "y": 163,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_adicionar_ctt",
+          "text": "Adicionar CTT",
+          "isUndecorated": false,
+          "onClick": "AcionarTelaAdicionarContato",
+          "width": 80,
+          "height": 20,
+          "x": 174,
+          "y": 143,
           "locked": false
         }
       }
