@@ -42,7 +42,7 @@ public class BotaoCelularParamedicoProcedure {
 				}
 			}, _bpos);
 		}
-		MinerpMod.queueServerWork(4, () -> {
+		MinerpMod.queueServerWork(8, () -> {
 			if (world instanceof ServerLevel _level) {
 				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 				});
