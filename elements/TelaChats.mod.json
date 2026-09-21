@@ -94,95 +94,18 @@
       {
         "type": "multiline_label",
         "data": {
-          "name": "multiline_label_voce_quer_chamar_a_policia_copy",
-          "text": "Lista-Contatos\n",
-          "color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 100,
-          "width": 81,
-          "height": 31,
-          "x": 176,
-          "y": 33,
-          "locked": false
-        }
-      },
-      {
-        "type": "slider",
-        "data": {
-          "name": "slidercontatos",
-          "min": 1.0,
-          "max": 10.0,
-          "value": 1.0,
-          "step": 1.0,
-          "prefix": "",
-          "suffix": "",
-          "width": 70,
-          "height": 20,
-          "x": 179,
-          "y": 71,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_empty",
-          "text": "",
+          "name": "multiline_label_uwdhnuawdb7yawhbdawhd7yahdyg67aw",
+          "text": "uwdhnuawdb7yawhbdawh\nwdawdwad\n",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
           "hasShadow": false,
-          "fontScale": 75,
-          "textProcedure": "InformacoesContatos",
-          "width": 75,
-          "height": 21,
-          "x": 178,
-          "y": 92,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_deletar_ctt",
-          "text": "Deletar CTT",
-          "isUndecorated": false,
-          "onClick": "DeletarContato",
-          "width": 80,
-          "height": 20,
-          "x": 174,
-          "y": 162,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_adicionar_ctt",
-          "text": "Adicionar CTT",
-          "isUndecorated": false,
-          "onClick": "AcionarTelaAdicionarContato",
-          "width": 80,
-          "height": 20,
-          "x": 174,
-          "y": 141,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_chats",
-          "text": "Chats",
-          "isUndecorated": false,
-          "width": 50,
-          "height": 20,
-          "x": 174,
-          "y": 120,
+          "fontScale": 50,
+          "width": 79,
+          "height": 24,
+          "x": 175,
+          "y": 54,
           "locked": false
         }
       }

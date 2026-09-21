@@ -1,35 +1,26 @@
 package net.mcreator.minerp.client.gui;
 
-import net.neoforged.neoforge.network.PacketDistributor;
-import net.neoforged.neoforge.client.gui.widget.ExtendedSlider;
-
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
-import net.mcreator.minerp.world.inventory.TelaCelularMenssagensMenu;
+import net.mcreator.minerp.world.inventory.TelaChatsMenu;
 import net.mcreator.minerp.procedures.BateriaVisorProcedure;
-import net.mcreator.minerp.network.TelaCelularMenssagensButtonMessage;
 import net.mcreator.minerp.init.MinerpModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class TelaCelularMenssagensScreen extends AbstractContainerScreen<TelaCelularMenssagensMenu> implements MinerpModScreens.ScreenAccessor {
+public class TelaChatsScreen extends AbstractContainerScreen<TelaChatsMenu> implements MinerpModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	private Button button_deletar_ctt;
-	private Button button_adicionar_ctt;
-	private Button button_chats;
-	private ExtendedSlider slidercontatos;
 
-	public TelaCelularMenssagensScreen(TelaCelularMenssagensMenu container, Inventory inventory, Component text) {
+	public TelaChatsScreen(TelaChatsMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
@@ -43,14 +34,10 @@ public class TelaCelularMenssagensScreen extends AbstractContainerScreen<TelaCel
 	@Override
 	public void updateMenuState(int elementType, String name, Object elementState) {
 		menuStateUpdateActive = true;
-		if (elementType == 2 && elementState instanceof Number n) {
-			if (name.equals("slidercontatos"))
-				slidercontatos.setValue(n.doubleValue());
-		}
 		menuStateUpdateActive = false;
 	}
 
-	private static final ResourceLocation texture = ResourceLocation.parse("minerp:textures/screens/tela_celular_menssagens.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("minerp:textures/screens/tela_chats.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
@@ -90,52 +77,14 @@ public class TelaCelularMenssagensScreen extends AbstractContainerScreen<TelaCel
 	}
 
 	@Override
-	public boolean mouseDragged(double mouseX, double mouseY, int button, double dragX, double dragY) {
-		return (this.getFocused() != null && this.isDragging() && button == 0) ? this.getFocused().mouseDragged(mouseX, mouseY, button, dragX, dragY) : super.mouseDragged(mouseX, mouseY, button, dragX, dragY);
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 40, -1, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Lista-Contatos\n", -27, -87, 81, 31, -16777216, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.InformacoesContatosProcedure.execute(entity), ""), -25, -28, 75, 21, -12829636, false, 0.75F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "uwdhnuawdb7yawhbdawh\nwdawdwad\n", -28, -66, 79, 24, -12829636, false, 0.50F);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		button_deletar_ctt = Button.builder(Component.translatable("gui.minerp.tela_celular_menssagens.button_deletar_ctt"), e -> {
-			int x = TelaCelularMenssagensScreen.this.x;
-			int y = TelaCelularMenssagensScreen.this.y;
-			if (true) {
-				PacketDistributor.sendToServer(new TelaCelularMenssagensButtonMessage(0, x, y, z));
-				TelaCelularMenssagensButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}).bounds(this.leftPos + -29, this.topPos + 42, 80, 20).build();
-		this.addRenderableWidget(button_deletar_ctt);
-		button_adicionar_ctt = Button.builder(Component.translatable("gui.minerp.tela_celular_menssagens.button_adicionar_ctt"), e -> {
-			int x = TelaCelularMenssagensScreen.this.x;
-			int y = TelaCelularMenssagensScreen.this.y;
-			if (true) {
-				PacketDistributor.sendToServer(new TelaCelularMenssagensButtonMessage(1, x, y, z));
-				TelaCelularMenssagensButtonMessage.handleButtonAction(entity, 1, x, y, z);
-			}
-		}).bounds(this.leftPos + -29, this.topPos + 21, 80, 20).build();
-		this.addRenderableWidget(button_adicionar_ctt);
-		button_chats = Button.builder(Component.translatable("gui.minerp.tela_celular_menssagens.button_chats"), e -> {
-		}).bounds(this.leftPos + -29, this.topPos + 0, 50, 20).build();
-		this.addRenderableWidget(button_chats);
-		slidercontatos = new ExtendedSlider(this.leftPos + -24, this.topPos + -49, 70, 20, Component.translatable("gui.minerp.tela_celular_menssagens.slidercontatos_prefix"),
-				Component.translatable("gui.minerp.tela_celular_menssagens.slidercontatos_suffix"), 1, 10, 1, 1, 0, true) {
-			@Override
-			protected void applyValue() {
-				if (!menuStateUpdateActive)
-					menu.sendMenuStateUpdate(entity, 2, "slidercontatos", this.getValue(), false);
-			}
-		};
-		this.addRenderableWidget(slidercontatos);
-		if (!menuStateUpdateActive)
-			menu.sendMenuStateUpdate(entity, 2, "slidercontatos", slidercontatos.getValue(), false);
 	}
 
 	private final java.util.Map<String, java.util.List<String>> guiTools$multilineCache = new java.util.HashMap<>();

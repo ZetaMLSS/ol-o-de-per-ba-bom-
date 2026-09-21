@@ -28,11 +28,11 @@ import java.util.HashMap;
 import java.util.Collections;
 
 @EventBusSubscriber
-public class TelaCelularMenssagensMenu extends AbstractContainerMenu implements MinerpModMenus.MenuAccessor {
+public class TelaChatsMenu extends AbstractContainerMenu implements MinerpModMenus.MenuAccessor {
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
 		public Object put(String key, Object value) {
-			if (!this.containsKey(key) && this.size() >= 9)
+			if (!this.containsKey(key) && this.size() >= 4)
 				return null;
 			return super.put(key, value);
 		}
@@ -48,8 +48,8 @@ public class TelaCelularMenssagensMenu extends AbstractContainerMenu implements 
 	private Entity boundEntity = null;
 	private BlockEntity boundBlockEntity = null;
 
-	public TelaCelularMenssagensMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(MinerpModMenus.TELA_CELULAR_MENSSAGENS.get(), id);
+	public TelaChatsMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+		super(MinerpModMenus.TELA_CHATS.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level();
 		this.internal = new ItemStackHandler(0);
@@ -100,7 +100,7 @@ public class TelaCelularMenssagensMenu extends AbstractContainerMenu implements 
 	@SubscribeEvent
 	public static void onPlayerTick(PlayerTickEvent.Post event) {
 		Player entity = event.getEntity();
-		if (entity.containerMenu instanceof TelaCelularMenssagensMenu menu) {
+		if (entity.containerMenu instanceof TelaChatsMenu menu) {
 			Level world = menu.world;
 			double x = menu.x;
 			double y = menu.y;
