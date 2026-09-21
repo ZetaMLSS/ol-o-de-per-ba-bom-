@@ -107,7 +107,7 @@
     },
     "hasInventory": true,
     "guiBoundTo": "ATMTELA1",
-    "openGUIOnRightClick": false,
+    "openGUIOnRightClick": true,
     "inventorySize": 9,
     "inventoryStackSize": 99,
     "inventoryDropWhenDestroyed": true,
