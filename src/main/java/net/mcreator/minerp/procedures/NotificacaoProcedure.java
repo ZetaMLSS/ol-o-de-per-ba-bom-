@@ -15,21 +15,18 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.minerp.world.inventory.TelaChatsMenu;
-import net.mcreator.minerp.init.MinerpModMenus;
+import net.mcreator.minerp.world.inventory.TelaCelularMenssagensMenu;
 
 import io.netty.buffer.Unpooled;
 
-public class SelecionarChatProcedure {
+public class NotificacaoProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (!((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag()
-				.getString(("contato_numero_" + Math.round((entity instanceof Player _entity0 && _entity0.containerMenu instanceof MinerpModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(2, "slidercontatos", 0.0) : 0.0)))).isEmpty()) {
+		if (!(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("Ultima_Mensagem_Numero")).equals(""))) {
 			{
 				final String _tagName = "numero_chat_ativo";
-				final String _tagValue = ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag()
-						.getString(("contato_numero_" + Math.round((entity instanceof Player _entity3 && _entity3.containerMenu instanceof MinerpModMenus.MenuAccessor _menu3) ? _menu3.getMenuState(2, "slidercontatos", 0.0) : 0.0))));
+				final String _tagValue = ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("Ultima_Mensagem_Numero"));
 				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putString(_tagName, _tagValue));
 			}
 			if (entity instanceof ServerPlayer _ent) {
@@ -37,7 +34,7 @@ public class SelecionarChatProcedure {
 				_ent.openMenu(new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
-						return Component.literal("TelaChats");
+						return Component.literal("TelaCelularMenssagens");
 					}
 
 					@Override
@@ -47,7 +44,7 @@ public class SelecionarChatProcedure {
 
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new TelaChatsMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						return new TelaCelularMenssagensMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}

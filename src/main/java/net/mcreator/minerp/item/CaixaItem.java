@@ -14,7 +14,7 @@ public class CaixaItem extends Item {
 	@Override
 	public InteractionResult useOn(UseOnContext context) {
 		super.useOn(context);
-		CaixaQuandoClicadoComOBotaoDireitoProcedure.execute(context.getPlayer());
+		CaixaQuandoClicadoComOBotaoDireitoProcedure.execute(context.getLevel(), context.getPlayer());
 		return InteractionResult.SUCCESS;
 	}
 }

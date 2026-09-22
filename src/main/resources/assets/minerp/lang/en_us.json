@@ -84,5 +84,6 @@
   "gui.minerp.atmtela_2.button_05": "0,5",
   "gui.minerp.atmtela_2.label_depositar": "Depositar",
   "gui.minerp.atmtela_2.label_saldo_disponivel": "Valor",
-  "gui.minerp.atmtela_2.label_retirar": "Retirar"
+  "gui.minerp.atmtela_2.label_retirar": "Retirar",
+  "gui.minerp.tela_chats.escrevermensagem": ""
 }

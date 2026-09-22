@@ -92,16 +92,43 @@
         }
       },
       {
+        "type": "button",
+        "data": {
+          "name": "button_enviar",
+          "text": "Enviar",
+          "isUndecorated": false,
+          "onClick": "Enviarmensagem",
+          "width": 55,
+          "height": 20,
+          "x": 187,
+          "y": 175,
+          "locked": false
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "escrevermensagem",
+          "width": 80,
+          "height": 20,
+          "x": 174,
+          "y": 149,
+          "locked": false
+        }
+      },
+      {
         "type": "multiline_label",
         "data": {
           "name": "multiline_label_uwdhnuawdb7yawhbdawhd7yahdyg67aw",
-          "text": "uwdhnuawdb7yawhbdawh\nwdawdwad\n",
+          "text": "-----------------------------",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
           "hasShadow": false,
           "fontScale": 50,
+          "textProcedure": "Texto5",
           "width": 79,
           "height": 24,
           "x": 175,
@@ -110,15 +137,97 @@
         }
       },
       {
-        "type": "button",
+        "type": "multiline_label",
         "data": {
-          "name": "button_enviar",
-          "text": "Enviar",
-          "isUndecorated": false,
-          "width": 55,
-          "height": 20,
-          "x": 187,
-          "y": 175,
+          "name": "multiline_label_uwdhnuawdb7yawhbdawhd7yahdyg67aw_copy_2",
+          "text": "-----------------------------",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 50,
+          "textProcedure": "Texto4",
+          "width": 79,
+          "height": 24,
+          "x": 175,
+          "y": 72,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_uwdhnuawdb7yawhbdawhd7yahdyg67aw_copy",
+          "text": "-----------------------------",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 50,
+          "textProcedure": "Texto3",
+          "width": 79,
+          "height": 24,
+          "x": 175,
+          "y": 91,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_uwdhnuawdb7yawhbdawhd7yahdyg67aw_copy_copy",
+          "text": "-----------------------------",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 50,
+          "textProcedure": "Texto2",
+          "width": 79,
+          "height": 24,
+          "x": 175,
+          "y": 108,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_uwdhnuawdb7yawhbdawhd7yahdyg67aw_copy_copy_copy",
+          "text": "-----------------------------",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 50,
+          "textProcedure": "Texto1",
+          "width": 79,
+          "height": 24,
+          "x": 175,
+          "y": 125,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_numero",
+          "text": "",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "textProcedure": "NumeroNotificacoes",
+          "width": 120,
+          "height": 40,
+          "x": 177,
+          "y": 34,
           "locked": false
         }
       }

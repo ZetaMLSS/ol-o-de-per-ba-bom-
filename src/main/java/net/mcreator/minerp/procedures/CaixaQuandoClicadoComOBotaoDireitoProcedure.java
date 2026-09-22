@@ -1,5 +1,6 @@
 package net.mcreator.minerp.procedures;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -10,10 +11,11 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.core.component.DataComponents;
 
+import net.mcreator.minerp.network.MinerpModVariables;
 import net.mcreator.minerp.init.MinerpModItems;
 
 public class CaixaQuandoClicadoComOBotaoDireitoProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == MinerpModItems.CAIXA.get()) {
@@ -34,6 +36,14 @@ public class CaixaQuandoClicadoComOBotaoDireitoProcedure {
 				final double _tagValue = 5000;
 				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 			}
+			{
+				MinerpModVariables.PlayerVariables _vars = entity.getData(MinerpModVariables.PLAYER_VARIABLES);
+				_vars.DinheiroBanco = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero");
+				_vars.markSyncDirty();
+			}
+			MinerpModVariables.MapVariables.get(world).numeros_registrados = MinerpModVariables.MapVariables.get(world).numeros_registrados + ""
+					+ Math.round((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero")) + ",";
+			MinerpModVariables.MapVariables.get(world).markSyncDirty();
 		}
 	}
 }

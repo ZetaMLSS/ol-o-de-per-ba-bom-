@@ -1,16 +1,21 @@
 package net.mcreator.minerp.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 
 import net.mcreator.minerp.world.inventory.TelaChatsMenu;
 import net.mcreator.minerp.procedures.BateriaVisorProcedure;
+import net.mcreator.minerp.network.TelaChatsButtonMessage;
 import net.mcreator.minerp.init.MinerpModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -20,6 +25,7 @@ public class TelaChatsScreen extends AbstractContainerScreen<TelaChatsMenu> impl
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private EditBox escrevermensagem;
 	private Button button_enviar;
 
 	public TelaChatsScreen(TelaChatsMenu container, Inventory inventory, Component text) {
@@ -36,6 +42,10 @@ public class TelaChatsScreen extends AbstractContainerScreen<TelaChatsMenu> impl
 	@Override
 	public void updateMenuState(int elementType, String name, Object elementState) {
 		menuStateUpdateActive = true;
+		if (elementType == 0 && elementState instanceof String stringState) {
+			if (name.equals("escrevermensagem"))
+				escrevermensagem.setValue(stringState);
+		}
 		menuStateUpdateActive = false;
 	}
 
@@ -44,6 +54,7 @@ public class TelaChatsScreen extends AbstractContainerScreen<TelaChatsMenu> impl
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+		escrevermensagem.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
@@ -75,19 +86,46 @@ public class TelaChatsScreen extends AbstractContainerScreen<TelaChatsMenu> impl
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+		if (escrevermensagem.isFocused())
+			return escrevermensagem.keyPressed(key, b, c);
 		return super.keyPressed(key, b, c);
+	}
+
+	@Override
+	public void resize(Minecraft minecraft, int width, int height) {
+		String escrevermensagemValue = escrevermensagem.getValue();
+		super.resize(minecraft, width, height);
+		escrevermensagem.setValue(escrevermensagemValue);
 	}
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 40, -1, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "uwdhnuawdb7yawhbdawh\nwdawdwad\n", -28, -66, 79, 24, -12829636, false, 0.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.Texto5Procedure.execute(entity), ""), -28, -66, 79, 24, -12829636, false, 0.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.Texto4Procedure.execute(entity), ""), -28, -48, 79, 24, -12829636, false, 0.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.Texto3Procedure.execute(entity), ""), -28, -29, 79, 24, -12829636, false, 0.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.Texto2Procedure.execute(entity), ""), -28, -12, 79, 24, -12829636, false, 0.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.Texto1Procedure.execute(entity), ""), -28, 5, 79, 24, -12829636, false, 0.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.NumeroNotificacoesProcedure.execute(entity), ""), -26, -86, 120, 40, -12829636, false, 1.00F);
 	}
 
 	@Override
 	public void init() {
 		super.init();
+		escrevermensagem = new EditBox(this.font, this.leftPos + -28, this.topPos + 30, 78, 18, Component.translatable("gui.minerp.tela_chats.escrevermensagem"));
+		escrevermensagem.setMaxLength(8192);
+		escrevermensagem.setResponder(content -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 0, "escrevermensagem", content, false);
+		});
+		this.addWidget(this.escrevermensagem);
 		button_enviar = Button.builder(Component.translatable("gui.minerp.tela_chats.button_enviar"), e -> {
+			int x = TelaChatsScreen.this.x;
+			int y = TelaChatsScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new TelaChatsButtonMessage(0, x, y, z));
+				TelaChatsButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}).bounds(this.leftPos + -16, this.topPos + 55, 55, 20).build();
 		this.addRenderableWidget(button_enviar);
 	}

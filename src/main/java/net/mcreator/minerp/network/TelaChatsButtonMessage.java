@@ -15,27 +15,25 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.SectionPos;
 
-import net.mcreator.minerp.procedures.SelecionarChatProcedure;
-import net.mcreator.minerp.procedures.DeletarContatoProcedure;
-import net.mcreator.minerp.procedures.AcionarTelaAdicionarContatoProcedure;
+import net.mcreator.minerp.procedures.EnviarmensagemProcedure;
 import net.mcreator.minerp.MinerpMod;
 
 @EventBusSubscriber
-public record TelaCelularMenssagensButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
-	public static final Type<TelaCelularMenssagensButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(MinerpMod.MODID, "tela_celular_menssagens_buttons"));
-	public static final StreamCodec<RegistryFriendlyByteBuf, TelaCelularMenssagensButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, TelaCelularMenssagensButtonMessage message) -> {
+public record TelaChatsButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
+	public static final Type<TelaChatsButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(MinerpMod.MODID, "tela_chats_buttons"));
+	public static final StreamCodec<RegistryFriendlyByteBuf, TelaChatsButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, TelaChatsButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
-	}, (RegistryFriendlyByteBuf buffer) -> new TelaCelularMenssagensButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
+	}, (RegistryFriendlyByteBuf buffer) -> new TelaChatsButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
 
 	@Override
-	public Type<TelaCelularMenssagensButtonMessage> type() {
+	public Type<TelaChatsButtonMessage> type() {
 		return TYPE;
 	}
 
-	public static void handleData(final TelaCelularMenssagensButtonMessage message, final IPayloadContext context) {
+	public static void handleData(final TelaChatsButtonMessage message, final IPayloadContext context) {
 		if (context.flow() == PacketFlow.SERVERBOUND) {
 			context.enqueueWork(() -> handleButtonAction(context.player(), message.buttonID, message.x, message.y, message.z)).exceptionally(e -> {
 				context.connection().disconnect(Component.literal(e.getMessage()));
@@ -51,26 +49,12 @@ public record TelaCelularMenssagensButtonMessage(int buttonID, int x, int y, int
 			return;
 		if (buttonID == 0) {
 
-			DeletarContatoProcedure.execute(entity);
-		}
-		if (buttonID == 1) {
-
-			AcionarTelaAdicionarContatoProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 2) {
-
-			SelecionarChatProcedure.execute(world, x, y, z, entity);
-		}
-
-		guiTools$enhancedImageButton : {
-			if (buttonID == 3) {
-				net.mcreator.minerp.procedures.NotificacaoProcedure.execute(world, x, y, z, entity);
-			}
+			EnviarmensagemProcedure.execute(world, entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		MinerpMod.addNetworkMessage(TelaCelularMenssagensButtonMessage.TYPE, TelaCelularMenssagensButtonMessage.STREAM_CODEC, TelaCelularMenssagensButtonMessage::handleData);
+		MinerpMod.addNetworkMessage(TelaChatsButtonMessage.TYPE, TelaChatsButtonMessage.STREAM_CODEC, TelaChatsButtonMessage::handleData);
 	}
 }

@@ -186,6 +186,30 @@
           "y": 120,
           "locked": false
         }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "icone_notificacao.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_icone_notificacao",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "Notificacao",
+          "width": 19,
+          "height": 16,
+          "x": 230,
+          "y": 122,
+          "locked": false
+        }
       }
     ],
     "onTick": "TelaCelularInicialQuandoEstaGUIEAberta",

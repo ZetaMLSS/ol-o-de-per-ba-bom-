@@ -201,6 +201,25 @@
           "y": 152,
           "locked": false
         }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_testeeeeeee",
+          "text": "",
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 75,
+          "textProcedure": "TelefoneNaoExiste",
+          "width": 120,
+          "height": 40,
+          "x": 175,
+          "y": 153,
+          "locked": false
+        }
       }
     ],
     "onTick": "TelaCelularInicialQuandoEstaGUIEAberta",
