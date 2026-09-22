@@ -164,6 +164,7 @@ public class MinerpModVariables {
 		public double urb_y = 0;
 		public double urb_z = 0;
 		public double CatCoinLimite = 0;
+		public double DinheiroDoProprioBanco = 0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -179,6 +180,7 @@ public class MinerpModVariables {
 			urb_y = nbt.getDouble("urb_y");
 			urb_z = nbt.getDouble("urb_z");
 			CatCoinLimite = nbt.getDouble("CatCoinLimite");
+			DinheiroDoProprioBanco = nbt.getDouble("DinheiroDoProprioBanco");
 		}
 
 		@Override
@@ -190,6 +192,7 @@ public class MinerpModVariables {
 			nbt.putDouble("urb_y", urb_y);
 			nbt.putDouble("urb_z", urb_z);
 			nbt.putDouble("CatCoinLimite", CatCoinLimite);
+			nbt.putDouble("DinheiroDoProprioBanco", DinheiroDoProprioBanco);
 			return nbt;
 		}
 

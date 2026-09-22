@@ -101,7 +101,7 @@ public class ResultadoBancoComputadorScreen extends AbstractContainerScreen<Resu
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		{
-			guiGraphics.drawString(this.font, MostrarCreditoBancoComputadorBancoProcedure.execute(world, x, y, z), 150, 85, -12829636, false);
+			guiGraphics.drawString(this.font, MostrarCreditoBancoComputadorBancoProcedure.execute(world, x, y, z), 109, 85, -12829636, false);
 		}
 		{
 			guiGraphics.drawString(this.font, MostrarNickResultadoBancoProcedure.execute(world, x, y, z), 43, 9, -12829636, false);
@@ -113,9 +113,9 @@ public class ResultadoBancoComputadorScreen extends AbstractContainerScreen<Resu
 			guiGraphics.drawString(this.font, MostrarLimiteCreditoBancoComputadorBancoProcedure.execute(world, x, y, z), 118, 35, -12829636, false);
 		}
 		this.guiTools$renderMultilineLabel(guiGraphics, "Nick:", 5, 8, 120, 12, -12829636, false, 1.25F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Conta:", 4, 20, 120, 12, -12829636, false, 1.25F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Saldo:", 4, 20, 120, 12, -12829636, false, 1.25F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "Credito Limite:", 4, 34, 120, 12, -12829636, false, 1.25F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Credito Disponivel:", 4, 84, 146, 15, -12829636, false, 1.25F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Credito Gasto:", 4, 84, 146, 15, -12829636, false, 1.25F);
 	}
 
 	@Override
@@ -146,6 +146,12 @@ public class ResultadoBancoComputadorScreen extends AbstractContainerScreen<Resu
 		}).bounds(this.leftPos + 130, this.topPos + 50, 50, 20).build();
 		this.addRenderableWidget(button_setar);
 		button_cobrar = Button.builder(Component.translatable("gui.minerp.resultado_banco_computador.button_cobrar"), e -> {
+			int x = ResultadoBancoComputadorScreen.this.x;
+			int y = ResultadoBancoComputadorScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new ResultadoBancoComputadorButtonMessage(1, x, y, z));
+				ResultadoBancoComputadorButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
 		}).bounds(this.leftPos + 4, this.topPos + 104, 55, 20).build();
 		this.addRenderableWidget(button_cobrar);
 		button_criar_cartao = Button.builder(Component.translatable("gui.minerp.resultado_banco_computador.button_criar_cartao"), e -> {

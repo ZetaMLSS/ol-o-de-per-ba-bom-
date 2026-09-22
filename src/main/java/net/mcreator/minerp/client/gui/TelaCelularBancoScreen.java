@@ -89,7 +89,7 @@ public class TelaCelularBancoScreen extends AbstractContainerScreen<TelaCelularB
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 40, -1, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PegarValorDoBancoParaTextoProcedure.execute(entity), ""), -14, -29, 120, 40, -16777216, false, 2.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PegarValorDoBancoParaTextoProcedure.execute(entity), ""), -14, 39, 120, 40, -16777216, false, 2.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PegarValorDocreditoParaTextoProcedure.execute(entity), ""), -14, 39, 120, 40, -16777216, false, 2.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PegarValorDoBancoParaTextoProcedure.execute(entity), ""), -15, -30, 120, 40, -12415422, false, 2.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PegarValorDoBancoParaTextoProcedure.execute(entity), ""), -15, 38, 120, 40, -12415422, false, 2.00F);
 	}

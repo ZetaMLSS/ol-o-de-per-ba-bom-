@@ -2,123 +2,233 @@
   "_fv": 89,
   "_type": "gui",
   "definition": {
-    "type": 0,
-    "width": 248,
-    "height": 169,
+    "type": 1,
+    "width": 188,
+    "height": 187,
     "inventoryOffsetX": 0,
-    "inventoryOffsetY": 0,
+    "inventoryOffsetY": 11,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
       {
-        "type": "multiline_label",
+        "type": "outputslot",
         "data": {
-          "name": "multiline_label_nick",
-          "text": "Nick:",
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 127,
+          "y": 33,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_1",
+          "text": "1",
+          "isUndecorated": false,
+          "width": 20,
+          "height": 20,
+          "x": 256,
+          "y": 58,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_5",
+          "text": "5",
+          "isUndecorated": false,
+          "width": 20,
+          "height": 20,
+          "x": 276,
+          "y": 58,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_10",
+          "text": "10",
+          "isUndecorated": false,
+          "width": 20,
+          "height": 20,
+          "x": 236,
+          "y": 78,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_20",
+          "text": "20",
+          "isUndecorated": false,
+          "width": 20,
+          "height": 20,
+          "x": 256,
+          "y": 78,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_50",
+          "text": "50",
+          "isUndecorated": false,
+          "width": 20,
+          "height": 20,
+          "x": 276,
+          "y": 78,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_100",
+          "text": "100",
+          "isUndecorated": false,
+          "width": 20,
+          "height": 20,
+          "x": 236,
+          "y": 97,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_05",
+          "text": "0,5",
+          "isUndecorated": false,
+          "width": 20,
+          "height": 20,
+          "x": 236,
+          "y": 58,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_200",
+          "text": "200",
+          "isUndecorated": false,
+          "width": 20,
+          "height": 20,
+          "x": 256,
+          "y": 97,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 277,
+          "y": 99,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false,
+            "name": "QuaisItensVaiNaCarteira"
+          },
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 145,
+          "y": 87,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "sua_font": "vanilla",
+          "sua_color_effect": "solid",
+          "sua_motion_effect": "none",
+          "sua_color1": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "sua_color2": {
+            "value": -14336,
+            "falpha": 0.0
+          },
+          "sua_alignment": "LEFT",
+          "sua_max_width": 0,
+          "sua_reveal_speed": 0.0,
+          "sua_rainbow_speed": 1.0,
+          "sua_wave_amplitude": 2.0,
+          "sua_wave_speed": 1.0,
+          "sua_bounce_amplitude": 3.0,
+          "sua_bounce_ms": 150,
+          "sua_color3": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "sua_color4": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "sua_outline_enabled": false,
+          "sua_outline_color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "sua_outline_width": 1,
+          "sua_scale_x": 1.0,
+          "sua_scale_y": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "sua_pulse_speed": 1.0,
+          "name": "label_saldo_disponivel",
+          "text": {
+            "fixedValue": "Valor"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
           "hasShadow": false,
-          "fontScale": 125,
-          "width": 120,
-          "height": 12,
-          "x": 95,
-          "y": 44,
+          "x": 183,
+          "y": 36,
           "locked": false
         }
       },
       {
         "type": "multiline_label",
         "data": {
-          "name": "multiline_label_conta",
+          "name": "multiline_label_saldo",
           "text": "Saldo:",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
           "hasShadow": false,
-          "fontScale": 125,
-          "width": 120,
+          "fontScale": 100,
+          "width": 30,
           "height": 12,
-          "x": 94,
-          "y": 56,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_credito_limite",
-          "text": "Credito Limite:",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 125,
-          "width": 120,
-          "height": 12,
-          "x": 94,
-          "y": 70,
-          "locked": false
-        }
-      },
-      {
-        "type": "textfield",
-        "data": {
-          "placeholder": "",
-          "name": "SetarLimiteCredito",
-          "width": 120,
-          "height": 20,
-          "x": 94,
-          "y": 86,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_credito_disponivel",
-          "text": "Credito Gasto:",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 125,
-          "width": 146,
-          "height": 15,
-          "x": 94,
-          "y": 120,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_setar",
-          "text": "Setar",
-          "isUndecorated": false,
-          "onClick": "SetarPelaGuiDoComputadorBancoLimite",
-          "width": 50,
-          "height": 20,
-          "x": 220,
-          "y": 86,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_cobrar",
-          "text": "Cobrar",
-          "isUndecorated": false,
-          "onClick": "PagarDividasProcedurebotaopcbanco",
-          "width": 55,
-          "height": 20,
-          "x": 94,
-          "y": 140,
+          "x": 152,
+          "y": 36,
           "locked": false
         }
       },
@@ -162,213 +272,76 @@
           "sua_scale_y": 1.0,
           "sua_pulse_easing": "easeInOutSine",
           "sua_pulse_speed": 1.0,
-          "name": "label_valorcredito",
+          "name": "label_depositar",
           "text": {
-            "fixedValue": "ValorCredito",
-            "name": "MostrarCreditoBancoComputadorBanco"
+            "fixedValue": "Depositar"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 199,
-          "y": 121,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "sua_font": "vanilla",
-          "sua_color_effect": "solid",
-          "sua_motion_effect": "none",
-          "sua_color1": {
-            "value": -16776961,
-            "falpha": 0.0
-          },
-          "sua_color2": {
-            "value": -14336,
-            "falpha": 0.0
-          },
-          "sua_alignment": "LEFT",
-          "sua_max_width": 0,
-          "sua_reveal_speed": 0.0,
-          "sua_rainbow_speed": 1.0,
-          "sua_wave_amplitude": 2.0,
-          "sua_wave_speed": 1.0,
-          "sua_bounce_amplitude": 3.0,
-          "sua_bounce_ms": 150,
-          "sua_color3": {
-            "value": -16711936,
-            "falpha": 0.0
-          },
-          "sua_color4": {
-            "value": -65281,
-            "falpha": 0.0
-          },
-          "sua_outline_enabled": false,
-          "sua_outline_color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "sua_outline_width": 1,
-          "sua_scale_x": 1.0,
-          "sua_scale_y": 1.0,
-          "sua_pulse_easing": "easeInOutSine",
-          "sua_pulse_speed": 1.0,
-          "name": "label_nickdojogador",
-          "text": {
-            "fixedValue": "NickDoJogador",
-            "name": "MostrarNickResultadoBanco"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 133,
-          "y": 45,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "sua_font": "vanilla",
-          "sua_color_effect": "solid",
-          "sua_motion_effect": "none",
-          "sua_color1": {
-            "value": -16776961,
-            "falpha": 0.0
-          },
-          "sua_color2": {
-            "value": -14336,
-            "falpha": 0.0
-          },
-          "sua_alignment": "LEFT",
-          "sua_max_width": 0,
-          "sua_reveal_speed": 0.0,
-          "sua_rainbow_speed": 1.0,
-          "sua_wave_amplitude": 2.0,
-          "sua_wave_speed": 1.0,
-          "sua_bounce_amplitude": 3.0,
-          "sua_bounce_ms": 150,
-          "sua_color3": {
-            "value": -16711936,
-            "falpha": 0.0
-          },
-          "sua_color4": {
-            "value": -65281,
-            "falpha": 0.0
-          },
-          "sua_outline_enabled": false,
-          "sua_outline_color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "sua_outline_width": 1,
-          "sua_scale_x": 1.0,
-          "sua_scale_y": 1.0,
-          "sua_pulse_easing": "easeInOutSine",
-          "sua_pulse_speed": 1.0,
-          "name": "label_valornaconta",
-          "text": {
-            "fixedValue": "ValorNaConta",
-            "name": "MostrarSaldoBancoComputadorBanco"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 140,
-          "y": 58,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "sua_font": "vanilla",
-          "sua_color_effect": "solid",
-          "sua_motion_effect": "none",
-          "sua_color1": {
-            "value": -16776961,
-            "falpha": 0.0
-          },
-          "sua_color2": {
-            "value": -14336,
-            "falpha": 0.0
-          },
-          "sua_alignment": "LEFT",
-          "sua_max_width": 0,
-          "sua_reveal_speed": 0.0,
-          "sua_rainbow_speed": 1.0,
-          "sua_wave_amplitude": 2.0,
-          "sua_wave_speed": 1.0,
-          "sua_bounce_amplitude": 3.0,
-          "sua_bounce_ms": 150,
-          "sua_color3": {
-            "value": -16711936,
-            "falpha": 0.0
-          },
-          "sua_color4": {
-            "value": -65281,
-            "falpha": 0.0
-          },
-          "sua_outline_enabled": false,
-          "sua_outline_color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "sua_outline_width": 1,
-          "sua_scale_x": 1.0,
-          "sua_scale_y": 1.0,
-          "sua_pulse_easing": "easeInOutSine",
-          "sua_pulse_speed": 1.0,
-          "name": "label_limitedocredito",
-          "text": {
-            "fixedValue": "LimiteDoCredito",
-            "name": "MostrarLimiteCreditoBancoComputadorBanco"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 208,
+          "x": 131,
           "y": 71,
           "locked": false
         }
       },
       {
-        "type": "button",
+        "type": "label",
         "data": {
-          "name": "button_criar_cartao",
-          "text": "Criar Cartão",
-          "isUndecorated": false,
-          "onClick": "CriadorDeCartaoDoBanco",
-          "width": 85,
-          "height": 20,
-          "x": 245,
-          "y": 177,
-          "locked": false
-        }
-      },
-      {
-        "type": "textfield",
-        "data": {
-          "placeholder": "Adicionar Senha",
-          "name": "senhaprocartao",
-          "width": 120,
-          "height": 20,
-          "x": 120,
-          "y": 177,
+          "sua_font": "vanilla",
+          "sua_color_effect": "solid",
+          "sua_motion_effect": "none",
+          "sua_color1": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "sua_color2": {
+            "value": -14336,
+            "falpha": 0.0
+          },
+          "sua_alignment": "LEFT",
+          "sua_max_width": 0,
+          "sua_reveal_speed": 0.0,
+          "sua_rainbow_speed": 1.0,
+          "sua_wave_amplitude": 2.0,
+          "sua_wave_speed": 1.0,
+          "sua_bounce_amplitude": 3.0,
+          "sua_bounce_ms": 150,
+          "sua_color3": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "sua_color4": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "sua_outline_enabled": false,
+          "sua_outline_color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "sua_outline_width": 1,
+          "sua_scale_x": 1.0,
+          "sua_scale_y": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "sua_pulse_speed": 1.0,
+          "name": "label_retirar",
+          "text": {
+            "fixedValue": "Retirar"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 249,
+          "y": 40,
           "locked": false
         }
       }
     ],
+    "onTick": "AdicionandoDinheiroAtm",
     "gridSettings": {
       "sx": 18,
       "sy": 18,

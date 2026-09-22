@@ -133,7 +133,7 @@
           },
           "hasShadow": false,
           "fontScale": 200,
-          "textProcedure": "PegarValorDoBancoParaTexto",
+          "textProcedure": "PegarValorDocreditoParaTexto",
           "width": 120,
           "height": 40,
           "x": 189,

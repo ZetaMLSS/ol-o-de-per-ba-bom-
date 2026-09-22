@@ -49,7 +49,7 @@ public record ATMTELA1ButtonMessage(int buttonID, int x, int y, int z) implement
 			return;
 		if (buttonID == 0) {
 
-			ATMLERCARTAODECREDITOProcedure.execute(world, entity);
+			ATMLERCARTAODECREDITOProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
