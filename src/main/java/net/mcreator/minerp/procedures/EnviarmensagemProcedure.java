@@ -46,7 +46,7 @@ public class EnviarmensagemProcedure {
 		}
 		{
 			final String _tagName = ("Chat_" + ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("numero_chat_ativo")) + "_L1");
-			final String _tagValue = ((entity instanceof Player _entity34 && _entity34.containerMenu instanceof MinerpModMenus.MenuAccessor _menu34) ? _menu34.getMenuState(0, "escrevermensagem", "") : "");
+			final String _tagValue = ("Voc\u00EA: " + ((entity instanceof Player _entity34 && _entity34.containerMenu instanceof MinerpModMenus.MenuAccessor _menu34) ? _menu34.getMenuState(0, "escrevermensagem", "") : ""));
 			CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putString(_tagName, _tagValue));
 		}
 		for (Entity entityiterator : new ArrayList<>(world.players())) {
@@ -81,7 +81,7 @@ public class EnviarmensagemProcedure {
 						}
 						{
 							final String _tagName = ("Chat_" + ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("numero")) + "_L1");
-							final String _tagValue = ((entity instanceof Player _entity77 && _entity77.containerMenu instanceof MinerpModMenus.MenuAccessor _menu77) ? _menu77.getMenuState(0, "escrevermensagem", "") : "");
+							final String _tagValue = (": " + ((entity instanceof Player _entity77 && _entity77.containerMenu instanceof MinerpModMenus.MenuAccessor _menu77) ? _menu77.getMenuState(0, "escrevermensagem", "") : ""));
 							CustomData.update(DataComponents.CUSTOM_DATA, itemstackiterator, tag -> tag.putString(_tagName, _tagValue));
 						}
 						{
