@@ -78,21 +78,21 @@ public class EnviarmensagemProcedure {
 			}
 		}
 		if (alvo_encontrado == true) {
-			if ((MinerpModVariables.MapVariables.get(world).canal1_alvo).equals("")) {
+			if ((MinerpModVariables.MapVariables.get(world).canal1_alvo).equals("livre")) {
 				MinerpModVariables.MapVariables.get(world).canal1_alvo = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag()
 						.getString("numero_chat_ativo");
 				MinerpModVariables.MapVariables.get(world).canal1_remetente = ""
 						+ ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero"));
 				MinerpModVariables.MapVariables.get(world).canal1_texto = (entity instanceof Player _entity50 && _entity50.containerMenu instanceof MinerpModMenus.MenuAccessor _menu50) ? _menu50.getMenuState(0, "escrevermensagem", "") : "";
 				MinerpModVariables.MapVariables.get(world).markSyncDirty();
-			} else if ((MinerpModVariables.MapVariables.get(world).canal2_alvo).equals("")) {
-				MinerpModVariables.MapVariables.get(world).canal1_alvo = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag()
+			} else if ((MinerpModVariables.MapVariables.get(world).canal2_alvo).equals("livre")) {
+				MinerpModVariables.MapVariables.get(world).canal2_alvo = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag()
 						.getString("numero_chat_ativo");
 				MinerpModVariables.MapVariables.get(world).canal2_remetente = ""
 						+ ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero"));
 				MinerpModVariables.MapVariables.get(world).canal2_texto = (entity instanceof Player _entity55 && _entity55.containerMenu instanceof MinerpModMenus.MenuAccessor _menu55) ? _menu55.getMenuState(0, "escrevermensagem", "") : "";
 				MinerpModVariables.MapVariables.get(world).markSyncDirty();
-			} else if ((MinerpModVariables.MapVariables.get(world).canal3_alvo).equals("")) {
+			} else if ((MinerpModVariables.MapVariables.get(world).canal3_alvo).equals("livre")) {
 				MinerpModVariables.MapVariables.get(world).canal3_alvo = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag()
 						.getString("numero_chat_ativo");
 				MinerpModVariables.MapVariables.get(world).canal3_remetente = ""

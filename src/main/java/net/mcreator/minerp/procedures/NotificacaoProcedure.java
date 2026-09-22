@@ -48,6 +48,9 @@ public class NotificacaoProcedure {
 					}
 				}, _bpos);
 			}
+		} else {
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal("Caixa de entrada vazia.\" para Entidade alvo"), false);
 		}
 	}
 }
