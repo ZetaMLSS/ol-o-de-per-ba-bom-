@@ -16,6 +16,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.minerp.world.inventory.TelaCelularMenssagensMenu;
+import net.mcreator.minerp.world.inventory.TelaAdionarContatoMenu;
 import net.mcreator.minerp.network.MinerpModVariables;
 import net.mcreator.minerp.init.MinerpModMenus;
 
@@ -344,7 +345,7 @@ public class SalvarContatoProcedure {
 				_ent.openMenu(new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
-						return Component.literal("TelaCelularMenssagens");
+						return Component.literal("TelaAdionarContato");
 					}
 
 					@Override
@@ -354,7 +355,7 @@ public class SalvarContatoProcedure {
 
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new TelaCelularMenssagensMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						return new TelaAdionarContatoMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}
