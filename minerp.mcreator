@@ -2690,6 +2690,29 @@
         ]
       },
       "path": "~/Bloco/ATM/Gui"
+    },
+    {
+      "name": "CelularTickDeQuandoItemNoInventario",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "celular_tick_de_quando_item_no_inventario",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/CelularTickDeQuandoItemNoInventarioProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular"
     }
   ],
   "variable_elements": [
@@ -2784,25 +2807,55 @@
       "value": "\"\""
     },
     {
-      "name": "cCanal1",
+      "name": "canal1_alvo",
       "type": "string",
       "scope": "map",
       "value": "\"\""
     },
     {
-      "name": "cCanal2",
+      "name": "canal2_alvo",
       "type": "string",
       "scope": "map",
       "value": "\"\""
     },
     {
-      "name": "cCanal3",
+      "name": "canal3_alvo",
       "type": "string",
       "scope": "map",
       "value": "\"\""
     },
     {
-      "name": "cCanal4",
+      "name": "canal1_remetente",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "canal2_remetente",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "canal3_remetente",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "canal1_texto",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "canal2_texto",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "canal3_texto",
       "type": "string",
       "scope": "map",
       "value": "\"\""
@@ -2810,14 +2863,14 @@
   ],
   "sound_elements": [],
   "tag_elements": {
-    "ITEMS:minecraft:enchantable/durability": [
-      "~Celular@CUSTOM:Celular"
-    ],
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~ATMSup@CUSTOM:ATMSup",
       "~Monitor@CUSTOM:Monitor",
       "~Computador@CUSTOM:Computador",
       "~ATMinf@CUSTOM:ATMinf"
+    ],
+    "ITEMS:minecraft:enchantable/durability": [
+      "~Celular@CUSTOM:Celular"
     ]
   },
   "tab_element_order": {
@@ -3022,49 +3075,49 @@
     "files": [
       "src/main/java/net/mcreator/minerp/init/MinerpModBerClient.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBerSupport.java",
-      "src/main/java/net/mcreator/minerp/init/MinerpModScreens.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModScreens.java",
       "src/main/java/net/mcreator/minerp/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlocks.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlockEntities.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModItems.java",
-      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
+      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
+      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
+      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
       "src/main/java/net/mcreator/minerp/ai/MoveToBlockGoal.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
+      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
+      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
+      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
       "src/main/java/net/mcreator/minerp/world/BlackHoleSavedData.java",
       "src/main/java/net/mcreator/minerp/mixin/LevelRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
-      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/minerp.mixins.json",
+      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
       "src/main/java/net/mcreator/minerp/client/renderer/CustomEyeOfEnderRenderer.java",
+      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
+      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
+      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
       "src/main/java/net/mcreator/minerp/world/PortalSavedData.java",
       "src/main/java/net/mcreator/minerp/MinerpMod.java",
-      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
-      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
-      "src/main/java/net/mcreator/minerp/math/CallCounter.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
-      "src/main/resources/minerp.mixins.json",
-      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
-      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
-      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
-      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
       "src/main/java/net/mcreator/minerp/ai/OrbitPositionGoal.java",
-      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
-      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
-      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
-      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java"
+      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
+      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
+      "src/main/java/net/mcreator/minerp/math/CallCounter.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
+      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java"
     ]
   },
   "foldersRoot": {

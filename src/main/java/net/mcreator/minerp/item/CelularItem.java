@@ -5,10 +5,12 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 
+import net.mcreator.minerp.procedures.CelularTickDeQuandoItemNoInventarioProcedure;
 import net.mcreator.minerp.procedures.CelularRightclickedProcedure;
 
 public class CelularItem extends Item {
@@ -28,5 +30,11 @@ public class CelularItem extends Item {
 		super.useOn(context);
 		CelularRightclickedProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getY(), context.getClickedPos().getZ(), context.getPlayer(), context.getItemInHand());
 		return InteractionResult.SUCCESS;
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		CelularTickDeQuandoItemNoInventarioProcedure.execute(world, itemstack);
 	}
 }

@@ -57,6 +57,7 @@
     "inventoryStackSize": 99,
     "onRightClickedInAir": "CelularRightclicked",
     "onRightClickedOnBlock": "CelularRightclicked",
+    "onItemInInventoryTick": "CelularTickDeQuandoItemNoInventario",
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

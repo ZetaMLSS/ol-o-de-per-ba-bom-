@@ -167,10 +167,15 @@ public class MinerpModVariables {
 		public double CatCoinLimite = 0;
 		public double DinheiroDoProprioBanco = 0;
 		public String numeros_registrados = "\"\"";
-		public String cCanal1 = "\"\"";
-		public String cCanal2 = "\"\"";
-		public String cCanal3 = "\"\"";
-		public String cCanal4 = "\"\"";
+		public String canal1_alvo = "\"\"";
+		public String canal2_alvo = "\"\"";
+		public String canal3_alvo = "\"\"";
+		public String canal1_remetente = "\"\"";
+		public String canal2_remetente = "\"\"";
+		public String canal3_remetente = "\"\"";
+		public String canal1_texto = "\"\"";
+		public String canal2_texto = "\"\"";
+		public String canal3_texto = "\"\"";
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -188,10 +193,15 @@ public class MinerpModVariables {
 			CatCoinLimite = nbt.getDouble("CatCoinLimite");
 			DinheiroDoProprioBanco = nbt.getDouble("DinheiroDoProprioBanco");
 			numeros_registrados = nbt.getString("numeros_registrados");
-			cCanal1 = nbt.getString("cCanal1");
-			cCanal2 = nbt.getString("cCanal2");
-			cCanal3 = nbt.getString("cCanal3");
-			cCanal4 = nbt.getString("cCanal4");
+			canal1_alvo = nbt.getString("canal1_alvo");
+			canal2_alvo = nbt.getString("canal2_alvo");
+			canal3_alvo = nbt.getString("canal3_alvo");
+			canal1_remetente = nbt.getString("canal1_remetente");
+			canal2_remetente = nbt.getString("canal2_remetente");
+			canal3_remetente = nbt.getString("canal3_remetente");
+			canal1_texto = nbt.getString("canal1_texto");
+			canal2_texto = nbt.getString("canal2_texto");
+			canal3_texto = nbt.getString("canal3_texto");
 		}
 
 		@Override
@@ -205,10 +215,15 @@ public class MinerpModVariables {
 			nbt.putDouble("CatCoinLimite", CatCoinLimite);
 			nbt.putDouble("DinheiroDoProprioBanco", DinheiroDoProprioBanco);
 			nbt.putString("numeros_registrados", numeros_registrados);
-			nbt.putString("cCanal1", cCanal1);
-			nbt.putString("cCanal2", cCanal2);
-			nbt.putString("cCanal3", cCanal3);
-			nbt.putString("cCanal4", cCanal4);
+			nbt.putString("canal1_alvo", canal1_alvo);
+			nbt.putString("canal2_alvo", canal2_alvo);
+			nbt.putString("canal3_alvo", canal3_alvo);
+			nbt.putString("canal1_remetente", canal1_remetente);
+			nbt.putString("canal2_remetente", canal2_remetente);
+			nbt.putString("canal3_remetente", canal3_remetente);
+			nbt.putString("canal1_texto", canal1_texto);
+			nbt.putString("canal2_texto", canal2_texto);
+			nbt.putString("canal3_texto", canal3_texto);
 			return nbt;
 		}
 
