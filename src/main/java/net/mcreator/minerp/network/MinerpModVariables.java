@@ -167,14 +167,14 @@ public class MinerpModVariables {
 		public double CatCoinLimite = 0;
 		public double DinheiroDoProprioBanco = 0;
 		public String numeros_registrados = "\"\"";
-		public String canal1_alvo = "\"\"";
-		public String canal2_alvo = "\"\"";
-		public String canal3_alvo = "\"\"";
-		public String canal1_remetente = "\"\"";
-		public String canal2_remetente = "\"\"";
-		public String canal3_remetente = "\"\"";
-		public String canal1_texto = "\"\"";
-		public String canal2_texto = "\"\"";
+		public String canal1_alvo = "";
+		public String canal2_alvo = "";
+		public String canal3_alvo = "";
+		public String canal1_remetente = "";
+		public String canal2_remetente = "";
+		public String canal3_remetente = "";
+		public String canal1_texto = "";
+		public String canal2_texto = "";
 		public String canal3_texto = "\"\"";
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
