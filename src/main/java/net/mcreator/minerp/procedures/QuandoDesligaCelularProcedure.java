@@ -7,6 +7,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.minerp.world.inventory.*;
+import net.mcreator.minerp.network.MinerpModVariables;
 import net.mcreator.minerp.MinerpMod;
 
 public class QuandoDesligaCelularProcedure {
@@ -22,5 +23,10 @@ public class QuandoDesligaCelularProcedure {
 				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).setDamageValue(0);
 			}
 		});
+		{
+			MinerpModVariables.PlayerVariables _vars = entity.getData(MinerpModVariables.PLAYER_VARIABLES);
+			_vars.NumeroInesistente = "";
+			_vars.markSyncDirty();
+		}
 	}
 }

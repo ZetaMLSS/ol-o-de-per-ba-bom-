@@ -113,7 +113,7 @@ public class TelaAdionarContatoScreen extends AbstractContainerScreen<TelaAdiona
 		this.guiTools$renderMultilineLabel(guiGraphics, "Apelido:\n", -29, -42, 81, 31, -16777216, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "N\u00FAmero:\n", -29, 1, 81, 31, -16777216, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.ExcessocontatosProcedure.execute(entity), ""), -28, 32, 120, 40, -65536, false, 0.50F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.TelefoneNaoExisteProcedure.execute(world), ""), -28, 33, 120, 40, -65536, false, 0.75F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.TelefoneNaoExisteProcedure.execute(entity), ""), -28, 33, 120, 40, -65536, false, 0.50F);
 	}
 
 	@Override

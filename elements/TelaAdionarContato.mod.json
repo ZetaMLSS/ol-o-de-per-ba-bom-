@@ -212,7 +212,7 @@
             "falpha": 0.0
           },
           "hasShadow": false,
-          "fontScale": 75,
+          "fontScale": 50,
           "textProcedure": "TelefoneNaoExiste",
           "width": 120,
           "height": 40,

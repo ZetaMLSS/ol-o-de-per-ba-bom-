@@ -78,6 +78,7 @@ public class MinerpModVariables {
 		clone.CreditoBanco = original.CreditoBanco;
 		clone.LimiteDoCredito = original.LimiteDoCredito;
 		clone.CartaoVinculado = original.CartaoVinculado;
+		clone.NumeroInesistente = original.NumeroInesistente;
 		if (!event.isWasDeath()) {
 		}
 		event.getEntity().setData(PLAYER_VARIABLES, clone);
@@ -166,7 +167,6 @@ public class MinerpModVariables {
 		public double CatCoinLimite = 0;
 		public double DinheiroDoProprioBanco = 0;
 		public String numeros_registrados = "\"\"";
-		public String NumeroInesistente = "\"\"";
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -184,7 +184,6 @@ public class MinerpModVariables {
 			CatCoinLimite = nbt.getDouble("CatCoinLimite");
 			DinheiroDoProprioBanco = nbt.getDouble("DinheiroDoProprioBanco");
 			numeros_registrados = nbt.getString("numeros_registrados");
-			NumeroInesistente = nbt.getString("NumeroInesistente");
 		}
 
 		@Override
@@ -198,7 +197,6 @@ public class MinerpModVariables {
 			nbt.putDouble("CatCoinLimite", CatCoinLimite);
 			nbt.putDouble("DinheiroDoProprioBanco", DinheiroDoProprioBanco);
 			nbt.putString("numeros_registrados", numeros_registrados);
-			nbt.putString("NumeroInesistente", NumeroInesistente);
 			return nbt;
 		}
 
@@ -265,6 +263,7 @@ public class MinerpModVariables {
 		public double CreditoBanco = 0;
 		public double LimiteDoCredito = 0;
 		public double CartaoVinculado = 0;
+		public String NumeroInesistente = "\"\"";
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -274,6 +273,7 @@ public class MinerpModVariables {
 			nbt.putDouble("CreditoBanco", CreditoBanco);
 			nbt.putDouble("LimiteDoCredito", LimiteDoCredito);
 			nbt.putDouble("CartaoVinculado", CartaoVinculado);
+			nbt.putString("NumeroInesistente", NumeroInesistente);
 			return nbt;
 		}
 
@@ -284,6 +284,7 @@ public class MinerpModVariables {
 			CreditoBanco = nbt.getDouble("CreditoBanco");
 			LimiteDoCredito = nbt.getDouble("LimiteDoCredito");
 			CartaoVinculado = nbt.getDouble("CartaoVinculado");
+			NumeroInesistente = nbt.getString("NumeroInesistente");
 		}
 
 		public void markSyncDirty() {

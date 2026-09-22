@@ -2332,8 +2332,8 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "world",
-            "type": "world"
+            "name": "entity",
+            "type": "entity"
           }
         ],
         "return_type": "string",
@@ -2432,7 +2432,7 @@
     {
       "name": "NumeroInesistente",
       "type": "string",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": "\"\""
     }
   ],

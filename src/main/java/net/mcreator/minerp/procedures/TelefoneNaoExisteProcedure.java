@@ -1,11 +1,13 @@
 package net.mcreator.minerp.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Entity;
 
 import net.mcreator.minerp.network.MinerpModVariables;
 
 public class TelefoneNaoExisteProcedure {
-	public static String execute(LevelAccessor world) {
-		return MinerpModVariables.MapVariables.get(world).NumeroInesistente;
+	public static String execute(Entity entity) {
+		if (entity == null)
+			return "";
+		return entity.getData(MinerpModVariables.PLAYER_VARIABLES).NumeroInesistente;
 	}
 }

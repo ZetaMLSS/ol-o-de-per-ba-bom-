@@ -358,8 +358,11 @@ public class SalvarContatoProcedure {
 					}
 				}, _bpos);
 			}
-			MinerpModVariables.MapVariables.get(world).NumeroInesistente = "Erro: Este n\u00FAmero n\u00E3o existe!";
-			MinerpModVariables.MapVariables.get(world).markSyncDirty();
+			{
+				MinerpModVariables.PlayerVariables _vars = entity.getData(MinerpModVariables.PLAYER_VARIABLES);
+				_vars.NumeroInesistente = "Erro: Este n\u00FAmero n\u00E3o existe!";
+				_vars.markSyncDirty();
+			}
 		}
 	}
 }
