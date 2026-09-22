@@ -1977,7 +1977,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/minerp/client/gui/ATMTELA2Screen.java",
-          "src/main/java/net/mcreator/minerp/world/inventory/ATMTELA2Menu.java"
+          "src/main/java/net/mcreator/minerp/world/inventory/ATMTELA2Menu.java",
+          "src/main/java/net/mcreator/minerp/network/ATMTELA2ButtonMessage.java"
         ]
       },
       "path": "~/Bloco/ATM/Gui"
@@ -2342,6 +2343,353 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
+    },
+    {
+      "name": "RetirarAtm05",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retirar_atm_05",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/RetirarAtm05Procedure.java"
+        ]
+      },
+      "path": "~/Bloco/ATM/Gui"
+    },
+    {
+      "name": "RetirarAtm1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retirar_atm_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/RetirarAtm1Procedure.java"
+        ]
+      },
+      "path": "~/Bloco/ATM/Gui"
+    },
+    {
+      "name": "RetirarAtm5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retirar_atm_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/RetirarAtm5Procedure.java"
+        ]
+      },
+      "path": "~/Bloco/ATM/Gui"
+    },
+    {
+      "name": "RetirarAtm10",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retirar_atm_10",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/RetirarAtm10Procedure.java"
+        ]
+      },
+      "path": "~/Bloco/ATM/Gui"
+    },
+    {
+      "name": "RetirarAtm20",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retirar_atm_20",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/RetirarAtm20Procedure.java"
+        ]
+      },
+      "path": "~/Bloco/ATM/Gui"
+    },
+    {
+      "name": "RetirarAtm50",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retirar_atm_50",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/RetirarAtm50Procedure.java"
+        ]
+      },
+      "path": "~/Bloco/ATM/Gui"
+    },
+    {
+      "name": "RetirarAtm100",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retirar_atm_100",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/RetirarAtm100Procedure.java"
+        ]
+      },
+      "path": "~/Bloco/ATM/Gui"
+    },
+    {
+      "name": "RetirarAtm200",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retirar_atm_200",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/RetirarAtm200Procedure.java"
+        ]
+      },
+      "path": "~/Bloco/ATM/Gui"
+    },
+    {
+      "name": "MostraValorBancoAtmDoCartao",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostra_valor_banco_atm_do_cartao",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostraValorBancoAtmDoCartaoProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/ATM/Gui"
+    },
+    {
+      "name": "MostraValorBancoAtmDoCartao2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostra_valor_banco_atm_do_cartao_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostraValorBancoAtmDoCartao2Procedure.java"
+        ]
+      },
+      "path": "~/Bloco/ATM/Gui"
     }
   ],
   "variable_elements": [
@@ -2433,6 +2781,30 @@
       "name": "NumeroInesistente",
       "type": "string",
       "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "cCanal1",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "cCanal2",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "cCanal3",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "cCanal4",
+      "type": "string",
+      "scope": "map",
       "value": "\"\""
     }
   ],
@@ -2550,7 +2922,9 @@
       "gui.minerp.atmtela_2.label_depositar": "Depositar",
       "gui.minerp.atmtela_2.label_saldo_disponivel": "Valor",
       "gui.minerp.atmtela_2.label_retirar": "Retirar",
-      "gui.minerp.tela_chats.escrevermensagem": ""
+      "gui.minerp.tela_chats.escrevermensagem": "",
+      "gui.minerp.atmtela_2.label_depositar_copy": "Depositar",
+      "gui.minerp.atmtela_2.label_retirar_copy": "Retirar"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -2595,7 +2969,7 @@
       "gui.minerp.tela_celular_cripto.button_mineracoes": "Minerações",
       "gui.minerp.configurar_senha_computador_bancario.button_avancar": "Avançar",
       "gui.minerp.configurar_senha_computador_bancario.ColocarSenha": "Escreva sua nova senha",
-      "gui.minerp.insira_sua_senha_computador_banqueiro.ColocarSenha": "Escreva sua nova senha",
+      "gui.minerp.insira_sua_senha_computador_banqueiro.ColocarSenha": "Insira Sua Senha",
       "gui.minerp.insira_sua_senha_computador_banqueiro.button_avancar": "Avançar",
       "gui.minerp.tela_de_pesquisa_computador_banco.Pesquisar": "Pesquisar (nick)",
       "gui.minerp.tela_de_pesquisa_computador_banco.button_pesquisar": "Pesquisar",
@@ -2639,56 +3013,58 @@
       "gui.minerp.atmtela_2.label_depositar": "Depositar",
       "gui.minerp.atmtela_2.label_saldo_disponivel": "Valor",
       "gui.minerp.atmtela_2.label_retirar": "Retirar",
-      "gui.minerp.tela_chats.escrevermensagem": ""
+      "gui.minerp.tela_chats.escrevermensagem": "",
+      "gui.minerp.atmtela_2.label_depositar_copy": "Depositar",
+      "gui.minerp.atmtela_2.label_retirar_copy": "Retirar"
     }
   },
   "metadata": {
     "files": [
       "src/main/java/net/mcreator/minerp/init/MinerpModBerClient.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBerSupport.java",
-      "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModScreens.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
       "src/main/java/net/mcreator/minerp/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlocks.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlockEntities.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModItems.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
-      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
-      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
-      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
+      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
       "src/main/java/net/mcreator/minerp/ai/MoveToBlockGoal.java",
-      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
-      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
-      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
-      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/mcreator/minerp/world/BlackHoleSavedData.java",
       "src/main/java/net/mcreator/minerp/mixin/LevelRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/resources/minerp.mixins.json",
-      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
+      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
       "src/main/java/net/mcreator/minerp/client/renderer/CustomEyeOfEnderRenderer.java",
-      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
-      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
-      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
       "src/main/java/net/mcreator/minerp/world/PortalSavedData.java",
       "src/main/java/net/mcreator/minerp/MinerpMod.java",
-      "src/main/java/net/mcreator/minerp/ai/OrbitPositionGoal.java",
-      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
-      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
-      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
+      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
+      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
       "src/main/java/net/mcreator/minerp/math/CallCounter.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
       "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
-      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java"
+      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
+      "src/main/resources/minerp.mixins.json",
+      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
+      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
+      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
+      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
+      "src/main/java/net/mcreator/minerp/ai/OrbitPositionGoal.java",
+      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
+      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
+      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
+      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java"
     ]
   },
   "foldersRoot": {

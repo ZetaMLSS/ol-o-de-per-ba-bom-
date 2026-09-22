@@ -29,6 +29,7 @@
           "name": "button_1",
           "text": "1",
           "isUndecorated": false,
+          "onClick": "RetirarAtm1",
           "width": 20,
           "height": 20,
           "x": 256,
@@ -42,6 +43,7 @@
           "name": "button_5",
           "text": "5",
           "isUndecorated": false,
+          "onClick": "RetirarAtm5",
           "width": 20,
           "height": 20,
           "x": 276,
@@ -55,6 +57,7 @@
           "name": "button_10",
           "text": "10",
           "isUndecorated": false,
+          "onClick": "RetirarAtm10",
           "width": 20,
           "height": 20,
           "x": 236,
@@ -68,6 +71,7 @@
           "name": "button_20",
           "text": "20",
           "isUndecorated": false,
+          "onClick": "RetirarAtm20",
           "width": 20,
           "height": 20,
           "x": 256,
@@ -81,6 +85,7 @@
           "name": "button_50",
           "text": "50",
           "isUndecorated": false,
+          "onClick": "RetirarAtm50",
           "width": 20,
           "height": 20,
           "x": 276,
@@ -94,6 +99,7 @@
           "name": "button_100",
           "text": "100",
           "isUndecorated": false,
+          "onClick": "RetirarAtm100",
           "width": 20,
           "height": 20,
           "x": 236,
@@ -107,6 +113,7 @@
           "name": "button_05",
           "text": "0,5",
           "isUndecorated": false,
+          "onClick": "RetirarAtm05",
           "width": 20,
           "height": 20,
           "x": 236,
@@ -120,6 +127,7 @@
           "name": "button_200",
           "text": "200",
           "isUndecorated": false,
+          "onClick": "RetirarAtm200",
           "width": 20,
           "height": 20,
           "x": 256,
@@ -192,7 +200,7 @@
           },
           "sua_outline_enabled": false,
           "sua_outline_color": {
-            "value": -16777216,
+            "value": -1,
             "falpha": 0.0
           },
           "sua_outline_width": 1,
@@ -202,32 +210,15 @@
           "sua_pulse_speed": 1.0,
           "name": "label_saldo_disponivel",
           "text": {
-            "fixedValue": "Valor"
+            "fixedValue": "Valor",
+            "name": "MostraValorBancoAtmDoCartao2"
           },
           "color": {
-            "value": -12829636,
+            "value": -16777216,
             "falpha": 0.0
           },
           "hasShadow": false,
           "x": 183,
-          "y": 36,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_saldo",
-          "text": "Saldo:",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 100,
-          "width": 30,
-          "height": 12,
-          "x": 152,
           "y": 36,
           "locked": false
         }
@@ -264,7 +255,98 @@
           },
           "sua_outline_enabled": false,
           "sua_outline_color": {
+            "value": -16751104,
+            "falpha": 0.0
+          },
+          "sua_outline_width": 1,
+          "sua_scale_x": 1.0,
+          "sua_scale_y": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "sua_pulse_speed": 1.0,
+          "name": "label_saldo_disponivel_copy",
+          "text": {
+            "fixedValue": "Valor",
+            "name": "MostraValorBancoAtmDoCartao2"
+          },
+          "color": {
+            "value": -16751104,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 182,
+          "y": 36,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_saldo_copy",
+          "text": "Saldo:",
+          "color": {
             "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "width": 30,
+          "height": 12,
+          "x": 152,
+          "y": 36,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_saldo",
+          "text": "Saldo:",
+          "color": {
+            "value": -16751104,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "width": 30,
+          "height": 12,
+          "x": 151,
+          "y": 36,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "sua_font": "vanilla",
+          "sua_color_effect": "solid",
+          "sua_motion_effect": "none",
+          "sua_color1": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "sua_color2": {
+            "value": -14336,
+            "falpha": 0.0
+          },
+          "sua_alignment": "LEFT",
+          "sua_max_width": 0,
+          "sua_reveal_speed": 0.0,
+          "sua_rainbow_speed": 1.0,
+          "sua_wave_amplitude": 2.0,
+          "sua_wave_speed": 1.0,
+          "sua_bounce_amplitude": 3.0,
+          "sua_bounce_ms": 150,
+          "sua_color3": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "sua_color4": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "sua_outline_enabled": false,
+          "sua_outline_color": {
+            "value": -16751104,
             "falpha": 0.0
           },
           "sua_outline_width": 1,
@@ -277,7 +359,61 @@
             "fixedValue": "Depositar"
           },
           "color": {
-            "value": -12829636,
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 132,
+          "y": 71,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "sua_font": "vanilla",
+          "sua_color_effect": "solid",
+          "sua_motion_effect": "none",
+          "sua_color1": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "sua_color2": {
+            "value": -14336,
+            "falpha": 0.0
+          },
+          "sua_alignment": "LEFT",
+          "sua_max_width": 0,
+          "sua_reveal_speed": 0.0,
+          "sua_rainbow_speed": 1.0,
+          "sua_wave_amplitude": 2.0,
+          "sua_wave_speed": 1.0,
+          "sua_bounce_amplitude": 3.0,
+          "sua_bounce_ms": 150,
+          "sua_color3": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "sua_color4": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "sua_outline_enabled": false,
+          "sua_outline_color": {
+            "value": -16751104,
+            "falpha": 0.0
+          },
+          "sua_outline_width": 1,
+          "sua_scale_x": 1.0,
+          "sua_scale_y": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "sua_pulse_speed": 1.0,
+          "name": "label_depositar_copy",
+          "text": {
+            "fixedValue": "Depositar"
+          },
+          "color": {
+            "value": -16751104,
             "falpha": 0.0
           },
           "hasShadow": false,
@@ -318,7 +454,7 @@
           },
           "sua_outline_enabled": false,
           "sua_outline_color": {
-            "value": -16777216,
+            "value": -16751104,
             "falpha": 0.0
           },
           "sua_outline_width": 1,
@@ -331,11 +467,65 @@
             "fixedValue": "Retirar"
           },
           "color": {
-            "value": -12829636,
+            "value": -16777216,
             "falpha": 0.0
           },
           "hasShadow": false,
           "x": 249,
+          "y": 40,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "sua_font": "vanilla",
+          "sua_color_effect": "solid",
+          "sua_motion_effect": "none",
+          "sua_color1": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "sua_color2": {
+            "value": -14336,
+            "falpha": 0.0
+          },
+          "sua_alignment": "LEFT",
+          "sua_max_width": 0,
+          "sua_reveal_speed": 0.0,
+          "sua_rainbow_speed": 1.0,
+          "sua_wave_amplitude": 2.0,
+          "sua_wave_speed": 1.0,
+          "sua_bounce_amplitude": 3.0,
+          "sua_bounce_ms": 150,
+          "sua_color3": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "sua_color4": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "sua_outline_enabled": false,
+          "sua_outline_color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "sua_outline_width": 1,
+          "sua_scale_x": 1.0,
+          "sua_scale_y": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "sua_pulse_speed": 1.0,
+          "name": "label_retirar_copy",
+          "text": {
+            "fixedValue": "Retirar"
+          },
+          "color": {
+            "value": -16751104,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 248,
           "y": 40,
           "locked": false
         }

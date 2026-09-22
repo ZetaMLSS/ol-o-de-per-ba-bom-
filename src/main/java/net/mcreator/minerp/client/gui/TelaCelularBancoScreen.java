@@ -91,7 +91,7 @@ public class TelaCelularBancoScreen extends AbstractContainerScreen<TelaCelularB
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PegarValorDoBancoParaTextoProcedure.execute(entity), ""), -14, -29, 120, 40, -16777216, false, 2.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PegarValorDocreditoParaTextoProcedure.execute(entity), ""), -14, 39, 120, 40, -16777216, false, 2.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PegarValorDoBancoParaTextoProcedure.execute(entity), ""), -15, -30, 120, 40, -12415422, false, 2.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PegarValorDoBancoParaTextoProcedure.execute(entity), ""), -15, 38, 120, 40, -12415422, false, 2.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.PegarValorDocreditoParaTextoProcedure.execute(entity), ""), -15, 38, 120, 40, -12415422, false, 2.00F);
 	}
 
 	@Override

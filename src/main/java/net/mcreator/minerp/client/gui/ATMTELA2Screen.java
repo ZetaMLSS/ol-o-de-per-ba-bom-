@@ -1,5 +1,7 @@
 package net.mcreator.minerp.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -10,6 +12,8 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.minerp.world.inventory.ATMTELA2Menu;
+import net.mcreator.minerp.procedures.MostraValorBancoAtmDoCartao2Procedure;
+import net.mcreator.minerp.network.ATMTELA2ButtonMessage;
 import net.mcreator.minerp.init.MinerpModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -74,42 +78,100 @@ public class ATMTELA2Screen extends AbstractContainerScreen<ATMTELA2Menu> implem
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		{
-			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.atmtela_2.label_saldo_disponivel"), 63, 9, -12829636, false);
+			guiGraphics.drawString(this.font, MostraValorBancoAtmDoCartao2Procedure.execute(world, x, y, z), 63, 9, -16777216, false);
 		}
 		{
-			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.atmtela_2.label_depositar"), 11, 44, -12829636, false);
+			guiGraphics.drawString(this.font, MostraValorBancoAtmDoCartao2Procedure.execute(world, x, y, z), 62, 9, -16751104, false);
 		}
 		{
-			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.atmtela_2.label_retirar"), 129, 13, -12829636, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.atmtela_2.label_depositar"), 12, 44, -16777216, false);
 		}
-		this.guiTools$renderMultilineLabel(guiGraphics, "Saldo:", 32, 9, 30, 12, -12829636, false, 1.00F);
+		{
+			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.atmtela_2.label_depositar_copy"), 11, 44, -16751104, false);
+		}
+		{
+			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.atmtela_2.label_retirar"), 129, 13, -16777216, false);
+		}
+		{
+			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.atmtela_2.label_retirar_copy"), 128, 13, -16751104, false);
+		}
+		this.guiTools$renderMultilineLabel(guiGraphics, "Saldo:", 32, 9, 30, 12, -16777216, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Saldo:", 31, 9, 30, 12, -16751104, false, 1.00F);
 	}
 
 	@Override
 	public void init() {
 		super.init();
 		button_1 = Button.builder(Component.translatable("gui.minerp.atmtela_2.button_1"), e -> {
+			int x = ATMTELA2Screen.this.x;
+			int y = ATMTELA2Screen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new ATMTELA2ButtonMessage(0, x, y, z));
+				ATMTELA2ButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}).bounds(this.leftPos + 136, this.topPos + 31, 20, 20).build();
 		this.addRenderableWidget(button_1);
 		button_5 = Button.builder(Component.translatable("gui.minerp.atmtela_2.button_5"), e -> {
+			int x = ATMTELA2Screen.this.x;
+			int y = ATMTELA2Screen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new ATMTELA2ButtonMessage(1, x, y, z));
+				ATMTELA2ButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
 		}).bounds(this.leftPos + 156, this.topPos + 31, 20, 20).build();
 		this.addRenderableWidget(button_5);
 		button_10 = Button.builder(Component.translatable("gui.minerp.atmtela_2.button_10"), e -> {
+			int x = ATMTELA2Screen.this.x;
+			int y = ATMTELA2Screen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new ATMTELA2ButtonMessage(2, x, y, z));
+				ATMTELA2ButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
 		}).bounds(this.leftPos + 116, this.topPos + 51, 20, 20).build();
 		this.addRenderableWidget(button_10);
 		button_20 = Button.builder(Component.translatable("gui.minerp.atmtela_2.button_20"), e -> {
+			int x = ATMTELA2Screen.this.x;
+			int y = ATMTELA2Screen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new ATMTELA2ButtonMessage(3, x, y, z));
+				ATMTELA2ButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
 		}).bounds(this.leftPos + 136, this.topPos + 51, 20, 20).build();
 		this.addRenderableWidget(button_20);
 		button_50 = Button.builder(Component.translatable("gui.minerp.atmtela_2.button_50"), e -> {
+			int x = ATMTELA2Screen.this.x;
+			int y = ATMTELA2Screen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new ATMTELA2ButtonMessage(4, x, y, z));
+				ATMTELA2ButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
 		}).bounds(this.leftPos + 156, this.topPos + 51, 20, 20).build();
 		this.addRenderableWidget(button_50);
 		button_100 = Button.builder(Component.translatable("gui.minerp.atmtela_2.button_100"), e -> {
+			int x = ATMTELA2Screen.this.x;
+			int y = ATMTELA2Screen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new ATMTELA2ButtonMessage(5, x, y, z));
+				ATMTELA2ButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
 		}).bounds(this.leftPos + 116, this.topPos + 70, 20, 20).build();
 		this.addRenderableWidget(button_100);
 		button_05 = Button.builder(Component.translatable("gui.minerp.atmtela_2.button_05"), e -> {
+			int x = ATMTELA2Screen.this.x;
+			int y = ATMTELA2Screen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new ATMTELA2ButtonMessage(6, x, y, z));
+				ATMTELA2ButtonMessage.handleButtonAction(entity, 6, x, y, z);
+			}
 		}).bounds(this.leftPos + 116, this.topPos + 31, 20, 20).build();
 		this.addRenderableWidget(button_05);
 		button_200 = Button.builder(Component.translatable("gui.minerp.atmtela_2.button_200"), e -> {
+			int x = ATMTELA2Screen.this.x;
+			int y = ATMTELA2Screen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new ATMTELA2ButtonMessage(7, x, y, z));
+				ATMTELA2ButtonMessage.handleButtonAction(entity, 7, x, y, z);
+			}
 		}).bounds(this.leftPos + 136, this.topPos + 70, 20, 20).build();
 		this.addRenderableWidget(button_200);
 	}

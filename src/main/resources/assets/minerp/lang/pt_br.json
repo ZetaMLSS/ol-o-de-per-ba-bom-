@@ -41,7 +41,7 @@
   "gui.minerp.tela_celular_cripto.button_mineracoes": "Minerações",
   "gui.minerp.configurar_senha_computador_bancario.button_avancar": "Avançar",
   "gui.minerp.configurar_senha_computador_bancario.ColocarSenha": "Escreva sua nova senha",
-  "gui.minerp.insira_sua_senha_computador_banqueiro.ColocarSenha": "Escreva sua nova senha",
+  "gui.minerp.insira_sua_senha_computador_banqueiro.ColocarSenha": "Insira Sua Senha",
   "gui.minerp.insira_sua_senha_computador_banqueiro.button_avancar": "Avançar",
   "gui.minerp.tela_de_pesquisa_computador_banco.Pesquisar": "Pesquisar (nick)",
   "gui.minerp.tela_de_pesquisa_computador_banco.button_pesquisar": "Pesquisar",
@@ -85,5 +85,7 @@
   "gui.minerp.atmtela_2.label_depositar": "Depositar",
   "gui.minerp.atmtela_2.label_saldo_disponivel": "Valor",
   "gui.minerp.atmtela_2.label_retirar": "Retirar",
-  "gui.minerp.tela_chats.escrevermensagem": ""
+  "gui.minerp.tela_chats.escrevermensagem": "",
+  "gui.minerp.atmtela_2.label_depositar_copy": "Depositar",
+  "gui.minerp.atmtela_2.label_retirar_copy": "Retirar"
 }

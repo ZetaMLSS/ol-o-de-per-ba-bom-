@@ -167,6 +167,10 @@ public class MinerpModVariables {
 		public double CatCoinLimite = 0;
 		public double DinheiroDoProprioBanco = 0;
 		public String numeros_registrados = "\"\"";
+		public String cCanal1 = "\"\"";
+		public String cCanal2 = "\"\"";
+		public String cCanal3 = "\"\"";
+		public String cCanal4 = "\"\"";
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -184,6 +188,10 @@ public class MinerpModVariables {
 			CatCoinLimite = nbt.getDouble("CatCoinLimite");
 			DinheiroDoProprioBanco = nbt.getDouble("DinheiroDoProprioBanco");
 			numeros_registrados = nbt.getString("numeros_registrados");
+			cCanal1 = nbt.getString("cCanal1");
+			cCanal2 = nbt.getString("cCanal2");
+			cCanal3 = nbt.getString("cCanal3");
+			cCanal4 = nbt.getString("cCanal4");
 		}
 
 		@Override
@@ -197,6 +205,10 @@ public class MinerpModVariables {
 			nbt.putDouble("CatCoinLimite", CatCoinLimite);
 			nbt.putDouble("DinheiroDoProprioBanco", DinheiroDoProprioBanco);
 			nbt.putString("numeros_registrados", numeros_registrados);
+			nbt.putString("cCanal1", cCanal1);
+			nbt.putString("cCanal2", cCanal2);
+			nbt.putString("cCanal3", cCanal3);
+			nbt.putString("cCanal4", cCanal4);
 			return nbt;
 		}
 
