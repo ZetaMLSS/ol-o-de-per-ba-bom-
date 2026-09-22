@@ -2810,49 +2810,49 @@
       "name": "canal1_alvo",
       "type": "string",
       "scope": "map",
-      "value": ""
+      "value": "\"\""
     },
     {
       "name": "canal2_alvo",
       "type": "string",
       "scope": "map",
-      "value": ""
+      "value": "\"\""
     },
     {
       "name": "canal3_alvo",
       "type": "string",
       "scope": "map",
-      "value": ""
+      "value": "\"\""
     },
     {
       "name": "canal1_remetente",
       "type": "string",
       "scope": "map",
-      "value": ""
+      "value": "\"\""
     },
     {
       "name": "canal2_remetente",
       "type": "string",
       "scope": "map",
-      "value": ""
+      "value": "\"\""
     },
     {
       "name": "canal3_remetente",
       "type": "string",
       "scope": "map",
-      "value": ""
+      "value": "\"\""
     },
     {
       "name": "canal1_texto",
       "type": "string",
       "scope": "map",
-      "value": ""
+      "value": "\"\""
     },
     {
       "name": "canal2_texto",
       "type": "string",
       "scope": "map",
-      "value": ""
+      "value": "\"\""
     },
     {
       "name": "canal3_texto",
