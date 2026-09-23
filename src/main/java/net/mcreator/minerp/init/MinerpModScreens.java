@@ -32,16 +32,6 @@ public class MinerpModScreens {
 		event.register(MinerpModMenus.TELA_CHATS.get(), TelaChatsScreen::new);
 		event.register(MinerpModMenus.ATMTELA_1.get(), ATMTELA1Screen::new);
 		event.register(MinerpModMenus.ATMTELA_2.get(), ATMTELA2Screen::new);
-		event.register(MinerpModMenus.TELA_CHATS_2.get(), TelaChats2Screen::new);
-		event.register(MinerpModMenus.TELA_CHATS_3.get(), TelaChats3Screen::new);
-		event.register(MinerpModMenus.TELA_CHATS_4.get(), TelaChats4Screen::new);
-		event.register(MinerpModMenus.TELA_CHATS_5.get(), TelaChats5Screen::new);
-		event.register(MinerpModMenus.TELA_CHATS_6.get(), TelaChats6Screen::new);
-		event.register(MinerpModMenus.TELA_CHATS_7.get(), TelaChats7Screen::new);
-		event.register(MinerpModMenus.TELA_CHATS_8.get(), TelaChats8Screen::new);
-		event.register(MinerpModMenus.TELA_CHATS_9.get(), TelaChats9Screen::new);
-		event.register(MinerpModMenus.TELA_CHATS_10.get(), TelaChats10Screen::new);
-		event.register(MinerpModMenus.TELA_CHATS_NOTIFICACAO.get(), TelaChatsNOTIFICACAOScreen::new);
 	}
 
 	public interface ScreenAccessor {

@@ -147,12 +147,6 @@ public class TelaCelularMenssagensScreen extends AbstractContainerScreen<TelaCel
 			menu.sendMenuStateUpdate(entity, 2, "slidercontatos", slidercontatos.getValue(), false);
 		enhanced_image_button_icone_notificacao = new net.minecraft.client.gui.components.ImageButton(this.leftPos + 27, this.topPos + 2, 19, 16, new net.minecraft.client.gui.components.WidgetSprites(
 				net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/icone_notificacao.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/icone_notificacao.png")), e -> {
-					int x = TelaCelularMenssagensScreen.this.x;
-					int y = TelaCelularMenssagensScreen.this.y;
-					if (true) {
-						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.TelaCelularMenssagensButtonMessage(3, x, y, z));
-						net.mcreator.minerp.network.TelaCelularMenssagensButtonMessage.handleButtonAction(entity, 3, x, y, z);
-					}
 				}) {
 			@Override
 			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {

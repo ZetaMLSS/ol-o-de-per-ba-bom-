@@ -203,7 +203,6 @@
           "name": "enhanced_image_button_icone_notificacao",
           "text": "",
           "isUndecorated": true,
-          "onClick": "Notificacao",
           "width": 19,
           "height": 16,
           "x": 230,
