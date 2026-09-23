@@ -20,7 +20,7 @@ import net.mcreator.minerp.MinerpMod;
 
 @EventBusSubscriber
 public record TelaChatsButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
-	public static final Type<TelaChatsButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(MinerpMod.MODID, "tela_chats_buttons"));
+	public static final Type<TelaChatsButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(MinerpMod.MODID, "tela_chat1_buttons"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, TelaChatsButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, TelaChatsButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
@@ -49,7 +49,7 @@ public record TelaChatsButtonMessage(int buttonID, int x, int y, int z) implemen
 			return;
 		if (buttonID == 0) {
 
-			EnviarmensagemProcedure.execute(world, entity);
+			EnviarmensagemProcedure.execute();
 		}
 	}
 

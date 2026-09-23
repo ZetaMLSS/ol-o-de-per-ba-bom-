@@ -29,7 +29,7 @@ public class MinerpModScreens {
 		event.register(MinerpModMenus.RESULTADO_BANCO_COMPUTADOR.get(), ResultadoBancoComputadorScreen::new);
 		event.register(MinerpModMenus.TELA_CELULAR_MENSSAGENS.get(), TelaCelularMenssagensScreen::new);
 		event.register(MinerpModMenus.TELA_ADIONAR_CONTATO.get(), TelaAdionarContatoScreen::new);
-		event.register(MinerpModMenus.TELA_CHATS.get(), TelaChatsScreen::new);
+		event.register(MinerpModMenus.TELA_CHAT1.get(), TelaChatsScreen::new);
 		event.register(MinerpModMenus.ATMTELA_1.get(), ATMTELA1Screen::new);
 		event.register(MinerpModMenus.ATMTELA_2.get(), ATMTELA2Screen::new);
 	}

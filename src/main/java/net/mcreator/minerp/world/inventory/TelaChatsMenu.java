@@ -49,7 +49,7 @@ public class TelaChatsMenu extends AbstractContainerMenu implements MinerpModMen
 	private BlockEntity boundBlockEntity = null;
 
 	public TelaChatsMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(MinerpModMenus.TELA_CHATS.get(), id);
+		super(MinerpModMenus.TELA_CHAT1.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level();
 		this.internal = new ItemStackHandler(0);

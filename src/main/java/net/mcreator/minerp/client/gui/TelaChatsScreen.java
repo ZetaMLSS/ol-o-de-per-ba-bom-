@@ -49,7 +49,7 @@ public class TelaChatsScreen extends AbstractContainerScreen<TelaChatsMenu> impl
 		menuStateUpdateActive = false;
 	}
 
-	private static final ResourceLocation texture = ResourceLocation.parse("minerp:textures/screens/tela_chats.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("minerp:textures/screens/tela_chat1.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
@@ -112,14 +112,14 @@ public class TelaChatsScreen extends AbstractContainerScreen<TelaChatsMenu> impl
 	@Override
 	public void init() {
 		super.init();
-		escrevermensagem = new EditBox(this.font, this.leftPos + -28, this.topPos + 30, 78, 18, Component.translatable("gui.minerp.tela_chats.escrevermensagem"));
+		escrevermensagem = new EditBox(this.font, this.leftPos + -28, this.topPos + 30, 78, 18, Component.translatable("gui.minerp.tela_chat1.escrevermensagem"));
 		escrevermensagem.setMaxLength(8192);
 		escrevermensagem.setResponder(content -> {
 			if (!menuStateUpdateActive)
 				menu.sendMenuStateUpdate(entity, 0, "escrevermensagem", content, false);
 		});
 		this.addWidget(this.escrevermensagem);
-		button_enviar = Button.builder(Component.translatable("gui.minerp.tela_chats.button_enviar"), e -> {
+		button_enviar = Button.builder(Component.translatable("gui.minerp.tela_chat1.button_enviar"), e -> {
 			int x = TelaChatsScreen.this.x;
 			int y = TelaChatsScreen.this.y;
 			if (true) {

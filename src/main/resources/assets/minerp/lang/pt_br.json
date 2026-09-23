@@ -73,7 +73,6 @@
   "gui.minerp.tela_chats.input_nome": "",
   "gui.minerp.atmtela_1.Senha": "",
   "gui.minerp.atmtela_1.button_proximo": "Proximo",
-  "gui.minerp.tela_chats.button_enviar": "Enviar",
   "gui.minerp.atmtela_2.button_50": "50",
   "gui.minerp.atmtela_2.button_5": "5",
   "gui.minerp.atmtela_2.button_20": "20",
@@ -85,8 +84,9 @@
   "gui.minerp.atmtela_2.label_depositar": "Depositar",
   "gui.minerp.atmtela_2.label_saldo_disponivel": "Valor",
   "gui.minerp.atmtela_2.label_retirar": "Retirar",
-  "gui.minerp.tela_chats.escrevermensagem": "",
   "gui.minerp.atmtela_2.label_depositar_copy": "Depositar",
   "gui.minerp.atmtela_2.label_retirar_copy": "Retirar",
-  "gui.minerp.tela_chats_notificacao.escrevermensagem": ""
+  "gui.minerp.tela_chats_notificacao.escrevermensagem": "",
+  "gui.minerp.tela_chat1.button_enviar": "Enviar",
+  "gui.minerp.tela_chat1.escrevermensagem": ""
 }
