@@ -26,6 +26,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.minerp.procedures.QuaisItensVaiNaCarteiraProcedure;
 import net.mcreator.minerp.procedures.AdicionandoDinheiroAtmProcedure;
+import net.mcreator.minerp.procedures.ATMTELA1ThisGUIIsClosedProcedure;
 import net.mcreator.minerp.init.MinerpModMenus;
 
 import java.util.function.Supplier;
@@ -241,6 +242,7 @@ public class ATMTELA2Menu extends AbstractContainerMenu implements MinerpModMenu
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
+		ATMTELA1ThisGUIIsClosedProcedure.execute(world, x, y, z);
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {

@@ -27,6 +27,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.minerp.world.inventory.ATMTELA1Menu;
+import net.mcreator.minerp.procedures.ATMSupOnBlockRightclickedProcedure;
 import net.mcreator.minerp.block.entity.ATMSupBlockEntity;
 
 import io.netty.buffer.Unpooled;
@@ -111,6 +112,14 @@ public class ATMSupBlock extends Block implements EntityBlock {
 				}
 			}, pos);
 		}
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+		double hitX = hit.getLocation().x;
+		double hitY = hit.getLocation().y;
+		double hitZ = hit.getLocation().z;
+		Direction direction = hit.getDirection();
+		ATMSupOnBlockRightclickedProcedure.execute(world, x, y, z, entity);
 		return InteractionResult.SUCCESS;
 	}
 

@@ -44,6 +44,8 @@ public class MinerpModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<TelaChatsMenu>> TELA_CHAT1 = REGISTRY.register("tela_chat1", () -> IMenuTypeExtension.create(TelaChatsMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<ATMTELA1Menu>> ATMTELA_1 = REGISTRY.register("atmtela_1", () -> IMenuTypeExtension.create(ATMTELA1Menu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<ATMTELA2Menu>> ATMTELA_2 = REGISTRY.register("atmtela_2", () -> IMenuTypeExtension.create(ATMTELA2Menu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<GuiMaquinaConfigMenu>> GUI_MAQUINA_CONFIG = REGISTRY.register("gui_maquina_config", () -> IMenuTypeExtension.create(GuiMaquinaConfigMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<GuiMaquinaCartaonoblocoMenu>> GUI_MAQUINA_CARTAONOBLOCO = REGISTRY.register("gui_maquina_cartaonobloco", () -> IMenuTypeExtension.create(GuiMaquinaCartaonoblocoMenu::new));
 
 	public interface MenuAccessor {
 		Map<String, Object> getMenuState();

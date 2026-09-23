@@ -7,6 +7,7 @@ import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerContainerEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -25,6 +26,8 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.minerp.procedures.ATMTELA1ThisGUIIsOpenedProcedure;
+import net.mcreator.minerp.procedures.ATMTELA1ThisGUIIsClosedProcedure;
 import net.mcreator.minerp.procedures.ATMTELA1ProceudretodotempoProcedure;
 import net.mcreator.minerp.network.ATMTELA1SlotMessage;
 import net.mcreator.minerp.init.MinerpModMenus;
@@ -229,6 +232,7 @@ public class ATMTELA1Menu extends AbstractContainerMenu implements MinerpModMenu
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
+		ATMTELA1ThisGUIIsClosedProcedure.execute(world, x, y, z);
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {
@@ -272,6 +276,18 @@ public class ATMTELA1Menu extends AbstractContainerMenu implements MinerpModMenu
 			double y = menu.y;
 			double z = menu.z;
 			ATMTELA1ProceudretodotempoProcedure.execute(entity);
+		}
+	}
+
+	@SubscribeEvent
+	public static void onContainerOpen(PlayerContainerEvent.Open event) {
+		Player entity = event.getEntity();
+		if (event.getContainer() instanceof ATMTELA1Menu menu) {
+			Level world = menu.world;
+			double x = menu.x;
+			double y = menu.y;
+			double z = menu.z;
+			ATMTELA1ThisGUIIsOpenedProcedure.execute(world, x, y, z);
 		}
 	}
 }

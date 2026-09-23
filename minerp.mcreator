@@ -147,12 +147,12 @@
       "registry_name": "atm_sup",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/block/entity/ATMSupBlockEntity.java",
           "src/main/java/net/mcreator/minerp/block/ATMSupBlock.java",
-          "src/main/resources/assets/minerp/models/item/atm_sup.json",
-          "src/main/resources/assets/minerp/blockstates/atm_sup.json",
           "src/main/resources/data/minerp/loot_table/blocks/atm_sup.json",
-          "src/main/resources/assets/minerp/models/block/atm_sup.json"
+          "src/main/resources/assets/minerp/blockstates/atm_sup.json",
+          "src/main/resources/assets/minerp/models/block/atm_sup.json",
+          "src/main/java/net/mcreator/minerp/block/entity/ATMSupBlockEntity.java",
+          "src/main/resources/assets/minerp/models/item/atm_sup.json"
         ]
       },
       "path": "~/Bloco/ATM"
@@ -1187,11 +1187,11 @@
       "registry_name": "maquina_cartao",
       "metadata": {
         "files": [
-          "src/main/resources/data/minerp/loot_table/blocks/maquina_cartao.json",
-          "src/main/resources/assets/minerp/models/block/maquina_cartao.json",
           "src/main/resources/assets/minerp/models/item/maquina_cartao.json",
+          "src/main/resources/assets/minerp/blockstates/maquina_cartao.json",
           "src/main/java/net/mcreator/minerp/block/MaquinaCartaoBlock.java",
-          "src/main/resources/assets/minerp/blockstates/maquina_cartao.json"
+          "src/main/resources/assets/minerp/models/block/maquina_cartao.json",
+          "src/main/resources/data/minerp/loot_table/blocks/maquina_cartao.json"
         ]
       },
       "path": "~/Itens/MaquininhaCartao"
@@ -1864,10 +1864,10 @@
       "registry_name": "atmtela_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/client/gui/ATMTELA1Screen.java",
           "src/main/java/net/mcreator/minerp/world/inventory/ATMTELA1Menu.java",
           "src/main/java/net/mcreator/minerp/network/ATMTELA1ButtonMessage.java",
-          "src/main/java/net/mcreator/minerp/network/ATMTELA1SlotMessage.java"
+          "src/main/java/net/mcreator/minerp/network/ATMTELA1SlotMessage.java",
+          "src/main/java/net/mcreator/minerp/client/gui/ATMTELA1Screen.java"
         ]
       },
       "path": "~/Bloco/ATM/Gui"
@@ -1968,8 +1968,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/minerp/client/gui/ATMTELA2Screen.java",
-          "src/main/java/net/mcreator/minerp/network/ATMTELA2ButtonMessage.java",
-          "src/main/java/net/mcreator/minerp/world/inventory/ATMTELA2Menu.java"
+          "src/main/java/net/mcreator/minerp/world/inventory/ATMTELA2Menu.java",
+          "src/main/java/net/mcreator/minerp/network/ATMTELA2ButtonMessage.java"
         ]
       },
       "path": "~/Bloco/ATM/Gui"
@@ -2682,6 +2682,164 @@
         ]
       },
       "path": "~/Sistemas/Comandos"
+    },
+    {
+      "name": "MaquinaCartaoItem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maquina_cartao_item",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minerp/models/item/maquina_cartao_item.json",
+          "src/main/java/net/mcreator/minerp/item/MaquinaCartaoItemItem.java"
+        ]
+      },
+      "path": "~/Itens/MaquininhaCartao"
+    },
+    {
+      "name": "GuiMaquinaConfig",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gui_maquina_config",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/world/inventory/GuiMaquinaConfigMenu.java",
+          "src/main/java/net/mcreator/minerp/client/gui/GuiMaquinaConfigScreen.java"
+        ]
+      },
+      "path": "~/Itens/MaquininhaCartao/Gui"
+    },
+    {
+      "name": "GuiMaquinaCartaonobloco",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gui_maquina_cartaonobloco",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/world/inventory/GuiMaquinaCartaonoblocoMenu.java",
+          "src/main/java/net/mcreator/minerp/client/gui/GuiMaquinaCartaonoblocoScreen.java"
+        ]
+      },
+      "path": "~/Itens/MaquininhaCartao/Gui"
+    },
+    {
+      "name": "ATMTELA1ThisGUIIsOpened",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atmtela_1_this_gui_is_opened",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/ATMTELA1ThisGUIIsOpenedProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/ATM/Gui"
+    },
+    {
+      "name": "ATMTELA1ThisGUIIsClosed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atmtela_1_this_gui_is_closed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/ATMTELA1ThisGUIIsClosedProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/ATM/Gui"
+    },
+    {
+      "name": "ATMSupOnBlockRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atm_sup_on_block_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/ATMSupOnBlockRightclickedProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/ATM"
+    },
+    {
+      "name": "ProcedureDaConfigDaMaquinaDeCartao",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "procedure_da_config_da_maquina_de_cartao",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/ProcedureDaConfigDaMaquinaDeCartaoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/MaquininhaCartao/Gui"
     }
   ],
   "variable_elements": [
@@ -2836,10 +2994,10 @@
       "~Celular@CUSTOM:Celular"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~ATMSup@CUSTOM:ATMSup",
       "~Monitor@CUSTOM:Monitor",
       "~Computador@CUSTOM:Computador",
-      "~ATMinf@CUSTOM:ATMinf",
-      "~ATMSup@CUSTOM:ATMSup"
+      "~ATMinf@CUSTOM:ATMinf"
     ]
   },
   "tab_element_order": {
@@ -2911,7 +3069,7 @@
       "gui.minerp.resultado_banco_computador.button_cobrar": "Cobrar",
       "gui.minerp.resultado_banco_computador.label_valornaconta": "ValorNaConta",
       "gui.minerp.resultado_banco_computador.label_valorcredito": "ValorCredito",
-      "block.minerp.maquina_cartao": "Maquina Cartao",
+      "block.minerp.maquina_cartao": "Maquina Cartao Bloco",
       "item.minerp.cartao_de_credito": "Cartao De Credito",
       "gui.minerp.resultado_banco_computador.senhaprocartao": "Adicionar Senha",
       "gui.minerp.resultado_banco_computador.button_criar_cartao": "Criar Cartão",
@@ -2947,7 +3105,18 @@
       "gui.minerp.atmtela_2.label_retirar_copy": "Retirar",
       "gui.minerp.tela_chats_notificacao.escrevermensagem": "",
       "gui.minerp.tela_chat1.button_enviar": "Enviar",
-      "gui.minerp.tela_chat1.escrevermensagem": ""
+      "gui.minerp.tela_chat1.escrevermensagem": "",
+      "item.minerp.maquina_cartao_item": "Maquina De Cartao",
+      "gui.minerp.gui_maquina_config.label_debito": "Debito",
+      "gui.minerp.gui_maquina_config.Debito": "",
+      "gui.minerp.gui_maquina_config.Credito": "",
+      "gui.minerp.gui_maquina_config.button_confirmar": "Confirmar",
+      "gui.minerp.gui_maquina_config.ValorAPagar": "Valor",
+      "gui.minerp.gui_maquina_config.label_credito": "Credito",
+      "gui.minerp.gui_maquina_cartaonobloco.label_dinheiro": "Dinheiro",
+      "gui.minerp.gui_maquina_cartaonobloco.label_ecreditooudebido": "ecreditooudebido",
+      "gui.minerp.gui_maquina_cartaonobloco.senha": "Sua Senha:",
+      "gui.minerp.gui_maquina_cartaonobloco.button_confirmar": "Confirmar"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -3039,56 +3208,67 @@
       "gui.minerp.atmtela_2.label_retirar_copy": "Retirar",
       "gui.minerp.tela_chats_notificacao.escrevermensagem": "",
       "gui.minerp.tela_chat1.button_enviar": "Enviar",
-      "gui.minerp.tela_chat1.escrevermensagem": ""
+      "gui.minerp.tela_chat1.escrevermensagem": "",
+      "item.minerp.maquina_cartao_item": "Maquina De Cartao",
+      "gui.minerp.gui_maquina_config.label_debito": "Debito",
+      "gui.minerp.gui_maquina_config.Debito": "",
+      "gui.minerp.gui_maquina_config.Credito": "",
+      "gui.minerp.gui_maquina_config.button_confirmar": "Confirmar",
+      "gui.minerp.gui_maquina_config.ValorAPagar": "Valor",
+      "gui.minerp.gui_maquina_config.label_credito": "Credito",
+      "gui.minerp.gui_maquina_cartaonobloco.label_dinheiro": "Dinheiro",
+      "gui.minerp.gui_maquina_cartaonobloco.label_ecreditooudebido": "ecreditooudebido",
+      "gui.minerp.gui_maquina_cartaonobloco.senha": "Sua Senha:",
+      "gui.minerp.gui_maquina_cartaonobloco.button_confirmar": "Confirmar"
     }
   },
   "metadata": {
     "files": [
       "src/main/java/net/mcreator/minerp/init/MinerpModBerClient.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBerSupport.java",
-      "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModScreens.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
       "src/main/java/net/mcreator/minerp/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlocks.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlockEntities.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModItems.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
-      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
-      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
-      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
+      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
       "src/main/java/net/mcreator/minerp/ai/MoveToBlockGoal.java",
-      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
-      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
-      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
-      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/mcreator/minerp/world/BlackHoleSavedData.java",
       "src/main/java/net/mcreator/minerp/mixin/LevelRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/resources/minerp.mixins.json",
-      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
+      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
       "src/main/java/net/mcreator/minerp/client/renderer/CustomEyeOfEnderRenderer.java",
-      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
-      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
-      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
       "src/main/java/net/mcreator/minerp/world/PortalSavedData.java",
       "src/main/java/net/mcreator/minerp/MinerpMod.java",
-      "src/main/java/net/mcreator/minerp/ai/OrbitPositionGoal.java",
-      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
-      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
-      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
+      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
+      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
       "src/main/java/net/mcreator/minerp/math/CallCounter.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
       "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
-      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java"
+      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
+      "src/main/resources/minerp.mixins.json",
+      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
+      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
+      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
+      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
+      "src/main/java/net/mcreator/minerp/ai/OrbitPositionGoal.java",
+      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
+      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
+      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
+      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java"
     ]
   },
   "foldersRoot": {
@@ -3179,7 +3359,12 @@
           },
           {
             "name": "MaquininhaCartao",
-            "children": []
+            "children": [
+              {
+                "name": "Gui",
+                "children": []
+              }
+            ]
           }
         ]
       },

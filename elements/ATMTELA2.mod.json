@@ -532,6 +532,7 @@
       }
     ],
     "onTick": "AdicionandoDinheiroAtm",
+    "onClosed": "ATMTELA1ThisGUIIsClosed",
     "gridSettings": {
       "sx": 18,
       "sy": 18,

@@ -1,0 +1,7 @@
+{
+  "parent": "minerp:custom/maquininhacartao",
+  "textures": {
+    "0": "minerp:block/maquininha",
+    "particle": "minecraft:item/empty_slot_ingot"
+  }
+}

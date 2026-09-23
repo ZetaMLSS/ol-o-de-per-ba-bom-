@@ -1,0 +1,246 @@
+{
+  "_fv": 89,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 212,
+    "height": 179,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 8,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_valor_copy",
+          "text": "Valor:",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 125,
+          "width": 40,
+          "height": 16,
+          "x": 157,
+          "y": 38,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_valor",
+          "text": "Valor:",
+          "color": {
+            "value": -16751104,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 125,
+          "width": 40,
+          "height": 16,
+          "x": 156,
+          "y": 38,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "sua_font": "vanilla",
+          "sua_color_effect": "solid",
+          "sua_motion_effect": "none",
+          "sua_color1": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "sua_color2": {
+            "value": -14336,
+            "falpha": 0.0
+          },
+          "sua_alignment": "LEFT",
+          "sua_max_width": 0,
+          "sua_reveal_speed": 0.0,
+          "sua_rainbow_speed": 1.0,
+          "sua_wave_amplitude": 2.0,
+          "sua_wave_speed": 1.0,
+          "sua_bounce_amplitude": 3.0,
+          "sua_bounce_ms": 150,
+          "sua_color3": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "sua_color4": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "sua_outline_enabled": false,
+          "sua_outline_color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "sua_outline_width": 1,
+          "sua_scale_x": 1.0,
+          "sua_scale_y": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "sua_pulse_speed": 1.0,
+          "name": "label_dinheiro",
+          "text": {
+            "fixedValue": "Dinheiro"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 201,
+          "y": 39,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_metodo_copy",
+          "text": "Método:",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 125,
+          "width": 56,
+          "height": 15,
+          "x": 157,
+          "y": 54,
+          "locked": false
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Sua Senha:",
+          "name": "senha",
+          "width": 120,
+          "height": 20,
+          "x": 115,
+          "y": 77,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_confirmar",
+          "text": "Confirmar",
+          "isUndecorated": false,
+          "width": 70,
+          "height": 20,
+          "x": 242,
+          "y": 77,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_metodo",
+          "text": "Método:",
+          "color": {
+            "value": -16750951,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 125,
+          "width": 56,
+          "height": 15,
+          "x": 156,
+          "y": 54,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "sua_font": "vanilla",
+          "sua_color_effect": "solid",
+          "sua_motion_effect": "none",
+          "sua_color1": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "sua_color2": {
+            "value": -14336,
+            "falpha": 0.0
+          },
+          "sua_alignment": "LEFT",
+          "sua_max_width": 0,
+          "sua_reveal_speed": 0.0,
+          "sua_rainbow_speed": 1.0,
+          "sua_wave_amplitude": 2.0,
+          "sua_wave_speed": 1.0,
+          "sua_bounce_amplitude": 3.0,
+          "sua_bounce_ms": 150,
+          "sua_color3": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "sua_color4": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "sua_outline_enabled": false,
+          "sua_outline_color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "sua_outline_width": 1,
+          "sua_scale_x": 1.0,
+          "sua_scale_y": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "sua_pulse_speed": 1.0,
+          "name": "label_ecreditooudebido",
+          "text": {
+            "fixedValue": "ecreditooudebido"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 209,
+          "y": 55,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 205,
+          "y": 102,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

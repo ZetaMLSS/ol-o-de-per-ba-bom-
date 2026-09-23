@@ -57,7 +57,9 @@
         }
       }
     ],
+    "onOpen": "ATMTELA1ThisGUIIsOpened",
     "onTick": "ATMTELA1Proceudretodotempo",
+    "onClosed": "ATMTELA1ThisGUIIsClosed",
     "gridSettings": {
       "sx": 18,
       "sy": 18,

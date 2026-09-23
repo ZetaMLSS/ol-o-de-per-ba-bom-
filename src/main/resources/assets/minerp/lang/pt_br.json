@@ -88,5 +88,16 @@
   "gui.minerp.atmtela_2.label_retirar_copy": "Retirar",
   "gui.minerp.tela_chats_notificacao.escrevermensagem": "",
   "gui.minerp.tela_chat1.button_enviar": "Enviar",
-  "gui.minerp.tela_chat1.escrevermensagem": ""
+  "gui.minerp.tela_chat1.escrevermensagem": "",
+  "item.minerp.maquina_cartao_item": "Maquina De Cartao",
+  "gui.minerp.gui_maquina_config.label_debito": "Debito",
+  "gui.minerp.gui_maquina_config.Debito": "",
+  "gui.minerp.gui_maquina_config.Credito": "",
+  "gui.minerp.gui_maquina_config.button_confirmar": "Confirmar",
+  "gui.minerp.gui_maquina_config.ValorAPagar": "Valor",
+  "gui.minerp.gui_maquina_config.label_credito": "Credito",
+  "gui.minerp.gui_maquina_cartaonobloco.label_dinheiro": "Dinheiro",
+  "gui.minerp.gui_maquina_cartaonobloco.label_ecreditooudebido": "ecreditooudebido",
+  "gui.minerp.gui_maquina_cartaonobloco.senha": "Sua Senha:",
+  "gui.minerp.gui_maquina_cartaonobloco.button_confirmar": "Confirmar"
 }
