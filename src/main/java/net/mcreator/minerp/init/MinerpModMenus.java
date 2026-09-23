@@ -44,6 +44,16 @@ public class MinerpModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<TelaChatsMenu>> TELA_CHATS = REGISTRY.register("tela_chats", () -> IMenuTypeExtension.create(TelaChatsMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<ATMTELA1Menu>> ATMTELA_1 = REGISTRY.register("atmtela_1", () -> IMenuTypeExtension.create(ATMTELA1Menu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<ATMTELA2Menu>> ATMTELA_2 = REGISTRY.register("atmtela_2", () -> IMenuTypeExtension.create(ATMTELA2Menu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<TelaChats2Menu>> TELA_CHATS_2 = REGISTRY.register("tela_chats_2", () -> IMenuTypeExtension.create(TelaChats2Menu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<TelaChats3Menu>> TELA_CHATS_3 = REGISTRY.register("tela_chats_3", () -> IMenuTypeExtension.create(TelaChats3Menu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<TelaChats4Menu>> TELA_CHATS_4 = REGISTRY.register("tela_chats_4", () -> IMenuTypeExtension.create(TelaChats4Menu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<TelaChats5Menu>> TELA_CHATS_5 = REGISTRY.register("tela_chats_5", () -> IMenuTypeExtension.create(TelaChats5Menu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<TelaChats6Menu>> TELA_CHATS_6 = REGISTRY.register("tela_chats_6", () -> IMenuTypeExtension.create(TelaChats6Menu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<TelaChats7Menu>> TELA_CHATS_7 = REGISTRY.register("tela_chats_7", () -> IMenuTypeExtension.create(TelaChats7Menu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<TelaChats8Menu>> TELA_CHATS_8 = REGISTRY.register("tela_chats_8", () -> IMenuTypeExtension.create(TelaChats8Menu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<TelaChats9Menu>> TELA_CHATS_9 = REGISTRY.register("tela_chats_9", () -> IMenuTypeExtension.create(TelaChats9Menu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<TelaChats10Menu>> TELA_CHATS_10 = REGISTRY.register("tela_chats_10", () -> IMenuTypeExtension.create(TelaChats10Menu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<TelaChatsNOTIFICACAOMenu>> TELA_CHATS_NOTIFICACAO = REGISTRY.register("tela_chats_notificacao", () -> IMenuTypeExtension.create(TelaChatsNOTIFICACAOMenu::new));
 
 	public interface MenuAccessor {
 		Map<String, Object> getMenuState();

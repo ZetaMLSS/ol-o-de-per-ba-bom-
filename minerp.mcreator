@@ -1621,8 +1621,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularMenssagensMenu.java",
-          "src/main/java/net/mcreator/minerp/network/TelaCelularMenssagensButtonMessage.java",
-          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularMenssagensScreen.java"
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularMenssagensScreen.java",
+          "src/main/java/net/mcreator/minerp/network/TelaCelularMenssagensButtonMessage.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
@@ -1635,9 +1635,9 @@
       "registry_name": "tela_adionar_contato",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/network/TelaAdionarContatoButtonMessage.java",
           "src/main/java/net/mcreator/minerp/world/inventory/TelaAdionarContatoMenu.java",
-          "src/main/java/net/mcreator/minerp/client/gui/TelaAdionarContatoScreen.java"
+          "src/main/java/net/mcreator/minerp/client/gui/TelaAdionarContatoScreen.java",
+          "src/main/java/net/mcreator/minerp/network/TelaAdionarContatoButtonMessage.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
@@ -2713,6 +2713,209 @@
         ]
       },
       "path": "~/Itens/Celular"
+    },
+    {
+      "name": "ENVIARMENSAGEMCELULAR",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enviarmensagemcelular",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/command/ENVIARMENSAGEMCELULARCommand.java"
+        ]
+      },
+      "path": "~/Sistemas/Comandos"
+    },
+    {
+      "name": "TelaChats2",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_chats_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaChats2Menu.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaChats2Screen.java",
+          "src/main/java/net/mcreator/minerp/network/TelaChats2ButtonMessage.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
+    },
+    {
+      "name": "TelaChats3",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_chats_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/network/TelaChats3ButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaChats3Screen.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaChats3Menu.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
+    },
+    {
+      "name": "TelaChats4",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_chats_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaChats4Menu.java",
+          "src/main/java/net/mcreator/minerp/network/TelaChats4ButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaChats4Screen.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
+    },
+    {
+      "name": "TelaChats5",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_chats_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/network/TelaChats5ButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaChats5Screen.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaChats5Menu.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
+    },
+    {
+      "name": "TelaChats6",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_chats_6",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/client/gui/TelaChats6Screen.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaChats6Menu.java",
+          "src/main/java/net/mcreator/minerp/network/TelaChats6ButtonMessage.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
+    },
+    {
+      "name": "TelaChats7",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_chats_7",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/client/gui/TelaChats7Screen.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaChats7Menu.java",
+          "src/main/java/net/mcreator/minerp/network/TelaChats7ButtonMessage.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
+    },
+    {
+      "name": "TelaChats8",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_chats_8",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/client/gui/TelaChats8Screen.java",
+          "src/main/java/net/mcreator/minerp/network/TelaChats8ButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaChats8Menu.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
+    },
+    {
+      "name": "TelaChats9",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_chats_9",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/network/TelaChats9ButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaChats9Menu.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaChats9Screen.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
+    },
+    {
+      "name": "TelaChats10",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_chats_10",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/client/gui/TelaChats10Screen.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaChats10Menu.java",
+          "src/main/java/net/mcreator/minerp/network/TelaChats10ButtonMessage.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
+    },
+    {
+      "name": "TelaChatsNOTIFICACAO",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_chats_notificacao",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/network/TelaChatsNOTIFICACAOButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaChatsNOTIFICACAOScreen.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaChatsNOTIFICACAOMenu.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
+    },
+    {
+      "name": "Numeronotificacao",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "numeronotificacao",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/NumeronotificacaoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
+    },
+    {
+      "name": "Mensagemnotificacao",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mensagemnotificacao",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MensagemnotificacaoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
     }
   ],
   "variable_elements": [
@@ -2977,7 +3180,27 @@
       "gui.minerp.atmtela_2.label_retirar": "Retirar",
       "gui.minerp.tela_chats.escrevermensagem": "",
       "gui.minerp.atmtela_2.label_depositar_copy": "Depositar",
-      "gui.minerp.atmtela_2.label_retirar_copy": "Retirar"
+      "gui.minerp.atmtela_2.label_retirar_copy": "Retirar",
+      "gui.minerp.tela_chats_2.escrevermensagem": "",
+      "gui.minerp.tela_chats_2.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_3.escrevermensagem": "",
+      "gui.minerp.tela_chats_3.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_4.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_4.escrevermensagem": "",
+      "gui.minerp.tela_chats_5.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_5.escrevermensagem": "",
+      "gui.minerp.tela_chats_6.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_6.escrevermensagem": "",
+      "gui.minerp.tela_chats_7.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_7.escrevermensagem": "",
+      "gui.minerp.tela_chats_8.escrevermensagem": "",
+      "gui.minerp.tela_chats_8.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_9.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_9.escrevermensagem": "",
+      "gui.minerp.tela_chats_10.escrevermensagem": "",
+      "gui.minerp.tela_chats_10.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_notificacao.button_enviar": "Adicionar",
+      "gui.minerp.tela_chats_notificacao.escrevermensagem": ""
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -3068,56 +3291,76 @@
       "gui.minerp.atmtela_2.label_retirar": "Retirar",
       "gui.minerp.tela_chats.escrevermensagem": "",
       "gui.minerp.atmtela_2.label_depositar_copy": "Depositar",
-      "gui.minerp.atmtela_2.label_retirar_copy": "Retirar"
+      "gui.minerp.atmtela_2.label_retirar_copy": "Retirar",
+      "gui.minerp.tela_chats_2.escrevermensagem": "",
+      "gui.minerp.tela_chats_2.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_3.escrevermensagem": "",
+      "gui.minerp.tela_chats_3.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_4.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_4.escrevermensagem": "",
+      "gui.minerp.tela_chats_5.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_5.escrevermensagem": "",
+      "gui.minerp.tela_chats_6.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_6.escrevermensagem": "",
+      "gui.minerp.tela_chats_7.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_7.escrevermensagem": "",
+      "gui.minerp.tela_chats_8.escrevermensagem": "",
+      "gui.minerp.tela_chats_8.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_9.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_9.escrevermensagem": "",
+      "gui.minerp.tela_chats_10.escrevermensagem": "",
+      "gui.minerp.tela_chats_10.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_notificacao.button_enviar": "Enviar",
+      "gui.minerp.tela_chats_notificacao.escrevermensagem": ""
     }
   },
   "metadata": {
     "files": [
       "src/main/java/net/mcreator/minerp/init/MinerpModBerClient.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBerSupport.java",
-      "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModScreens.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
       "src/main/java/net/mcreator/minerp/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlocks.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlockEntities.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModItems.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
-      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
-      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
-      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
+      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
       "src/main/java/net/mcreator/minerp/ai/MoveToBlockGoal.java",
-      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
-      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
-      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
-      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/mcreator/minerp/world/BlackHoleSavedData.java",
       "src/main/java/net/mcreator/minerp/mixin/LevelRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/resources/minerp.mixins.json",
-      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
+      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
       "src/main/java/net/mcreator/minerp/client/renderer/CustomEyeOfEnderRenderer.java",
-      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
-      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
-      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
       "src/main/java/net/mcreator/minerp/world/PortalSavedData.java",
       "src/main/java/net/mcreator/minerp/MinerpMod.java",
-      "src/main/java/net/mcreator/minerp/ai/OrbitPositionGoal.java",
-      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
-      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
-      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
+      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
+      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
       "src/main/java/net/mcreator/minerp/math/CallCounter.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
       "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
-      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java"
+      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
+      "src/main/resources/minerp.mixins.json",
+      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
+      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
+      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
+      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
+      "src/main/java/net/mcreator/minerp/ai/OrbitPositionGoal.java",
+      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
+      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
+      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
+      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java"
     ]
   },
   "foldersRoot": {

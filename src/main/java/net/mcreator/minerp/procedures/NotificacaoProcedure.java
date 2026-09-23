@@ -15,7 +15,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.minerp.world.inventory.TelaCelularMenssagensMenu;
+import net.mcreator.minerp.world.inventory.TelaChatsNOTIFICACAOMenu;
 
 import io.netty.buffer.Unpooled;
 
@@ -23,18 +23,13 @@ public class NotificacaoProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (!(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("Ultima_Mensagem_Numero")).equals(""))) {
-			{
-				final String _tagName = "numero_chat_ativo";
-				final String _tagValue = ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("Ultima_Mensagem_Numero"));
-				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putString(_tagName, _tagValue));
-			}
+		if (!(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("notificacao_numero")).equals(""))) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				_ent.openMenu(new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
-						return Component.literal("TelaCelularMenssagens");
+						return Component.literal("TelaChatsNOTIFICACAO");
 					}
 
 					@Override
@@ -44,7 +39,7 @@ public class NotificacaoProcedure {
 
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new TelaCelularMenssagensMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						return new TelaChatsNOTIFICACAOMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}
