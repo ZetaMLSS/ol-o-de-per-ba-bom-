@@ -40,7 +40,7 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 99,
-    "onRightClickedInAir": "Teste",
+    "onRightClickedInAir": "VincularComCodigoAlgema",
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

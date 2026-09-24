@@ -15,7 +15,7 @@ public class GerarCodigoAlgemaProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == MinerpModItems.ALGEMA.get()
-				&& itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("codigoalgema") == 0) {
+				&& itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("codigoalgema") < 55) {
 			{
 				final String _tagName = "codigoalgema";
 				final double _tagValue = (Mth.nextInt(RandomSource.create(), 1000, 9999));

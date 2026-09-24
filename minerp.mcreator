@@ -3425,37 +3425,12 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
+            "name": "entity",
+            "type": "entity"
           }
         ],
         "files": [
           "src/main/java/net/mcreator/minerp/procedures/VincularComCodigoAlgemaProcedure.java"
-        ]
-      },
-      "path": "~/Itens/Algema"
-    },
-    {
-      "name": "ChaveAlgemaVinculado",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "chave_algema_vinculado",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/minerp/recipe/chave_algema_vinculado.json"
         ]
       },
       "path": "~/Itens/Algema"

@@ -7,7 +7,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
-import net.mcreator.minerp.procedures.TesteProcedure;
+import net.mcreator.minerp.procedures.VincularComCodigoAlgemaProcedure;
 
 public class ChaveAlgemaSemCodigoItem extends Item {
 	public ChaveAlgemaSemCodigoItem() {
@@ -17,7 +17,7 @@ public class ChaveAlgemaSemCodigoItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		TesteProcedure.execute(entity, ar.getObject());
+		VincularComCodigoAlgemaProcedure.execute(entity);
 		return ar;
 	}
 }
