@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 1,
-    "texture": "minecraft:chain",
+    "texture": "minecraft:empty_slot_amethyst_shard",
     "customModelName": "chavealgema:default",
     "guiTexture": "",
     "customProperties": {},
@@ -11,7 +11,9 @@
     "animations": [],
     "name": "Chave_Algema",
     "rarity": "COMMON",
-    "creativeTabs": [],
+    "creativeTabs": [
+      "CUSTOM:MINERPTec"
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
@@ -39,7 +41,6 @@
     "inventorySize": 9,
     "inventoryStackSize": 99,
     "onRightClickedInAir": "Teste",
-    "onCrafted": "VincularComCodigoAlgema",
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

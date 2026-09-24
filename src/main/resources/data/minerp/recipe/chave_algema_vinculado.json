@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "ab"
+  ],
+  "key": {
+    "a": {
+      "item": "minerp:algema"
+    },
+    "b": {
+      "item": "minerp:chave_algema_sem_codigo"
+    }
+  },
+  "result": {
+    "id": "minerp:chave_algema",
+    "count": 1
+  }
+}

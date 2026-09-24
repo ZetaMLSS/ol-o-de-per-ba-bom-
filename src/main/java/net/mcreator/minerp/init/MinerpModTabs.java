@@ -41,6 +41,7 @@ public class MinerpModTabs {
 				tabData.accept(MinerpModBlocks.TRANSFERIDOR_DE_ENERGIA.get().asItem());
 				tabData.accept(MinerpModItems.BATERIA.get());
 				tabData.accept(MinerpModBlocks.GERADORV_1.get().asItem());
-				tabData.accept(MinerpModItems.CHAVE_ALGEMA.get());
+				tabData.accept(MinerpModItems.ALGEMA.get());
+				tabData.accept(MinerpModItems.CHAVE_ALGEMA_SEM_CODIGO.get());
 			}).withTabsBefore(MINERP_MONEY.getId()).build());
 }

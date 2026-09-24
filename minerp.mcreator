@@ -147,12 +147,12 @@
       "registry_name": "atm_sup",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/block/ATMSupBlock.java",
-          "src/main/resources/data/minerp/loot_table/blocks/atm_sup.json",
-          "src/main/resources/assets/minerp/blockstates/atm_sup.json",
-          "src/main/resources/assets/minerp/models/block/atm_sup.json",
           "src/main/java/net/mcreator/minerp/block/entity/ATMSupBlockEntity.java",
-          "src/main/resources/assets/minerp/models/item/atm_sup.json"
+          "src/main/java/net/mcreator/minerp/block/ATMSupBlock.java",
+          "src/main/resources/assets/minerp/models/item/atm_sup.json",
+          "src/main/resources/assets/minerp/blockstates/atm_sup.json",
+          "src/main/resources/data/minerp/loot_table/blocks/atm_sup.json",
+          "src/main/resources/assets/minerp/models/block/atm_sup.json"
         ]
       },
       "path": "~/Bloco/ATM"
@@ -728,11 +728,11 @@
       "registry_name": "carregador_celular",
       "metadata": {
         "files": [
-          "src/main/resources/assets/minerp/models/item/carregador_celular.json",
           "src/main/resources/assets/minerp/blockstates/carregador_celular.json",
-          "src/main/resources/assets/minerp/models/block/carregador_celular.json",
-          "src/main/resources/data/minerp/loot_table/blocks/carregador_celular.json",
+          "src/main/resources/assets/minerp/models/item/carregador_celular.json",
           "src/main/java/net/mcreator/minerp/block/CarregadorCelularBlock.java",
+          "src/main/resources/data/minerp/loot_table/blocks/carregador_celular.json",
+          "src/main/resources/assets/minerp/models/block/carregador_celular.json",
           "src/main/java/net/mcreator/minerp/block/entity/CarregadorCelularBlockEntity.java"
         ]
       },
@@ -1187,12 +1187,12 @@
       "registry_name": "maquina_cartao",
       "metadata": {
         "files": [
-          "src/main/resources/assets/minerp/models/item/maquina_cartao.json",
-          "src/main/resources/assets/minerp/blockstates/maquina_cartao.json",
-          "src/main/java/net/mcreator/minerp/block/MaquinaCartaoBlock.java",
-          "src/main/java/net/mcreator/minerp/block/entity/MaquinaCartaoBlockEntity.java",
+          "src/main/resources/data/minerp/loot_table/blocks/maquina_cartao.json",
           "src/main/resources/assets/minerp/models/block/maquina_cartao.json",
-          "src/main/resources/data/minerp/loot_table/blocks/maquina_cartao.json"
+          "src/main/resources/assets/minerp/models/item/maquina_cartao.json",
+          "src/main/java/net/mcreator/minerp/block/entity/MaquinaCartaoBlockEntity.java",
+          "src/main/java/net/mcreator/minerp/block/MaquinaCartaoBlock.java",
+          "src/main/resources/assets/minerp/blockstates/maquina_cartao.json"
         ]
       },
       "path": "~/Itens/MaquininhaCartao"
@@ -1865,10 +1865,10 @@
       "registry_name": "atmtela_1",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/minerp/client/gui/ATMTELA1Screen.java",
           "src/main/java/net/mcreator/minerp/world/inventory/ATMTELA1Menu.java",
           "src/main/java/net/mcreator/minerp/network/ATMTELA1ButtonMessage.java",
-          "src/main/java/net/mcreator/minerp/network/ATMTELA1SlotMessage.java",
-          "src/main/java/net/mcreator/minerp/client/gui/ATMTELA1Screen.java"
+          "src/main/java/net/mcreator/minerp/network/ATMTELA1SlotMessage.java"
         ]
       },
       "path": "~/Bloco/ATM/Gui"
@@ -1969,8 +1969,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/minerp/client/gui/ATMTELA2Screen.java",
-          "src/main/java/net/mcreator/minerp/world/inventory/ATMTELA2Menu.java",
-          "src/main/java/net/mcreator/minerp/network/ATMTELA2ButtonMessage.java"
+          "src/main/java/net/mcreator/minerp/network/ATMTELA2ButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/ATMTELA2Menu.java"
         ]
       },
       "path": "~/Bloco/ATM/Gui"
@@ -2692,8 +2692,8 @@
       "registry_name": "maquina_cartao_item",
       "metadata": {
         "files": [
-          "src/main/resources/assets/minerp/models/item/maquina_cartao_item.json",
-          "src/main/java/net/mcreator/minerp/item/MaquinaCartaoItemItem.java"
+          "src/main/java/net/mcreator/minerp/item/MaquinaCartaoItemItem.java",
+          "src/main/resources/assets/minerp/models/item/maquina_cartao_item.json"
         ]
       },
       "path": "~/Itens/MaquininhaCartao"
@@ -2722,8 +2722,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/minerp/world/inventory/GuiMaquinaCartaonoblocoMenu.java",
-          "src/main/java/net/mcreator/minerp/client/gui/GuiMaquinaCartaonoblocoScreen.java",
-          "src/main/java/net/mcreator/minerp/network/GuiMaquinaCartaonoblocoButtonMessage.java"
+          "src/main/java/net/mcreator/minerp/network/GuiMaquinaCartaonoblocoButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/client/gui/GuiMaquinaCartaonoblocoScreen.java"
         ]
       },
       "path": "~/Itens/MaquininhaCartao/Gui"
@@ -2954,8 +2954,8 @@
       "registry_name": "gui_aprovado_maquina_cartao",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/client/gui/GuiAprovadoMaquinaCartaoScreen.java",
-          "src/main/java/net/mcreator/minerp/world/inventory/GuiAprovadoMaquinaCartaoMenu.java"
+          "src/main/java/net/mcreator/minerp/world/inventory/GuiAprovadoMaquinaCartaoMenu.java",
+          "src/main/java/net/mcreator/minerp/client/gui/GuiAprovadoMaquinaCartaoScreen.java"
         ]
       },
       "path": "~/Itens/MaquininhaCartao/Gui"
@@ -3118,11 +3118,11 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/minerp/models/block/transferidor_de_energia.json",
-          "src/main/java/net/mcreator/minerp/block/TransferidorDeEnergiaBlock.java",
+          "src/main/resources/assets/minerp/models/item/transferidor_de_energia.json",
           "src/main/resources/assets/minerp/blockstates/transferidor_de_energia.json",
           "src/main/java/net/mcreator/minerp/block/entity/TransferidorDeEnergiaBlockEntity.java",
           "src/main/resources/data/minerp/loot_table/blocks/transferidor_de_energia.json",
-          "src/main/resources/assets/minerp/models/item/transferidor_de_energia.json"
+          "src/main/java/net/mcreator/minerp/block/TransferidorDeEnergiaBlock.java"
         ]
       },
       "path": "~/Bloco/Transferidor De Energia"
@@ -3135,8 +3135,8 @@
       "registry_name": "bateria",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/item/BateriaItem.java",
-          "src/main/resources/assets/minerp/models/item/bateria.json"
+          "src/main/resources/assets/minerp/models/item/bateria.json",
+          "src/main/java/net/mcreator/minerp/item/BateriaItem.java"
         ]
       },
       "path": "~/Itens/Bateria"
@@ -3173,11 +3173,11 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/minerp/blockstates/geradorv_1.json",
-          "src/main/java/net/mcreator/minerp/block/entity/Geradorv1BlockEntity.java",
-          "src/main/resources/assets/minerp/models/block/geradorv_1.json",
-          "src/main/resources/data/minerp/loot_table/blocks/geradorv_1.json",
+          "src/main/java/net/mcreator/minerp/block/Geradorv1Block.java",
           "src/main/resources/assets/minerp/models/item/geradorv_1.json",
-          "src/main/java/net/mcreator/minerp/block/Geradorv1Block.java"
+          "src/main/resources/data/minerp/loot_table/blocks/geradorv_1.json",
+          "src/main/java/net/mcreator/minerp/block/entity/Geradorv1BlockEntity.java",
+          "src/main/resources/assets/minerp/models/block/geradorv_1.json"
         ]
       },
       "path": "~/Bloco/Geradores De Energia/GeradorV1"
@@ -3366,15 +3366,119 @@
       "path": "~/Itens/Algema"
     },
     {
-      "name": "GerarCodigo",
+      "name": "Algema",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "algema",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/item/AlgemaItem.java",
+          "src/main/resources/assets/minerp/models/item/algema.json"
+        ]
+      },
+      "path": "~/Itens/Algema"
+    },
+    {
+      "name": "GerarCodigoAlgema",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "gerar_codigo",
+      "registry_name": "gerar_codigo_algema",
       "metadata": {
-        "dependencies": [],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
         "files": [
-          "src/main/java/net/mcreator/minerp/procedures/GerarCodigoProcedure.java"
+          "src/main/java/net/mcreator/minerp/procedures/GerarCodigoAlgemaProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Algema"
+    },
+    {
+      "name": "ChaveAlgemaSemCodigo",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chave_algema_sem_codigo",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/item/ChaveAlgemaSemCodigoItem.java",
+          "src/main/resources/assets/minerp/models/item/chave_algema_sem_codigo.json"
+        ]
+      },
+      "path": "~/Itens/Algema"
+    },
+    {
+      "name": "VincularComCodigoAlgema",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vincular_com_codigo_algema",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/VincularComCodigoAlgemaProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Algema"
+    },
+    {
+      "name": "ChaveAlgemaVinculado",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chave_algema_vinculado",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minerp/recipe/chave_algema_vinculado.json"
+        ]
+      },
+      "path": "~/Itens/Algema"
+    },
+    {
+      "name": "Teste",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teste",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/TesteProcedure.java"
         ]
       },
       "path": "~/Itens/Algema"
@@ -3533,10 +3637,10 @@
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~Geradorv1@CUSTOM:Geradorv1",
-      "~ATMSup@CUSTOM:ATMSup",
       "~Monitor@CUSTOM:Monitor",
       "~Computador@CUSTOM:Computador",
-      "~ATMinf@CUSTOM:ATMinf"
+      "~ATMinf@CUSTOM:ATMinf",
+      "~ATMSup@CUSTOM:ATMSup"
     ]
   },
   "tab_element_order": {
@@ -3659,7 +3763,9 @@
       "block.minerp.transferidor_de_energia": "Transferidor De Energia",
       "item.minerp.bateria": "Bateria All",
       "block.minerp.geradorv_1": "Gerador V1",
-      "item.minerp.chave_algema": "Chave_Algema"
+      "item.minerp.chave_algema": "Chave_Algema",
+      "item.minerp.algema": "Algema",
+      "item.minerp.chave_algema_sem_codigo": "Chave_Algema"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -3767,56 +3873,58 @@
       "block.minerp.transferidor_de_energia": "Transferidor De Energia",
       "item.minerp.bateria": "Bateria All",
       "block.minerp.geradorv_1": "Gerador V1",
-      "item.minerp.chave_algema": "Chave_Algema"
+      "item.minerp.chave_algema": "Chave_Algema",
+      "item.minerp.algema": "Algema",
+      "item.minerp.chave_algema_sem_codigo": "Chave_Algema"
     }
   },
   "metadata": {
     "files": [
       "src/main/java/net/mcreator/minerp/init/MinerpModBerClient.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBerSupport.java",
-      "src/main/java/net/mcreator/minerp/init/MinerpModScreens.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModScreens.java",
       "src/main/java/net/mcreator/minerp/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlocks.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlockEntities.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModItems.java",
-      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
+      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
+      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
+      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
       "src/main/java/net/mcreator/minerp/ai/MoveToBlockGoal.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
+      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
+      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
+      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
       "src/main/java/net/mcreator/minerp/world/BlackHoleSavedData.java",
       "src/main/java/net/mcreator/minerp/mixin/LevelRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
-      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/minerp.mixins.json",
+      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
       "src/main/java/net/mcreator/minerp/client/renderer/CustomEyeOfEnderRenderer.java",
+      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
+      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
+      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
       "src/main/java/net/mcreator/minerp/world/PortalSavedData.java",
       "src/main/java/net/mcreator/minerp/MinerpMod.java",
-      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
-      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
-      "src/main/java/net/mcreator/minerp/math/CallCounter.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
-      "src/main/resources/minerp.mixins.json",
-      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
-      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
-      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
-      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
       "src/main/java/net/mcreator/minerp/ai/OrbitPositionGoal.java",
-      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
-      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
-      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
-      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java"
+      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
+      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
+      "src/main/java/net/mcreator/minerp/math/CallCounter.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
+      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java"
     ]
   },
   "foldersRoot": {

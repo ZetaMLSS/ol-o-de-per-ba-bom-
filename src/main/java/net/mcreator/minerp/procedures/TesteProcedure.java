@@ -7,11 +7,11 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
 
-public class BateriaRightclickedOnBlockProcedure {
+public class TesteProcedure {
 	public static void execute(Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(Component.literal(("Bateria restante: " + itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("bateria") / 500 + "%")), false);
+			_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("####").format(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("codigoalgema")) + " DEU CERTO!")), true);
 	}
 }

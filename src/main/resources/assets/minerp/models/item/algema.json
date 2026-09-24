@@ -1,0 +1,7 @@
+{
+  "parent": "minerp:custom/algema",
+  "textures": {
+    "0": "minerp:block/algema",
+    "particle": "minecraft:item/empty_slot_amethyst_shard"
+  }
+}

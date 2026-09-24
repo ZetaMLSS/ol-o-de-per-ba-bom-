@@ -7,11 +7,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
-import net.mcreator.minerp.procedures.VincularComCodigoAlgemaProcedure;
 import net.mcreator.minerp.procedures.TesteProcedure;
 
-public class ChaveAlgemaItem extends Item {
-	public ChaveAlgemaItem() {
+public class ChaveAlgemaSemCodigoItem extends Item {
+	public ChaveAlgemaSemCodigoItem() {
 		super(new Item.Properties().stacksTo(1));
 	}
 
@@ -20,11 +19,5 @@ public class ChaveAlgemaItem extends Item {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
 		TesteProcedure.execute(entity, ar.getObject());
 		return ar;
-	}
-
-	@Override
-	public void onCraftedBy(ItemStack itemstack, Level world, Player entity) {
-		super.onCraftedBy(itemstack, world, entity);
-		VincularComCodigoAlgemaProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ());
 	}
 }

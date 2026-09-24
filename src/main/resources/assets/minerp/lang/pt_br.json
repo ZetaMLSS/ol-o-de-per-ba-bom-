@@ -104,5 +104,7 @@
   "block.minerp.transferidor_de_energia": "Transferidor De Energia",
   "item.minerp.bateria": "Bateria All",
   "block.minerp.geradorv_1": "Gerador V1",
-  "item.minerp.chave_algema": "Chave_Algema"
+  "item.minerp.chave_algema": "Chave_Algema",
+  "item.minerp.algema": "Algema",
+  "item.minerp.chave_algema_sem_codigo": "Chave_Algema"
 }
