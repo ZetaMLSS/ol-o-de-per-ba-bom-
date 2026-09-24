@@ -156,6 +156,7 @@
           "name": "button_confirmar",
           "text": "Confirmar",
           "isUndecorated": false,
+          "onClick": "ProcedureDaConfigDaMaquinaDeCartao",
           "width": 70,
           "height": 20,
           "x": 178,

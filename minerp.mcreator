@@ -1190,6 +1190,7 @@
           "src/main/resources/assets/minerp/models/item/maquina_cartao.json",
           "src/main/resources/assets/minerp/blockstates/maquina_cartao.json",
           "src/main/java/net/mcreator/minerp/block/MaquinaCartaoBlock.java",
+          "src/main/java/net/mcreator/minerp/block/entity/MaquinaCartaoBlockEntity.java",
           "src/main/resources/assets/minerp/models/block/maquina_cartao.json",
           "src/main/resources/data/minerp/loot_table/blocks/maquina_cartao.json"
         ]
@@ -2706,7 +2707,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/minerp/world/inventory/GuiMaquinaConfigMenu.java",
-          "src/main/java/net/mcreator/minerp/client/gui/GuiMaquinaConfigScreen.java"
+          "src/main/java/net/mcreator/minerp/client/gui/GuiMaquinaConfigScreen.java",
+          "src/main/java/net/mcreator/minerp/network/GuiMaquinaConfigButtonMessage.java"
         ]
       },
       "path": "~/Itens/MaquininhaCartao/Gui"
@@ -2720,7 +2722,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/minerp/world/inventory/GuiMaquinaCartaonoblocoMenu.java",
-          "src/main/java/net/mcreator/minerp/client/gui/GuiMaquinaCartaonoblocoScreen.java"
+          "src/main/java/net/mcreator/minerp/client/gui/GuiMaquinaCartaonoblocoScreen.java",
+          "src/main/java/net/mcreator/minerp/network/GuiMaquinaCartaonoblocoButtonMessage.java"
         ]
       },
       "path": "~/Itens/MaquininhaCartao/Gui"
@@ -2840,6 +2843,269 @@
         ]
       },
       "path": "~/Itens/MaquininhaCartao/Gui"
+    },
+    {
+      "name": "ReciboDeVenda",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recibo_de_venda",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/item/ReciboDeVendaItem.java",
+          "src/main/resources/assets/minerp/models/item/recibo_de_venda.json"
+        ]
+      },
+      "path": "~/Itens/MaquininhaCartao"
+    },
+    {
+      "name": "MaquinaCartaoItemRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maquina_cartao_item_rightclicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MaquinaCartaoItemRightclickedOnBlockProcedure.java"
+        ]
+      },
+      "path": "~/Itens/MaquininhaCartao"
+    },
+    {
+      "name": "LerCartaoEDarResultadoNaMaquinaCartao",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ler_cartao_e_dar_resultado_na_maquina_cartao",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/LerCartaoEDarResultadoNaMaquinaCartaoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/MaquininhaCartao/Gui"
+    },
+    {
+      "name": "AoAbrirMaquinaDeCartao",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ao_abrir_maquina_de_cartao",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/AoAbrirMaquinaDeCartaoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/MaquininhaCartao/Gui"
+    },
+    {
+      "name": "GuiAprovadoMaquinaCartao",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gui_aprovado_maquina_cartao",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/client/gui/GuiAprovadoMaquinaCartaoScreen.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/GuiAprovadoMaquinaCartaoMenu.java"
+        ]
+      },
+      "path": "~/Itens/MaquininhaCartao/Gui"
+    },
+    {
+      "name": "AoFecharMaquinaDeCartao",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ao_fechar_maquina_de_cartao",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/AoFecharMaquinaDeCartaoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/MaquininhaCartao/Gui"
+    },
+    {
+      "name": "VerValorDaGuiMaquinaCartao",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ver_valor_da_gui_maquina_cartao",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/VerValorDaGuiMaquinaCartaoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/MaquininhaCartao/Gui"
+    },
+    {
+      "name": "VerMetodoDaGuiMaquinaCartao",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ver_metodo_da_gui_maquina_cartao",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/VerMetodoDaGuiMaquinaCartaoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/MaquininhaCartao/Gui"
+    },
+    {
+      "name": "MaquinaCartaoOnBlockRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maquina_cartao_on_block_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MaquinaCartaoOnBlockRightclickedProcedure.java"
+        ]
+      },
+      "path": "~/Itens/MaquininhaCartao"
     }
   ],
   "variable_elements": [
@@ -3116,7 +3382,8 @@
       "gui.minerp.gui_maquina_cartaonobloco.label_dinheiro": "Dinheiro",
       "gui.minerp.gui_maquina_cartaonobloco.label_ecreditooudebido": "ecreditooudebido",
       "gui.minerp.gui_maquina_cartaonobloco.senha": "Sua Senha:",
-      "gui.minerp.gui_maquina_cartaonobloco.button_confirmar": "Confirmar"
+      "gui.minerp.gui_maquina_cartaonobloco.button_confirmar": "Confirmar",
+      "item.minerp.recibo_de_venda": "Recibo De Venda"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -3219,7 +3486,8 @@
       "gui.minerp.gui_maquina_cartaonobloco.label_dinheiro": "Dinheiro",
       "gui.minerp.gui_maquina_cartaonobloco.label_ecreditooudebido": "ecreditooudebido",
       "gui.minerp.gui_maquina_cartaonobloco.senha": "Sua Senha:",
-      "gui.minerp.gui_maquina_cartaonobloco.button_confirmar": "Confirmar"
+      "gui.minerp.gui_maquina_cartaonobloco.button_confirmar": "Confirmar",
+      "item.minerp.recibo_de_venda": "Recibo De Venda"
     }
   },
   "metadata": {

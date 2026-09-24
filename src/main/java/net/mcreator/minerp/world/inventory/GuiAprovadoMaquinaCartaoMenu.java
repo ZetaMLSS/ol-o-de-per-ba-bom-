@@ -34,11 +34,11 @@ import java.util.HashMap;
 import java.util.Collections;
 
 @EventBusSubscriber
-public class GuiMaquinaCartaonoblocoMenu extends AbstractContainerMenu implements MinerpModMenus.MenuAccessor {
+public class GuiAprovadoMaquinaCartaoMenu extends AbstractContainerMenu implements MinerpModMenus.MenuAccessor {
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
 		public Object put(String key, Object value) {
-			if (!this.containsKey(key) && this.size() >= 9)
+			if (!this.containsKey(key) && this.size() >= 2)
 				return null;
 			return super.put(key, value);
 		}
@@ -54,8 +54,8 @@ public class GuiMaquinaCartaonoblocoMenu extends AbstractContainerMenu implement
 	private Entity boundEntity = null;
 	private BlockEntity boundBlockEntity = null;
 
-	public GuiMaquinaCartaonoblocoMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(MinerpModMenus.GUI_MAQUINA_CARTAONOBLOCO.get(), id);
+	public GuiAprovadoMaquinaCartaoMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+		super(MinerpModMenus.GUI_APROVADO_MAQUINA_CARTAO.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level();
 		this.internal = new ItemStackHandler(1);
@@ -95,16 +95,16 @@ public class GuiMaquinaCartaonoblocoMenu extends AbstractContainerMenu implement
 				}
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 98, 72) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 80, 44) {
 			private final int slot = 0;
-			private int x = GuiMaquinaCartaonoblocoMenu.this.x;
-			private int y = GuiMaquinaCartaonoblocoMenu.this.y;
+			private int x = GuiAprovadoMaquinaCartaoMenu.this.x;
+			private int y = GuiAprovadoMaquinaCartaoMenu.this.y;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 18 + 8 + sj * 18, 14 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 0 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 18 + 8 + si * 18, 14 + 142));
+			this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 0 + 142));
 	}
 
 	@Override
@@ -247,7 +247,7 @@ public class GuiMaquinaCartaonoblocoMenu extends AbstractContainerMenu implement
 	@SubscribeEvent
 	public static void onContainerOpen(PlayerContainerEvent.Open event) {
 		Player entity = event.getEntity();
-		if (event.getContainer() instanceof GuiMaquinaCartaonoblocoMenu menu) {
+		if (event.getContainer() instanceof GuiAprovadoMaquinaCartaoMenu menu) {
 			Level world = menu.world;
 			double x = menu.x;
 			double y = menu.y;

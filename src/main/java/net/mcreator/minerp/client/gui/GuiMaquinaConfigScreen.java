@@ -1,5 +1,7 @@
 package net.mcreator.minerp.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -13,6 +15,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.minerp.world.inventory.GuiMaquinaConfigMenu;
+import net.mcreator.minerp.network.GuiMaquinaConfigButtonMessage;
 import net.mcreator.minerp.init.MinerpModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -115,6 +118,12 @@ public class GuiMaquinaConfigScreen extends AbstractContainerScreen<GuiMaquinaCo
 		ValorAPagar.setHint(Component.translatable("gui.minerp.gui_maquina_config.ValorAPagar"));
 		this.addWidget(this.ValorAPagar);
 		button_confirmar = Button.builder(Component.translatable("gui.minerp.gui_maquina_config.button_confirmar"), e -> {
+			int x = GuiMaquinaConfigScreen.this.x;
+			int y = GuiMaquinaConfigScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new GuiMaquinaConfigButtonMessage(0, x, y, z));
+				GuiMaquinaConfigButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}).bounds(this.leftPos + 52, this.topPos + 117, 70, 20).build();
 		this.addRenderableWidget(button_confirmar);
 		Debito = Checkbox.builder(Component.translatable("gui.minerp.gui_maquina_config.Debito"), this.font).pos(this.leftPos + 28, this.topPos + 58).onValueChange((checkbox, value) -> {

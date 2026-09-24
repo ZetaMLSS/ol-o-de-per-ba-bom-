@@ -42,6 +42,7 @@ public class MinerpModItems {
 	public static final DeferredItem<Item> MAQUINA_CARTAO;
 	public static final DeferredItem<Item> CARTAO_DE_CREDITO;
 	public static final DeferredItem<Item> MAQUINA_CARTAO_ITEM;
+	public static final DeferredItem<Item> RECIBO_DE_VENDA;
 	static {
 		VD_1 = REGISTRY.register("vd_1", VD1Item::new);
 		VD_050 = REGISTRY.register("vd_050", VD050Item::new);
@@ -63,6 +64,7 @@ public class MinerpModItems {
 		MAQUINA_CARTAO = block(MinerpModBlocks.MAQUINA_CARTAO, new Item.Properties().stacksTo(1));
 		CARTAO_DE_CREDITO = REGISTRY.register("cartao_de_credito", CartaoDeCreditoItem::new);
 		MAQUINA_CARTAO_ITEM = REGISTRY.register("maquina_cartao_item", MaquinaCartaoItemItem::new);
+		RECIBO_DE_VENDA = REGISTRY.register("recibo_de_venda", ReciboDeVendaItem::new);
 	}
 
 	// Start of user code block custom items

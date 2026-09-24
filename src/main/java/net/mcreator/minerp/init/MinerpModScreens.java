@@ -34,6 +34,7 @@ public class MinerpModScreens {
 		event.register(MinerpModMenus.ATMTELA_2.get(), ATMTELA2Screen::new);
 		event.register(MinerpModMenus.GUI_MAQUINA_CONFIG.get(), GuiMaquinaConfigScreen::new);
 		event.register(MinerpModMenus.GUI_MAQUINA_CARTAONOBLOCO.get(), GuiMaquinaCartaonoblocoScreen::new);
+		event.register(MinerpModMenus.GUI_APROVADO_MAQUINA_CARTAO.get(), GuiAprovadoMaquinaCartaoScreen::new);
 	}
 
 	public interface ScreenAccessor {

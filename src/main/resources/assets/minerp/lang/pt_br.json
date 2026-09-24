@@ -99,5 +99,6 @@
   "gui.minerp.gui_maquina_cartaonobloco.label_dinheiro": "Dinheiro",
   "gui.minerp.gui_maquina_cartaonobloco.label_ecreditooudebido": "ecreditooudebido",
   "gui.minerp.gui_maquina_cartaonobloco.senha": "Sua Senha:",
-  "gui.minerp.gui_maquina_cartaonobloco.button_confirmar": "Confirmar"
+  "gui.minerp.gui_maquina_cartaonobloco.button_confirmar": "Confirmar",
+  "item.minerp.recibo_de_venda": "Recibo De Venda"
 }

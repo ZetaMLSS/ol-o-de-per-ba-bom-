@@ -88,7 +88,8 @@
           "sua_pulse_speed": 1.0,
           "name": "label_dinheiro",
           "text": {
-            "fixedValue": "Dinheiro"
+            "fixedValue": "Dinheiro",
+            "name": "VerValorDaGuiMaquinaCartao"
           },
           "color": {
             "value": -12829636,
@@ -136,6 +137,7 @@
           "name": "button_confirmar",
           "text": "Confirmar",
           "isUndecorated": false,
+          "onClick": "LerCartaoEDarResultadoNaMaquinaCartao",
           "width": 70,
           "height": 20,
           "x": 242,
@@ -203,7 +205,8 @@
           "sua_pulse_speed": 1.0,
           "name": "label_ecreditooudebido",
           "text": {
-            "fixedValue": "ecreditooudebido"
+            "fixedValue": "ecreditooudebido",
+            "name": "VerMetodoDaGuiMaquinaCartao"
           },
           "color": {
             "value": -12829636,
@@ -235,6 +238,8 @@
         }
       }
     ],
+    "onOpen": "AoAbrirMaquinaDeCartao",
+    "onClosed": "AoFecharMaquinaDeCartao",
     "gridSettings": {
       "sx": 18,
       "sy": 18,

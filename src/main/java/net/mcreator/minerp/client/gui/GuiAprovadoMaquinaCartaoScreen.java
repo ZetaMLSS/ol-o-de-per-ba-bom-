@@ -1,61 +1,46 @@
 package net.mcreator.minerp.client.gui;
 
-import net.neoforged.neoforge.network.PacketDistributor;
-
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.EditBox;
-import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.Minecraft;
 
-import net.mcreator.minerp.world.inventory.GuiMaquinaCartaonoblocoMenu;
-import net.mcreator.minerp.procedures.VerValorDaGuiMaquinaCartaoProcedure;
-import net.mcreator.minerp.procedures.VerMetodoDaGuiMaquinaCartaoProcedure;
-import net.mcreator.minerp.network.GuiMaquinaCartaonoblocoButtonMessage;
+import net.mcreator.minerp.world.inventory.GuiAprovadoMaquinaCartaoMenu;
 import net.mcreator.minerp.init.MinerpModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class GuiMaquinaCartaonoblocoScreen extends AbstractContainerScreen<GuiMaquinaCartaonoblocoMenu> implements MinerpModScreens.ScreenAccessor {
+public class GuiAprovadoMaquinaCartaoScreen extends AbstractContainerScreen<GuiAprovadoMaquinaCartaoMenu> implements MinerpModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	private EditBox senha;
-	private Button button_confirmar;
 
-	public GuiMaquinaCartaonoblocoScreen(GuiMaquinaCartaonoblocoMenu container, Inventory inventory, Component text) {
+	public GuiAprovadoMaquinaCartaoScreen(GuiAprovadoMaquinaCartaoMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 212;
-		this.imageHeight = 179;
+		this.imageWidth = 176;
+		this.imageHeight = 166;
 	}
 
 	@Override
 	public void updateMenuState(int elementType, String name, Object elementState) {
 		menuStateUpdateActive = true;
-		if (elementType == 0 && elementState instanceof String stringState) {
-			if (name.equals("senha"))
-				senha.setValue(stringState);
-		}
 		menuStateUpdateActive = false;
 	}
 
-	private static final ResourceLocation texture = ResourceLocation.parse("minerp:textures/screens/gui_maquina_cartaonobloco.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("minerp:textures/screens/gui_aprovado_maquina_cartao.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		senha.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
@@ -74,52 +59,17 @@ public class GuiMaquinaCartaonoblocoScreen extends AbstractContainerScreen<GuiMa
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-		if (senha.isFocused())
-			return senha.keyPressed(key, b, c);
 		return super.keyPressed(key, b, c);
 	}
 
 	@Override
-	public void resize(Minecraft minecraft, int width, int height) {
-		String senhaValue = senha.getValue();
-		super.resize(minecraft, width, height);
-		senha.setValue(senhaValue);
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		{
-			guiGraphics.drawString(this.font, VerValorDaGuiMaquinaCartaoProcedure.execute(world, x, y, z), 93, 8, -12829636, false);
-		}
-		{
-			guiGraphics.drawString(this.font, VerMetodoDaGuiMaquinaCartaoProcedure.execute(world, x, y, z), 101, 24, -12829636, false);
-		}
-		this.guiTools$renderMultilineLabel(guiGraphics, "Valor:", 49, 7, 40, 16, -16777216, false, 1.25F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Valor:", 48, 7, 40, 16, -16751104, false, 1.25F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "M\u00E9todo:", 49, 23, 56, 15, -16777216, false, 1.25F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "M\u00E9todo:", 48, 23, 56, 15, -16750951, false, 1.25F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Aprovado.", 52, 12, 120, 40, -12829636, false, 1.50F);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		senha = new EditBox(this.font, this.leftPos + 8, this.topPos + 47, 118, 18, Component.translatable("gui.minerp.gui_maquina_cartaonobloco.senha"));
-		senha.setMaxLength(8192);
-		senha.setResponder(content -> {
-			if (!menuStateUpdateActive)
-				menu.sendMenuStateUpdate(entity, 0, "senha", content, false);
-		});
-		senha.setHint(Component.translatable("gui.minerp.gui_maquina_cartaonobloco.senha"));
-		this.addWidget(this.senha);
-		button_confirmar = Button.builder(Component.translatable("gui.minerp.gui_maquina_cartaonobloco.button_confirmar"), e -> {
-			int x = GuiMaquinaCartaonoblocoScreen.this.x;
-			int y = GuiMaquinaCartaonoblocoScreen.this.y;
-			if (true) {
-				PacketDistributor.sendToServer(new GuiMaquinaCartaonoblocoButtonMessage(0, x, y, z));
-				GuiMaquinaCartaonoblocoButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}).bounds(this.leftPos + 134, this.topPos + 46, 70, 20).build();
-		this.addRenderableWidget(button_confirmar);
 	}
 
 	private final java.util.Map<String, java.util.List<String>> guiTools$multilineCache = new java.util.HashMap<>();
