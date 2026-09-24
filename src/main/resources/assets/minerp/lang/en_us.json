@@ -103,5 +103,6 @@
   "item.minerp.recibo_de_venda": "Recibo De Venda",
   "block.minerp.transferidor_de_energia": "Transferidor De Energia",
   "item.minerp.bateria": "Bateria All",
-  "block.minerp.geradorv_1": "Gerador V1"
+  "block.minerp.geradorv_1": "Gerador V1",
+  "item.minerp.chave_algema": "Chave_Algema"
 }

@@ -46,6 +46,7 @@ public class MinerpModItems {
 	public static final DeferredItem<Item> TRANSFERIDOR_DE_ENERGIA;
 	public static final DeferredItem<Item> BATERIA;
 	public static final DeferredItem<Item> GERADORV_1;
+	public static final DeferredItem<Item> CHAVE_ALGEMA;
 	static {
 		VD_1 = REGISTRY.register("vd_1", VD1Item::new);
 		VD_050 = REGISTRY.register("vd_050", VD050Item::new);
@@ -71,6 +72,7 @@ public class MinerpModItems {
 		TRANSFERIDOR_DE_ENERGIA = block(MinerpModBlocks.TRANSFERIDOR_DE_ENERGIA, new Item.Properties().stacksTo(16));
 		BATERIA = REGISTRY.register("bateria", BateriaItem::new);
 		GERADORV_1 = block(MinerpModBlocks.GERADORV_1, new Item.Properties().stacksTo(32));
+		CHAVE_ALGEMA = REGISTRY.register("chave_algema", ChaveAlgemaItem::new);
 	}
 
 	// Start of user code block custom items
