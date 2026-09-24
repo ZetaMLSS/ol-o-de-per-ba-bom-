@@ -15,30 +15,36 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.minerp.init.MinerpModItems;
+import net.mcreator.minerp.MinerpMod;
 
 public class MaquinaCartaoOnBlockRightclickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		if (!entity.isShiftKeyDown() && getBlockNBTLogic(world, BlockPos.containing(x, y, z), "usando") == true) {
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal("Em uso!"), false);
 			if (entity instanceof Player _player)
 				_player.closeContainer();
 		}
-		if (!entity.isShiftKeyDown() && getBlockNBTLogic(world, BlockPos.containing(x, y, z), "usando") == false) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putBoolean("usando", true);
+		MinerpMod.queueServerWork(4, () -> {
+			if (!entity.isShiftKeyDown() && getBlockNBTLogic(world, BlockPos.containing(x, y, z), "usando") == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null) {
+						_blockEntity.getPersistentData().putBoolean("usando", true);
+					}
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-		}
+		});
 		if (entity.isShiftKeyDown()) {
 			if (entity instanceof Player _player)
 				_player.closeContainer();
