@@ -1,5 +1,6 @@
 package net.mcreator.minerp.procedures;
 
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.common.extensions.ILevelExtension;
 import net.neoforged.neoforge.capabilities.Capabilities;
@@ -20,13 +21,18 @@ public class PegarEnergiaTransferidorEPassarPraCimaProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		ItemStack Itemdentro = ItemStack.EMPTY;
 		if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == MinerpModItems.BATERIA.get()) {
-			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("energia") > 0) {
+			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("bateria") >= 0) {
 				if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == MinerpModBlocks.CARREGADOR_CELULAR.get()) {
 					Itemdentro = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).copy();
 					{
-						final String _tagName = "energia";
-						final double _tagValue = (Itemdentro.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("energia") - 2);
+						final String _tagName = "bateria";
+						final double _tagValue = (Itemdentro.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("bateria") - 2);
 						CustomData.update(DataComponents.CUSTOM_DATA, Itemdentro, tag -> tag.putDouble(_tagName, _tagValue));
+					}
+					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+						ItemStack _setstack = Itemdentro.copy();
+						_setstack.setCount(1);
+						_itemHandlerModifiable.setStackInSlot(0, _setstack);
 					}
 					if (getBlockNBTNumber(world, BlockPos.containing(x, y + 1, z), "energia") < 100) {
 						if (!world.isClientSide()) {

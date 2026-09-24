@@ -336,7 +336,7 @@ public class MinerpModBerSupport {
 		Vec3 lookEnd = eye.add(entity.getViewVector(1.0f).scale(reach));
 		Vec3 start = worldToLocal(eye, pos, state, false);
 		Vec3 end = worldToLocal(lookEnd, pos, state, false);
-		double[][] slots = new double[][]{{0.5, 0.35000000000000003, 0.5, 0.175, 0.175, 0.175, 0}};
+		double[][] slots = new double[][]{{0.5, 0.39999999999999997, 0.5, 0.175, 0.175, 0.175, 0}};
 		return closestSlot(start, end, slots);
 	}
 }

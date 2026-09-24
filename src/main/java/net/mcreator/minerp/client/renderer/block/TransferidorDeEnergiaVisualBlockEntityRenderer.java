@@ -63,9 +63,9 @@ public class TransferidorDeEnergiaVisualBlockEntityRenderer implements BlockEnti
 				poseStack.pushPose();
 				poseStack.translate(0.5, 0.5, 0.5);
 				applyFacingRotation(poseStack, state);
-				poseStack.translate(0, -0.14999999999999997, 0);
+				poseStack.translate(0, -0.10000000000000003, 0);
 				poseStack.mulPose(Axis.YP.rotationDegrees(360f));
-				float _scale0 = 0.8f;
+				float _scale0 = 0.9f;
 				poseStack.scale(_scale0, _scale0, _scale0);
 				itemRenderer.renderStatic(stack, ItemDisplayContext.FIXED, packedLight, packedOverlay, poseStack, bufferSource, level, 0);
 				poseStack.popPose();
