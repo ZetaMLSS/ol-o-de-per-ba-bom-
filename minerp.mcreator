@@ -3363,7 +3363,21 @@
           "src/main/resources/assets/minerp/models/item/chave_algema.json"
         ]
       },
-      "path": "~/Itens/ChaveAlgema"
+      "path": "~/Itens/Algema"
+    },
+    {
+      "name": "GerarCodigo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gerar_codigo",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/GerarCodigoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Algema"
     }
   ],
   "variable_elements": [
@@ -3905,7 +3919,7 @@
             "children": []
           },
           {
-            "name": "ChaveAlgema",
+            "name": "Algema",
             "children": []
           }
         ]
