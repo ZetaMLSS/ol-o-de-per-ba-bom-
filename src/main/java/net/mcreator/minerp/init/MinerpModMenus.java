@@ -48,6 +48,7 @@ public class MinerpModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<GuiMaquinaCartaonoblocoMenu>> GUI_MAQUINA_CARTAONOBLOCO = REGISTRY.register("gui_maquina_cartaonobloco", () -> IMenuTypeExtension.create(GuiMaquinaCartaonoblocoMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<GuiAprovadoMaquinaCartaoMenu>> GUI_APROVADO_MAQUINA_CARTAO = REGISTRY.register("gui_aprovado_maquina_cartao", () -> IMenuTypeExtension.create(GuiAprovadoMaquinaCartaoMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<GuiDoGeradorv1Menu>> GUI_DO_GERADORV_1 = REGISTRY.register("gui_do_geradorv_1", () -> IMenuTypeExtension.create(GuiDoGeradorv1Menu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<GuiTransferidorDeEnergiaMenu>> GUI_TRANSFERIDOR_DE_ENERGIA = REGISTRY.register("gui_transferidor_de_energia", () -> IMenuTypeExtension.create(GuiTransferidorDeEnergiaMenu::new));
 
 	public interface MenuAccessor {
 		Map<String, Object> getMenuState();

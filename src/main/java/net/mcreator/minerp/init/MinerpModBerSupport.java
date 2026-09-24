@@ -59,6 +59,24 @@ public class MinerpModBerSupport {
 				event.setUseItem(TriState.FALSE);
 			}
 		}
+		if (block == MinerpModBlocks.TRANSFERIDOR_DE_ENERGIA.get()) {
+			if (entity.isShiftKeyDown())
+				return;
+			if (areSlotsLocked(world, pos))
+				return;
+			ItemStack itemstack = entity.getItemInHand(event.getHand());
+			int slotid = -1;
+			boolean handled = false;
+			if (!world.isClientSide())
+				slotid = insertOrExtractNext(world, pos, entity, event.getHand());
+			handled = true;
+			if (handled) {
+				event.setCanceled(true);
+				event.setCancellationResult(InteractionResult.sidedSuccess(world.isClientSide()));
+				event.setUseBlock(TriState.FALSE);
+				event.setUseItem(TriState.FALSE);
+			}
+		}
 	}
 
 	public static int getLookedSlot(LevelAccessor world, BlockPos pos, Entity entity) {
@@ -68,6 +86,8 @@ public class MinerpModBerSupport {
 		Block block = state.getBlock();
 		if (block == MinerpModBlocks.CARREGADOR_CELULAR.get())
 			return hitTest_ver_celular_carregando_na_base(pos, state, entity);
+		if (block == MinerpModBlocks.TRANSFERIDOR_DE_ENERGIA.get())
+			return hitTest_transferidor_de_energia_visual(pos, state, entity);
 		return -1;
 	}
 
@@ -76,6 +96,8 @@ public class MinerpModBerSupport {
 			return 0;
 		Block block = world.getBlockState(pos).getBlock();
 		if (block == MinerpModBlocks.CARREGADOR_CELULAR.get())
+			return 1;
+		if (block == MinerpModBlocks.TRANSFERIDOR_DE_ENERGIA.get())
 			return 1;
 		return 0;
 	}
@@ -86,6 +108,10 @@ public class MinerpModBerSupport {
 		Block block = world.getBlockState(pos).getBlock();
 		if (block == MinerpModBlocks.CARREGADOR_CELULAR.get()) {
 			int[] map = INV_ver_celular_carregando_na_base;
+			return displayIndex < map.length ? map[displayIndex] : -1;
+		}
+		if (block == MinerpModBlocks.TRANSFERIDOR_DE_ENERGIA.get()) {
+			int[] map = INV_transferidor_de_energia_visual;
 			return displayIndex < map.length ? map[displayIndex] : -1;
 		}
 		return -1;
@@ -299,6 +325,18 @@ public class MinerpModBerSupport {
 		Vec3 start = worldToLocal(eye, pos, state, false);
 		Vec3 end = worldToLocal(lookEnd, pos, state, false);
 		double[][] slots = new double[][]{{0.49000000000000005, 0.08, 0.55, 0.175, 0.175, 0.175, 0}};
+		return closestSlot(start, end, slots);
+	}
+
+	private static final int[] INV_transferidor_de_energia_visual = new int[]{0};
+
+	private static int hitTest_transferidor_de_energia_visual(BlockPos pos, BlockState state, Entity entity) {
+		double reach = entity instanceof Player player ? player.blockInteractionRange() : 5.0;
+		Vec3 eye = entity.getEyePosition(1.0f);
+		Vec3 lookEnd = eye.add(entity.getViewVector(1.0f).scale(reach));
+		Vec3 start = worldToLocal(eye, pos, state, false);
+		Vec3 end = worldToLocal(lookEnd, pos, state, false);
+		double[][] slots = new double[][]{{0.5, 0.35000000000000003, 0.5, 0.175, 0.175, 0.175, 0}};
 		return closestSlot(start, end, slots);
 	}
 }

@@ -3290,6 +3290,66 @@
         ]
       },
       "path": "~/Bloco/Geradores De Energia/GeradorV1"
+    },
+    {
+      "name": "GuiTransferidorDeEnergia",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gui_transferidor_de_energia",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/client/gui/GuiTransferidorDeEnergiaScreen.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/GuiTransferidorDeEnergiaMenu.java"
+        ]
+      },
+      "path": "~/Bloco/Transferidor De Energia"
+    },
+    {
+      "name": "PegarEnergiaTransferidorEPassarPraCima",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pegar_energia_transferidor_e_passar_pra_cima",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/PegarEnergiaTransferidorEPassarPraCimaProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Transferidor De Energia"
+    },
+    {
+      "name": "TransferidorDeEnergiaVisual",
+      "type": "ber",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transferidor_de_energia_visual",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/init/MinerpModBerClient.java",
+          "src/main/java/net/mcreator/minerp/client/renderer/block/TransferidorDeEnergiaVisualBlockEntityRenderer.java",
+          "src/main/java/net/mcreator/minerp/init/MinerpModBerSupport.java"
+        ]
+      },
+      "path": "~/Bloco/Transferidor De Energia"
     }
   ],
   "variable_elements": [

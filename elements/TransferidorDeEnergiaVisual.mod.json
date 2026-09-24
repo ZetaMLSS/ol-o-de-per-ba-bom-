@@ -1,0 +1,34 @@
+{
+  "_fv": 89,
+  "_type": "ber",
+  "definition": {
+    "targetBlock": "CUSTOM:TransferidorDeEnergia",
+    "displaySlots": [
+      {
+        "slotName": "slot0",
+        "inventorySlot": 0,
+        "offsetX": 0.5,
+        "offsetY": 0.35000000000000003,
+        "offsetZ": 0.5,
+        "rotationX": 0.0,
+        "rotationY": 180.0,
+        "rotationZ": 0.0,
+        "scale": 0.8,
+        "hitboxSize": 0.35,
+        "slotType": "REGULAR",
+        "hitboxX": 0.5,
+        "hitboxY": 0.12,
+        "hitboxZ": 0.5,
+        "displayContext": "FIXED",
+        "followBlockRotation": true,
+        "fixedItem": ""
+      }
+    ],
+    "rotateWithBlockFacing": true,
+    "enableSlotInteraction": false,
+    "interactionMode": "FILL_NEXT",
+    "sneakOpensGui": true,
+    "preventGuiWhenSlotHit": true,
+    "viewDistance": 64
+  }
+}
