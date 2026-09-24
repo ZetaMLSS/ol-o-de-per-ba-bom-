@@ -35,6 +35,7 @@ public class LerCartaoEDarResultadoNaMaquinaCartaoProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		ItemStack recibo = ItemStack.EMPTY;
 		if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof MinerpModMenus.MenuAccessor _menu0 ? _menu0.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == MinerpModItems.CARTAO_DE_CREDITO.get()) {
 			if (new Object() {
 				double convert(String s) {
@@ -70,6 +71,27 @@ public class LerCartaoEDarResultadoNaMaquinaCartaoProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
+							recibo = new ItemStack(MinerpModItems.RECIBO_DE_VENDA.get()).copy();
+							{
+								final String _tagName = "valor";
+								final double _tagValue = ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 10).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("valor"));
+								CustomData.update(DataComponents.CUSTOM_DATA, recibo, tag -> tag.putDouble(_tagName, _tagValue));
+							}
+							{
+								final String _tagName = "nickvendedor";
+								final String _tagValue = ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 10).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("nickvendedor"));
+								CustomData.update(DataComponents.CUSTOM_DATA, recibo, tag -> tag.putString(_tagName, _tagValue));
+							}
+							{
+								final String _tagName = "metodo";
+								final String _tagValue = "Debito";
+								CustomData.update(DataComponents.CUSTOM_DATA, recibo, tag -> tag.putString(_tagName, _tagValue));
+							}
+							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+								ItemStack _setstack = recibo.copy();
+								_setstack.setCount(1);
+								_itemHandlerModifiable.setStackInSlot(9, _setstack);
+							}
 							if (entity instanceof ServerPlayer _ent) {
 								BlockPos _bpos = BlockPos.containing(x, y, z);
 								_ent.openMenu(new MenuProvider() {
@@ -89,49 +111,17 @@ public class LerCartaoEDarResultadoNaMaquinaCartaoProcedure {
 									}
 								}, _bpos);
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(MinerpModItems.RECIBO_DE_VENDA.get()).copy();
-								_setstack.setCount(1);
-								_itemHandlerModifiable.setStackInSlot(9, _setstack);
-							}
-							{
-								final String _tagName = "valor";
-								final double _tagValue = ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 10).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("valor"));
-								CustomData.update(DataComponents.CUSTOM_DATA, (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 9).copy()), tag -> tag.putDouble(_tagName, _tagValue));
-							}
-							{
-								final String _tagName = "nickvendedor";
-								final String _tagValue = ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 10).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("nickvendedor"));
-								CustomData.update(DataComponents.CUSTOM_DATA, (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 9).copy()), tag -> tag.putString(_tagName, _tagValue));
-							}
-							{
-								final String _tagName = "metodo";
-								final String _tagValue = "Debito";
-								CustomData.update(DataComponents.CUSTOM_DATA, (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 9).copy()), tag -> tag.putString(_tagName, _tagValue));
-							}
 							break;
-						} else {
-							if (entity instanceof Player _player && _player.containerMenu instanceof MinerpModMenus.MenuAccessor _menu)
-								_menu.sendMenuStateUpdate(_player, 0, "senha", "Cart\u00E3o Recusado.", true);
-						}
-					} else {
-						if (entity instanceof Player _player && _player.containerMenu instanceof MinerpModMenus.MenuAccessor _menu)
-							_menu.sendMenuStateUpdate(_player, 0, "senha", "Cart\u00E3o invalido.", true);
-					}
-					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof MinerpModMenus.MenuAccessor _menu28 ? _menu28.getSlots().get(0).getItem() : ItemStack.EMPTY)
-							.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("codigo") == entityiterator.getData(MinerpModVariables.PLAYER_VARIABLES).CartaoVinculado) {
-						if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 10).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("credito") == true
-								&& entityiterator.getData(MinerpModVariables.PLAYER_VARIABLES).CreditoBanco >= (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 10).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY)
-										.copyTag().getDouble("valor")
+						} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 10).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("credito") == true
 								&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 10).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag()
-										.getDouble("valor") <= entityiterator.getData(MinerpModVariables.PLAYER_VARIABLES).LimiteDoCredito) {
+										.getDouble("valor") <= entityiterator.getData(MinerpModVariables.PLAYER_VARIABLES).LimiteDoCredito - entityiterator.getData(MinerpModVariables.PLAYER_VARIABLES).CreditoBanco) {
 							MinerpModVariables.MapVariables.get(world).DinheiroDoProprioBanco = MinerpModVariables.MapVariables.get(world).DinheiroDoProprioBanco
 									- (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 10).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("valor");
 							MinerpModVariables.MapVariables.get(world).markSyncDirty();
 							{
 								MinerpModVariables.PlayerVariables _vars = entityiterator.getData(MinerpModVariables.PLAYER_VARIABLES);
 								_vars.CreditoBanco = entityiterator.getData(MinerpModVariables.PLAYER_VARIABLES).CreditoBanco
-										- (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 10).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("valor") * 1.15;
+										+ (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 10).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("valor") * 1.15;
 								_vars.markSyncDirty();
 							}
 							if (!world.isClientSide()) {
@@ -144,6 +134,27 @@ public class LerCartaoEDarResultadoNaMaquinaCartaoProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
+							recibo = new ItemStack(MinerpModItems.RECIBO_DE_VENDA.get()).copy();
+							{
+								final String _tagName = "valor";
+								final double _tagValue = ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 10).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("valor"));
+								CustomData.update(DataComponents.CUSTOM_DATA, recibo, tag -> tag.putDouble(_tagName, _tagValue));
+							}
+							{
+								final String _tagName = "nickvendedor";
+								final String _tagValue = ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 10).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("nickvendedor"));
+								CustomData.update(DataComponents.CUSTOM_DATA, recibo, tag -> tag.putString(_tagName, _tagValue));
+							}
+							{
+								final String _tagName = "metodo";
+								final String _tagValue = "Credito";
+								CustomData.update(DataComponents.CUSTOM_DATA, recibo, tag -> tag.putString(_tagName, _tagValue));
+							}
+							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+								ItemStack _setstack = recibo.copy();
+								_setstack.setCount(1);
+								_itemHandlerModifiable.setStackInSlot(9, _setstack);
+							}
 							if (entity instanceof ServerPlayer _ent) {
 								BlockPos _bpos = BlockPos.containing(x, y, z);
 								_ent.openMenu(new MenuProvider() {
@@ -162,26 +173,6 @@ public class LerCartaoEDarResultadoNaMaquinaCartaoProcedure {
 										return new GuiAprovadoMaquinaCartaoMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 									}
 								}, _bpos);
-							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(MinerpModItems.RECIBO_DE_VENDA.get()).copy();
-								_setstack.setCount(1);
-								_itemHandlerModifiable.setStackInSlot(9, _setstack);
-							}
-							{
-								final String _tagName = "valor";
-								final double _tagValue = ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 10).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("valor"));
-								CustomData.update(DataComponents.CUSTOM_DATA, (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 9).copy()), tag -> tag.putDouble(_tagName, _tagValue));
-							}
-							{
-								final String _tagName = "nickvendedor";
-								final String _tagValue = ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 10).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("nickvendedor"));
-								CustomData.update(DataComponents.CUSTOM_DATA, (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 9).copy()), tag -> tag.putString(_tagName, _tagValue));
-							}
-							{
-								final String _tagName = "metodo";
-								final String _tagValue = "Credito";
-								CustomData.update(DataComponents.CUSTOM_DATA, (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 9).copy()), tag -> tag.putString(_tagName, _tagValue));
 							}
 							break;
 						} else {

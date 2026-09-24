@@ -48,7 +48,6 @@
         }
       }
     ],
-    "onOpen": "AoAbrirMaquinaDeCartao",
     "onClosed": "AoFecharMaquinaDeCartao",
     "gridSettings": {
       "sx": 18,

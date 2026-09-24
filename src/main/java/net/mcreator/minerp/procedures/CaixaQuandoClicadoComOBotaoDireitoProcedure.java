@@ -36,11 +36,6 @@ public class CaixaQuandoClicadoComOBotaoDireitoProcedure {
 				final double _tagValue = 5000;
 				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 			}
-			{
-				MinerpModVariables.PlayerVariables _vars = entity.getData(MinerpModVariables.PLAYER_VARIABLES);
-				_vars.DinheiroBanco = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero");
-				_vars.markSyncDirty();
-			}
 			MinerpModVariables.MapVariables.get(world).numeros_registrados = MinerpModVariables.MapVariables.get(world).numeros_registrados + ""
 					+ Math.round((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero")) + ",";
 			MinerpModVariables.MapVariables.get(world).markSyncDirty();

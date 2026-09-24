@@ -38,6 +38,8 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 99,
+    "onRightClickedInAir": "ReciboDeVendaMostrarNoChat",
+    "onRightClickedOnBlock": "ReciboDeVendaMostrarNoChat",
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

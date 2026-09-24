@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minerp:block/geradorv1baixo",
+    "up": "minerp:block/geradorv1baixo",
+    "north": "minerp:block/geradorv1",
+    "east": "minerp:block/geradorv1lados",
+    "south": "minerp:block/geradorv1lados",
+    "west": "minerp:block/geradorv1lados",
+    "particle": "minerp:block/geradorv1baixo"
+  },
+  "render_type": "solid"
+}

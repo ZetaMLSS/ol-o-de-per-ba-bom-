@@ -1,0 +1,162 @@
+{
+  "_fv": 89,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 241,
+          "y": 68,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 151,
+          "y": 54,
+          "locked": false
+        }
+      },
+      {
+        "type": "progress_bar",
+        "data": {
+          "name": "progressbar_progress_bar",
+          "sua_image_mode": false,
+          "current": {
+            "fixedValue": 0.0,
+            "name": "RetornarEnergiaDaBateriaDentroDoGerador"
+          },
+          "max": {
+            "fixedValue": 50000.0
+          },
+          "direction": "BOTTOM_TO_TOP",
+          "sua_color_effect": "solid",
+          "color1": {
+            "value": -11163051,
+            "falpha": 0.0
+          },
+          "color2": {
+            "value": -43691,
+            "falpha": 0.0
+          },
+          "color3": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "color4": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "thresholdPercent": 0.25,
+          "emptyColor": {
+            "value": -14145496,
+            "falpha": 0.0
+          },
+          "borderColor": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "borderWidth": 1,
+          "sua_pulse_speed": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "width": 12,
+          "height": 52,
+          "anchorPoint": "CENTER",
+          "x": 271,
+          "y": 51,
+          "locked": false
+        }
+      },
+      {
+        "type": "progress_bar",
+        "data": {
+          "name": "progressbar_progress_bar1",
+          "sua_image_mode": true,
+          "current": {
+            "fixedValue": 0.0,
+            "name": "RetornarEnergiaDoGuiGerador"
+          },
+          "max": {
+            "fixedValue": 1600.0
+          },
+          "direction": "BOTTOM_TO_TOP",
+          "sua_color_effect": "solid",
+          "color1": {
+            "value": -11163051,
+            "falpha": 0.0
+          },
+          "color2": {
+            "value": -43691,
+            "falpha": 0.0
+          },
+          "color3": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "color4": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "thresholdPercent": 0.25,
+          "emptyColor": {
+            "value": -14145496,
+            "falpha": 0.0
+          },
+          "borderColor": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "borderWidth": 1,
+          "sua_pulse_speed": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "emptyTexture": "fogoapagado.png",
+          "fullTexture": "fogoacesso.png",
+          "width": 18,
+          "height": 18,
+          "anchorPoint": "CENTER",
+          "x": 151,
+          "y": 80,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -6,7 +6,7 @@ import net.minecraft.core.BlockPos;
 
 public class MostraValorBancoAtmDoCartao2Procedure {
 	public static String execute(LevelAccessor world, double x, double y, double z) {
-		return "" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "valordaconta");
+		return new java.text.DecimalFormat("##.##").format(getBlockNBTNumber(world, BlockPos.containing(x, y, z), "valordaconta"));
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {

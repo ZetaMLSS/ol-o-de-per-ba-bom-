@@ -35,6 +35,7 @@ public class MinerpModScreens {
 		event.register(MinerpModMenus.GUI_MAQUINA_CONFIG.get(), GuiMaquinaConfigScreen::new);
 		event.register(MinerpModMenus.GUI_MAQUINA_CARTAONOBLOCO.get(), GuiMaquinaCartaonoblocoScreen::new);
 		event.register(MinerpModMenus.GUI_APROVADO_MAQUINA_CARTAO.get(), GuiAprovadoMaquinaCartaoScreen::new);
+		event.register(MinerpModMenus.GUI_DO_GERADORV_1.get(), GuiDoGeradorv1Screen::new);
 	}
 
 	public interface ScreenAccessor {

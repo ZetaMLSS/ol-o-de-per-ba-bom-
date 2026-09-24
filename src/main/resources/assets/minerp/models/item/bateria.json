@@ -1,0 +1,7 @@
+{
+  "parent": "minerp:custom/bateriaall",
+  "textures": {
+    "0": "minerp:block/bateriaall",
+    "particle": "minecraft:item/light_15"
+  }
+}

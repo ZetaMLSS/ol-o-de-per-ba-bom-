@@ -26,7 +26,6 @@ public class MinerpModTabs {
 				tabData.accept(MinerpModItems.VD_100.get());
 				tabData.accept(MinerpModItems.VD_200.get());
 				tabData.accept(MinerpModItems.CARTEIRA.get());
-				tabData.accept(MinerpModBlocks.MAQUINA_CARTAO.get().asItem());
 			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MINERP_TEC = REGISTRY.register("minerp_tec",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.minerp.minerp_tec")).icon(() -> new ItemStack(MinerpModBlocks.ASIC_V_1.get())).displayItems((parameters, tabData) -> {
@@ -37,5 +36,10 @@ public class MinerpModTabs {
 				tabData.accept(MinerpModBlocks.COMPUTADOR.get().asItem());
 				tabData.accept(MinerpModBlocks.MONITOR.get().asItem());
 				tabData.accept(MinerpModItems.CAIXA.get());
+				tabData.accept(MinerpModBlocks.CARREGADOR_CELULAR.get().asItem());
+				tabData.accept(MinerpModItems.MAQUINA_CARTAO_ITEM.get());
+				tabData.accept(MinerpModBlocks.TRANSFERIDOR_DE_ENERGIA.get().asItem());
+				tabData.accept(MinerpModItems.BATERIA.get());
+				tabData.accept(MinerpModBlocks.GERADORV_1.get().asItem());
 			}).withTabsBefore(MINERP_MONEY.getId()).build());
 }

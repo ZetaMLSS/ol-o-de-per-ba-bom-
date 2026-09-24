@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "minerp:block/geradorv_1"
+    },
+    "facing=east": {
+      "model": "minerp:block/geradorv_1",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minerp:block/geradorv_1",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minerp:block/geradorv_1",
+      "y": 270
+    }
+  }
+}

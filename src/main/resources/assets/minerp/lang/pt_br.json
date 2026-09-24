@@ -100,5 +100,8 @@
   "gui.minerp.gui_maquina_cartaonobloco.label_ecreditooudebido": "ecreditooudebido",
   "gui.minerp.gui_maquina_cartaonobloco.senha": "Sua Senha:",
   "gui.minerp.gui_maquina_cartaonobloco.button_confirmar": "Confirmar",
-  "item.minerp.recibo_de_venda": "Recibo De Venda"
+  "item.minerp.recibo_de_venda": "Recibo De Venda",
+  "block.minerp.transferidor_de_energia": "Transferidor De Energia",
+  "item.minerp.bateria": "Bateria All",
+  "block.minerp.geradorv_1": "Gerador V1"
 }

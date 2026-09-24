@@ -287,7 +287,7 @@ public class ATMTELA1Menu extends AbstractContainerMenu implements MinerpModMenu
 			double x = menu.x;
 			double y = menu.y;
 			double z = menu.z;
-			ATMTELA1ThisGUIIsOpenedProcedure.execute(world, x, y, z);
+			ATMTELA1ThisGUIIsOpenedProcedure.execute();
 		}
 	}
 }

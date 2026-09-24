@@ -50,9 +50,7 @@
     "maxStackSize": 1,
     "rarity": "COMMON",
     "immuneToFire": false,
-    "creativeTabs": [
-      "CUSTOM:MINERPMoney"
-    ],
+    "creativeTabs": [],
     "destroyTool": "Not specified",
     "customDrop": "",
     "dropAmount": 1,

@@ -1,0 +1,9 @@
+{
+  "parent": "minerp:custom/transferidordeenergia",
+  "textures": {
+    "all": "minecraft:block/iron_block",
+    "particle": "minecraft:block/iron_block",
+    "0": "minerp:block/transferidor"
+  },
+  "render_type": "solid"
+}

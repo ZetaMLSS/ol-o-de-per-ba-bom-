@@ -728,11 +728,11 @@
       "registry_name": "carregador_celular",
       "metadata": {
         "files": [
-          "src/main/resources/assets/minerp/blockstates/carregador_celular.json",
           "src/main/resources/assets/minerp/models/item/carregador_celular.json",
-          "src/main/java/net/mcreator/minerp/block/CarregadorCelularBlock.java",
-          "src/main/resources/data/minerp/loot_table/blocks/carregador_celular.json",
+          "src/main/resources/assets/minerp/blockstates/carregador_celular.json",
           "src/main/resources/assets/minerp/models/block/carregador_celular.json",
+          "src/main/resources/data/minerp/loot_table/blocks/carregador_celular.json",
+          "src/main/java/net/mcreator/minerp/block/CarregadorCelularBlock.java",
           "src/main/java/net/mcreator/minerp/block/entity/CarregadorCelularBlockEntity.java"
         ]
       },
@@ -2735,24 +2735,7 @@
       "locked_code": false,
       "registry_name": "atmtela_1_this_gui_is_opened",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
+        "dependencies": [],
         "files": [
           "src/main/java/net/mcreator/minerp/procedures/ATMTELA1ThisGUIIsOpenedProcedure.java"
         ]
@@ -3106,6 +3089,207 @@
         ]
       },
       "path": "~/Itens/MaquininhaCartao"
+    },
+    {
+      "name": "ReciboDeVendaMostrarNoChat",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recibo_de_venda_mostrar_no_chat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/ReciboDeVendaMostrarNoChatProcedure.java"
+        ]
+      },
+      "path": "~/Itens/MaquininhaCartao"
+    },
+    {
+      "name": "TransferidorDeEnergia",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transferidor_de_energia",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minerp/models/block/transferidor_de_energia.json",
+          "src/main/java/net/mcreator/minerp/block/TransferidorDeEnergiaBlock.java",
+          "src/main/resources/assets/minerp/blockstates/transferidor_de_energia.json",
+          "src/main/java/net/mcreator/minerp/block/entity/TransferidorDeEnergiaBlockEntity.java",
+          "src/main/resources/data/minerp/loot_table/blocks/transferidor_de_energia.json",
+          "src/main/resources/assets/minerp/models/item/transferidor_de_energia.json"
+        ]
+      },
+      "path": "~/Bloco/Transferidor De Energia"
+    },
+    {
+      "name": "Bateria",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bateria",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/item/BateriaItem.java",
+          "src/main/resources/assets/minerp/models/item/bateria.json"
+        ]
+      },
+      "path": "~/Itens/Bateria"
+    },
+    {
+      "name": "BateriaRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bateria_rightclicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/BateriaRightclickedOnBlockProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Bateria"
+    },
+    {
+      "name": "Geradorv1",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "geradorv_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minerp/blockstates/geradorv_1.json",
+          "src/main/java/net/mcreator/minerp/block/entity/Geradorv1BlockEntity.java",
+          "src/main/resources/assets/minerp/models/block/geradorv_1.json",
+          "src/main/resources/data/minerp/loot_table/blocks/geradorv_1.json",
+          "src/main/resources/assets/minerp/models/item/geradorv_1.json",
+          "src/main/java/net/mcreator/minerp/block/Geradorv1Block.java"
+        ]
+      },
+      "path": "~/Bloco/Geradores De Energia/GeradorV1"
+    },
+    {
+      "name": "GuiDoGeradorv1",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gui_do_geradorv_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/client/gui/GuiDoGeradorv1Screen.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/GuiDoGeradorv1Menu.java"
+        ]
+      },
+      "path": "~/Bloco/Geradores De Energia/GeradorV1"
+    },
+    {
+      "name": "Geradorv1Procedureenergia",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "geradorv_1_procedureenergia",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/Geradorv1ProcedureenergiaProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Geradores De Energia/GeradorV1"
+    },
+    {
+      "name": "RetornarEnergiaDoGuiGerador",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retornar_energia_do_gui_gerador",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/RetornarEnergiaDoGuiGeradorProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Geradores De Energia/GeradorV1"
+    },
+    {
+      "name": "RetornarEnergiaDaBateriaDentroDoGerador",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retornar_energia_da_bateria_dentro_do_gerador",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/RetornarEnergiaDaBateriaDentroDoGeradorProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Geradores De Energia/GeradorV1"
     }
   ],
   "variable_elements": [
@@ -3260,6 +3444,7 @@
       "~Celular@CUSTOM:Celular"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~Geradorv1@CUSTOM:Geradorv1",
       "~ATMSup@CUSTOM:ATMSup",
       "~Monitor@CUSTOM:Monitor",
       "~Computador@CUSTOM:Computador",
@@ -3276,8 +3461,7 @@
       "VD50",
       "VD100",
       "VD200",
-      "Carteira",
-      "MaquinaCartao"
+      "Carteira"
     ]
   },
   "language_map": {
@@ -3383,7 +3567,10 @@
       "gui.minerp.gui_maquina_cartaonobloco.label_ecreditooudebido": "ecreditooudebido",
       "gui.minerp.gui_maquina_cartaonobloco.senha": "Sua Senha:",
       "gui.minerp.gui_maquina_cartaonobloco.button_confirmar": "Confirmar",
-      "item.minerp.recibo_de_venda": "Recibo De Venda"
+      "item.minerp.recibo_de_venda": "Recibo De Venda",
+      "block.minerp.transferidor_de_energia": "Transferidor De Energia",
+      "item.minerp.bateria": "Bateria All",
+      "block.minerp.geradorv_1": "Gerador V1"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -3487,7 +3674,10 @@
       "gui.minerp.gui_maquina_cartaonobloco.label_ecreditooudebido": "ecreditooudebido",
       "gui.minerp.gui_maquina_cartaonobloco.senha": "Sua Senha:",
       "gui.minerp.gui_maquina_cartaonobloco.button_confirmar": "Confirmar",
-      "item.minerp.recibo_de_venda": "Recibo De Venda"
+      "item.minerp.recibo_de_venda": "Recibo De Venda",
+      "block.minerp.transferidor_de_energia": "Transferidor De Energia",
+      "item.minerp.bateria": "Bateria All",
+      "block.minerp.geradorv_1": "Gerador V1"
     }
   },
   "metadata": {
@@ -3633,6 +3823,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "Bateria",
+            "children": []
           }
         ]
       },
@@ -3698,6 +3892,19 @@
             "children": [
               {
                 "name": "Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Transferidor De Energia",
+            "children": []
+          },
+          {
+            "name": "Geradores De Energia",
+            "children": [
+              {
+                "name": "GeradorV1",
                 "children": []
               }
             ]
