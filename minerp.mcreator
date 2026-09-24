@@ -3434,29 +3434,6 @@
         ]
       },
       "path": "~/Itens/Algema"
-    },
-    {
-      "name": "Teste",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "teste",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/minerp/procedures/TesteProcedure.java"
-        ]
-      },
-      "path": "~/Itens/Algema"
     }
   ],
   "variable_elements": [

@@ -40,7 +40,6 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 99,
-    "onRightClickedInAir": "Teste",
     "onItemInInventoryTick": "GerarCodigoAlgema",
     "enableRanged": false,
     "shootConstantly": false,
