@@ -223,7 +223,6 @@
           },
           "hasShadow": false,
           "fontScale": 100,
-          "textProcedure": "NumeroNotificacoes",
           "width": 120,
           "height": 40,
           "x": 177,

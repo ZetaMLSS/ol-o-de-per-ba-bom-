@@ -50,10 +50,11 @@
     "glowCondition": {
       "fixedValue": false
     },
+    "guiBoundTo": "TelaCelularInicial",
     "openGUIOnRightClick": {
       "fixedValue": false
     },
-    "inventorySize": 9,
+    "inventorySize": 12,
     "inventoryStackSize": 99,
     "onRightClickedInAir": "CelularRightclicked",
     "onRightClickedOnBlock": "CelularRightclicked",

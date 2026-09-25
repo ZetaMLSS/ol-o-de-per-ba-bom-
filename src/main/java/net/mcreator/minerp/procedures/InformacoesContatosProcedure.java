@@ -1,5 +1,9 @@
 package net.mcreator.minerp.procedures;
 
+import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.capabilities.Capabilities;
+
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -14,66 +18,73 @@ public class InformacoesContatosProcedure {
 		if (entity == null)
 			return "";
 		if (((entity instanceof Player _entity0 && _entity0.containerMenu instanceof MinerpModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 1) {
-			if (!(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_1")).equals(""))) {
-				return ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_1")) + " - ("
-						+ ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_numero_1")) + ")";
+			if (!((getItemStackFromItemStackSlot(1, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getItem() == Blocks.AIR.asItem())) {
+				return ((getItemStackFromItemStackSlot(1, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("nome")) + " - ("
+						+ ((getItemStackFromItemStackSlot(1, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero")) + ")";
 			}
 			return "";
-		} else if (((entity instanceof Player _entity7 && _entity7.containerMenu instanceof MinerpModMenus.MenuAccessor _menu7) ? _menu7.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 2) {
-			if (!(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_2")).equals(""))) {
-				return ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_2")) + " - ("
-						+ ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_numero_2")) + ")";
+		} else if (((entity instanceof Player _entity10 && _entity10.containerMenu instanceof MinerpModMenus.MenuAccessor _menu10) ? _menu10.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 2) {
+			if (!((getItemStackFromItemStackSlot(2, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getItem() == Blocks.AIR.asItem())) {
+				return ((getItemStackFromItemStackSlot(2, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("nome")) + " - ("
+						+ ((getItemStackFromItemStackSlot(2, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero")) + ")";
 			}
 			return "";
-		} else if (((entity instanceof Player _entity14 && _entity14.containerMenu instanceof MinerpModMenus.MenuAccessor _menu14) ? _menu14.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 3) {
-			if (!(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_3")).equals(""))) {
-				return ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_3")) + " - ("
-						+ ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_numero_3")) + ")";
+		} else if (((entity instanceof Player _entity20 && _entity20.containerMenu instanceof MinerpModMenus.MenuAccessor _menu20) ? _menu20.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 3) {
+			if (!((getItemStackFromItemStackSlot(3, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getItem() == Blocks.AIR.asItem())) {
+				return ((getItemStackFromItemStackSlot(3, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("nome")) + " - ("
+						+ ((getItemStackFromItemStackSlot(3, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero")) + ")";
 			}
 			return "";
-		} else if (((entity instanceof Player _entity21 && _entity21.containerMenu instanceof MinerpModMenus.MenuAccessor _menu21) ? _menu21.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 4) {
-			if (!(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_4")).equals(""))) {
-				return ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_4")) + " - ("
-						+ ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_numero_4")) + ")";
+		} else if (((entity instanceof Player _entity30 && _entity30.containerMenu instanceof MinerpModMenus.MenuAccessor _menu30) ? _menu30.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 4) {
+			if (!((getItemStackFromItemStackSlot(4, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getItem() == Blocks.AIR.asItem())) {
+				return ((getItemStackFromItemStackSlot(4, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("nome")) + " - ("
+						+ ((getItemStackFromItemStackSlot(4, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero")) + ")";
 			}
 			return "";
-		} else if (((entity instanceof Player _entity28 && _entity28.containerMenu instanceof MinerpModMenus.MenuAccessor _menu28) ? _menu28.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 5) {
-			if (!(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_5")).equals(""))) {
-				return ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_5")) + " - ("
-						+ ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_numero_5")) + ")";
+		} else if (((entity instanceof Player _entity40 && _entity40.containerMenu instanceof MinerpModMenus.MenuAccessor _menu40) ? _menu40.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 5) {
+			if (!((getItemStackFromItemStackSlot(5, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getItem() == Blocks.AIR.asItem())) {
+				return ((getItemStackFromItemStackSlot(5, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("nome")) + " - ("
+						+ ((getItemStackFromItemStackSlot(5, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero")) + ")";
 			}
 			return "";
-		} else if (((entity instanceof Player _entity35 && _entity35.containerMenu instanceof MinerpModMenus.MenuAccessor _menu35) ? _menu35.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 6) {
-			if (!(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_6")).equals(""))) {
-				return ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_6")) + " - ("
-						+ ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_numero_6")) + ")";
+		} else if (((entity instanceof Player _entity50 && _entity50.containerMenu instanceof MinerpModMenus.MenuAccessor _menu50) ? _menu50.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 6) {
+			if (!((getItemStackFromItemStackSlot(6, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getItem() == Blocks.AIR.asItem())) {
+				return ((getItemStackFromItemStackSlot(6, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("nome")) + " - ("
+						+ ((getItemStackFromItemStackSlot(6, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero")) + ")";
 			}
 			return "";
-		} else if (((entity instanceof Player _entity42 && _entity42.containerMenu instanceof MinerpModMenus.MenuAccessor _menu42) ? _menu42.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 7) {
-			if (!(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_7")).equals(""))) {
-				return ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_7")) + " - ("
-						+ ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_numero_7")) + ")";
+		} else if (((entity instanceof Player _entity60 && _entity60.containerMenu instanceof MinerpModMenus.MenuAccessor _menu60) ? _menu60.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 7) {
+			if (!((getItemStackFromItemStackSlot(6, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getItem() == Blocks.AIR.asItem())) {
+				return ((getItemStackFromItemStackSlot(7, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("nome")) + " - ("
+						+ ((getItemStackFromItemStackSlot(7, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero")) + ")";
 			}
 			return "";
-		} else if (((entity instanceof Player _entity49 && _entity49.containerMenu instanceof MinerpModMenus.MenuAccessor _menu49) ? _menu49.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 8) {
-			if (!(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_8")).equals(""))) {
-				return ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_8")) + " - ("
-						+ ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_numero_8")) + ")";
+		} else if (((entity instanceof Player _entity70 && _entity70.containerMenu instanceof MinerpModMenus.MenuAccessor _menu70) ? _menu70.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 8) {
+			if (!((getItemStackFromItemStackSlot(8, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getItem() == Blocks.AIR.asItem())) {
+				return ((getItemStackFromItemStackSlot(8, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("nome")) + " - ("
+						+ ((getItemStackFromItemStackSlot(8, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero")) + ")";
 			}
 			return "";
-		} else if (((entity instanceof Player _entity56 && _entity56.containerMenu instanceof MinerpModMenus.MenuAccessor _menu56) ? _menu56.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 9) {
-			if (!(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_9")).equals(""))) {
-				return ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_9")) + " - ("
-						+ ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_numero_9")) + ")";
+		} else if (((entity instanceof Player _entity80 && _entity80.containerMenu instanceof MinerpModMenus.MenuAccessor _menu80) ? _menu80.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 9) {
+			if (!((getItemStackFromItemStackSlot(9, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getItem() == Blocks.AIR.asItem())) {
+				return ((getItemStackFromItemStackSlot(9, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("nome")) + " - ("
+						+ ((getItemStackFromItemStackSlot(9, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero")) + ")";
 			}
 			return "";
-		} else if (((entity instanceof Player _entity63 && _entity63.containerMenu instanceof MinerpModMenus.MenuAccessor _menu63) ? _menu63.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 10) {
-			if (!(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_10")).equals(""))) {
-				return ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_nome_10")) + " - ("
-						+ ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("contato_numero_10")) + ")";
+		} else if (((entity instanceof Player _entity90 && _entity90.containerMenu instanceof MinerpModMenus.MenuAccessor _menu90) ? _menu90.getMenuState(2, "slidercontatos", 0.0) : 0.0) == 10) {
+			if (!((getItemStackFromItemStackSlot(10, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getItem() == Blocks.AIR.asItem())) {
+				return ((getItemStackFromItemStackSlot(10, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("nome")) + " - ("
+						+ ((getItemStackFromItemStackSlot(10, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("numero")) + ")";
 			}
 			return "";
 		}
 		return "";
+	}
+
+	private static ItemStack getItemStackFromItemStackSlot(int slotID, ItemStack itemStack) {
+		IItemHandler itemHandler = itemStack.getCapability(Capabilities.ItemHandler.ITEM, null);
+		if (itemHandler != null)
+			return itemHandler.getStackInSlot(slotID).copy();
+		return ItemStack.EMPTY;
 	}
 }

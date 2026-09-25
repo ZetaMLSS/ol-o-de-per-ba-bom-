@@ -49,7 +49,7 @@ public record TelaChatsButtonMessage(int buttonID, int x, int y, int z) implemen
 			return;
 		if (buttonID == 0) {
 
-			EnviarmensagemProcedure.execute();
+			EnviarmensagemProcedure.execute(world, entity);
 		}
 	}
 

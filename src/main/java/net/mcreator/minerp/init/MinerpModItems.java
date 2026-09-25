@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.minerp.item.inventory.CelularInventoryCapability;
 import net.mcreator.minerp.item.inventory.CarteiraInventoryCapability;
 import net.mcreator.minerp.item.*;
 import net.mcreator.minerp.MinerpMod;
@@ -83,6 +84,7 @@ public class MinerpModItems {
 	// End of user code block custom items
 	@SubscribeEvent
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new CelularInventoryCapability(stack), CELULAR.get());
 		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new CarteiraInventoryCapability(stack), CARTEIRA.get());
 	}
 

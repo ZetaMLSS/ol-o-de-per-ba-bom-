@@ -106,7 +106,7 @@ public class TelaChatsScreen extends AbstractContainerScreen<TelaChatsMenu> impl
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.Texto3Procedure.execute(entity), ""), -28, -29, 79, 24, -12829636, false, 0.50F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.Texto2Procedure.execute(entity), ""), -28, -12, 79, 24, -12829636, false, 0.50F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.Texto1Procedure.execute(entity), ""), -28, 5, 79, 24, -12829636, false, 0.50F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.NumeroNotificacoesProcedure.execute(entity), ""), -26, -86, 120, 40, -12829636, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "", -26, -86, 120, 40, -12829636, false, 1.00F);
 	}
 
 	@Override

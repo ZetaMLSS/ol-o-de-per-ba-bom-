@@ -25,14 +25,9 @@ public class PegarEnergiaTransferidorEPassarPraCimaProcedure {
 				if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == MinerpModBlocks.CARREGADOR_CELULAR.get()) {
 					Itemdentro = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).copy();
 					{
-						final String _tagName = "bateria";
-						final double _tagValue = (Itemdentro.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("bateria") - 2);
-						CustomData.update(DataComponents.CUSTOM_DATA, Itemdentro, tag -> tag.putDouble(_tagName, _tagValue));
-					}
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = Itemdentro.copy();
-						_setstack.setCount(1);
-						_itemHandlerModifiable.setStackInSlot(0, _setstack);
+						final String _tagName = "usado";
+						final boolean _tagValue = true;
+						CustomData.update(DataComponents.CUSTOM_DATA, Itemdentro, tag -> tag.putBoolean(_tagName, _tagValue));
 					}
 					if (getBlockNBTNumber(world, BlockPos.containing(x, y + 1, z), "energia") < 100) {
 						if (!world.isClientSide()) {
@@ -44,6 +39,16 @@ public class PegarEnergiaTransferidorEPassarPraCimaProcedure {
 							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
+						{
+							final String _tagName = "bateria";
+							final double _tagValue = (Itemdentro.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("bateria") - 2);
+							CustomData.update(DataComponents.CUSTOM_DATA, Itemdentro, tag -> tag.putDouble(_tagName, _tagValue));
+						}
+						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+							ItemStack _setstack = Itemdentro.copy();
+							_setstack.setCount(1);
+							_itemHandlerModifiable.setStackInSlot(0, _setstack);
 						}
 					}
 				}
