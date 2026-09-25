@@ -42,16 +42,8 @@ public class SalvarContatoProcedure {
 					contato = new ItemStack(Items.PAPER).copy();
 					{
 						final String _tagName = "numero";
-						final double _tagValue = new Object() {
-							double convert(String s) {
-								try {
-									return Double.parseDouble(s.trim());
-								} catch (Exception e) {
-								}
-								return 0;
-							}
-						}.convert((entity instanceof Player _entity4 && _entity4.containerMenu instanceof MinerpModMenus.MenuAccessor _menu4) ? _menu4.getMenuState(0, "input_numero", "") : "");
-						CustomData.update(DataComponents.CUSTOM_DATA, contato, tag -> tag.putDouble(_tagName, _tagValue));
+						final String _tagValue = ((entity instanceof Player _entity4 && _entity4.containerMenu instanceof MinerpModMenus.MenuAccessor _menu4) ? _menu4.getMenuState(0, "input_numero", "") : "");
+						CustomData.update(DataComponents.CUSTOM_DATA, contato, tag -> tag.putString(_tagName, _tagValue));
 					}
 					{
 						final String _tagName = "nome";

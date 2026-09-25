@@ -43,7 +43,8 @@ public class Geradorv1ProcedureenergiaProcedure {
 					}
 				}
 			}
-			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == MinerpModItems.BATERIA.get() && getBlockNBTNumber(world, BlockPos.containing(x, y, z), "energia") > 0) {
+			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == MinerpModItems.BATERIA.get() && getBlockNBTNumber(world, BlockPos.containing(x, y, z), "energia") > 0
+					&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("bateria") < 50000) {
 				resultadoestado = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).copy();
 				{
 					final String _tagName = "bateria";

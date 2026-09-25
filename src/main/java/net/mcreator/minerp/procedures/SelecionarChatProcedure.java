@@ -32,7 +32,7 @@ public class SelecionarChatProcedure {
 				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY))).getItem() == Blocks.AIR.asItem())) {
 			{
 				final String _tagName = "numero_chat_ativo";
-				final double _tagValue = Math.round((entity instanceof Player _entity4 && _entity4.containerMenu instanceof MinerpModMenus.MenuAccessor _menu4) ? _menu4.getMenuState(2, "slidercontatos", 0.0) : 0.0);
+				final double _tagValue = ((entity instanceof Player _entity4 && _entity4.containerMenu instanceof MinerpModMenus.MenuAccessor _menu4) ? _menu4.getMenuState(2, "slidercontatos", 0.0) : 0.0);
 				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 			}
 			if (entity instanceof ServerPlayer _ent) {
