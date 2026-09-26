@@ -38,6 +38,7 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 99,
+    "onEntityHitWith": "RemoverAlgema",
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

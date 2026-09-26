@@ -9,31 +9,21 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.component.DataComponents;
 
 import net.mcreator.minerp.init.MinerpModItems;
 
-public class GerarCodigoAlgemaProcedure {
+public class BloquearAlgemaProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == MinerpModItems.ALGEMA.get()
-				&& itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("codigoalgema") == 0) {
-			{
-				final String _tagName = "codigoalgema";
-				final double _tagValue = (Mth.nextInt(RandomSource.create(), 1000, 9999));
-				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
-			}
-		}
 		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("ativada") == true) {
 			if (!((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == MinerpModItems.ALGEMA.get())) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack12 = itemstack.copy();
-					_setstack12.setCount(1);
-					_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack12);
+					ItemStack _setstack5 = itemstack.copy();
+					_setstack5.setCount(1);
+					_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack5);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -46,9 +36,9 @@ public class GerarCodigoAlgemaProcedure {
 					_level.addFreshEntity(entityToSpawn);
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack19 = new ItemStack(Blocks.AIR).copy();
-					_setstack19.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack19);
+					ItemStack _setstack12 = new ItemStack(Blocks.AIR).copy();
+					_setstack12.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack12);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
