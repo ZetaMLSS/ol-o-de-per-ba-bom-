@@ -63,6 +63,9 @@ public record TelaCelularMenssagensButtonMessage(int buttonID, int x, int y, int
 		}
 
 		guiTools$enhancedImageButton : {
+			if (buttonID == 3) {
+				net.mcreator.minerp.procedures.BotaoInvisivelcelularvoltaraoinicioProcedure.execute(world, x, y, z, entity);
+			}
 		}
 	}
 

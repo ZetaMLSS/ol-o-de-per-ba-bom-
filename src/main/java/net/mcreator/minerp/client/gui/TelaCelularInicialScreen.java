@@ -308,6 +308,12 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 		this.addWidget(enhanced_image_button_app_chamada);
 		enhanced_image_button_vaunt_wallet = new net.minecraft.client.gui.components.ImageButton(this.leftPos + 19, this.topPos + -8, 26, 26, new net.minecraft.client.gui.components.WidgetSprites(
 				net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/vaunt_wallet.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/vaunt_wallet.png")), e -> {
+					int x = TelaCelularInicialScreen.this.x;
+					int y = TelaCelularInicialScreen.this.y;
+					if (true) {
+						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.TelaCelularInicialButtonMessage(5, x, y, z));
+						net.mcreator.minerp.network.TelaCelularInicialButtonMessage.handleButtonAction(entity, 5, x, y, z);
+					}
 				}) {
 			private boolean guiTools$pressedToggled;
 

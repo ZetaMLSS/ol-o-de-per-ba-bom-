@@ -10,6 +10,10 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.minerp.world.inventory.TelaCelularCriptoMenu;
+import net.mcreator.minerp.procedures.MostrarLuanaCoinProcedureProcedure;
+import net.mcreator.minerp.procedures.MostrarEtCoinProcedureProcedure;
+import net.mcreator.minerp.procedures.MostrarCatCoinProcedureProcedure;
+import net.mcreator.minerp.procedures.MostrarBatCoinProcedureProcedure;
 import net.mcreator.minerp.procedures.BateriaVisorProcedure;
 import net.mcreator.minerp.init.MinerpModScreens;
 
@@ -20,8 +24,10 @@ public class TelaCelularCriptoScreen extends AbstractContainerScreen<TelaCelular
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	private Button button_mineracoes;
-	private Button button_loja;
+	private Button button_catcoin;
+	private Button button_catcoin_copy;
+	private Button button_catcoin_copy_copy;
+	private Button button_catcoin_copy_copy_copy;
 
 	public TelaCelularCriptoScreen(TelaCelularCriptoMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -67,6 +73,21 @@ public class TelaCelularCriptoScreen extends AbstractContainerScreen<TelaCelular
 				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
 					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -49 + guiTools$xOffset, this.topPos + -120 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 120, 229);
 			}
+			if (true) {
+				int guiTools$xOffset = 0;
+				int guiTools$yOffset = 0;
+				int guiTools$visibleWidth = 82;
+				int guiTools$visibleHeight = 165;
+				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/tradetela.png"));
+				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -30 + guiTools$xOffset, this.topPos + -88 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 82, 165);
+			}
+			if (this.enhanced_image_button_invisivel_copy != null && this.enhanced_image_button_invisivel_copy.visible) {
+				this.enhanced_image_button_invisivel_copy.render(guiGraphics, mouseX, mouseY, partialTicks);
+			}
+			if (this.enhanced_image_button_invisivel != null && this.enhanced_image_button_invisivel.visible) {
+				this.enhanced_image_button_invisivel.render(guiGraphics, mouseX, mouseY, partialTicks);
+			}
 		}
 	}
 
@@ -87,12 +108,71 @@ public class TelaCelularCriptoScreen extends AbstractContainerScreen<TelaCelular
 	@Override
 	public void init() {
 		super.init();
-		button_mineracoes = Button.builder(Component.translatable("gui.minerp.tela_celular_cripto.button_mineracoes"), e -> {
-		}).bounds(this.leftPos + -27, this.topPos + -25, 75, 20).build();
-		this.addRenderableWidget(button_mineracoes);
-		button_loja = Button.builder(Component.translatable("gui.minerp.tela_celular_cripto.button_loja"), e -> {
-		}).bounds(this.leftPos + -11, this.topPos + -52, 45, 20).build();
-		this.addRenderableWidget(button_loja);
+		button_catcoin = Button.builder(Component.translatable("gui.minerp.tela_celular_cripto.button_catcoin"), e -> {
+		}).bounds(this.leftPos + -22, this.topPos + -39, 65, 20).build();
+		this.addRenderableWidget(button_catcoin);
+		button_catcoin_copy = Button.builder(Component.translatable("gui.minerp.tela_celular_cripto.button_catcoin_copy"), e -> {
+		}).bounds(this.leftPos + -22, this.topPos + -12, 65, 20).build();
+		this.addRenderableWidget(button_catcoin_copy);
+		button_catcoin_copy_copy = Button.builder(Component.translatable("gui.minerp.tela_celular_cripto.button_catcoin_copy_copy"), e -> {
+		}).bounds(this.leftPos + -22, this.topPos + 15, 65, 20).build();
+		this.addRenderableWidget(button_catcoin_copy_copy);
+		button_catcoin_copy_copy_copy = Button.builder(Component.translatable("gui.minerp.tela_celular_cripto.button_catcoin_copy_copy_copy"), e -> {
+		}).bounds(this.leftPos + -22, this.topPos + 42, 65, 20).build();
+		this.addRenderableWidget(button_catcoin_copy_copy_copy);
+		enhanced_image_button_invisivel_copy = new net.minecraft.client.gui.components.ImageButton(this.leftPos + 1, this.topPos + 86, 20, 18,
+				new net.minecraft.client.gui.components.WidgetSprites(net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/invisivel.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/invisivel.png")),
+				e -> {
+					int x = TelaCelularCriptoScreen.this.x;
+					int y = TelaCelularCriptoScreen.this.y;
+					if (true) {
+						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.TelaCelularCriptoButtonMessage(4, x, y, z));
+						net.mcreator.minerp.network.TelaCelularCriptoButtonMessage.handleButtonAction(entity, 4, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/invisivel.png");
+				net.minecraft.resources.ResourceLocation guiTools$hoveredTexture = guiTools$normalTexture;
+				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = guiTools$hoveredTexture;
+				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
+				boolean mousePressed = mouseOverButton && org.lwjgl.glfw.GLFW.glfwGetMouseButton(net.minecraft.client.Minecraft.getInstance().getWindow().getWindow(), org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT) == org.lwjgl.glfw.GLFW.GLFW_PRESS;
+				net.minecraft.resources.ResourceLocation buttonTexture = mousePressed ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
+				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addWidget(enhanced_image_button_invisivel_copy);
+		enhanced_image_button_invisivel = new net.minecraft.client.gui.components.ImageButton(this.leftPos + 14, this.topPos + -64, 32, 16,
+				new net.minecraft.client.gui.components.WidgetSprites(net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/invisivel.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/invisivel.png")),
+				e -> {
+					int x = TelaCelularCriptoScreen.this.x;
+					int y = TelaCelularCriptoScreen.this.y;
+					if (true) {
+						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.TelaCelularCriptoButtonMessage(5, x, y, z));
+						net.mcreator.minerp.network.TelaCelularCriptoButtonMessage.handleButtonAction(entity, 5, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/invisivel.png");
+				net.minecraft.resources.ResourceLocation guiTools$hoveredTexture = guiTools$normalTexture;
+				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = guiTools$hoveredTexture;
+				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
+				boolean mousePressed = mouseOverButton && org.lwjgl.glfw.GLFW.glfwGetMouseButton(net.minecraft.client.Minecraft.getInstance().getWindow().getWindow(), org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT) == org.lwjgl.glfw.GLFW.GLFW_PRESS;
+				net.minecraft.resources.ResourceLocation buttonTexture = mousePressed ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
+				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addWidget(enhanced_image_button_invisivel);
+	}
+
+	@Override
+	protected void containerTick() {
+		super.containerTick();
+		this.button_catcoin.visible = MostrarCatCoinProcedureProcedure.execute(world);
+		this.button_catcoin_copy.visible = MostrarBatCoinProcedureProcedure.execute(world);
+		this.button_catcoin_copy_copy.visible = MostrarEtCoinProcedureProcedure.execute(world);
+		this.button_catcoin_copy_copy_copy.visible = MostrarLuanaCoinProcedureProcedure.execute(world);
 	}
 
 	private final java.util.Map<String, java.util.List<String>> guiTools$multilineCache = new java.util.HashMap<>();
@@ -141,6 +221,29 @@ public class TelaCelularCriptoScreen extends AbstractContainerScreen<TelaCelular
 			lines.add(line.toString());
 		}
 		return java.util.List.copyOf(lines);
+	}
+
+	private static final boolean guiTools$enhancedImageButton = true;
+	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_invisivel_copy;
+	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_invisivel;
+
+	private static net.minecraft.resources.ResourceLocation guiTools$buttonTexture(String value, net.minecraft.resources.ResourceLocation fallback) {
+		if (value == null || value.isBlank())
+			return fallback;
+		try {
+			String texture = value.trim().replace('\\', '/');
+			if (texture.indexOf(':') >= 0)
+				return net.minecraft.resources.ResourceLocation.parse(texture);
+			while (texture.startsWith("/"))
+				texture = texture.substring(1);
+			if (texture.startsWith("textures/screens/"))
+				texture = texture.substring("textures/screens/".length());
+			if (!texture.endsWith(".png"))
+				texture += ".png";
+			return net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("minerp", "textures/screens/" + texture);
+		} catch (RuntimeException ignored) {
+			return fallback;
+		}
 	}
 
 	private static net.minecraft.resources.ResourceLocation guiTools$dynamicTexture(String value, net.minecraft.resources.ResourceLocation fallback) {

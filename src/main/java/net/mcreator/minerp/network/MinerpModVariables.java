@@ -79,6 +79,9 @@ public class MinerpModVariables {
 		clone.LimiteDoCredito = original.LimiteDoCredito;
 		clone.CartaoVinculado = original.CartaoVinculado;
 		clone.NumeroInesistente = original.NumeroInesistente;
+		clone.BatCoinSaldo = original.BatCoinSaldo;
+		clone.EtCoinSaldo = original.EtCoinSaldo;
+		clone.LuanaCoinSaldo = original.LuanaCoinSaldo;
 		if (!event.isWasDeath()) {
 		}
 		event.getEntity().setData(PLAYER_VARIABLES, clone);
@@ -176,6 +179,19 @@ public class MinerpModVariables {
 		public String canal1_texto = "\"\"";
 		public String canal2_texto = "\"\"";
 		public String canal3_texto = "\"\"";
+		public boolean CatCoinAtivada = true;
+		public boolean BatCoinAtivada = false;
+		public boolean LuanaCoinAtivada = false;
+		public boolean EtCoinAtivada = false;
+		public double BatCoinValor = 0;
+		public double BatCoinQuantidade = 0;
+		public double BatCoinLimite = 0;
+		public double EtCoinValor = 0;
+		public double EtCoinQuantidade = 0;
+		public double EtCoinLimite = 0;
+		public double LuanaCoinValor = 0;
+		public double LuanaCoinQuantidade = 0;
+		public double LuanaCoinLimite = 0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -202,6 +218,19 @@ public class MinerpModVariables {
 			canal1_texto = nbt.getString("canal1_texto");
 			canal2_texto = nbt.getString("canal2_texto");
 			canal3_texto = nbt.getString("canal3_texto");
+			CatCoinAtivada = nbt.getBoolean("CatCoinAtivada");
+			BatCoinAtivada = nbt.getBoolean("BatCoinAtivada");
+			LuanaCoinAtivada = nbt.getBoolean("LuanaCoinAtivada");
+			EtCoinAtivada = nbt.getBoolean("EtCoinAtivada");
+			BatCoinValor = nbt.getDouble("BatCoinValor");
+			BatCoinQuantidade = nbt.getDouble("BatCoinQuantidade");
+			BatCoinLimite = nbt.getDouble("BatCoinLimite");
+			EtCoinValor = nbt.getDouble("EtCoinValor");
+			EtCoinQuantidade = nbt.getDouble("EtCoinQuantidade");
+			EtCoinLimite = nbt.getDouble("EtCoinLimite");
+			LuanaCoinValor = nbt.getDouble("LuanaCoinValor");
+			LuanaCoinQuantidade = nbt.getDouble("LuanaCoinQuantidade");
+			LuanaCoinLimite = nbt.getDouble("LuanaCoinLimite");
 		}
 
 		@Override
@@ -224,6 +253,19 @@ public class MinerpModVariables {
 			nbt.putString("canal1_texto", canal1_texto);
 			nbt.putString("canal2_texto", canal2_texto);
 			nbt.putString("canal3_texto", canal3_texto);
+			nbt.putBoolean("CatCoinAtivada", CatCoinAtivada);
+			nbt.putBoolean("BatCoinAtivada", BatCoinAtivada);
+			nbt.putBoolean("LuanaCoinAtivada", LuanaCoinAtivada);
+			nbt.putBoolean("EtCoinAtivada", EtCoinAtivada);
+			nbt.putDouble("BatCoinValor", BatCoinValor);
+			nbt.putDouble("BatCoinQuantidade", BatCoinQuantidade);
+			nbt.putDouble("BatCoinLimite", BatCoinLimite);
+			nbt.putDouble("EtCoinValor", EtCoinValor);
+			nbt.putDouble("EtCoinQuantidade", EtCoinQuantidade);
+			nbt.putDouble("EtCoinLimite", EtCoinLimite);
+			nbt.putDouble("LuanaCoinValor", LuanaCoinValor);
+			nbt.putDouble("LuanaCoinQuantidade", LuanaCoinQuantidade);
+			nbt.putDouble("LuanaCoinLimite", LuanaCoinLimite);
 			return nbt;
 		}
 
@@ -291,6 +333,9 @@ public class MinerpModVariables {
 		public double LimiteDoCredito = 0;
 		public double CartaoVinculado = 0;
 		public String NumeroInesistente = "\"\"";
+		public double BatCoinSaldo = 0;
+		public double EtCoinSaldo = 0;
+		public double LuanaCoinSaldo = 0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -301,6 +346,9 @@ public class MinerpModVariables {
 			nbt.putDouble("LimiteDoCredito", LimiteDoCredito);
 			nbt.putDouble("CartaoVinculado", CartaoVinculado);
 			nbt.putString("NumeroInesistente", NumeroInesistente);
+			nbt.putDouble("BatCoinSaldo", BatCoinSaldo);
+			nbt.putDouble("EtCoinSaldo", EtCoinSaldo);
+			nbt.putDouble("LuanaCoinSaldo", LuanaCoinSaldo);
 			return nbt;
 		}
 
@@ -312,6 +360,9 @@ public class MinerpModVariables {
 			LimiteDoCredito = nbt.getDouble("LimiteDoCredito");
 			CartaoVinculado = nbt.getDouble("CartaoVinculado");
 			NumeroInesistente = nbt.getString("NumeroInesistente");
+			BatCoinSaldo = nbt.getDouble("BatCoinSaldo");
+			EtCoinSaldo = nbt.getDouble("EtCoinSaldo");
+			LuanaCoinSaldo = nbt.getDouble("LuanaCoinSaldo");
 		}
 
 		public void markSyncDirty() {

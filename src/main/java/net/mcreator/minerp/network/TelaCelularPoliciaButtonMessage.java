@@ -51,6 +51,12 @@ public record TelaCelularPoliciaButtonMessage(int buttonID, int x, int y, int z)
 
 			ChamarPoliciaProcedure.execute(world, x, y, z, entity);
 		}
+
+		guiTools$enhancedImageButton : {
+			if (buttonID == 1) {
+				net.mcreator.minerp.procedures.BotaoInvisivelcelularvoltaraoinicioProcedure.execute(world, x, y, z, entity);
+			}
+		}
 	}
 
 	@SubscribeEvent

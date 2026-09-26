@@ -94,9 +94,9 @@
       "registry_name": "tela_celular_inicial",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/network/TelaCelularInicialButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularInicialScreen.java",
           "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularInicialMenu.java",
-          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularInicialScreen.java"
+          "src/main/java/net/mcreator/minerp/network/TelaCelularInicialButtonMessage.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
@@ -384,9 +384,9 @@
       "registry_name": "tela_celular_policia",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularPoliciaScreen.java",
+          "src/main/java/net/mcreator/minerp/network/TelaCelularPoliciaButtonMessage.java",
           "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularPoliciaMenu.java",
-          "src/main/java/net/mcreator/minerp/network/TelaCelularPoliciaButtonMessage.java"
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularPoliciaScreen.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Policia"
@@ -474,9 +474,9 @@
       "registry_name": "tela_celular_paramedico",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularParamedicoMenu.java",
           "src/main/java/net/mcreator/minerp/client/gui/TelaCelularParamedicoScreen.java",
-          "src/main/java/net/mcreator/minerp/network/TelaCelularParamedicoButtonMessage.java",
-          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularParamedicoMenu.java"
+          "src/main/java/net/mcreator/minerp/network/TelaCelularParamedicoButtonMessage.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Paramedicos"
@@ -629,9 +629,9 @@
       "registry_name": "tela_celular_urb",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularUrbMenu.java",
           "src/main/java/net/mcreator/minerp/client/gui/TelaCelularUrbScreen.java",
-          "src/main/java/net/mcreator/minerp/network/TelaCelularUrbButtonMessage.java",
-          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularUrbMenu.java"
+          "src/main/java/net/mcreator/minerp/network/TelaCelularUrbButtonMessage.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Urb"
@@ -877,6 +877,7 @@
       "registry_name": "tela_celular_banco",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/minerp/network/TelaCelularBancoButtonMessage.java",
           "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularBancoMenu.java",
           "src/main/java/net/mcreator/minerp/client/gui/TelaCelularBancoScreen.java"
         ]
@@ -946,8 +947,9 @@
       "registry_name": "tela_celular_config",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularConfigScreen.java",
-          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularConfigMenu.java"
+          "src/main/java/net/mcreator/minerp/network/TelaCelularConfigButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularConfigMenu.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularConfigScreen.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Config"
@@ -1114,8 +1116,9 @@
       "registry_name": "tela_celular_cripto",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularCriptoScreen.java",
-          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularCriptoMenu.java"
+          "src/main/java/net/mcreator/minerp/network/TelaCelularCriptoButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularCriptoMenu.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularCriptoScreen.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto"
@@ -1637,9 +1640,9 @@
       "registry_name": "tela_adionar_contato",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minerp/network/TelaAdionarContatoButtonMessage.java",
           "src/main/java/net/mcreator/minerp/world/inventory/TelaAdionarContatoMenu.java",
-          "src/main/java/net/mcreator/minerp/client/gui/TelaAdionarContatoScreen.java"
+          "src/main/java/net/mcreator/minerp/client/gui/TelaAdionarContatoScreen.java",
+          "src/main/java/net/mcreator/minerp/network/TelaAdionarContatoButtonMessage.java"
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Menssagens"
@@ -3447,6 +3450,317 @@
         ]
       },
       "path": "~/Itens/Algema"
+    },
+    {
+      "name": "TelaCelularCriptoPortifolio",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_celular_cripto_portifolio",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/network/TelaCelularCriptoPortifolioButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularCriptoPortifolioScreen.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularCriptoPortifolioMenu.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto"
+    },
+    {
+      "name": "BotaoInvisivelcelularvoltaraoinicio",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "botao_invisivelcelularvoltaraoinicio",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/BotaoInvisivelcelularvoltaraoinicioProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
+    },
+    {
+      "name": "AbrirPortifolioCripto",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abrir_portifolio_cripto",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/AbrirPortifolioCriptoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto"
+    },
+    {
+      "name": "AbrirAppCripto",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abrir_app_cripto",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/AbrirAppCriptoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
+    },
+    {
+      "name": "MostrarCatCoinProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostrar_cat_coin_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostrarCatCoinProcedureProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto"
+    },
+    {
+      "name": "MostrarBatCoinProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostrar_bat_coin_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostrarBatCoinProcedureProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto"
+    },
+    {
+      "name": "MostrarEtCoinProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostrar_et_coin_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostrarEtCoinProcedureProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto"
+    },
+    {
+      "name": "MostrarLuanaCoinProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostrar_luana_coin_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostrarLuanaCoinProcedureProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto"
+    },
+    {
+      "name": "MostrarValorCarcoinCriptoCelular",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostrar_valor_carcoin_cripto_celular",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostrarValorCarcoinCriptoCelularProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto"
+    },
+    {
+      "name": "MostrarValorBatCoinCriptoCelular",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostrar_valor_bat_coin_cripto_celular",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostrarValorBatCoinCriptoCelularProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto"
+    },
+    {
+      "name": "MostrarValorEtCoinCriptoCelular",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostrar_valor_et_coin_cripto_celular",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostrarValorEtCoinCriptoCelularProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto"
+    },
+    {
+      "name": "MostrarValorLuanaCoinCriptoCelular",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostrar_valor_luana_coin_cripto_celular",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostrarValorLuanaCoinCriptoCelularProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto"
+    },
+    {
+      "name": "TelaCelularCriptoCatCoinAba",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_celular_cripto_cat_coin_aba",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/network/TelaCelularCriptoCatCoinAbaButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/client/gui/TelaCelularCriptoCatCoinAbaScreen.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/TelaCelularCriptoCatCoinAbaMenu.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto/CatCoin aba"
     }
   ],
   "variable_elements": [
@@ -3593,6 +3907,102 @@
       "type": "string",
       "scope": "map",
       "value": "\"\""
+    },
+    {
+      "name": "CatCoinAtivada",
+      "type": "logic",
+      "scope": "map",
+      "value": "true"
+    },
+    {
+      "name": "BatCoinAtivada",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "LuanaCoinAtivada",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "EtCoinAtivada",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "BatCoinValor",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "BatCoinQuantidade",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "BatCoinSaldo",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "BatCoinLimite",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "EtCoinValor",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "EtCoinQuantidade",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "EtCoinLimite",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "EtCoinSaldo",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "LuanaCoinValor",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "LuanaCoinQuantidade",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "LuanaCoinLimite",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "LuanaCoinSaldo",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -3730,7 +4140,19 @@
       "block.minerp.geradorv_1": "Gerador V1",
       "item.minerp.chave_algema": "Chave_Algema",
       "item.minerp.algema": "Algema",
-      "item.minerp.chave_algema_sem_codigo": "Chave_Algema"
+      "item.minerp.chave_algema_sem_codigo": "Chave_Algema",
+      "gui.minerp.tela_celular_cripto.button_catcoin_copy_copy": "???",
+      "gui.minerp.tela_celular_cripto.button_catcoin_copy": "???",
+      "gui.minerp.tela_celular_cripto.button_catcoin": "Cat-Coin",
+      "gui.minerp.tela_celular_cripto.button_catcoin_copy_copy_copy": "???",
+      "gui.minerp.tela_celular_cripto_portifolio.button_catcoin_copy_copy": "???",
+      "gui.minerp.tela_celular_cripto_portifolio.button_catcoin": "Cat-Coin",
+      "gui.minerp.tela_celular_cripto_portifolio.button_catcoin_copy": "???",
+      "gui.minerp.tela_celular_cripto_portifolio.button_catcoin_copy_copy_copy": "???",
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin": "Cat-Coin",
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin_copy": "???",
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin_copy_copy_copy": "???",
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin_copy_copy": "???"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -3840,56 +4262,68 @@
       "block.minerp.geradorv_1": "Gerador V1",
       "item.minerp.chave_algema": "Chave_Algema",
       "item.minerp.algema": "Algema",
-      "item.minerp.chave_algema_sem_codigo": "Chave_Algema"
+      "item.minerp.chave_algema_sem_codigo": "Chave_Algema",
+      "gui.minerp.tela_celular_cripto.button_catcoin_copy_copy": "???",
+      "gui.minerp.tela_celular_cripto.button_catcoin_copy": "???",
+      "gui.minerp.tela_celular_cripto.button_catcoin": "Cat-Coin",
+      "gui.minerp.tela_celular_cripto.button_catcoin_copy_copy_copy": "???",
+      "gui.minerp.tela_celular_cripto_portifolio.button_catcoin_copy_copy": "???",
+      "gui.minerp.tela_celular_cripto_portifolio.button_catcoin": "Cat-Coin",
+      "gui.minerp.tela_celular_cripto_portifolio.button_catcoin_copy": "???",
+      "gui.minerp.tela_celular_cripto_portifolio.button_catcoin_copy_copy_copy": "???",
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin": "Cat-Coin",
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin_copy": "???",
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin_copy_copy_copy": "???",
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin_copy_copy": "???"
     }
   },
   "metadata": {
     "files": [
       "src/main/java/net/mcreator/minerp/init/MinerpModBerClient.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBerSupport.java",
-      "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModScreens.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModMenus.java",
       "src/main/java/net/mcreator/minerp/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlocks.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModBlockEntities.java",
       "src/main/java/net/mcreator/minerp/init/MinerpModItems.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
-      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
-      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
-      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
+      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
+      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
       "src/main/java/net/mcreator/minerp/ai/MoveToBlockGoal.java",
-      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
-      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
-      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
-      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
-      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/mcreator/minerp/world/BlackHoleSavedData.java",
       "src/main/java/net/mcreator/minerp/mixin/LevelRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationRendererMixin.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/resources/minerp.mixins.json",
-      "src/main/java/net/mcreator/minerp/mixin/LivingEntityRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/client/ClientHelper.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
+      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
+      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
+      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
       "src/main/java/net/mcreator/minerp/client/renderer/CustomEyeOfEnderRenderer.java",
-      "src/main/java/net/mcreator/minerp/network/CameraShakePayload.java",
-      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
-      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java",
-      "src/main/java/net/mcreator/minerp/mixin/ItemInHandRendererMixin.java",
-      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
       "src/main/java/net/mcreator/minerp/world/PortalSavedData.java",
       "src/main/java/net/mcreator/minerp/MinerpMod.java",
-      "src/main/java/net/mcreator/minerp/ai/OrbitPositionGoal.java",
-      "src/main/java/net/mcreator/minerp/network/NetworkRegister.java",
-      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
-      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
-      "src/main/java/net/mcreator/minerp/init/MinerpModTabs.java",
+      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/SemiAquaticRenderer.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeManager.java",
+      "src/main/java/net/mcreator/minerp/ai/OverrideMovementGoal.java",
       "src/main/java/net/mcreator/minerp/math/CallCounter.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomFireballEntity.java",
       "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/minerp/mixin/PlayerAnimationMixin.java",
-      "src/main/java/net/mcreator/minerp/world/TeleportBlockHandler.java"
+      "src/main/java/net/mcreator/minerp/network/PlayPlayerAnimationMessage.java",
+      "src/main/resources/minerp.mixins.json",
+      "src/main/java/net/mcreator/minerp/mixin/EntityRenderDispatcherMixin.java",
+      "src/main/java/net/mcreator/minerp/client/CameraShakeClientEvents.java",
+      "src/main/java/net/mcreator/minerp/ai/MoveToStructureGoal.java",
+      "src/main/java/net/mcreator/minerp/mixin/CameraAccessor.java",
+      "src/main/java/net/mcreator/minerp/client/renderer/CustomFireballRenderer.java",
+      "src/main/java/net/mcreator/minerp/network/MinerpModVariables.java",
+      "src/main/java/net/mcreator/minerp/ai/OrbitPositionGoal.java",
+      "src/main/java/net/mcreator/minerp/math/CallCooldownManager.java",
+      "src/main/java/net/mcreator/minerp/MinerpModPlayerAnimationAPI.java",
+      "src/main/java/net/mcreator/minerp/world/BlockDamageHandler.java",
+      "src/main/java/net/mcreator/minerp/entity/CustomEyeOfEnderEntity.java",
+      "src/main/java/net/mcreator/minerp/mixin/ItemInHandLayerMixin.java",
+      "src/main/java/net/mcreator/minerp/world/BlackHoleManager.java"
     ]
   },
   "foldersRoot": {
@@ -3946,7 +4380,24 @@
                       },
                       {
                         "name": "Cripto",
-                        "children": []
+                        "children": [
+                          {
+                            "name": "CatCoin aba",
+                            "children": []
+                          },
+                          {
+                            "name": "BatCoin Aba",
+                            "children": []
+                          },
+                          {
+                            "name": "EtCoin Aba",
+                            "children": []
+                          },
+                          {
+                            "name": "LuanaCoin Aba",
+                            "children": []
+                          }
+                        ]
                       },
                       {
                         "name": "Menssagens",

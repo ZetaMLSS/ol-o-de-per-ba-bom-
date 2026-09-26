@@ -32,7 +32,7 @@ public class TelaCelularPoliciaMenu extends AbstractContainerMenu implements Min
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
 		public Object put(String key, Object value) {
-			if (!this.containsKey(key) && this.size() >= 7)
+			if (!this.containsKey(key) && this.size() >= 8)
 				return null;
 			return super.put(key, value);
 		}

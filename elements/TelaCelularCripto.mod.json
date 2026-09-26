@@ -11,6 +11,20 @@
     "doesPauseGame": false,
     "components": [
       {
+        "type": "button",
+        "data": {
+          "name": "button_catcoin",
+          "text": "Cat-Coin",
+          "isUndecorated": false,
+          "displayCondition": "MostrarCatCoinProcedure",
+          "width": 65,
+          "height": 20,
+          "x": 181,
+          "y": 81,
+          "locked": false
+        }
+      },
+      {
         "type": "dynamic_image",
         "data": {
           "name": "dynamic_image_0",
@@ -92,28 +106,104 @@
         }
       },
       {
-        "type": "button",
+        "type": "dynamic_image",
         "data": {
-          "name": "button_mineracoes",
-          "text": "Minerações",
-          "isUndecorated": false,
-          "width": 75,
-          "height": 20,
-          "x": 176,
-          "y": 95,
+          "name": "dynamic_image_1",
+          "image": "tradetela.png",
+          "width": 82,
+          "height": 165,
+          "x": 173,
+          "y": 32,
           "locked": false
         }
       },
       {
         "type": "button",
         "data": {
-          "name": "button_loja",
-          "text": "Loja",
+          "name": "button_catcoin_copy",
+          "text": "???",
           "isUndecorated": false,
-          "width": 45,
+          "displayCondition": "MostrarBatCoinProcedure",
+          "width": 65,
           "height": 20,
-          "x": 192,
-          "y": 68,
+          "x": 181,
+          "y": 108,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_catcoin_copy_copy",
+          "text": "???",
+          "isUndecorated": false,
+          "displayCondition": "MostrarEtCoinProcedure",
+          "width": 65,
+          "height": 20,
+          "x": 181,
+          "y": 135,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_catcoin_copy_copy_copy",
+          "text": "???",
+          "isUndecorated": false,
+          "displayCondition": "MostrarLuanaCoinProcedure",
+          "width": 65,
+          "height": 20,
+          "x": 181,
+          "y": 162,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "invisivel.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_invisivel_copy",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "BotaoInvisivelcelularvoltaraoinicio",
+          "width": 20,
+          "height": 18,
+          "x": 204,
+          "y": 206,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "invisivel.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_invisivel",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "AbrirPortifolioCripto",
+          "width": 32,
+          "height": 16,
+          "x": 217,
+          "y": 56,
           "locked": false
         }
       }

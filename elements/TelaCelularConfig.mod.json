@@ -480,6 +480,30 @@
           "y": 85,
           "locked": false
         }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "invisivel.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_invisivel_copy",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "BotaoInvisivelcelularvoltaraoinicio",
+          "width": 20,
+          "height": 18,
+          "x": 204,
+          "y": 206,
+          "locked": false
+        }
       }
     ],
     "onTick": "TelaCelularInicialQuandoEstaGUIEAberta",

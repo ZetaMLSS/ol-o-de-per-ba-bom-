@@ -37,6 +37,8 @@ public class MinerpModScreens {
 		event.register(MinerpModMenus.GUI_APROVADO_MAQUINA_CARTAO.get(), GuiAprovadoMaquinaCartaoScreen::new);
 		event.register(MinerpModMenus.GUI_DO_GERADORV_1.get(), GuiDoGeradorv1Screen::new);
 		event.register(MinerpModMenus.GUI_TRANSFERIDOR_DE_ENERGIA.get(), GuiTransferidorDeEnergiaScreen::new);
+		event.register(MinerpModMenus.TELA_CELULAR_CRIPTO_PORTIFOLIO.get(), TelaCelularCriptoPortifolioScreen::new);
+		event.register(MinerpModMenus.TELA_CELULAR_CRIPTO_CAT_COIN_ABA.get(), TelaCelularCriptoCatCoinAbaScreen::new);
 	}
 
 	public interface ScreenAccessor {

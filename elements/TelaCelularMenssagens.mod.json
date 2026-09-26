@@ -182,7 +182,7 @@
           "onClick": "SelecionarChat",
           "width": 50,
           "height": 20,
-          "x": 174,
+          "x": 189,
           "y": 120,
           "locked": false
         }
@@ -190,7 +190,7 @@
       {
         "type": "enhanced_image_button",
         "data": {
-          "image": "icone_notificacao.png",
+          "image": "invisivel.png",
           "hoveredImage": "",
           "pressedImage": "",
           "textColor": {
@@ -200,13 +200,14 @@
           "textShadow": true,
           "fontScale": 100,
           "togglePressedTexture": false,
-          "name": "enhanced_image_button_icone_notificacao",
+          "name": "enhanced_image_button_invisivel_copy",
           "text": "",
           "isUndecorated": true,
-          "width": 19,
-          "height": 16,
-          "x": 230,
-          "y": 122,
+          "onClick": "BotaoInvisivelcelularvoltaraoinicio",
+          "width": 20,
+          "height": 18,
+          "x": 204,
+          "y": 206,
           "locked": false
         }
       }

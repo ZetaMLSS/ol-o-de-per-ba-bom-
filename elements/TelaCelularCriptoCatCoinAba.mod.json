@@ -1,0 +1,165 @@
+{
+  "_fv": 89,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 21,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_0",
+          "image": "gemini_generated_image_luqojiluqojiluqo-removebg-preview.png",
+          "width": 120,
+          "height": 229,
+          "x": 154,
+          "y": 0,
+          "locked": false
+        }
+      },
+      {
+        "type": "progress_bar",
+        "data": {
+          "name": "progressbar_progress_bar",
+          "sua_image_mode": false,
+          "current": {
+            "fixedValue": 0.0,
+            "name": "BateriaVisor"
+          },
+          "max": {
+            "fixedValue": 10000.0
+          },
+          "direction": "LEFT_TO_RIGHT",
+          "sua_color_effect": "multiGradient",
+          "color1": {
+            "value": -6750208,
+            "falpha": 0.0
+          },
+          "color2": {
+            "value": -256,
+            "falpha": 0.0
+          },
+          "color3": {
+            "value": -16724992,
+            "falpha": 0.0
+          },
+          "color4": {
+            "value": -16751104,
+            "falpha": 0.0
+          },
+          "thresholdPercent": 0.25,
+          "emptyColor": {
+            "value": -14145496,
+            "falpha": 0.0
+          },
+          "borderColor": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "borderWidth": 1,
+          "sua_pulse_speed": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "width": 16,
+          "height": 7,
+          "anchorPoint": "TOP_RIGHT",
+          "x": 227,
+          "y": 25,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_relogio",
+          "text": "00:00\n",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "textProcedure": "Horacelularvisor",
+          "width": 48,
+          "height": 21,
+          "x": 177,
+          "y": 24,
+          "locked": false
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_1",
+          "image": "tradetela.png",
+          "width": 82,
+          "height": 165,
+          "x": 173,
+          "y": 32,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "invisivel.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_invisivel_copy",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "BotaoInvisivelcelularvoltaraoinicio",
+          "width": 20,
+          "height": 18,
+          "x": 204,
+          "y": 206,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "invisivel.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_invisivel",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "AbrirPortifolioCripto",
+          "width": 32,
+          "height": 16,
+          "x": 217,
+          "y": 56,
+          "locked": false
+        }
+      }
+    ],
+    "onTick": "TelaCelularInicialQuandoEstaGUIEAberta",
+    "onClosed": "QuandoDesligaCelular",
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

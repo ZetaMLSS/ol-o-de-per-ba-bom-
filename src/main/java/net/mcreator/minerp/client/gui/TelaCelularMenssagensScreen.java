@@ -77,8 +77,8 @@ public class TelaCelularMenssagensScreen extends AbstractContainerScreen<TelaCel
 				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
 					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -49 + guiTools$xOffset, this.topPos + -120 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 120, 229);
 			}
-			if (this.enhanced_image_button_icone_notificacao != null && this.enhanced_image_button_icone_notificacao.visible) {
-				this.enhanced_image_button_icone_notificacao.render(guiGraphics, mouseX, mouseY, partialTicks);
+			if (this.enhanced_image_button_invisivel_copy != null && this.enhanced_image_button_invisivel_copy.visible) {
+				this.enhanced_image_button_invisivel_copy.render(guiGraphics, mouseX, mouseY, partialTicks);
 			}
 		}
 	}
@@ -132,7 +132,7 @@ public class TelaCelularMenssagensScreen extends AbstractContainerScreen<TelaCel
 				PacketDistributor.sendToServer(new TelaCelularMenssagensButtonMessage(2, x, y, z));
 				TelaCelularMenssagensButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		}).bounds(this.leftPos + -29, this.topPos + 0, 50, 20).build();
+		}).bounds(this.leftPos + -14, this.topPos + 0, 50, 20).build();
 		this.addRenderableWidget(button_chats);
 		slidercontatos = new ExtendedSlider(this.leftPos + -24, this.topPos + -49, 70, 20, Component.translatable("gui.minerp.tela_celular_menssagens.slidercontatos_prefix"),
 				Component.translatable("gui.minerp.tela_celular_menssagens.slidercontatos_suffix"), 1, 10, 1, 1, 0, true) {
@@ -145,12 +145,19 @@ public class TelaCelularMenssagensScreen extends AbstractContainerScreen<TelaCel
 		this.addRenderableWidget(slidercontatos);
 		if (!menuStateUpdateActive)
 			menu.sendMenuStateUpdate(entity, 2, "slidercontatos", slidercontatos.getValue(), false);
-		enhanced_image_button_icone_notificacao = new net.minecraft.client.gui.components.ImageButton(this.leftPos + 27, this.topPos + 2, 19, 16, new net.minecraft.client.gui.components.WidgetSprites(
-				net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/icone_notificacao.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/icone_notificacao.png")), e -> {
+		enhanced_image_button_invisivel_copy = new net.minecraft.client.gui.components.ImageButton(this.leftPos + 1, this.topPos + 86, 20, 18,
+				new net.minecraft.client.gui.components.WidgetSprites(net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/invisivel.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/invisivel.png")),
+				e -> {
+					int x = TelaCelularMenssagensScreen.this.x;
+					int y = TelaCelularMenssagensScreen.this.y;
+					if (true) {
+						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.TelaCelularMenssagensButtonMessage(3, x, y, z));
+						net.mcreator.minerp.network.TelaCelularMenssagensButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
 				}) {
 			@Override
 			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/icone_notificacao.png");
+				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/invisivel.png");
 				net.minecraft.resources.ResourceLocation guiTools$hoveredTexture = guiTools$normalTexture;
 				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = guiTools$hoveredTexture;
 				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
@@ -159,7 +166,7 @@ public class TelaCelularMenssagensScreen extends AbstractContainerScreen<TelaCel
 				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		this.addWidget(enhanced_image_button_icone_notificacao);
+		this.addWidget(enhanced_image_button_invisivel_copy);
 	}
 
 	private final java.util.Map<String, java.util.List<String>> guiTools$multilineCache = new java.util.HashMap<>();
@@ -211,7 +218,7 @@ public class TelaCelularMenssagensScreen extends AbstractContainerScreen<TelaCel
 	}
 
 	private static final boolean guiTools$enhancedImageButton = true;
-	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_icone_notificacao;
+	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_invisivel_copy;
 
 	private static net.minecraft.resources.ResourceLocation guiTools$buttonTexture(String value, net.minecraft.resources.ResourceLocation fallback) {
 		if (value == null || value.isBlank())

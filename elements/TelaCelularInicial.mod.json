@@ -280,6 +280,7 @@
           "name": "enhanced_image_button_vaunt_wallet",
           "text": "",
           "isUndecorated": true,
+          "onClick": "AbrirAppCripto",
           "width": 26,
           "height": 26,
           "x": 222,
