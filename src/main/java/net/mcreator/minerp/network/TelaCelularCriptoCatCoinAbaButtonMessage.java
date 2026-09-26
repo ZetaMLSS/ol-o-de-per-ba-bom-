@@ -54,6 +54,18 @@ public record TelaCelularCriptoCatCoinAbaButtonMessage(int buttonID, int x, int 
 			if (buttonID == 1) {
 				net.mcreator.minerp.procedures.AbrirPortifolioCriptoProcedure.execute(world, x, y, z, entity);
 			}
+			if (buttonID == 2) {
+				net.mcreator.minerp.procedures.Vender1catcoinProcedure.execute(world, entity);
+			}
+			if (buttonID == 3) {
+				net.mcreator.minerp.procedures.Comprar1catcoinProcedure.execute(world, entity);
+			}
+			if (buttonID == 4) {
+				net.mcreator.minerp.procedures.Vender5catcoinProcedure.execute(world, entity);
+			}
+			if (buttonID == 5) {
+				net.mcreator.minerp.procedures.Comprar5catcoinProcedure.execute(world, entity);
+			}
 		}
 	}
 

@@ -11,20 +11,6 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "button",
-        "data": {
-          "name": "button_catcoin",
-          "text": "Cat-Coin",
-          "isUndecorated": false,
-          "displayCondition": "MostrarCatCoinProcedure",
-          "width": 65,
-          "height": 20,
-          "x": 181,
-          "y": 81,
-          "locked": false
-        }
-      },
-      {
         "type": "dynamic_image",
         "data": {
           "name": "dynamic_image_0",
@@ -87,6 +73,18 @@
         }
       },
       {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_1",
+          "image": "tradetela.png",
+          "width": 82,
+          "height": 166,
+          "x": 173,
+          "y": 32,
+          "locked": false
+        }
+      },
+      {
         "type": "multiline_label",
         "data": {
           "name": "multiline_label_relogio",
@@ -102,60 +100,6 @@
           "height": 21,
           "x": 177,
           "y": 24,
-          "locked": false
-        }
-      },
-      {
-        "type": "dynamic_image",
-        "data": {
-          "name": "dynamic_image_1",
-          "image": "tradetela.png",
-          "width": 82,
-          "height": 165,
-          "x": 173,
-          "y": 32,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_catcoin_copy",
-          "text": "???",
-          "isUndecorated": false,
-          "displayCondition": "MostrarBatCoinProcedure",
-          "width": 65,
-          "height": 20,
-          "x": 181,
-          "y": 108,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_catcoin_copy_copy",
-          "text": "???",
-          "isUndecorated": false,
-          "displayCondition": "MostrarEtCoinProcedure",
-          "width": 65,
-          "height": 20,
-          "x": 181,
-          "y": 135,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_catcoin_copy_copy_copy",
-          "text": "???",
-          "isUndecorated": false,
-          "displayCondition": "MostrarLuanaCoinProcedure",
-          "width": 65,
-          "height": 20,
-          "x": 181,
-          "y": 162,
           "locked": false
         }
       },
@@ -204,6 +148,178 @@
           "height": 16,
           "x": 217,
           "y": 56,
+          "locked": false
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_2",
+          "image": "negrom.png",
+          "displayCondition": "MostrarCatCoinProcedure",
+          "width": 65,
+          "height": 22,
+          "x": 181,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_2_copy",
+          "image": "negrom.png",
+          "displayCondition": "MostrarBatCoinProcedure",
+          "width": 65,
+          "height": 22,
+          "x": 181,
+          "y": 107,
+          "locked": false
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_2_copy_copy",
+          "image": "negrom.png",
+          "displayCondition": "MostrarEtCoinProcedure",
+          "width": 65,
+          "height": 22,
+          "x": 181,
+          "y": 134,
+          "locked": false
+        }
+      },
+      {
+        "type": "dynamic_image",
+        "data": {
+          "name": "dynamic_image_2_copy_copy_copy",
+          "image": "negrom.png",
+          "displayCondition": "MostrarLuanaCoinProcedure",
+          "width": 65,
+          "height": 22,
+          "x": 181,
+          "y": 161,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "tela_de_pesquisa_computador_banco.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "textShadow": false,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_configurar_senha_computador_banc",
+          "text": "Cat-Coin",
+          "isUndecorated": true,
+          "displayCondition": "MostrarCatCoinProcedure",
+          "width": 65,
+          "height": 20,
+          "x": 181,
+          "y": 81,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "tela_de_pesquisa_computador_banco.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "textShadow": false,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_configurar_senha_computador_banc_copy",
+          "text": "Bat-Coin",
+          "isUndecorated": true,
+          "displayCondition": "MostrarBatCoinProcedure",
+          "width": 65,
+          "height": 20,
+          "x": 181,
+          "y": 108,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "tela_de_pesquisa_computador_banco.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "textShadow": false,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_configurar_senha_computador_banc_copy_copy",
+          "text": "Et-Coin",
+          "isUndecorated": true,
+          "displayCondition": "MostrarEtCoinProcedure",
+          "width": 65,
+          "height": 20,
+          "x": 181,
+          "y": 135,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "tela_de_pesquisa_computador_banco.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "textShadow": false,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_configurar_senha_computador_banc_copy_copy_copy",
+          "text": "Luana-Coin",
+          "isUndecorated": true,
+          "displayCondition": "MostrarLuanaCoinProcedure",
+          "width": 65,
+          "height": 20,
+          "x": 181,
+          "y": 162,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "branco.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_branco",
+          "text": "",
+          "isUndecorated": true,
+          "displayCondition": "TELABRANCACELLTRANSICAO",
+          "width": 82,
+          "height": 166,
+          "x": 173,
+          "y": 32,
           "locked": false
         }
       }

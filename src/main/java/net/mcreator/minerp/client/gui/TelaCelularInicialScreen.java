@@ -139,6 +139,9 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 			if (this.enhanced_image_button_app_urbr != null && this.enhanced_image_button_app_urbr.visible) {
 				this.enhanced_image_button_app_urbr.render(guiGraphics, mouseX, mouseY, partialTicks);
 			}
+			if (this.enhanced_image_button_branco != null && this.enhanced_image_button_branco.visible) {
+				this.enhanced_image_button_branco.render(guiGraphics, mouseX, mouseY, partialTicks);
+			}
 		}
 	}
 
@@ -365,6 +368,21 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 			}
 		};
 		this.addWidget(enhanced_image_button_app_urbr);
+		enhanced_image_button_branco = new net.minecraft.client.gui.components.ImageButton(this.leftPos + -30, this.topPos + -88, 82, 166,
+				new net.minecraft.client.gui.components.WidgetSprites(net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/branco.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/branco.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/branco.png");
+				net.minecraft.resources.ResourceLocation guiTools$hoveredTexture = guiTools$normalTexture;
+				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = guiTools$hoveredTexture;
+				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
+				boolean mousePressed = mouseOverButton && org.lwjgl.glfw.GLFW.glfwGetMouseButton(net.minecraft.client.Minecraft.getInstance().getWindow().getWindow(), org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT) == org.lwjgl.glfw.GLFW.GLFW_PRESS;
+				net.minecraft.resources.ResourceLocation buttonTexture = mousePressed ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
+				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addWidget(enhanced_image_button_branco);
 	}
 
 	private final java.util.Map<String, java.util.List<String>> guiTools$multilineCache = new java.util.HashMap<>();
@@ -423,6 +441,13 @@ public class TelaCelularInicialScreen extends AbstractContainerScreen<TelaCelula
 	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_app_chamada;
 	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_vaunt_wallet;
 	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_app_urbr;
+	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_branco;
+
+	@Override
+	protected void containerTick() {
+		super.containerTick();
+		this.enhanced_image_button_branco.visible = net.mcreator.minerp.procedures.TELABRANCACELLTRANSICAOProcedure.execute(entity);
+	}
 
 	private static net.minecraft.resources.ResourceLocation guiTools$buttonTexture(String value, net.minecraft.resources.ResourceLocation fallback) {
 		if (value == null || value.isBlank())

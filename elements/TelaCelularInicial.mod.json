@@ -330,6 +330,30 @@
           "y": 24,
           "locked": false
         }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "branco.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_branco",
+          "text": "",
+          "isUndecorated": true,
+          "displayCondition": "TELABRANCACELLTRANSICAO",
+          "width": 82,
+          "height": 166,
+          "x": 173,
+          "y": 32,
+          "locked": false
+        }
       }
     ],
     "onTick": "TelaCelularInicialQuandoEstaGUIEAberta",

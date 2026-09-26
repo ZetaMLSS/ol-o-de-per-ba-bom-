@@ -192,6 +192,7 @@ public class MinerpModVariables {
 		public double LuanaCoinValor = 0;
 		public double LuanaCoinQuantidade = 0;
 		public double LuanaCoinLimite = 0;
+		public double DinheiroPrefeitura = 0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -231,6 +232,7 @@ public class MinerpModVariables {
 			LuanaCoinValor = nbt.getDouble("LuanaCoinValor");
 			LuanaCoinQuantidade = nbt.getDouble("LuanaCoinQuantidade");
 			LuanaCoinLimite = nbt.getDouble("LuanaCoinLimite");
+			DinheiroPrefeitura = nbt.getDouble("DinheiroPrefeitura");
 		}
 
 		@Override
@@ -266,6 +268,7 @@ public class MinerpModVariables {
 			nbt.putDouble("LuanaCoinValor", LuanaCoinValor);
 			nbt.putDouble("LuanaCoinQuantidade", LuanaCoinQuantidade);
 			nbt.putDouble("LuanaCoinLimite", LuanaCoinLimite);
+			nbt.putDouble("DinheiroPrefeitura", DinheiroPrefeitura);
 			return nbt;
 		}
 

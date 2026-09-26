@@ -48,10 +48,10 @@ public record TelaCelularCriptoButtonMessage(int buttonID, int x, int y, int z) 
 			return;
 
 		guiTools$enhancedImageButton : {
-			if (buttonID == 4) {
+			if (buttonID == 0) {
 				net.mcreator.minerp.procedures.BotaoInvisivelcelularvoltaraoinicioProcedure.execute(world, x, y, z, entity);
 			}
-			if (buttonID == 5) {
+			if (buttonID == 1) {
 				net.mcreator.minerp.procedures.AbrirPortifolioCriptoProcedure.execute(world, x, y, z, entity);
 			}
 		}

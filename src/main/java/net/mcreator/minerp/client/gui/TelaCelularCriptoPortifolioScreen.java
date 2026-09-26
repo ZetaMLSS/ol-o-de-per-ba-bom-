@@ -71,10 +71,10 @@ public class TelaCelularCriptoPortifolioScreen extends AbstractContainerScreen<T
 				int guiTools$xOffset = 0;
 				int guiTools$yOffset = 0;
 				int guiTools$visibleWidth = 82;
-				int guiTools$visibleHeight = 165;
+				int guiTools$visibleHeight = 166;
 				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/portifoliotela.png"));
 				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
-					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -30 + guiTools$xOffset, this.topPos + -88 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 82, 165);
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -30 + guiTools$xOffset, this.topPos + -88 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 82, 166);
 			}
 			if (this.enhanced_image_button_invisivel != null && this.enhanced_image_button_invisivel.visible) {
 				this.enhanced_image_button_invisivel.render(guiGraphics, mouseX, mouseY, partialTicks);

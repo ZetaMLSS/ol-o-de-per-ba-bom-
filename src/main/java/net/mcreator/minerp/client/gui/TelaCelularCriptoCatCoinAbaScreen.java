@@ -9,6 +9,8 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.minerp.world.inventory.TelaCelularCriptoCatCoinAbaMenu;
+import net.mcreator.minerp.procedures.MostrarquantidadeCatCoinAtualProcedure;
+import net.mcreator.minerp.procedures.MostrarValorCatCoinAtualProcedure;
 import net.mcreator.minerp.procedures.BateriaVisorProcedure;
 import net.mcreator.minerp.init.MinerpModScreens;
 
@@ -68,16 +70,64 @@ public class TelaCelularCriptoCatCoinAbaScreen extends AbstractContainerScreen<T
 				int guiTools$xOffset = 0;
 				int guiTools$yOffset = 0;
 				int guiTools$visibleWidth = 82;
-				int guiTools$visibleHeight = 165;
+				int guiTools$visibleHeight = 166;
 				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/tradetela.png"));
 				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
-					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -30 + guiTools$xOffset, this.topPos + -88 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 82, 165);
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -30 + guiTools$xOffset, this.topPos + -88 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 82, 166);
 			}
 			if (this.enhanced_image_button_invisivel_copy != null && this.enhanced_image_button_invisivel_copy.visible) {
 				this.enhanced_image_button_invisivel_copy.render(guiGraphics, mouseX, mouseY, partialTicks);
 			}
 			if (this.enhanced_image_button_invisivel != null && this.enhanced_image_button_invisivel.visible) {
 				this.enhanced_image_button_invisivel.render(guiGraphics, mouseX, mouseY, partialTicks);
+			}
+			if (true) {
+				int guiTools$xOffset = 0;
+				int guiTools$yOffset = 0;
+				int guiTools$visibleWidth = 21;
+				int guiTools$visibleHeight = 21;
+				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/negrom.png"));
+				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -21 + guiTools$xOffset, this.topPos + 11 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 21, 21);
+			}
+			if (true) {
+				int guiTools$xOffset = 0;
+				int guiTools$yOffset = 0;
+				int guiTools$visibleWidth = 21;
+				int guiTools$visibleHeight = 21;
+				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/negrom.png"));
+				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -21 + guiTools$xOffset, this.topPos + 33 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 21, 21);
+			}
+			if (true) {
+				int guiTools$xOffset = 0;
+				int guiTools$yOffset = 0;
+				int guiTools$visibleWidth = 21;
+				int guiTools$visibleHeight = 21;
+				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/negrom.png"));
+				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + 23 + guiTools$xOffset, this.topPos + 33 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 21, 21);
+			}
+			if (true) {
+				int guiTools$xOffset = 0;
+				int guiTools$yOffset = 0;
+				int guiTools$visibleWidth = 21;
+				int guiTools$visibleHeight = 21;
+				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/negrom.png"));
+				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + 23 + guiTools$xOffset, this.topPos + 11 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 21, 21);
+			}
+			if (this.enhanced_image_button_configurar_senha_computador_banc != null && this.enhanced_image_button_configurar_senha_computador_banc.visible) {
+				this.enhanced_image_button_configurar_senha_computador_banc.render(guiGraphics, mouseX, mouseY, partialTicks);
+			}
+			if (this.enhanced_image_button_configurar_senha_computador_banc_copy != null && this.enhanced_image_button_configurar_senha_computador_banc_copy.visible) {
+				this.enhanced_image_button_configurar_senha_computador_banc_copy.render(guiGraphics, mouseX, mouseY, partialTicks);
+			}
+			if (this.enhanced_image_button_configurar_senha_computador_banc_copy_2 != null && this.enhanced_image_button_configurar_senha_computador_banc_copy_2.visible) {
+				this.enhanced_image_button_configurar_senha_computador_banc_copy_2.render(guiGraphics, mouseX, mouseY, partialTicks);
+			}
+			if (this.enhanced_image_button_configurar_senha_computador_banc_copy_copy != null && this.enhanced_image_button_configurar_senha_computador_banc_copy_copy.visible) {
+				this.enhanced_image_button_configurar_senha_computador_banc_copy_copy.render(guiGraphics, mouseX, mouseY, partialTicks);
 			}
 		}
 	}
@@ -93,7 +143,24 @@ public class TelaCelularCriptoCatCoinAbaScreen extends AbstractContainerScreen<T
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		{
+			guiGraphics.drawString(this.font, MostrarValorCatCoinAtualProcedure.execute(world), -2, -37, -16777216, false);
+		}
+		{
+			guiGraphics.drawString(this.font, MostrarValorCatCoinAtualProcedure.execute(world), -2, -38, -16738048, false);
+		}
+		{
+			guiGraphics.drawString(this.font, MostrarquantidadeCatCoinAtualProcedure.execute(world), -1, -8, -16777216, false);
+		}
+		{
+			guiGraphics.drawString(this.font, MostrarquantidadeCatCoinAtualProcedure.execute(world), -1, -9, -16750951, false);
+		}
+		this.guiTools$renderMultilineLabel(guiGraphics, "Quantidade no mercado:", -15, -28, 60, 22, -16777216, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Valor:", -3, -46, 30, 12, -16777216, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 21, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Valor:", -4, -46, 30, 12, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Quantidade no mercado:", -16, -28, 60, 22, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "ResultadoCripto", -26, 57, 74, 12, -1, false, 1.00F);
 	}
 
 	@Override
@@ -143,6 +210,126 @@ public class TelaCelularCriptoCatCoinAbaScreen extends AbstractContainerScreen<T
 			}
 		};
 		this.addWidget(enhanced_image_button_invisivel);
+		enhanced_image_button_configurar_senha_computador_banc = new net.minecraft.client.gui.components.ImageButton(this.leftPos + -23, this.topPos + 9, 22, 22, new net.minecraft.client.gui.components.WidgetSprites(
+				net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/resultado_banco_computador.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/resultado_banco_computador.png")), e -> {
+					int x = TelaCelularCriptoCatCoinAbaScreen.this.x;
+					int y = TelaCelularCriptoCatCoinAbaScreen.this.y;
+					if (true) {
+						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.TelaCelularCriptoCatCoinAbaButtonMessage(2, x, y, z));
+						net.mcreator.minerp.network.TelaCelularCriptoCatCoinAbaButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/resultado_banco_computador.png");
+				net.minecraft.resources.ResourceLocation guiTools$hoveredTexture = guiTools$normalTexture;
+				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/negrom.png");
+				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
+				boolean mousePressed = mouseOverButton && org.lwjgl.glfw.GLFW.glfwGetMouseButton(net.minecraft.client.Minecraft.getInstance().getWindow().getWindow(), org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT) == org.lwjgl.glfw.GLFW.GLFW_PRESS;
+				net.minecraft.resources.ResourceLocation buttonTexture = mousePressed ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
+				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
+				String guiTools$buttonText = "-1";
+				if (!guiTools$buttonText.isEmpty()) {
+					guiGraphics.pose().pushPose();
+					guiGraphics.pose().translate(getX() + width / 2.0, getY() + height / 2.0, 0);
+					guiGraphics.pose().scale(1.25f, 1.25f, 1.0f);
+					guiGraphics.drawString(net.minecraft.client.Minecraft.getInstance().font, guiTools$buttonText, -net.minecraft.client.Minecraft.getInstance().font.width(guiTools$buttonText) / 2,
+							-net.minecraft.client.Minecraft.getInstance().font.lineHeight / 2, -1, false);
+					guiGraphics.pose().popPose();
+				}
+			}
+		};
+		this.addWidget(enhanced_image_button_configurar_senha_computador_banc);
+		enhanced_image_button_configurar_senha_computador_banc_copy = new net.minecraft.client.gui.components.ImageButton(this.leftPos + 21, this.topPos + 9, 22, 22, new net.minecraft.client.gui.components.WidgetSprites(
+				net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/resultado_banco_computador.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/resultado_banco_computador.png")), e -> {
+					int x = TelaCelularCriptoCatCoinAbaScreen.this.x;
+					int y = TelaCelularCriptoCatCoinAbaScreen.this.y;
+					if (true) {
+						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.TelaCelularCriptoCatCoinAbaButtonMessage(3, x, y, z));
+						net.mcreator.minerp.network.TelaCelularCriptoCatCoinAbaButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/resultado_banco_computador.png");
+				net.minecraft.resources.ResourceLocation guiTools$hoveredTexture = guiTools$normalTexture;
+				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/negrom.png");
+				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
+				boolean mousePressed = mouseOverButton && org.lwjgl.glfw.GLFW.glfwGetMouseButton(net.minecraft.client.Minecraft.getInstance().getWindow().getWindow(), org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT) == org.lwjgl.glfw.GLFW.GLFW_PRESS;
+				net.minecraft.resources.ResourceLocation buttonTexture = mousePressed ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
+				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
+				String guiTools$buttonText = "+1";
+				if (!guiTools$buttonText.isEmpty()) {
+					guiGraphics.pose().pushPose();
+					guiGraphics.pose().translate(getX() + width / 2.0, getY() + height / 2.0, 0);
+					guiGraphics.pose().scale(1.25f, 1.25f, 1.0f);
+					guiGraphics.drawString(net.minecraft.client.Minecraft.getInstance().font, guiTools$buttonText, -net.minecraft.client.Minecraft.getInstance().font.width(guiTools$buttonText) / 2,
+							-net.minecraft.client.Minecraft.getInstance().font.lineHeight / 2, -1, false);
+					guiGraphics.pose().popPose();
+				}
+			}
+		};
+		this.addWidget(enhanced_image_button_configurar_senha_computador_banc_copy);
+		enhanced_image_button_configurar_senha_computador_banc_copy_2 = new net.minecraft.client.gui.components.ImageButton(this.leftPos + -23, this.topPos + 31, 22, 22, new net.minecraft.client.gui.components.WidgetSprites(
+				net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/resultado_banco_computador.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/resultado_banco_computador.png")), e -> {
+					int x = TelaCelularCriptoCatCoinAbaScreen.this.x;
+					int y = TelaCelularCriptoCatCoinAbaScreen.this.y;
+					if (true) {
+						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.TelaCelularCriptoCatCoinAbaButtonMessage(4, x, y, z));
+						net.mcreator.minerp.network.TelaCelularCriptoCatCoinAbaButtonMessage.handleButtonAction(entity, 4, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/resultado_banco_computador.png");
+				net.minecraft.resources.ResourceLocation guiTools$hoveredTexture = guiTools$normalTexture;
+				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/negrom.png");
+				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
+				boolean mousePressed = mouseOverButton && org.lwjgl.glfw.GLFW.glfwGetMouseButton(net.minecraft.client.Minecraft.getInstance().getWindow().getWindow(), org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT) == org.lwjgl.glfw.GLFW.GLFW_PRESS;
+				net.minecraft.resources.ResourceLocation buttonTexture = mousePressed ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
+				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
+				String guiTools$buttonText = "-5";
+				if (!guiTools$buttonText.isEmpty()) {
+					guiGraphics.pose().pushPose();
+					guiGraphics.pose().translate(getX() + width / 2.0, getY() + height / 2.0, 0);
+					guiGraphics.pose().scale(1.25f, 1.25f, 1.0f);
+					guiGraphics.drawString(net.minecraft.client.Minecraft.getInstance().font, guiTools$buttonText, -net.minecraft.client.Minecraft.getInstance().font.width(guiTools$buttonText) / 2,
+							-net.minecraft.client.Minecraft.getInstance().font.lineHeight / 2, -1, false);
+					guiGraphics.pose().popPose();
+				}
+			}
+		};
+		this.addWidget(enhanced_image_button_configurar_senha_computador_banc_copy_2);
+		enhanced_image_button_configurar_senha_computador_banc_copy_copy = new net.minecraft.client.gui.components.ImageButton(this.leftPos + 21, this.topPos + 31, 22, 22, new net.minecraft.client.gui.components.WidgetSprites(
+				net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/resultado_banco_computador.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/resultado_banco_computador.png")), e -> {
+					int x = TelaCelularCriptoCatCoinAbaScreen.this.x;
+					int y = TelaCelularCriptoCatCoinAbaScreen.this.y;
+					if (true) {
+						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.TelaCelularCriptoCatCoinAbaButtonMessage(5, x, y, z));
+						net.mcreator.minerp.network.TelaCelularCriptoCatCoinAbaButtonMessage.handleButtonAction(entity, 5, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/resultado_banco_computador.png");
+				net.minecraft.resources.ResourceLocation guiTools$hoveredTexture = guiTools$normalTexture;
+				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/negrom.png");
+				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
+				boolean mousePressed = mouseOverButton && org.lwjgl.glfw.GLFW.glfwGetMouseButton(net.minecraft.client.Minecraft.getInstance().getWindow().getWindow(), org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT) == org.lwjgl.glfw.GLFW.GLFW_PRESS;
+				net.minecraft.resources.ResourceLocation buttonTexture = mousePressed ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
+				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
+				String guiTools$buttonText = "+5";
+				if (!guiTools$buttonText.isEmpty()) {
+					guiGraphics.pose().pushPose();
+					guiGraphics.pose().translate(getX() + width / 2.0, getY() + height / 2.0, 0);
+					guiGraphics.pose().scale(1.25f, 1.25f, 1.0f);
+					guiGraphics.drawString(net.minecraft.client.Minecraft.getInstance().font, guiTools$buttonText, -net.minecraft.client.Minecraft.getInstance().font.width(guiTools$buttonText) / 2,
+							-net.minecraft.client.Minecraft.getInstance().font.lineHeight / 2, -1, false);
+					guiGraphics.pose().popPose();
+				}
+			}
+		};
+		this.addWidget(enhanced_image_button_configurar_senha_computador_banc_copy_copy);
 	}
 
 	private final java.util.Map<String, java.util.List<String>> guiTools$multilineCache = new java.util.HashMap<>();
@@ -196,6 +383,10 @@ public class TelaCelularCriptoCatCoinAbaScreen extends AbstractContainerScreen<T
 	private static final boolean guiTools$enhancedImageButton = true;
 	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_invisivel_copy;
 	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_invisivel;
+	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_configurar_senha_computador_banc;
+	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_configurar_senha_computador_banc_copy;
+	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_configurar_senha_computador_banc_copy_2;
+	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_configurar_senha_computador_banc_copy_copy;
 
 	private static net.minecraft.resources.ResourceLocation guiTools$buttonTexture(String value, net.minecraft.resources.ResourceLocation fallback) {
 		if (value == null || value.isBlank())

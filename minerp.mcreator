@@ -3761,6 +3761,197 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto/CatCoin aba"
+    },
+    {
+      "name": "MostrarValorCatCoinAtual",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostrar_valor_cat_coin_atual",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostrarValorCatCoinAtualProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto/CatCoin aba"
+    },
+    {
+      "name": "MostrarquantidadeCatCoinAtual",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostrarquantidade_cat_coin_atual",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostrarquantidadeCatCoinAtualProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto/CatCoin aba"
+    },
+    {
+      "name": "MostrarResultadoDasComprasCripto",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mostrar_resultado_das_compras_cripto",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/MostrarResultadoDasComprasCriptoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto/CatCoin aba"
+    },
+    {
+      "name": "Comprar1catcoin",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "comprar_1catcoin",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/Comprar1catcoinProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto/CatCoin aba"
+    },
+    {
+      "name": "Vender1catcoin",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vender_1catcoin",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/Vender1catcoinProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto/CatCoin aba"
+    },
+    {
+      "name": "Comprar5catcoin",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "comprar_5catcoin",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/Comprar5catcoinProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto/CatCoin aba"
+    },
+    {
+      "name": "Vender5catcoin",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vender_5catcoin",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/Vender5catcoinProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto/CatCoin aba"
+    },
+    {
+      "name": "TELABRANCACELLTRANSICAO",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "telabrancacelltransicao",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/TELABRANCACELLTRANSICAOProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
+    },
+    {
+      "name": "TelaCelularCriptoThisGUIIsOpened",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tela_celular_cripto_this_gui_is_opened",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/TelaCelularCriptoThisGUIIsOpenedProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
     }
   ],
   "variable_elements": [
@@ -4003,6 +4194,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "DinheiroPrefeitura",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -4152,7 +4349,11 @@
       "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin": "Cat-Coin",
       "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin_copy": "???",
       "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin_copy_copy_copy": "???",
-      "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin_copy_copy": "???"
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin_copy_copy": "???",
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor": "VALOR",
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy": "VALOR",
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy_copy": "VALOR",
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy_2": "VALOR"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -4274,7 +4475,11 @@
       "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin": "Cat-Coin",
       "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin_copy": "???",
       "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin_copy_copy_copy": "???",
-      "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin_copy_copy": "???"
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.button_catcoin_copy_copy": "???",
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor": "VALOR",
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy": "VALOR",
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy_copy": "VALOR",
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy_2": "VALOR"
     }
   },
   "metadata": {
