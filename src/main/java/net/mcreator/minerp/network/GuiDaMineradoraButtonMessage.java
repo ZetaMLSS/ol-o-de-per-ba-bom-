@@ -18,21 +18,21 @@ import net.minecraft.core.SectionPos;
 import net.mcreator.minerp.MinerpMod;
 
 @EventBusSubscriber
-public record TelaCelularCriptoButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
-	public static final Type<TelaCelularCriptoButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(MinerpMod.MODID, "tela_celular_cripto_buttons"));
-	public static final StreamCodec<RegistryFriendlyByteBuf, TelaCelularCriptoButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, TelaCelularCriptoButtonMessage message) -> {
+public record GuiDaMineradoraButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
+	public static final Type<GuiDaMineradoraButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(MinerpMod.MODID, "gui_da_mineradora_buttons"));
+	public static final StreamCodec<RegistryFriendlyByteBuf, GuiDaMineradoraButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, GuiDaMineradoraButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
-	}, (RegistryFriendlyByteBuf buffer) -> new TelaCelularCriptoButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
+	}, (RegistryFriendlyByteBuf buffer) -> new GuiDaMineradoraButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
 
 	@Override
-	public Type<TelaCelularCriptoButtonMessage> type() {
+	public Type<GuiDaMineradoraButtonMessage> type() {
 		return TYPE;
 	}
 
-	public static void handleData(final TelaCelularCriptoButtonMessage message, final IPayloadContext context) {
+	public static void handleData(final GuiDaMineradoraButtonMessage message, final IPayloadContext context) {
 		if (context.flow() == PacketFlow.SERVERBOUND) {
 			context.enqueueWork(() -> handleButtonAction(context.player(), message.buttonID, message.x, message.y, message.z)).exceptionally(e -> {
 				context.connection().disconnect(Component.literal(e.getMessage()));
@@ -49,19 +49,28 @@ public record TelaCelularCriptoButtonMessage(int buttonID, int x, int y, int z) 
 
 		guiTools$enhancedImageButton : {
 			if (buttonID == 0) {
-				net.mcreator.minerp.procedures.BotaoInvisivelcelularvoltaraoinicioProcedure.execute(world, x, y, z, entity);
+				net.mcreator.minerp.procedures.FecharGuiProcedure.execute(entity);
 			}
 			if (buttonID == 1) {
-				net.mcreator.minerp.procedures.AbrirPortifolioCriptoProcedure.execute(world, x, y, z, entity);
+				net.mcreator.minerp.procedures.BotaoLigarMineradorav1procedureProcedure.execute(world, x, y, z);
 			}
 			if (buttonID == 2) {
-				net.mcreator.minerp.procedures.AbrirTelaCriptoCatcoinProcedure.execute(world, x, y, z, entity);
+				net.mcreator.minerp.procedures.SelecionarMoedaMineiradoraCatCoinProcedure.execute(world, x, y, z);
+			}
+			if (buttonID == 3) {
+				net.mcreator.minerp.procedures.SelecionarMoedaMineiradoraBatCoinProcedure.execute(world, x, y, z);
+			}
+			if (buttonID == 4) {
+				net.mcreator.minerp.procedures.SelecionarMoedaMineiradoraEtCoinProcedure.execute(world, x, y, z);
+			}
+			if (buttonID == 5) {
+				net.mcreator.minerp.procedures.SelecionarMoedaMineiradoraLuanaCoinProcedure.execute(world, x, y, z);
 			}
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		MinerpMod.addNetworkMessage(TelaCelularCriptoButtonMessage.TYPE, TelaCelularCriptoButtonMessage.STREAM_CODEC, TelaCelularCriptoButtonMessage::handleData);
+		MinerpMod.addNetworkMessage(GuiDaMineradoraButtonMessage.TYPE, GuiDaMineradoraButtonMessage.STREAM_CODEC, GuiDaMineradoraButtonMessage::handleData);
 	}
 }

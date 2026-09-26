@@ -122,5 +122,10 @@
   "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor": "VALOR",
   "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy": "VALOR",
   "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy_copy": "VALOR",
-  "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy_2": "VALOR"
+  "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy_2": "VALOR",
+  "gui.minerp.gui_da_mineradora.label_catcoin": "Cat-Coin",
+  "gui.minerp.gui_da_mineradora.label_catcoin_copy": "Bat-Coin",
+  "gui.minerp.gui_da_mineradora.label_catcoin_copy_copy": "Et-Coin",
+  "gui.minerp.gui_da_mineradora.label_catcoin_copy_copy_copy": "Lua-Coin",
+  "gui.minerp.gui_da_mineradora.label_informacoes": "Informações:"
 }

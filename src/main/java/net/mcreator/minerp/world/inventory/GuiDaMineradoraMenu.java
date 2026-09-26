@@ -2,9 +2,6 @@ package net.mcreator.minerp.world.inventory;
 
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.event.tick.PlayerTickEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.Level;
@@ -18,8 +15,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.minerp.procedures.TelaCelularInicialQuandoEstaGUIEAbertaProcedure;
-import net.mcreator.minerp.procedures.QuandoDesligaCelularProcedure;
 import net.mcreator.minerp.init.MinerpModMenus;
 
 import java.util.function.Supplier;
@@ -27,12 +22,11 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
 
-@EventBusSubscriber
-public class TelaCelularCriptoCatCoinAbaMenu extends AbstractContainerMenu implements MinerpModMenus.MenuAccessor {
+public class GuiDaMineradoraMenu extends AbstractContainerMenu implements MinerpModMenus.MenuAccessor {
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
 		public Object put(String key, Object value) {
-			if (!this.containsKey(key) && this.size() >= 25)
+			if (!this.containsKey(key) && this.size() >= 21)
 				return null;
 			return super.put(key, value);
 		}
@@ -48,8 +42,8 @@ public class TelaCelularCriptoCatCoinAbaMenu extends AbstractContainerMenu imple
 	private Entity boundEntity = null;
 	private BlockEntity boundBlockEntity = null;
 
-	public TelaCelularCriptoCatCoinAbaMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(MinerpModMenus.TELA_CELULAR_CRIPTO_CAT_COIN_ABA.get(), id);
+	public GuiDaMineradoraMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+		super(MinerpModMenus.GUI_DA_MINERADORA.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level();
 		this.internal = new ItemStackHandler(0);
@@ -82,12 +76,6 @@ public class TelaCelularCriptoCatCoinAbaMenu extends AbstractContainerMenu imple
 	}
 
 	@Override
-	public void removed(Player playerIn) {
-		super.removed(playerIn);
-		QuandoDesligaCelularProcedure.execute(world, entity);
-	}
-
-	@Override
 	public Map<Integer, Slot> getSlots() {
 		return Collections.unmodifiableMap(customSlots);
 	}
@@ -95,17 +83,5 @@ public class TelaCelularCriptoCatCoinAbaMenu extends AbstractContainerMenu imple
 	@Override
 	public Map<String, Object> getMenuState() {
 		return menuState;
-	}
-
-	@SubscribeEvent
-	public static void onPlayerTick(PlayerTickEvent.Post event) {
-		Player entity = event.getEntity();
-		if (entity.containerMenu instanceof TelaCelularCriptoCatCoinAbaMenu menu) {
-			Level world = menu.world;
-			double x = menu.x;
-			double y = menu.y;
-			double z = menu.z;
-			TelaCelularInicialQuandoEstaGUIEAbertaProcedure.execute(entity);
-		}
 	}
 }

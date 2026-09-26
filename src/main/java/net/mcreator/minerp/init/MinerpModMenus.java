@@ -53,6 +53,7 @@ public class MinerpModMenus {
 			() -> IMenuTypeExtension.create(TelaCelularCriptoPortifolioMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<TelaCelularCriptoCatCoinAbaMenu>> TELA_CELULAR_CRIPTO_CAT_COIN_ABA = REGISTRY.register("tela_celular_cripto_cat_coin_aba",
 			() -> IMenuTypeExtension.create(TelaCelularCriptoCatCoinAbaMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<GuiDaMineradoraMenu>> GUI_DA_MINERADORA = REGISTRY.register("gui_da_mineradora", () -> IMenuTypeExtension.create(GuiDaMineradoraMenu::new));
 
 	public interface MenuAccessor {
 		Map<String, Object> getMenuState();

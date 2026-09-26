@@ -50,11 +50,12 @@
       "registry_name": "asic_v_1",
       "metadata": {
         "files": [
-          "src/main/resources/assets/minerp/models/block/asic_v_1.json",
           "src/main/resources/assets/minerp/models/item/asic_v_1.json",
-          "src/main/resources/assets/minerp/blockstates/asic_v_1.json",
+          "src/main/java/net/mcreator/minerp/block/entity/AsicV1BlockEntity.java",
+          "src/main/resources/assets/minerp/models/block/asic_v_1.json",
+          "src/main/java/net/mcreator/minerp/block/AsicV1Block.java",
           "src/main/resources/data/minerp/loot_table/blocks/asic_v_1.json",
-          "src/main/java/net/mcreator/minerp/block/AsicV1Block.java"
+          "src/main/resources/assets/minerp/blockstates/asic_v_1.json"
         ]
       },
       "path": "~/Bloco/Mineradoras/Asic V1"
@@ -3952,6 +3953,361 @@
         ]
       },
       "path": "~/Itens/Celular/Sistema Celular/GUI/Inicio"
+    },
+    {
+      "name": "AbrirTelaCriptoCatcoin",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abrir_tela_cripto_catcoin",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/AbrirTelaCriptoCatcoinProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Celular/Sistema Celular/GUI/Cripto"
+    },
+    {
+      "name": "GuiDaMineradora",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gui_da_mineradora",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minerp/client/gui/GuiDaMineradoraScreen.java",
+          "src/main/java/net/mcreator/minerp/network/GuiDaMineradoraButtonMessage.java",
+          "src/main/java/net/mcreator/minerp/world/inventory/GuiDaMineradoraMenu.java"
+        ]
+      },
+      "path": "~/Bloco/Mineradoras/Asic V1"
+    },
+    {
+      "name": "FecharGui",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fechar_gui",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/FecharGuiProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Mineradoras/Asic V1"
+    },
+    {
+      "name": "SelecionarMoedaMineiradoraCatCoin",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "selecionar_moeda_mineiradora_cat_coin",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/SelecionarMoedaMineiradoraCatCoinProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Mineradoras/Asic V1"
+    },
+    {
+      "name": "SelecionarMoedaMineiradoraBatCoin",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "selecionar_moeda_mineiradora_bat_coin",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/SelecionarMoedaMineiradoraBatCoinProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Mineradoras/Asic V1"
+    },
+    {
+      "name": "SelecionarMoedaMineiradoraEtCoin",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "selecionar_moeda_mineiradora_et_coin",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/SelecionarMoedaMineiradoraEtCoinProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Mineradoras/Asic V1"
+    },
+    {
+      "name": "SelecionarMoedaMineiradoraLuanaCoin",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "selecionar_moeda_mineiradora_luana_coin",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/SelecionarMoedaMineiradoraLuanaCoinProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Mineradoras/Asic V1"
+    },
+    {
+      "name": "RetornarPlayerDaMineradora",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retornar_player_da_mineradora",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/RetornarPlayerDaMineradoraProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Mineradoras/Asic V1/Retornar"
+    },
+    {
+      "name": "RetornarMoedaDaMineradora",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retornar_moeda_da_mineradora",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/RetornarMoedaDaMineradoraProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Mineradoras/Asic V1/Retornar"
+    },
+    {
+      "name": "RetornarStatusOnMineradorav1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retornar_status_on_mineradorav_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/RetornarStatusOnMineradorav1Procedure.java"
+        ]
+      },
+      "path": "~/Bloco/Mineradoras/Asic V1/Retornar"
+    },
+    {
+      "name": "BotaoLigarMineradorav1procedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "botao_ligar_mineradorav_1procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/BotaoLigarMineradorav1procedureProcedure.java"
+        ]
+      },
+      "path": "~/Bloco/Mineradoras/Asic V1"
+    },
+    {
+      "name": "SISTEMAMINERACAOMINERADORAV1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sistemamineracaomineradorav_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/SISTEMAMINERACAOMINERADORAV1Procedure.java"
+        ]
+      },
+      "path": "~/Bloco/Mineradoras/Asic V1"
     }
   ],
   "variable_elements": [
@@ -4200,6 +4556,54 @@
       "type": "number",
       "scope": "map",
       "value": "0"
+    },
+    {
+      "name": "CatCoinGeradas",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "BatCoinGeradas",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "EtCoinGeradas",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "LuanaCoinGeradas",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "TaxaHashCatCoin",
+      "type": "number",
+      "scope": "map",
+      "value": "1000.0"
+    },
+    {
+      "name": "TaxaHashBatCoin",
+      "type": "number",
+      "scope": "map",
+      "value": "0.0"
+    },
+    {
+      "name": "TaxaHashEtCoin",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "TaxaHashLuanaCoin",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -4353,7 +4757,12 @@
       "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor": "VALOR",
       "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy": "VALOR",
       "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy_copy": "VALOR",
-      "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy_2": "VALOR"
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy_2": "VALOR",
+      "gui.minerp.gui_da_mineradora.label_catcoin": "Cat-Coin",
+      "gui.minerp.gui_da_mineradora.label_catcoin_copy": "Bat-Coin",
+      "gui.minerp.gui_da_mineradora.label_catcoin_copy_copy": "Et-Coin",
+      "gui.minerp.gui_da_mineradora.label_catcoin_copy_copy_copy": "Lua-Coin",
+      "gui.minerp.gui_da_mineradora.label_informacoes": "Informações:"
     },
     "pt_br": {
       "item.teste.bagaco": "Bagaco",
@@ -4479,7 +4888,12 @@
       "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor": "VALOR",
       "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy": "VALOR",
       "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy_copy": "VALOR",
-      "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy_2": "VALOR"
+      "gui.minerp.tela_celular_cripto_cat_coin_aba.label_valor_copy_2": "VALOR",
+      "gui.minerp.gui_da_mineradora.label_catcoin": "Cat-Coin",
+      "gui.minerp.gui_da_mineradora.label_catcoin_copy": "Bat-Coin",
+      "gui.minerp.gui_da_mineradora.label_catcoin_copy_copy": "Et-Coin",
+      "gui.minerp.gui_da_mineradora.label_catcoin_copy_copy_copy": "Lua-Coin",
+      "gui.minerp.gui_da_mineradora.label_informacoes": "Informações:"
     }
   },
   "metadata": {
@@ -4688,7 +5102,12 @@
             "children": [
               {
                 "name": "Asic V1",
-                "children": []
+                "children": [
+                  {
+                    "name": "Retornar",
+                    "children": []
+                  }
+                ]
               }
             ]
           },

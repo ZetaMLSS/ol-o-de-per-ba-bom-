@@ -3,7 +3,7 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 21,
+    "width": 0,
     "height": 0,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
@@ -11,49 +11,13 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_quantidade_no_mercado_copy",
-          "text": "Quantidade no mercado:",
-          "color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 100,
-          "width": 60,
-          "height": 22,
-          "x": 188,
-          "y": 96,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_valor_copy",
-          "text": "Valor:",
-          "color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 100,
-          "width": 30,
-          "height": 12,
-          "x": 200,
-          "y": 76,
-          "locked": false
-        }
-      },
-      {
         "type": "dynamic_image",
         "data": {
           "name": "dynamic_image_0",
-          "image": "gemini_generated_image_luqojiluqojiluqo-removebg-preview.png",
-          "width": 120,
-          "height": 229,
-          "x": 154,
+          "image": "guiminer1.png",
+          "width": 280,
+          "height": 240,
+          "x": 74,
           "y": 0,
           "locked": false
         }
@@ -64,28 +28,27 @@
           "name": "progressbar_progress_bar",
           "sua_image_mode": false,
           "current": {
-            "fixedValue": 0.0,
-            "name": "BateriaVisor"
+            "fixedValue": 0.0
           },
           "max": {
-            "fixedValue": 10000.0
+            "fixedValue": 100.0
           },
           "direction": "LEFT_TO_RIGHT",
-          "sua_color_effect": "multiGradient",
+          "sua_color_effect": "solid",
           "color1": {
-            "value": -6750208,
+            "value": -11163051,
             "falpha": 0.0
           },
           "color2": {
-            "value": -256,
+            "value": -43691,
             "falpha": 0.0
           },
           "color3": {
-            "value": -16724992,
+            "value": -16711936,
             "falpha": 0.0
           },
           "color4": {
-            "value": -16751104,
+            "value": -65281,
             "falpha": 0.0
           },
           "thresholdPercent": 0.25,
@@ -100,66 +63,11 @@
           "borderWidth": 1,
           "sua_pulse_speed": 1.0,
           "sua_pulse_easing": "easeInOutSine",
-          "width": 16,
-          "height": 7,
-          "anchorPoint": "TOP_RIGHT",
-          "x": 227,
-          "y": 25,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_relogio",
-          "text": "00:00\n",
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 100,
-          "textProcedure": "Horacelularvisor",
-          "width": 48,
-          "height": 21,
-          "x": 177,
-          "y": 24,
-          "locked": false
-        }
-      },
-      {
-        "type": "dynamic_image",
-        "data": {
-          "name": "dynamic_image_1",
-          "image": "tradetela.png",
-          "width": 82,
-          "height": 166,
-          "x": 173,
-          "y": 32,
-          "locked": false
-        }
-      },
-      {
-        "type": "enhanced_image_button",
-        "data": {
-          "image": "invisivel.png",
-          "hoveredImage": "",
-          "pressedImage": "",
-          "textColor": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "textShadow": true,
-          "fontScale": 100,
-          "togglePressedTexture": false,
-          "name": "enhanced_image_button_invisivel_copy",
-          "text": "",
-          "isUndecorated": true,
-          "onClick": "BotaoInvisivelcelularvoltaraoinicio",
-          "width": 20,
-          "height": 18,
-          "x": 204,
-          "y": 208,
+          "width": 37,
+          "height": 8,
+          "anchorPoint": "CENTER",
+          "x": 302,
+          "y": 46,
           "locked": false
         }
       },
@@ -179,471 +87,556 @@
           "name": "enhanced_image_button_invisivel",
           "text": "",
           "isUndecorated": true,
-          "onClick": "AbrirPortifolioCripto",
-          "width": 32,
-          "height": 16,
-          "x": 217,
-          "y": 56,
+          "onClick": "FecharGui",
+          "width": 14,
+          "height": 14,
+          "x": 336,
+          "y": 3,
           "locked": false
         }
       },
       {
         "type": "multiline_label",
         "data": {
-          "name": "multiline_label_valor",
-          "text": "Valor:",
+          "name": "multiline_label_ligadooun",
+          "text": "Ligadooun",
           "color": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 75,
+          "textProcedure": "RetornarStatusOnMineradorav1",
+          "width": 20,
+          "height": 12,
+          "x": 222,
+          "y": 157,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "invisivel.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
             "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_invisivel1",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "BotaoLigarMineradorav1procedure",
+          "width": 23,
+          "height": 22,
+          "x": 187,
+          "y": 126,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_escolher_moeda",
+          "text": "Escolher Moeda:",
+          "color": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "width": 40,
+          "height": 20,
+          "x": 214,
+          "y": 188,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "sua_font": "vanilla",
+          "sua_color_effect": "solid",
+          "sua_motion_effect": "none",
+          "sua_color1": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "sua_color2": {
+            "value": -14336,
+            "falpha": 0.0
+          },
+          "sua_alignment": "LEFT",
+          "sua_max_width": 0,
+          "sua_reveal_speed": 0.0,
+          "sua_rainbow_speed": 1.0,
+          "sua_wave_amplitude": 2.0,
+          "sua_wave_speed": 1.0,
+          "sua_bounce_amplitude": 3.0,
+          "sua_bounce_ms": 150,
+          "sua_color3": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "sua_color4": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "sua_outline_enabled": false,
+          "sua_outline_color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "sua_outline_width": 1,
+          "sua_scale_x": 1.0,
+          "sua_scale_y": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "sua_pulse_speed": 1.0,
+          "name": "label_catcoin",
+          "text": {
+            "fixedValue": "Cat-Coin"
+          },
+          "color": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "displayCondition": "MostrarCatCoinProcedure",
+          "x": 265,
+          "y": 177,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "sua_font": "vanilla",
+          "sua_color_effect": "solid",
+          "sua_motion_effect": "none",
+          "sua_color1": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "sua_color2": {
+            "value": -14336,
+            "falpha": 0.0
+          },
+          "sua_alignment": "LEFT",
+          "sua_max_width": 0,
+          "sua_reveal_speed": 0.0,
+          "sua_rainbow_speed": 1.0,
+          "sua_wave_amplitude": 2.0,
+          "sua_wave_speed": 1.0,
+          "sua_bounce_amplitude": 3.0,
+          "sua_bounce_ms": 150,
+          "sua_color3": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "sua_color4": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "sua_outline_enabled": false,
+          "sua_outline_color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "sua_outline_width": 1,
+          "sua_scale_x": 1.0,
+          "sua_scale_y": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "sua_pulse_speed": 1.0,
+          "name": "label_catcoin_copy",
+          "text": {
+            "fixedValue": "Bat-Coin"
+          },
+          "color": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "displayCondition": "MostrarBatCoinProcedure",
+          "x": 265,
+          "y": 188,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "sua_font": "vanilla",
+          "sua_color_effect": "solid",
+          "sua_motion_effect": "none",
+          "sua_color1": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "sua_color2": {
+            "value": -14336,
+            "falpha": 0.0
+          },
+          "sua_alignment": "LEFT",
+          "sua_max_width": 0,
+          "sua_reveal_speed": 0.0,
+          "sua_rainbow_speed": 1.0,
+          "sua_wave_amplitude": 2.0,
+          "sua_wave_speed": 1.0,
+          "sua_bounce_amplitude": 3.0,
+          "sua_bounce_ms": 150,
+          "sua_color3": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "sua_color4": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "sua_outline_enabled": false,
+          "sua_outline_color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "sua_outline_width": 1,
+          "sua_scale_x": 1.0,
+          "sua_scale_y": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "sua_pulse_speed": 1.0,
+          "name": "label_catcoin_copy_copy",
+          "text": {
+            "fixedValue": "Et-Coin"
+          },
+          "color": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "displayCondition": "MostrarEtCoinProcedure",
+          "x": 265,
+          "y": 201,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "sua_font": "vanilla",
+          "sua_color_effect": "solid",
+          "sua_motion_effect": "none",
+          "sua_color1": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "sua_color2": {
+            "value": -14336,
+            "falpha": 0.0
+          },
+          "sua_alignment": "LEFT",
+          "sua_max_width": 0,
+          "sua_reveal_speed": 0.0,
+          "sua_rainbow_speed": 1.0,
+          "sua_wave_amplitude": 2.0,
+          "sua_wave_speed": 1.0,
+          "sua_bounce_amplitude": 3.0,
+          "sua_bounce_ms": 150,
+          "sua_color3": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "sua_color4": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "sua_outline_enabled": false,
+          "sua_outline_color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "sua_outline_width": 1,
+          "sua_scale_x": 1.0,
+          "sua_scale_y": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "sua_pulse_speed": 1.0,
+          "name": "label_catcoin_copy_copy_copy",
+          "text": {
+            "fixedValue": "Lua-Coin"
+          },
+          "color": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "displayCondition": "MostrarLuanaCoinProcedure",
+          "x": 265,
+          "y": 213,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "invisivel.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_invisivel2",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "SelecionarMoedaMineiradoraCatCoin",
+          "width": 42,
+          "height": 10,
+          "x": 266,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "invisivel.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_invisivel2_copy",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "SelecionarMoedaMineiradoraBatCoin",
+          "width": 42,
+          "height": 10,
+          "x": 266,
+          "y": 189,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "invisivel.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_invisivel2_copy_copy",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "SelecionarMoedaMineiradoraEtCoin",
+          "width": 42,
+          "height": 10,
+          "x": 265,
+          "y": 202,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "invisivel.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_invisivel2_copy_copy_copy",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "SelecionarMoedaMineiradoraLuanaCoin",
+          "width": 42,
+          "height": 10,
+          "x": 266,
+          "y": 214,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_informacoes_copy",
+          "text": "Envio:",
+          "color": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "width": 36,
+          "height": 12,
+          "x": 103,
+          "y": 216,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "sua_font": "vanilla",
+          "sua_color_effect": "solid",
+          "sua_motion_effect": "none",
+          "sua_color1": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "sua_color2": {
+            "value": -14336,
+            "falpha": 0.0
+          },
+          "sua_alignment": "LEFT",
+          "sua_max_width": 0,
+          "sua_reveal_speed": 0.0,
+          "sua_rainbow_speed": 1.0,
+          "sua_wave_amplitude": 2.0,
+          "sua_wave_speed": 1.0,
+          "sua_bounce_amplitude": 3.0,
+          "sua_bounce_ms": 150,
+          "sua_color3": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "sua_color4": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "sua_outline_enabled": false,
+          "sua_outline_color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "sua_outline_width": 1,
+          "sua_scale_x": 1.0,
+          "sua_scale_y": 1.0,
+          "sua_pulse_easing": "easeInOutSine",
+          "sua_pulse_speed": 1.0,
+          "name": "label_informacoes",
+          "text": {
+            "fixedValue": "Informações:"
+          },
+          "color": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 103,
+          "y": 175,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_informacoes_copy_copy",
+          "text": "Moeda:",
+          "color": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "width": 36,
+          "height": 12,
+          "x": 103,
+          "y": 206,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_informacoes_copy_copy_copy",
+          "text": "Hash Da Moeda:",
+          "color": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "width": 43,
+          "height": 22,
+          "x": 103,
+          "y": 185,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_first_linesecond_line",
+          "text": "Moeda",
+          "color": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "textProcedure": "RetornarMoedaDaMineradora",
+          "width": 30,
+          "height": 12,
+          "x": 136,
+          "y": 206,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_first_linesecond_line_copy",
+          "text": "Player",
+          "color": {
+            "value": -16711936,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "fontScale": 100,
+          "textProcedure": "RetornarPlayerDaMineradora",
+          "width": 30,
+          "height": 12,
+          "x": 136,
+          "y": 216,
+          "locked": false
+        }
+      },
+      {
+        "type": "multiline_label",
+        "data": {
+          "name": "multiline_label_first_linesecond_line_copy_copy",
+          "text": "Hash",
+          "color": {
+            "value": -16711936,
             "falpha": 0.0
           },
           "hasShadow": false,
           "fontScale": 100,
           "width": 30,
           "height": 12,
-          "x": 199,
-          "y": 76,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_quantidade_no_mercado",
-          "text": "Quantidade no mercado:",
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 100,
-          "width": 60,
-          "height": 22,
-          "x": 187,
-          "y": 96,
-          "locked": false
-        }
-      },
-      {
-        "type": "dynamic_image",
-        "data": {
-          "name": "dynamic_image_2",
-          "image": "negrom.png",
-          "width": 21,
-          "height": 21,
-          "x": 182,
-          "y": 131,
-          "locked": false
-        }
-      },
-      {
-        "type": "dynamic_image",
-        "data": {
-          "name": "dynamic_image_2_copy",
-          "image": "negrom.png",
-          "width": 21,
-          "height": 21,
-          "x": 182,
-          "y": 153,
-          "locked": false
-        }
-      },
-      {
-        "type": "dynamic_image",
-        "data": {
-          "name": "dynamic_image_2_copy_copy",
-          "image": "negrom.png",
-          "width": 21,
-          "height": 21,
-          "x": 226,
-          "y": 153,
-          "locked": false
-        }
-      },
-      {
-        "type": "dynamic_image",
-        "data": {
-          "name": "dynamic_image_2_copy_copy_copy",
-          "image": "negrom.png",
-          "width": 21,
-          "height": 21,
-          "x": 226,
-          "y": 131,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "sua_font": "vanilla",
-          "sua_color_effect": "solid",
-          "sua_motion_effect": "none",
-          "sua_color1": {
-            "value": -16776961,
-            "falpha": 0.0
-          },
-          "sua_color2": {
-            "value": -14336,
-            "falpha": 0.0
-          },
-          "sua_alignment": "LEFT",
-          "sua_max_width": 0,
-          "sua_reveal_speed": 0.0,
-          "sua_rainbow_speed": 1.0,
-          "sua_wave_amplitude": 2.0,
-          "sua_wave_speed": 1.0,
-          "sua_bounce_amplitude": 3.0,
-          "sua_bounce_ms": 150,
-          "sua_color3": {
-            "value": -16711936,
-            "falpha": 0.0
-          },
-          "sua_color4": {
-            "value": -65281,
-            "falpha": 0.0
-          },
-          "sua_outline_enabled": false,
-          "sua_outline_color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "sua_outline_width": 1,
-          "sua_scale_x": 1.0,
-          "sua_scale_y": 1.0,
-          "sua_pulse_easing": "easeInOutSine",
-          "sua_pulse_speed": 1.0,
-          "name": "label_valor_copy_2",
-          "text": {
-            "fixedValue": "VALOR",
-            "name": "MostrarValorCatCoinAtual"
-          },
-          "color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 204,
-          "y": 87,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "sua_font": "vanilla",
-          "sua_color_effect": "solid",
-          "sua_motion_effect": "none",
-          "sua_color1": {
-            "value": -16776961,
-            "falpha": 0.0
-          },
-          "sua_color2": {
-            "value": -14336,
-            "falpha": 0.0
-          },
-          "sua_alignment": "LEFT",
-          "sua_max_width": 0,
-          "sua_reveal_speed": 0.0,
-          "sua_rainbow_speed": 1.0,
-          "sua_wave_amplitude": 2.0,
-          "sua_wave_speed": 1.0,
-          "sua_bounce_amplitude": 3.0,
-          "sua_bounce_ms": 150,
-          "sua_color3": {
-            "value": -16711936,
-            "falpha": 0.0
-          },
-          "sua_color4": {
-            "value": -65281,
-            "falpha": 0.0
-          },
-          "sua_outline_enabled": false,
-          "sua_outline_color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "sua_outline_width": 1,
-          "sua_scale_x": 1.0,
-          "sua_scale_y": 1.0,
-          "sua_pulse_easing": "easeInOutSine",
-          "sua_pulse_speed": 1.0,
-          "name": "label_valor",
-          "text": {
-            "fixedValue": "VALOR",
-            "name": "MostrarValorCatCoinAtual"
-          },
-          "color": {
-            "value": -16738048,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 204,
-          "y": 86,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "sua_font": "vanilla",
-          "sua_color_effect": "solid",
-          "sua_motion_effect": "none",
-          "sua_color1": {
-            "value": -16776961,
-            "falpha": 0.0
-          },
-          "sua_color2": {
-            "value": -14336,
-            "falpha": 0.0
-          },
-          "sua_alignment": "LEFT",
-          "sua_max_width": 0,
-          "sua_reveal_speed": 0.0,
-          "sua_rainbow_speed": 1.0,
-          "sua_wave_amplitude": 2.0,
-          "sua_wave_speed": 1.0,
-          "sua_bounce_amplitude": 3.0,
-          "sua_bounce_ms": 150,
-          "sua_color3": {
-            "value": -16711936,
-            "falpha": 0.0
-          },
-          "sua_color4": {
-            "value": -65281,
-            "falpha": 0.0
-          },
-          "sua_outline_enabled": false,
-          "sua_outline_color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "sua_outline_width": 1,
-          "sua_scale_x": 1.0,
-          "sua_scale_y": 1.0,
-          "sua_pulse_easing": "easeInOutSine",
-          "sua_pulse_speed": 1.0,
-          "name": "label_valor_copy_copy",
-          "text": {
-            "fixedValue": "VALOR",
-            "name": "MostrarquantidadeCatCoinAtual"
-          },
-          "color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 205,
-          "y": 116,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "sua_font": "vanilla",
-          "sua_color_effect": "solid",
-          "sua_motion_effect": "none",
-          "sua_color1": {
-            "value": -16776961,
-            "falpha": 0.0
-          },
-          "sua_color2": {
-            "value": -14336,
-            "falpha": 0.0
-          },
-          "sua_alignment": "LEFT",
-          "sua_max_width": 0,
-          "sua_reveal_speed": 0.0,
-          "sua_rainbow_speed": 1.0,
-          "sua_wave_amplitude": 2.0,
-          "sua_wave_speed": 1.0,
-          "sua_bounce_amplitude": 3.0,
-          "sua_bounce_ms": 150,
-          "sua_color3": {
-            "value": -16711936,
-            "falpha": 0.0
-          },
-          "sua_color4": {
-            "value": -65281,
-            "falpha": 0.0
-          },
-          "sua_outline_enabled": false,
-          "sua_outline_color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "sua_outline_width": 1,
-          "sua_scale_x": 1.0,
-          "sua_scale_y": 1.0,
-          "sua_pulse_easing": "easeInOutSine",
-          "sua_pulse_speed": 1.0,
-          "name": "label_valor_copy",
-          "text": {
-            "fixedValue": "VALOR",
-            "name": "MostrarquantidadeCatCoinAtual"
-          },
-          "color": {
-            "value": -16750951,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 205,
-          "y": 115,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_resultadocompracripto",
-          "text": "ResultadoCripto",
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 100,
-          "width": 74,
-          "height": 12,
-          "x": 177,
-          "y": 177,
-          "locked": false
-        }
-      },
-      {
-        "type": "enhanced_image_button",
-        "data": {
-          "image": "resultado_banco_computador.png",
-          "hoveredImage": "",
-          "pressedImage": "negrom.png",
-          "textColor": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "textShadow": false,
-          "fontScale": 125,
-          "togglePressedTexture": false,
-          "name": "enhanced_image_button_configurar_senha_computador_banc",
-          "text": "-1",
-          "isUndecorated": true,
-          "onClick": "Vender1catcoin",
-          "width": 22,
-          "height": 22,
-          "x": 180,
-          "y": 129,
-          "locked": false
-        }
-      },
-      {
-        "type": "enhanced_image_button",
-        "data": {
-          "image": "resultado_banco_computador.png",
-          "hoveredImage": "",
-          "pressedImage": "negrom.png",
-          "textColor": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "textShadow": false,
-          "fontScale": 125,
-          "togglePressedTexture": false,
-          "name": "enhanced_image_button_configurar_senha_computador_banc_copy",
-          "text": "+1",
-          "isUndecorated": true,
-          "onClick": "Comprar1catcoin",
-          "width": 22,
-          "height": 22,
-          "x": 224,
-          "y": 129,
-          "locked": false
-        }
-      },
-      {
-        "type": "enhanced_image_button",
-        "data": {
-          "image": "resultado_banco_computador.png",
-          "hoveredImage": "",
-          "pressedImage": "negrom.png",
-          "textColor": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "textShadow": false,
-          "fontScale": 125,
-          "togglePressedTexture": false,
-          "name": "enhanced_image_button_configurar_senha_computador_banc_copy_2",
-          "text": "-5",
-          "isUndecorated": true,
-          "onClick": "Vender5catcoin",
-          "width": 22,
-          "height": 22,
-          "x": 180,
-          "y": 151,
-          "locked": false
-        }
-      },
-      {
-        "type": "enhanced_image_button",
-        "data": {
-          "image": "resultado_banco_computador.png",
-          "hoveredImage": "",
-          "pressedImage": "negrom.png",
-          "textColor": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "textShadow": false,
-          "fontScale": 125,
-          "togglePressedTexture": false,
-          "name": "enhanced_image_button_configurar_senha_computador_banc_copy_copy",
-          "text": "+5",
-          "isUndecorated": true,
-          "onClick": "Comprar5catcoin",
-          "width": 22,
-          "height": 22,
-          "x": 224,
-          "y": 151,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_empty",
-          "text": "__________",
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 100,
-          "width": 80,
-          "height": 12,
-          "x": 187,
-          "y": 117,
-          "locked": false
-        }
-      },
-      {
-        "type": "multiline_label",
-        "data": {
-          "name": "multiline_label_empty_copy",
-          "text": "__________",
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "fontScale": 100,
-          "width": 80,
-          "height": 12,
-          "x": 187,
-          "y": 87,
+          "x": 136,
+          "y": 195,
           "locked": false
         }
       }
     ],
-    "onTick": "TelaCelularInicialQuandoEstaGUIEAberta",
-    "onClosed": "QuandoDesligaCelular",
     "gridSettings": {
       "sx": 18,
       "sy": 18,

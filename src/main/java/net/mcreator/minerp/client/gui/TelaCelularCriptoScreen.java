@@ -196,6 +196,12 @@ public class TelaCelularCriptoScreen extends AbstractContainerScreen<TelaCelular
 		this.addWidget(enhanced_image_button_invisivel);
 		enhanced_image_button_configurar_senha_computador_banc = new net.minecraft.client.gui.components.ImageButton(this.leftPos + -22, this.topPos + -39, 65, 20, new net.minecraft.client.gui.components.WidgetSprites(
 				net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/tela_de_pesquisa_computador_banco.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/tela_de_pesquisa_computador_banco.png")), e -> {
+					int x = TelaCelularCriptoScreen.this.x;
+					int y = TelaCelularCriptoScreen.this.y;
+					if (net.mcreator.minerp.procedures.MostrarCatCoinProcedureProcedure.execute(world)) {
+						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.TelaCelularCriptoButtonMessage(2, x, y, z));
+						net.mcreator.minerp.network.TelaCelularCriptoButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
 				}) {
 			@Override
 			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {

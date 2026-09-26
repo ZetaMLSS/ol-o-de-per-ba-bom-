@@ -219,6 +219,7 @@
           "name": "enhanced_image_button_configurar_senha_computador_banc",
           "text": "Cat-Coin",
           "isUndecorated": true,
+          "onClick": "AbrirTelaCriptoCatcoin",
           "displayCondition": "MostrarCatCoinProcedure",
           "width": 65,
           "height": 20,

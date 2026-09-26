@@ -193,6 +193,14 @@ public class MinerpModVariables {
 		public double LuanaCoinQuantidade = 0;
 		public double LuanaCoinLimite = 0;
 		public double DinheiroPrefeitura = 0;
+		public double CatCoinGeradas = 0;
+		public double BatCoinGeradas = 0;
+		public double EtCoinGeradas = 0;
+		public double LuanaCoinGeradas = 0;
+		public double TaxaHashCatCoin = 1000.0;
+		public double TaxaHashBatCoin = 0.0;
+		public double TaxaHashEtCoin = 0;
+		public double TaxaHashLuanaCoin = 0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -233,6 +241,14 @@ public class MinerpModVariables {
 			LuanaCoinQuantidade = nbt.getDouble("LuanaCoinQuantidade");
 			LuanaCoinLimite = nbt.getDouble("LuanaCoinLimite");
 			DinheiroPrefeitura = nbt.getDouble("DinheiroPrefeitura");
+			CatCoinGeradas = nbt.getDouble("CatCoinGeradas");
+			BatCoinGeradas = nbt.getDouble("BatCoinGeradas");
+			EtCoinGeradas = nbt.getDouble("EtCoinGeradas");
+			LuanaCoinGeradas = nbt.getDouble("LuanaCoinGeradas");
+			TaxaHashCatCoin = nbt.getDouble("TaxaHashCatCoin");
+			TaxaHashBatCoin = nbt.getDouble("TaxaHashBatCoin");
+			TaxaHashEtCoin = nbt.getDouble("TaxaHashEtCoin");
+			TaxaHashLuanaCoin = nbt.getDouble("TaxaHashLuanaCoin");
 		}
 
 		@Override
@@ -269,6 +285,14 @@ public class MinerpModVariables {
 			nbt.putDouble("LuanaCoinQuantidade", LuanaCoinQuantidade);
 			nbt.putDouble("LuanaCoinLimite", LuanaCoinLimite);
 			nbt.putDouble("DinheiroPrefeitura", DinheiroPrefeitura);
+			nbt.putDouble("CatCoinGeradas", CatCoinGeradas);
+			nbt.putDouble("BatCoinGeradas", BatCoinGeradas);
+			nbt.putDouble("EtCoinGeradas", EtCoinGeradas);
+			nbt.putDouble("LuanaCoinGeradas", LuanaCoinGeradas);
+			nbt.putDouble("TaxaHashCatCoin", TaxaHashCatCoin);
+			nbt.putDouble("TaxaHashBatCoin", TaxaHashBatCoin);
+			nbt.putDouble("TaxaHashEtCoin", TaxaHashEtCoin);
+			nbt.putDouble("TaxaHashLuanaCoin", TaxaHashLuanaCoin);
 			return nbt;
 		}
 

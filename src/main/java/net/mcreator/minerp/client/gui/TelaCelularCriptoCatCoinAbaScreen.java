@@ -144,29 +144,31 @@ public class TelaCelularCriptoCatCoinAbaScreen extends AbstractContainerScreen<T
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		{
-			guiGraphics.drawString(this.font, MostrarValorCatCoinAtualProcedure.execute(world), -2, -37, -16777216, false);
+			guiGraphics.drawString(this.font, MostrarValorCatCoinAtualProcedure.execute(world), 1, -33, -16777216, false);
 		}
 		{
-			guiGraphics.drawString(this.font, MostrarValorCatCoinAtualProcedure.execute(world), -2, -38, -16738048, false);
+			guiGraphics.drawString(this.font, MostrarValorCatCoinAtualProcedure.execute(world), 1, -34, -16738048, false);
 		}
 		{
-			guiGraphics.drawString(this.font, MostrarquantidadeCatCoinAtualProcedure.execute(world), -1, -8, -16777216, false);
+			guiGraphics.drawString(this.font, MostrarquantidadeCatCoinAtualProcedure.execute(world), 2, -4, -16777216, false);
 		}
 		{
-			guiGraphics.drawString(this.font, MostrarquantidadeCatCoinAtualProcedure.execute(world), -1, -9, -16750951, false);
+			guiGraphics.drawString(this.font, MostrarquantidadeCatCoinAtualProcedure.execute(world), 2, -5, -16750951, false);
 		}
-		this.guiTools$renderMultilineLabel(guiGraphics, "Quantidade no mercado:", -15, -28, 60, 22, -16777216, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Valor:", -3, -46, 30, 12, -16777216, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Quantidade no mercado:", -15, -24, 60, 22, -16777216, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Valor:", -3, -44, 30, 12, -16777216, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 21, -1, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Valor:", -4, -46, 30, 12, -1, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Quantidade no mercado:", -16, -28, 60, 22, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Valor:", -4, -44, 30, 12, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Quantidade no mercado:", -16, -24, 60, 22, -1, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "ResultadoCripto", -26, 57, 74, 12, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "__________", -16, -3, 80, 12, -1, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "__________", -16, -33, 80, 12, -1, false, 1.00F);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		enhanced_image_button_invisivel_copy = new net.minecraft.client.gui.components.ImageButton(this.leftPos + 1, this.topPos + 86, 20, 18,
+		enhanced_image_button_invisivel_copy = new net.minecraft.client.gui.components.ImageButton(this.leftPos + 1, this.topPos + 88, 20, 18,
 				new net.minecraft.client.gui.components.WidgetSprites(net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/invisivel.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/invisivel.png")),
 				e -> {
 					int x = TelaCelularCriptoCatCoinAbaScreen.this.x;
