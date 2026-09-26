@@ -27,7 +27,7 @@ public class AlgemaItem extends Item {
 	@Override
 	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		PrenderAlgemaProcedure.execute(entity, sourceentity, itemstack);
+		PrenderAlgemaProcedure.execute(entity, sourceentity);
 		return retval;
 	}
 

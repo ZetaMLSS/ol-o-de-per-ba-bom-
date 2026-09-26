@@ -3460,10 +3460,6 @@
           {
             "name": "sourceentity",
             "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
           }
         ],
         "files": [
