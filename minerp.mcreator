@@ -4409,6 +4409,44 @@
         ]
       },
       "path": "~/Itens/Algema"
+    },
+    {
+      "name": "BloquearQuebraAlgemado",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bloquear_quebra_algemado",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/BloquearQuebraAlgemadoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Algema"
+    },
+    {
+      "name": "BloquearAtaqueAlgemado",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bloquear_ataque_algemado",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minerp/procedures/BloquearAtaqueAlgemadoProcedure.java"
+        ]
+      },
+      "path": "~/Itens/Algema"
     }
   ],
   "variable_elements": [

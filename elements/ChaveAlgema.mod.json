@@ -38,7 +38,6 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 99,
-    "onRightClickedInAir": "Teste",
     "onEntityHitWith": "RemoverAlgema",
     "enableRanged": false,
     "shootConstantly": false,
