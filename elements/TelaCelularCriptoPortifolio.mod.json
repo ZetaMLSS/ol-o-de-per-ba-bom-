@@ -166,7 +166,7 @@
           "width": 43,
           "height": 12,
           "x": 204,
-          "y": 87,
+          "y": 98,
           "locked": false
         }
       },
@@ -185,7 +185,7 @@
           "width": 43,
           "height": 12,
           "x": 203,
-          "y": 87,
+          "y": 98,
           "locked": false
         }
       },
@@ -198,7 +198,7 @@
           "width": 80,
           "height": 90,
           "x": 177,
-          "y": 47,
+          "y": 58,
           "locked": false
         }
       },
@@ -241,7 +241,7 @@
           "width": 43,
           "height": 12,
           "x": 204,
-          "y": 113,
+          "y": 123,
           "locked": false
         }
       },
@@ -260,7 +260,7 @@
           "width": 43,
           "height": 12,
           "x": 203,
-          "y": 113,
+          "y": 123,
           "locked": false
         }
       },
@@ -273,7 +273,7 @@
           "width": 80,
           "height": 90,
           "x": 177,
-          "y": 73,
+          "y": 83,
           "locked": false
         }
       },
@@ -292,7 +292,7 @@
           "width": 43,
           "height": 12,
           "x": 204,
-          "y": 139,
+          "y": 148,
           "locked": false
         }
       },
@@ -311,7 +311,7 @@
           "width": 43,
           "height": 12,
           "x": 203,
-          "y": 139,
+          "y": 148,
           "locked": false
         }
       },
@@ -324,7 +324,7 @@
           "width": 80,
           "height": 90,
           "x": 177,
-          "y": 99,
+          "y": 108,
           "locked": false
         }
       },
@@ -343,7 +343,7 @@
           "width": 43,
           "height": 12,
           "x": 204,
-          "y": 165,
+          "y": 172,
           "locked": false
         }
       },
@@ -362,7 +362,7 @@
           "width": 43,
           "height": 12,
           "x": 203,
-          "y": 165,
+          "y": 172,
           "locked": false
         }
       },
@@ -375,7 +375,31 @@
           "width": 80,
           "height": 90,
           "x": 177,
-          "y": 125,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "enhanced_image_button",
+        "data": {
+          "image": "icone_notificacao.png",
+          "hoveredImage": "",
+          "pressedImage": "",
+          "textColor": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "textShadow": true,
+          "fontScale": 100,
+          "togglePressedTexture": false,
+          "name": "enhanced_image_button_icone_notificacao",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": "AtivarNotificacaoCriptoMineradas",
+          "width": 12,
+          "height": 12,
+          "x": 237,
+          "y": 75,
           "locked": false
         }
       }

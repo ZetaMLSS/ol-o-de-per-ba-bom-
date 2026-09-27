@@ -65,7 +65,7 @@
     "canRedstoneConnect": false,
     "hasCustomOpacity": true,
     "lightOpacity": 0,
-    "tickRate": 0,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -122,6 +122,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": "AsicV1OnBlockRightclicked",
+    "onBlockAdded": "AsicV1BlockAdded",
+    "onTickUpdate": "SISTEMAMINERACAOMINERADORAV1",
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

@@ -86,7 +86,7 @@ public class TelaCelularCriptoPortifolioScreen extends AbstractContainerScreen<T
 				int guiTools$visibleHeight = 90;
 				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/catcoinportfile.png"));
 				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
-					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -26 + guiTools$xOffset, this.topPos + -73 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 80, 90);
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -26 + guiTools$xOffset, this.topPos + -62 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 80, 90);
 			}
 			if (this.enhanced_image_button_invisivel_copy_copy != null && this.enhanced_image_button_invisivel_copy_copy.visible) {
 				this.enhanced_image_button_invisivel_copy_copy.render(guiGraphics, mouseX, mouseY, partialTicks);
@@ -98,7 +98,7 @@ public class TelaCelularCriptoPortifolioScreen extends AbstractContainerScreen<T
 				int guiTools$visibleHeight = 90;
 				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/catcoinportfile.png"));
 				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
-					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -26 + guiTools$xOffset, this.topPos + -47 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 80, 90);
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -26 + guiTools$xOffset, this.topPos + -37 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 80, 90);
 			}
 			if (net.mcreator.minerp.procedures.MostrarEtCoinProcedureProcedure.execute(world)) {
 				int guiTools$xOffset = 0;
@@ -107,7 +107,7 @@ public class TelaCelularCriptoPortifolioScreen extends AbstractContainerScreen<T
 				int guiTools$visibleHeight = 90;
 				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/catcoinportfile.png"));
 				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
-					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -26 + guiTools$xOffset, this.topPos + -21 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 80, 90);
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -26 + guiTools$xOffset, this.topPos + -12 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 80, 90);
 			}
 			if (net.mcreator.minerp.procedures.MostrarLuanaCoinProcedureProcedure.execute(world)) {
 				int guiTools$xOffset = 0;
@@ -116,7 +116,10 @@ public class TelaCelularCriptoPortifolioScreen extends AbstractContainerScreen<T
 				int guiTools$visibleHeight = 90;
 				net.minecraft.resources.ResourceLocation guiTools$image = guiTools$dynamicTexture("", net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/catcoinportfile.png"));
 				if (guiTools$image != null && guiTools$visibleWidth > 0 && guiTools$visibleHeight > 0)
-					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -26 + guiTools$xOffset, this.topPos + 5 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 80, 90);
+					guiTools$alphaBlit(guiGraphics, guiTools$image, this.leftPos + -26 + guiTools$xOffset, this.topPos + 12 + guiTools$yOffset, 0, 0, guiTools$visibleWidth, guiTools$visibleHeight, 80, 90);
+			}
+			if (this.enhanced_image_button_icone_notificacao != null && this.enhanced_image_button_icone_notificacao.visible) {
+				this.enhanced_image_button_icone_notificacao.render(guiGraphics, mouseX, mouseY, partialTicks);
 			}
 		}
 	}
@@ -133,14 +136,14 @@ public class TelaCelularCriptoPortifolioScreen extends AbstractContainerScreen<T
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 12, -1, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarValorCarcoinCriptoCelularProcedure.execute(world, entity), ""), 1, -33, 43, 12, -16777165, false, 1.50F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarValorCarcoinCriptoCelularProcedure.execute(world, entity), ""), 0, -33, 43, 12, -16750849, false, 1.50F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarValorBatCoinCriptoCelularProcedure.execute(world, entity), ""), 1, -7, 43, 12, -16777165, false, 1.50F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarValorBatCoinCriptoCelularProcedure.execute(world, entity), ""), 0, -7, 43, 12, -16750849, false, 1.50F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarValorEtCoinCriptoCelularProcedure.execute(world, entity), ""), 1, 19, 43, 12, -16777165, false, 1.50F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarValorEtCoinCriptoCelularProcedure.execute(world, entity), ""), 0, 19, 43, 12, -16750849, false, 1.50F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarValorLuanaCoinCriptoCelularProcedure.execute(world, entity), ""), 1, 45, 43, 12, -16777165, false, 1.50F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarValorLuanaCoinCriptoCelularProcedure.execute(world, entity), ""), 0, 45, 43, 12, -16750849, false, 1.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarValorCarcoinCriptoCelularProcedure.execute(world, entity), ""), 1, -22, 43, 12, -16777165, false, 1.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarValorCarcoinCriptoCelularProcedure.execute(world, entity), ""), 0, -22, 43, 12, -16750849, false, 1.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarValorBatCoinCriptoCelularProcedure.execute(world, entity), ""), 1, 3, 43, 12, -16777165, false, 1.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarValorBatCoinCriptoCelularProcedure.execute(world, entity), ""), 0, 3, 43, 12, -16750849, false, 1.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarValorEtCoinCriptoCelularProcedure.execute(world, entity), ""), 1, 28, 43, 12, -16777165, false, 1.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarValorEtCoinCriptoCelularProcedure.execute(world, entity), ""), 0, 28, 43, 12, -16750849, false, 1.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarValorLuanaCoinCriptoCelularProcedure.execute(world, entity), ""), 1, 52, 43, 12, -16777165, false, 1.50F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.MostrarValorLuanaCoinCriptoCelularProcedure.execute(world, entity), ""), 0, 52, 43, 12, -16750849, false, 1.50F);
 	}
 
 	@Override
@@ -212,6 +215,27 @@ public class TelaCelularCriptoPortifolioScreen extends AbstractContainerScreen<T
 			}
 		};
 		this.addWidget(enhanced_image_button_invisivel_copy_copy);
+		enhanced_image_button_icone_notificacao = new net.minecraft.client.gui.components.ImageButton(this.leftPos + 34, this.topPos + -45, 12, 12, new net.minecraft.client.gui.components.WidgetSprites(
+				net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/icone_notificacao.png"), net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/icone_notificacao.png")), e -> {
+					int x = TelaCelularCriptoPortifolioScreen.this.x;
+					int y = TelaCelularCriptoPortifolioScreen.this.y;
+					if (true) {
+						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.TelaCelularCriptoPortifolioButtonMessage(3, x, y, z));
+						net.mcreator.minerp.network.TelaCelularCriptoPortifolioButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(net.minecraft.client.gui.GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				net.minecraft.resources.ResourceLocation guiTools$normalTexture = net.minecraft.resources.ResourceLocation.parse("minerp:textures/screens/icone_notificacao.png");
+				net.minecraft.resources.ResourceLocation guiTools$hoveredTexture = guiTools$normalTexture;
+				net.minecraft.resources.ResourceLocation guiTools$pressedTexture = guiTools$hoveredTexture;
+				boolean mouseOverButton = mouseX >= getX() && mouseY >= getY() && mouseX < getX() + width && mouseY < getY() + height;
+				boolean mousePressed = mouseOverButton && org.lwjgl.glfw.GLFW.glfwGetMouseButton(net.minecraft.client.Minecraft.getInstance().getWindow().getWindow(), org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT) == org.lwjgl.glfw.GLFW.GLFW_PRESS;
+				net.minecraft.resources.ResourceLocation buttonTexture = mousePressed ? guiTools$pressedTexture : mouseOverButton ? guiTools$hoveredTexture : guiTools$normalTexture;
+				guiTools$alphaBlit(guiGraphics, buttonTexture, getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addWidget(enhanced_image_button_icone_notificacao);
 	}
 
 	private final java.util.Map<String, java.util.List<String>> guiTools$multilineCache = new java.util.HashMap<>();
@@ -266,6 +290,7 @@ public class TelaCelularCriptoPortifolioScreen extends AbstractContainerScreen<T
 	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_invisivel_copy_copy_copy;
 	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_invisivel;
 	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_invisivel_copy_copy;
+	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_icone_notificacao;
 
 	private static net.minecraft.resources.ResourceLocation guiTools$buttonTexture(String value, net.minecraft.resources.ResourceLocation fallback) {
 		if (value == null || value.isBlank())

@@ -26,6 +26,8 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.minerp.procedures.MudancaItensTransferidorEnergiaProcedure;
+import net.mcreator.minerp.procedures.ItensQueVaoProCarregadorDeBateriaProcedure;
 import net.mcreator.minerp.MinerpMod;
 
 import java.util.Optional;
@@ -52,6 +54,12 @@ public class MinerpModBerSupport {
 			if (!world.isClientSide())
 				slotid = insertOrExtractNext(world, pos, entity, event.getHand());
 			handled = true;
+			if (slotid < 0)
+				slotid = 0;
+			if (!world.isClientSide()) {
+				ItensQueVaoProCarregadorDeBateriaProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
+			}
+			handled = true;
 			if (handled) {
 				event.setCanceled(true);
 				event.setCancellationResult(InteractionResult.sidedSuccess(world.isClientSide()));
@@ -69,6 +77,12 @@ public class MinerpModBerSupport {
 			boolean handled = false;
 			if (!world.isClientSide())
 				slotid = insertOrExtractNext(world, pos, entity, event.getHand());
+			handled = true;
+			if (slotid < 0)
+				slotid = 0;
+			if (!world.isClientSide()) {
+				MudancaItensTransferidorEnergiaProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
+			}
 			handled = true;
 			if (handled) {
 				event.setCanceled(true);

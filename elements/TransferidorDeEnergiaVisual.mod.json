@@ -29,6 +29,7 @@
     "interactionMode": "FILL_NEXT",
     "sneakOpensGui": true,
     "preventGuiWhenSlotHit": true,
-    "viewDistance": 64
+    "viewDistance": 64,
+    "onSlotClicked": "MudancaItensTransferidorEnergia"
   }
 }

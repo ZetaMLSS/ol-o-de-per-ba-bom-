@@ -19,14 +19,14 @@ public class BotaoLigarMineradorav1procedureProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-		}
-		if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "status") == false && !(getBlockNBTString(world, BlockPos.containing(x, y, z), "player")).equals("")) {
+		} else if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "status") == false && !(getBlockNBTString(world, BlockPos.containing(x, y, z), "player")).equals("")) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null) {
 					_blockEntity.getPersistentData().putBoolean("status", true);
+					_blockEntity.getPersistentData().putDouble("tempo", 0);
 				}
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);

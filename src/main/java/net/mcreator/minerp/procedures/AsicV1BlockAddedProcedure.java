@@ -6,15 +6,14 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.core.BlockPos;
 
-public class SelecionarMoedaMineiradoraEtCoinProcedure {
+public class AsicV1BlockAddedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (!world.isClientSide()) {
 			BlockPos _bp = BlockPos.containing(x, y, z);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_blockEntity != null) {
-				_blockEntity.getPersistentData().putString("moeda", "etcoin");
-				_blockEntity.getPersistentData().putBoolean("status", false);
+				_blockEntity.getPersistentData().putDouble("frequencia", 1000);
 			}
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);

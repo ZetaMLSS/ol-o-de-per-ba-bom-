@@ -109,36 +109,44 @@ public class ValorDoCatCoinMudarProcedure {
 			MinerpModVariables.MapVariables.get(world).CatCoinValor = 0;
 			MinerpModVariables.MapVariables.get(world).markSyncDirty();
 		}
+		if (MinerpModVariables.MapVariables.get(world).CatCoinGeradas <= 50 && MinerpModVariables.MapVariables.get(world).CatCoinGeradas >= 99) {
+			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 1200;
+			MinerpModVariables.MapVariables.get(world).markSyncDirty();
+		}
 		if (MinerpModVariables.MapVariables.get(world).CatCoinGeradas <= 249 && MinerpModVariables.MapVariables.get(world).CatCoinGeradas >= 100) {
-			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 500;
+			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 1500;
 			MinerpModVariables.MapVariables.get(world).markSyncDirty();
 		}
 		if (MinerpModVariables.MapVariables.get(world).CatCoinGeradas <= 999 && MinerpModVariables.MapVariables.get(world).CatCoinGeradas >= 250) {
-			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 250;
+			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 2000;
 			MinerpModVariables.MapVariables.get(world).markSyncDirty();
 		}
 		if (MinerpModVariables.MapVariables.get(world).CatCoinGeradas <= 1499 && MinerpModVariables.MapVariables.get(world).CatCoinGeradas >= 1000) {
-			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 150;
+			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 2500;
 			MinerpModVariables.MapVariables.get(world).markSyncDirty();
 		}
 		if (MinerpModVariables.MapVariables.get(world).CatCoinGeradas <= 1999 && MinerpModVariables.MapVariables.get(world).CatCoinGeradas >= 1500) {
-			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 100;
+			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 3000;
 			MinerpModVariables.MapVariables.get(world).markSyncDirty();
 		}
 		if (MinerpModVariables.MapVariables.get(world).CatCoinGeradas <= 2499 && MinerpModVariables.MapVariables.get(world).CatCoinGeradas >= 2000) {
-			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 50;
+			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 4000;
 			MinerpModVariables.MapVariables.get(world).markSyncDirty();
 		}
 		if (MinerpModVariables.MapVariables.get(world).CatCoinGeradas <= 19999 && MinerpModVariables.MapVariables.get(world).CatCoinGeradas >= 10000) {
-			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 25;
+			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 6000;
 			MinerpModVariables.MapVariables.get(world).markSyncDirty();
 		}
 		if (MinerpModVariables.MapVariables.get(world).CatCoinGeradas <= 24999 && MinerpModVariables.MapVariables.get(world).CatCoinGeradas >= 20000) {
-			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 15;
+			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 8000;
 			MinerpModVariables.MapVariables.get(world).markSyncDirty();
 		}
-		if (MinerpModVariables.MapVariables.get(world).CatCoinGeradas >= 25000) {
-			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 10;
+		if (MinerpModVariables.MapVariables.get(world).CatCoinGeradas <= 29999 && MinerpModVariables.MapVariables.get(world).CatCoinGeradas >= 25000) {
+			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 10000;
+			MinerpModVariables.MapVariables.get(world).markSyncDirty();
+		}
+		if (MinerpModVariables.MapVariables.get(world).CatCoinGeradas >= 30000) {
+			MinerpModVariables.MapVariables.get(world).TaxaHashCatCoin = 12000;
 			MinerpModVariables.MapVariables.get(world).markSyncDirty();
 		}
 	}

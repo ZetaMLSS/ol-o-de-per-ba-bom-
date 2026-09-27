@@ -1,7 +1,11 @@
 package net.mcreator.minerp.procedures;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.component.CustomData;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.core.component.DataComponents;
 
 import net.mcreator.minerp.network.MinerpModVariables;
 
@@ -19,6 +23,11 @@ public class Vender1catcoinProcedure {
 			MinerpModVariables.MapVariables.get(world).CatCoinQuantidade = MinerpModVariables.MapVariables.get(world).CatCoinQuantidade + 1;
 			MinerpModVariables.MapVariables.get(world).DinheiroPrefeitura = MinerpModVariables.MapVariables.get(world).DinheiroPrefeitura + MinerpModVariables.MapVariables.get(world).CatCoinValor / 1.05;
 			MinerpModVariables.MapVariables.get(world).markSyncDirty();
+			{
+				final String _tagName = "resultadocripto";
+				final String _tagValue = "-1";
+				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putString(_tagName, _tagValue));
+			}
 		}
 	}
 }

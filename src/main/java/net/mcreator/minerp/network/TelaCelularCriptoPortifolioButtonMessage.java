@@ -57,6 +57,9 @@ public record TelaCelularCriptoPortifolioButtonMessage(int buttonID, int x, int 
 			if (buttonID == 2) {
 				net.mcreator.minerp.procedures.BotaoInvisivelcelularvoltaraoinicioProcedure.execute(world, x, y, z, entity);
 			}
+			if (buttonID == 3) {
+				net.mcreator.minerp.procedures.AtivarNotificacaoCriptoMineradasProcedure.execute(entity);
+			}
 		}
 	}
 

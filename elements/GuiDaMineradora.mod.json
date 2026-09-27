@@ -109,8 +109,8 @@
           "textProcedure": "RetornarStatusOnMineradorav1",
           "width": 20,
           "height": 12,
-          "x": 222,
-          "y": 157,
+          "x": 224,
+          "y": 156,
           "locked": false
         }
       },
@@ -393,6 +393,7 @@
           "text": "",
           "isUndecorated": true,
           "onClick": "SelecionarMoedaMineiradoraCatCoin",
+          "displayCondition": "MostrarCatCoinProcedure",
           "width": 42,
           "height": 10,
           "x": 266,
@@ -417,6 +418,7 @@
           "text": "",
           "isUndecorated": true,
           "onClick": "SelecionarMoedaMineiradoraBatCoin",
+          "displayCondition": "MostrarBatCoinProcedure",
           "width": 42,
           "height": 10,
           "x": 266,
@@ -441,6 +443,7 @@
           "text": "",
           "isUndecorated": true,
           "onClick": "SelecionarMoedaMineiradoraEtCoin",
+          "displayCondition": "MostrarEtCoinProcedure",
           "width": 42,
           "height": 10,
           "x": 265,
@@ -465,6 +468,7 @@
           "text": "",
           "isUndecorated": true,
           "onClick": "SelecionarMoedaMineiradoraLuanaCoin",
+          "displayCondition": "MostrarLuanaCoinProcedure",
           "width": 42,
           "height": 10,
           "x": 266,
@@ -486,7 +490,7 @@
           "width": 36,
           "height": 12,
           "x": 103,
-          "y": 216,
+          "y": 186,
           "locked": false
         }
       },
@@ -540,7 +544,7 @@
           },
           "hasShadow": false,
           "x": 103,
-          "y": 175,
+          "y": 176,
           "locked": false
         }
       },
@@ -558,7 +562,7 @@
           "width": 36,
           "height": 12,
           "x": 103,
-          "y": 206,
+          "y": 196,
           "locked": false
         }
       },
@@ -566,7 +570,7 @@
         "type": "multiline_label",
         "data": {
           "name": "multiline_label_informacoes_copy_copy_copy",
-          "text": "Hash Da Moeda:",
+          "text": "Desempenho:",
           "color": {
             "value": -16711936,
             "falpha": 0.0
@@ -576,7 +580,7 @@
           "width": 43,
           "height": 22,
           "x": 103,
-          "y": 185,
+          "y": 206,
           "locked": false
         }
       },
@@ -595,7 +599,7 @@
           "width": 30,
           "height": 12,
           "x": 136,
-          "y": 206,
+          "y": 196,
           "locked": false
         }
       },
@@ -614,7 +618,7 @@
           "width": 30,
           "height": 12,
           "x": 136,
-          "y": 216,
+          "y": 186,
           "locked": false
         }
       },
@@ -629,10 +633,11 @@
           },
           "hasShadow": false,
           "fontScale": 100,
-          "width": 30,
+          "textProcedure": "VerHashNaMineradora",
+          "width": 120,
           "height": 12,
-          "x": 136,
-          "y": 195,
+          "x": 103,
+          "y": 216,
           "locked": false
         }
       }

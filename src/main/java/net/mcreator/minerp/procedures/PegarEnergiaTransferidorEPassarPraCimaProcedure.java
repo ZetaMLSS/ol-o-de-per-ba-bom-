@@ -52,6 +52,36 @@ public class PegarEnergiaTransferidorEPassarPraCimaProcedure {
 						}
 					}
 				}
+				if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == MinerpModBlocks.ASIC_V_1.get()) {
+					Itemdentro = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).copy();
+					{
+						final String _tagName = "usado";
+						final boolean _tagValue = true;
+						CustomData.update(DataComponents.CUSTOM_DATA, Itemdentro, tag -> tag.putBoolean(_tagName, _tagValue));
+					}
+					if (getBlockNBTNumber(world, BlockPos.containing(x, y + 1, z), "energia") < 100) {
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y + 1, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null) {
+								_blockEntity.getPersistentData().putDouble("energia", (getBlockNBTNumber(world, BlockPos.containing(x, y + 1, z), "energia") + 2));
+							}
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
+						{
+							final String _tagName = "bateria";
+							final double _tagValue = (Itemdentro.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("bateria") - 2);
+							CustomData.update(DataComponents.CUSTOM_DATA, Itemdentro, tag -> tag.putDouble(_tagName, _tagValue));
+						}
+						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+							ItemStack _setstack = Itemdentro.copy();
+							_setstack.setCount(1);
+							_itemHandlerModifiable.setStackInSlot(0, _setstack);
+						}
+					}
+				}
 			}
 		}
 	}

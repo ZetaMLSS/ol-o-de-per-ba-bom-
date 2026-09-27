@@ -9,6 +9,7 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.minerp.world.inventory.TelaCelularCriptoCatCoinAbaMenu;
+import net.mcreator.minerp.procedures.ResultadosCriptoCatCoinAbaProcedure;
 import net.mcreator.minerp.procedures.MostrarquantidadeCatCoinAtualProcedure;
 import net.mcreator.minerp.procedures.MostrarValorCatCoinAtualProcedure;
 import net.mcreator.minerp.procedures.BateriaVisorProcedure;
@@ -155,12 +156,15 @@ public class TelaCelularCriptoCatCoinAbaScreen extends AbstractContainerScreen<T
 		{
 			guiGraphics.drawString(this.font, MostrarquantidadeCatCoinAtualProcedure.execute(world), 2, -5, -16750951, false);
 		}
+		{
+			net.spidrone.uiapi.UIGraphicsHelper.drawCustomFont(guiGraphics, net.minecraft.resources.ResourceLocation.parse("minecraft:default"), ResultadosCriptoCatCoinAbaProcedure.execute(entity), 10, 58,
+					net.spidrone.uiapi.ComponentEffects.solid(-1), null, false, net.spidrone.uiapi.UIGraphicsHelper.TextAlign.CENTER, 1f, 1f);
+		}
 		this.guiTools$renderMultilineLabel(guiGraphics, "Quantidade no mercado:", -15, -24, 60, 22, -16777216, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "Valor:", -3, -44, 30, 12, -16777216, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.HoracelularvisorProcedure.execute(world), ""), -26, -96, 48, 21, -1, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "Valor:", -4, -44, 30, 12, -1, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "Quantidade no mercado:", -16, -24, 60, 22, -1, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "ResultadoCripto", -26, 57, 74, 12, -1, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "__________", -16, -3, 80, 12, -1, false, 1.00F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "__________", -16, -33, 80, 12, -1, false, 1.00F);
 	}

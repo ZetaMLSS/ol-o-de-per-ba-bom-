@@ -82,6 +82,7 @@ public class MinerpModVariables {
 		clone.BatCoinSaldo = original.BatCoinSaldo;
 		clone.EtCoinSaldo = original.EtCoinSaldo;
 		clone.LuanaCoinSaldo = original.LuanaCoinSaldo;
+		clone.NotificacaoCriptoMoedasMineradas = original.NotificacaoCriptoMoedasMineradas;
 		if (!event.isWasDeath()) {
 		}
 		event.getEntity().setData(PLAYER_VARIABLES, clone);
@@ -167,7 +168,7 @@ public class MinerpModVariables {
 		public double urb_x = 0;
 		public double urb_y = 0;
 		public double urb_z = 0;
-		public double CatCoinLimite = 0;
+		public double CatCoinLimite = 100000.0;
 		public double DinheiroDoProprioBanco = 0;
 		public String numeros_registrados = "\"\"";
 		public String canal1_alvo = "livre";
@@ -198,9 +199,9 @@ public class MinerpModVariables {
 		public double EtCoinGeradas = 0;
 		public double LuanaCoinGeradas = 0;
 		public double TaxaHashCatCoin = 1000.0;
-		public double TaxaHashBatCoin = 0.0;
-		public double TaxaHashEtCoin = 0;
-		public double TaxaHashLuanaCoin = 0;
+		public double TaxaHashBatCoin = 1000.0;
+		public double TaxaHashEtCoin = 1000.0;
+		public double TaxaHashLuanaCoin = 1000.0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -363,6 +364,7 @@ public class MinerpModVariables {
 		public double BatCoinSaldo = 0;
 		public double EtCoinSaldo = 0;
 		public double LuanaCoinSaldo = 0;
+		public boolean NotificacaoCriptoMoedasMineradas = false;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -376,6 +378,7 @@ public class MinerpModVariables {
 			nbt.putDouble("BatCoinSaldo", BatCoinSaldo);
 			nbt.putDouble("EtCoinSaldo", EtCoinSaldo);
 			nbt.putDouble("LuanaCoinSaldo", LuanaCoinSaldo);
+			nbt.putBoolean("NotificacaoCriptoMoedasMineradas", NotificacaoCriptoMoedasMineradas);
 			return nbt;
 		}
 
@@ -390,6 +393,7 @@ public class MinerpModVariables {
 			BatCoinSaldo = nbt.getDouble("BatCoinSaldo");
 			EtCoinSaldo = nbt.getDouble("EtCoinSaldo");
 			LuanaCoinSaldo = nbt.getDouble("LuanaCoinSaldo");
+			NotificacaoCriptoMoedasMineradas = nbt.getBoolean("NotificacaoCriptoMoedasMineradas");
 		}
 
 		public void markSyncDirty() {

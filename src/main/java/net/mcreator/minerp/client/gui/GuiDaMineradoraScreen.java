@@ -112,16 +112,16 @@ public class GuiDaMineradoraScreen extends AbstractContainerScreen<GuiDaMinerado
 			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.gui_da_mineradora.label_catcoin_copy_copy_copy"), 51, 93, -16711936, false);
 		}
 		{
-			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.gui_da_mineradora.label_informacoes"), -111, 55, -16711936, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.minerp.gui_da_mineradora.label_informacoes"), -111, 56, -16711936, false);
 		}
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.RetornarStatusOnMineradorav1Procedure.execute(world, x, y, z), ""), 8, 37, 20, 12, -16711936, false, 0.75F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.RetornarStatusOnMineradorav1Procedure.execute(world, x, y, z), ""), 10, 36, 20, 12, -16711936, false, 0.75F);
 		this.guiTools$renderMultilineLabel(guiGraphics, "Escolher Moeda:", 0, 68, 40, 20, -16711936, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Envio:", -111, 96, 36, 12, -16711936, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Moeda:", -111, 86, 36, 12, -16711936, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Hash Da Moeda:", -111, 65, 43, 22, -16711936, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.RetornarMoedaDaMineradoraProcedure.execute(world, x, y, z), ""), -78, 86, 30, 12, -16711936, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.RetornarPlayerDaMineradoraProcedure.execute(world, x, y, z), ""), -78, 96, 30, 12, -16711936, false, 1.00F);
-		this.guiTools$renderMultilineLabel(guiGraphics, "Hash", -78, 75, 30, 12, -16711936, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Envio:", -111, 66, 36, 12, -16711936, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Moeda:", -111, 76, 36, 12, -16711936, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, "Desempenho:", -111, 86, 43, 22, -16711936, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.RetornarMoedaDaMineradoraProcedure.execute(world, x, y, z), ""), -78, 76, 30, 12, -16711936, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.RetornarPlayerDaMineradoraProcedure.execute(world, x, y, z), ""), -78, 66, 30, 12, -16711936, false, 1.00F);
+		this.guiTools$renderMultilineLabel(guiGraphics, java.util.Objects.toString(net.mcreator.minerp.procedures.VerHashNaMineradoraProcedure.execute(world, x, y, z), ""), -111, 96, 120, 12, -16711936, false, 1.00F);
 	}
 
 	@Override
@@ -176,7 +176,7 @@ public class GuiDaMineradoraScreen extends AbstractContainerScreen<GuiDaMinerado
 				e -> {
 					int x = GuiDaMineradoraScreen.this.x;
 					int y = GuiDaMineradoraScreen.this.y;
-					if (true) {
+					if (net.mcreator.minerp.procedures.MostrarCatCoinProcedureProcedure.execute(world)) {
 						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.GuiDaMineradoraButtonMessage(2, x, y, z));
 						net.mcreator.minerp.network.GuiDaMineradoraButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
@@ -198,7 +198,7 @@ public class GuiDaMineradoraScreen extends AbstractContainerScreen<GuiDaMinerado
 				e -> {
 					int x = GuiDaMineradoraScreen.this.x;
 					int y = GuiDaMineradoraScreen.this.y;
-					if (true) {
+					if (net.mcreator.minerp.procedures.MostrarBatCoinProcedureProcedure.execute(world)) {
 						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.GuiDaMineradoraButtonMessage(3, x, y, z));
 						net.mcreator.minerp.network.GuiDaMineradoraButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
@@ -220,7 +220,7 @@ public class GuiDaMineradoraScreen extends AbstractContainerScreen<GuiDaMinerado
 				e -> {
 					int x = GuiDaMineradoraScreen.this.x;
 					int y = GuiDaMineradoraScreen.this.y;
-					if (true) {
+					if (net.mcreator.minerp.procedures.MostrarEtCoinProcedureProcedure.execute(world)) {
 						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.GuiDaMineradoraButtonMessage(4, x, y, z));
 						net.mcreator.minerp.network.GuiDaMineradoraButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
@@ -242,7 +242,7 @@ public class GuiDaMineradoraScreen extends AbstractContainerScreen<GuiDaMinerado
 				e -> {
 					int x = GuiDaMineradoraScreen.this.x;
 					int y = GuiDaMineradoraScreen.this.y;
-					if (true) {
+					if (net.mcreator.minerp.procedures.MostrarLuanaCoinProcedureProcedure.execute(world)) {
 						net.neoforged.neoforge.network.PacketDistributor.sendToServer(new net.mcreator.minerp.network.GuiDaMineradoraButtonMessage(5, x, y, z));
 						net.mcreator.minerp.network.GuiDaMineradoraButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
@@ -316,6 +316,15 @@ public class GuiDaMineradoraScreen extends AbstractContainerScreen<GuiDaMinerado
 	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_invisivel2_copy;
 	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_invisivel2_copy_copy;
 	private net.minecraft.client.gui.components.ImageButton enhanced_image_button_invisivel2_copy_copy_copy;
+
+	@Override
+	protected void containerTick() {
+		super.containerTick();
+		this.enhanced_image_button_invisivel2.visible = net.mcreator.minerp.procedures.MostrarCatCoinProcedureProcedure.execute(world);
+		this.enhanced_image_button_invisivel2_copy.visible = net.mcreator.minerp.procedures.MostrarBatCoinProcedureProcedure.execute(world);
+		this.enhanced_image_button_invisivel2_copy_copy.visible = net.mcreator.minerp.procedures.MostrarEtCoinProcedureProcedure.execute(world);
+		this.enhanced_image_button_invisivel2_copy_copy_copy.visible = net.mcreator.minerp.procedures.MostrarLuanaCoinProcedureProcedure.execute(world);
+	}
 
 	private static net.minecraft.resources.ResourceLocation guiTools$buttonTexture(String value, net.minecraft.resources.ResourceLocation fallback) {
 		if (value == null || value.isBlank())

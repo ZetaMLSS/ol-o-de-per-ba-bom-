@@ -14,6 +14,7 @@ public class SelecionarMoedaMineiradoraBatCoinProcedure {
 			BlockState _bs = world.getBlockState(_bp);
 			if (_blockEntity != null) {
 				_blockEntity.getPersistentData().putString("moeda", "batcoin");
+				_blockEntity.getPersistentData().putBoolean("status", false);
 			}
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
