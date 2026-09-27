@@ -12,7 +12,6 @@ import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
@@ -28,6 +27,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.minerp.procedures.QuaisItensVaiNaCarteiraProcedure;
 import net.mcreator.minerp.procedures.CalculadoradaguicarteiraProcedure;
 import net.mcreator.minerp.init.MinerpModMenus;
+import net.mcreator.minerp.init.MinerpModItems;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -103,7 +103,7 @@ public class InventarioCarteiraMenu extends AbstractContainerMenu implements Min
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return Blocks.POLISHED_ANDESITE_STAIRS.asItem() == stack.getItem();
+				return MinerpModItems.CARTAO_DE_CREDITO.get() == stack.getItem();
 			}
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 4, 37) {
