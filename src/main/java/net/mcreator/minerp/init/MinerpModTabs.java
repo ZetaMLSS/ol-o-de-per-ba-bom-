@@ -43,5 +43,7 @@ public class MinerpModTabs {
 				tabData.accept(MinerpModBlocks.GERADORV_1.get().asItem());
 				tabData.accept(MinerpModItems.ALGEMA.get());
 				tabData.accept(MinerpModItems.CHAVE_ALGEMA_SEM_CODIGO.get());
+				tabData.accept(MinerpModBlocks.IMPRESSORA_CARTORIO.get().asItem());
+				tabData.accept(MinerpModItems.PAPEL.get());
 			}).withTabsBefore(MINERP_MONEY.getId()).build());
 }

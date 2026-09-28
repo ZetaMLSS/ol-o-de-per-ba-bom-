@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "minerp:block/impressora_cartorio"
+    },
+    "facing=east": {
+      "model": "minerp:block/impressora_cartorio",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minerp:block/impressora_cartorio",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minerp:block/impressora_cartorio",
+      "y": 270
+    }
+  }
+}
